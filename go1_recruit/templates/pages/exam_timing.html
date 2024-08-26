@@ -1,0 +1,33 @@
+{% extends "templates/web.html" %}
+
+{%- block title -%}{{_("Time Exceeded/Not reached")}}{%- endblock -%}
+
+{% block page_content %}
+<style>
+.hero-and-content {
+	background-color: #f5f7fa;
+}
+header, footer {
+	display: none;
+}
+html, body {
+	background-color: #f5f7fa;
+}
+{% include "templates/styles/card_style.css" %}
+</style>
+
+<div class='page-card'>
+	<div class='page-card-head'>
+		<span class='indicator darkgrey'>{{_("Online Assessment time Exceeded/Not reached")}}</span>
+	</div>
+	<p>{{_("The online assessment time is not yet reached or would have exceeded.")}}</p>
+	<p>{{_("Please go through your mail to get the exact information for your assessment.")}}</p>
+	{# <div><a href='/' class='btn btn-primary btn-sm'>{{ _("Home") }}</a></div> #}
+</div>
+<p class='text-muted text-center small' style='margin-top: -20px;'>{{ _("Error Code: {0}").format('404') }}</p>
+<style>
+.hero-and-content {
+	background-color: #f5f7fa;
+}
+</style>
+{% endblock %}

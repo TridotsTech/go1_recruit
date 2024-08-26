@@ -1,0 +1,99 @@
+{
+ "creation": "2019-09-26 11:00:56.078158",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "candidate_name",
+  "candidate_email",
+  "candidate_phone",
+  "interviewer_email",
+  "monitored_test",
+  "time_zone",
+  "start_time",
+  "end_time",
+  "mail_sent",
+  "test_result"
+ ],
+ "fields": [
+  {
+   "fieldname": "candidate_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Candidate Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "candidate_email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Candidate Email",
+   "options": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "candidate_phone",
+   "fieldtype": "Data",
+   "label": "Candidate Phone",
+   "reqd": 1
+  },
+  {
+   "fieldname": "interviewer_email",
+   "fieldtype": "Data",
+   "label": "Interviewer Email",
+   "options": "Email"
+  },
+  {
+   "default": "0",
+   "fieldname": "monitored_test",
+   "fieldtype": "Check",
+   "label": "Monitored test"
+  },
+  {
+   "fieldname": "time_zone",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Time Zone"
+  },
+  {
+   "fieldname": "start_time",
+   "fieldtype": "Datetime",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Start Date Time"
+  },
+  {
+   "fieldname": "end_time",
+   "fieldtype": "Datetime",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "End  Date Time"
+  },
+  {
+   "default": "0",
+   "fieldname": "mail_sent",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Mail Sent",
+   "read_only": 1
+  },
+  {
+   "fieldname": "test_result",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Test Result",
+   "read_only": 1
+  }
+ ],
+ "istable": 1,
+ "modified": "2019-09-26 12:53:46.769171",
+ "modified_by": "Administrator",
+ "module": "Go1 Recruit",
+ "name": "Shortlisted Candidates",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

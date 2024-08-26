@@ -1,0 +1,1029 @@
+{% extends "templates/Layout/customweb2.html" %}
+{% block page_content %}
+<div class="row">
+    <div class="col-sm-9" id="MainContent">
+    <div class='featured-products-section' itemscope itemtype="http://schema.org/Product">
+        <div>
+            <div id="search-list">
+                {% for item in answer1 %}
+                    {% set i=loop.index %} 
+                    <div class="col-sm-12 col-xs-12 product-image-wrapper QuestionItem">
+                        <div>
+                            <div class="QuestionNo" itemprop="name">Question No : {{i}}</div>
+
+                            <div class="QuestionTitle" itemprop="name"><span style="float: left;margin-right: 10px;font-weight: bold;">Q{{i}}:</span><div style="float:left;width: calc(100% - 40px);">{{ item.question }}</div></div>
+                           {%if item.question_type=="Single" %}
+                            <div class="options">
+                                <label class="optionItem">
+                                    <div class="optionvalue icon" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%; text-transform: capitalize;">Correct Answer</span> <div style="float:left;width: calc(100%);">{{item.answer}}</div>
+                                         </div>
+                                </label>
+                                <label class="optionItem">
+                                    <div class="optionvalue icon" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">User Answer</span> <div style="float:left;width: calc(100%);">{{item.user_answer}}</div>
+                                         </div>
+                                </label>
+                                <label class="optionItem">
+                                    {%if item.is_correct==1 %}
+                                    <div class="optionvalue icon" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">Result</span><div style="float:left;width: calc(100%);"><button class="btn btn-success"><span class="fa fa-check"></span> Correct</button></div>
+                                         </div>
+                                         {% endif %}
+                                          {%if (item.user_answer|trim ) != "" and item.is_correct==0 %}
+                                    <div class="optionvalue icon" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">Result</span> <div style="float:left;width: calc(100%);"><button class="btn btn-danger"><span class="fa fa-times"></span> Wrong</button></div>
+                                         </div>
+                                         {% endif %}
+                                         {%if (item.user_answer|trim )=="" and item.is_correct==0 %}
+                                         <div class="optionvalue icon" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">Result</span> <div style="float:left;width: calc(100%);"><button class="btn btn-info"><span class="fa fa-times"></span> Not Attempted</button></div>
+                                         </div>
+                                         {% endif %}
+
+                                </label>
+                                
+                            </div>
+                            {% endif %}
+                            
+                            {%if item.question_type=="Multiple" %}
+                            <div class="options">
+                                 <label class="optionItem">
+                                    <div class="optionvalue icon" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%; text-transform: capitalize;">Correct Answer</span> <div style="float:left;width: calc(100%);">{{item.answer}}</div>
+                                         </div>
+                                </label>
+                                <label class="optionItem">
+                                    <div class="optionvalue icon" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">User Answer</span> <div style="float:left;width: calc(100%);">{{item.user_answer}}</div>
+                                         </div>
+                                </label>
+                                <label class="optionItem">
+                                    {%if item.is_correct==1 %}
+                                    <div class="optionvalue icon" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">Result</span><div style="float:left;width: calc(100%);"><button class="btn btn-success"><span class="fa fa-check"></span> Correct</button></div>
+                                         </div>
+                                         {% endif %}
+                                          {%if (item.user_answer|trim ) != "" and item.is_correct==0 %}
+                                    <div class="optionvalue icon" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">Result</span> <div style="float:left;width: calc(100%);"><button class="btn btn-danger"><span class="fa fa-times"></span> Wrong</button></div>
+                                         </div>
+                                         {% endif %}
+                                         {%if (item.user_answer|trim )=="" and item.is_correct==0 %}
+                                         <div class="optionvalue icon" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">Result</span> <div style="float:left;width: calc(100%);"><button class="btn btn-info"><span class="fa fa-times"></span> Not Attempted</button></div>
+                                         </div>
+                                         {% endif %}
+
+                                </label>
+                            </div>
+                             
+                            {% endif %}
+                             {%if item.question_type=="Free Text" %}
+                             {%if (item.user_answer|trim )=="" and item.is_correct==0 %}
+                             <div class="options1">
+                             <div class="alert">
+                                <button class="btn btn-info"><span class="fa fa-check"></span> Not Attempted</button> 
+                                        </div></div>
+                            {% endif %}
+                            {% if (item.user_answer|trim ) != "" %}
+                            <div class="options">
+                             <label class="optionItem">
+                                    <div class="optionvalue icon" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">User Answer</span> <div style="float:left;width: calc(100%);">{{item.user_answer}}</div>
+                                         </div>
+                                </label>
+                                <label class="optionItem">
+                                    {%if item.is_correct==1 %}
+                                    <div class="optionvalue icon" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">Result</span><div style="float:left;width: calc(100%);"><button class="btn btn-success"><span class="fa fa-check"></span> Correct</button></div>
+                                         </div>
+                                         {% endif %}
+                                          {%if (item.user_answer|trim ) != "" and item.is_correct==0 %}
+                                    <div class="optionvalue icon" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">Result</span> <div style="float:left;width: calc(100%);"><button class="btn btn-danger"><span class="fa fa-times"></span> Wrong</button></div>
+                                         </div>
+                                         {% endif %}
+                                         {%if (item.user_answer|trim )=="" and item.is_correct==0 %}
+                                         <div class="optionvalue icon" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">Result</span> <div style="float:left;width: calc(100%);"><button class="btn btn-info"><span class="fa fa-times"></span> Not Attempted</button></div>
+                                         </div>
+                                         {% endif %}
+
+                                </label>
+                            </div>
+                            {% endif %}
+                            {% endif %}
+                            {%if item.question_type=="Audio" %}
+                             {%if (item.user_answer|trim )=="" and item.is_correct==0 %}
+                             <div class="options1">
+                             <div class="alert">
+                                <button class="btn btn-info"><span class="fa fa-check"></span> Not Attempted</button> 
+                                        </div></div>
+                            {% endif %}
+                            {% if (item.user_answer|trim ) != "" %}
+                            <div class="options">
+                             <label class="optionItem">
+                                    <div class="optionvalue icon" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">User Answer</span> <div style="float:left;width: calc(100%);" data-id="{{item.name}}"><audio controls><source src="{{item.user_answer}}" type="audio/mpeg">Your browser does not support the audio tag.</audio></div>
+                                         </div>
+                                </label>
+                                <label class="optionItem">
+                                    {%if item.is_correct==1 %}
+                                    <div class="optionvalue icon" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">Result</span><div style="float:left;width: calc(100%);"><button class="btn btn-success"><span class="fa fa-check"></span> Correct</button></div>
+                                         </div>
+                                         {% endif %}
+                                          {%if (item.user_answer|trim ) != "" and item.is_correct==0 %}
+                                    <div class="optionvalue icon" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">Result</span> <div style="float:left;width: calc(100%);"><button class="btn btn-danger"><span class="fa fa-times"></span> Wrong</button></div>
+                                         </div>
+                                         {% endif %}
+                                         {%if (item.user_answer|trim )=="" and item.is_correct==0 %}
+                                         <div class="optionvalue icon" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">Result</span> <div style="float:left;width: calc(100%);"><button class="btn btn-info"><span class="fa fa-times"></span> Not Attempted</button></div>
+                                         </div>
+                                         {% endif %}
+
+                                </label>
+                            </div>
+                            {% endif %}
+                            {% endif %}
+                             {%if item.question_type=="Coding Question" %}
+
+                             {%if (item.user_answer|trim )=="" and item.is_correct==0 %}
+                            <div class="options1">
+                             <div class="alert">
+                               <button class="btn btn-info"><span class="fa fa-check"></span> Not Attempted</button> 
+                                        </div></div>
+                            {% endif %}
+                            {% if (item.user_answer|trim ) != "" %}
+                            <div class="options">
+                             <label class="optionItem">
+                                    <div class="optionvalue icon" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">User Answer</span> <div style="float:left;width: calc(100%);">{{item.user_answer}}</div>
+                                         </div>
+                                </label>
+                                <label class="optionItem">
+                                    {%if item.is_correct==1 %}
+                                    <div class="optionvalue icon" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">Result</span><div style="float:left;width: calc(100%);"><button class="btn btn-success"><span class="fa fa-check"></span> Correct</button></div>
+                                         </div>
+                                         {% endif %}
+                                          {%if (item.user_answer|trim ) != "" and item.is_correct==0 %}
+                                    <div class="optionvalue icon" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">Result</span> <div style="float:left;width: calc(100%);"><button class="btn btn-danger"><span class="fa fa-times"></span> Wrong</button></div>
+                                         </div>
+                                         {% endif %}
+                                         {%if (item.user_answer|trim )=="" and item.is_correct==0 %}
+                                         <div class="optionvalue icon" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">Result</span> <div style="float:left;width: calc(100%);"><button class="btn btn-info"><span class="fa fa-times"></span> Not Attempted</button></div>
+                                         </div>
+                                         {% endif %}
+
+                                </label>
+                            </div>
+                            {% endif %}
+                            {% endif %}
+
+                        </div>
+                    </div>
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    
+
+    <div class="col-sm-3" id="rightContent">
+        <div class="timetitle" style="border-bottom: 1px solid #d3d3d3">
+        <h3 class="timetitle1" style="font-size: 18px;">Result Overview</h3></div>
+         {% if exam_info1 %}
+            {% for item in exam_info1 %}
+            {% set comma = joiner(",") %}
+        <div class="QuestionsOverView">
+            <div class="tblQuestions">
+                {% if user_list1 %}
+                <div class="optionvalue1 icon">
+                 <span class="info">Name</span> <div class="marks">{{user_list1}}</div></div>
+                {% endif %}
+                  <div class="optionvalue1 icon">
+                 <span class="info">Question Paper Name</span> <div class="marks">{{item.question_paper_name}}
+                </div>
+            </div>
+             <div class="optionvalue1 icon">
+                <span class="info">Email</span> <div class="marks">{{email}}</div>
+                </div>
+                  <div class="optionvalue1 icon">
+                <span class="info">Total Number of Questions</span> <div class="marks">{{over_all_question}}
+                </div></div>
+                  <div class="optionvalue1 icon">
+                 <span class="info">Number of Question Attempted</span> <div class="marks">{{attempt}}
+                </div>
+            </div>
+              <div class="optionvalue1 icon">
+                <span class="info">Number of Question Not Attempted</span> <div class="marks">{{not_attempt}}
+                </div>
+            </div>
+              <div class="optionvalue1 icon">
+                 <span class="info">Number of Correct Answers</span> <div class="marks">{{correct}}
+                </div>
+            </div>
+              <div class="optionvalue1 icon">
+
+                 <span class="info">Number of Wrong Answers</span> <div class="marks">{{wrong}}
+                </div></div>
+                  <div class="optionvalue1 icon">
+                <span class="info">Total Secured Marks</span> <div class="marks">{{secured_marks}}
+                </div></div>
+                {% if grade %}
+                  <div class="optionvalue1 icon">
+               <span class="info">Grade</span> <div class="marks">{{grade}}
+                </div></div>{% endif %}
+              <div class="optionvalue1 icon">
+                <!-- <span class="info">Subject</span> <div class="marks">{{item.subject}}</div> -->
+                {% if item.subject %}
+                <span class="info">Subjects</span> <div class="marks">{% for subject1 in item.subject %}{{subject1.subjects}} {% if not loop.last %}, {% endif %}{% endfor %}
+                </div>{% endif %}
+            </div>
+              <div class="optionvalue1 icon">
+                {% if item.topic %}
+                <span class="info">Topics</span> <div class="marks">{% for topic1 in item.topic %}{{topic1.topic}} {% if not loop.last %}, {% endif %}{% endfor %}
+                </div>{% endif %}</div>
+                 
+            </div>
+        </div>
+        {% endfor %}
+       {% endif %}
+    </div>
+
+
+</div>
+<style type="text/css">
+.marks{
+    float:left;
+    display: flex;
+}
+.info {
+    padding-bottom: 15px;
+    float: left;
+    margin-right: 10px;
+    font-weight: 600;
+    color: #222;
+}
+.optionvalue1{
+    display: flex;
+}
+.support-tip h3 {
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+.table-responsive {
+    min-height: .01%;
+}
+.table-responsive {
+    min-height: .01%;
+}
+.theme-details .table > tbody > tr {
+    border-bottom: none;
+}
+.table-condensed > tbody > tr > td, .table-condensed > tbody > tr > th, .table-condensed > tfoot > tr > td, .table-condensed > tfoot > tr > th, .table-condensed > thead > tr > td, .table-condensed > thead > tr > th {
+    padding: 8px;
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+    border-top: none;
+}
+.table-condensed > tbody > tr > td:first-child {
+    font-weight: 700;
+}
+.questop1{
+    float: left;
+}
+
+th,td{
+    padding: 5px;
+}
+.content-data{
+    margin-left: 25%;
+    margin-top: 30px;
+    border: 1px solid #232f3e !important;
+}
+.random,.randoms{
+    padding: 5px 0px !important;
+}
+@media screen and (min-width: 769px){
+.content-data {
+     border: 1px solid #f2f3f7;
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.08);
+    margin-bottom: 20px;
+    /*float: left;*/
+}
+}
+/*.randoms h4{
+    max-height: 70px;
+    padding: 10px 12px;
+}
+.random h4{
+    max-height: 60px;
+    padding: 10px 12px;
+}*/
+/*.random,.randoms{
+    padding: 10px;
+}
+.random{
+    width: 146px;
+}*/
+
+.btn{
+    cursor: auto;
+    pointer-events: none;
+    margin-top: -6px;
+}
+.randoms h4{
+    margin-left: 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+.random h4 {
+    font-size: 14px;
+}
+
+/*.randoms{
+    padding: 10px;
+}*/
+.randoms h4{
+    color: #666;
+}
+/*strong{
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+    padding: 11px 100px;
+    font-weight: bold;
+}*/
+.options1 {
+    float: left;
+    width: 100%;
+    margin-top: 15px;
+}
+.your_answer{
+    margin-left: 20px;
+}
+.questop{
+    text-align: right;
+    color: #6d7581;
+}
+p{
+    color: #000000;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+.timetitle1{
+    margin-left: 15px;
+    margin-top: 10px;
+}
+label{
+    text-transform: capitalize !important;
+}
+/*.fa-times{
+    margin-left: 30px;
+    color: red;
+}*/
+.fa-check-circle{
+    margin-left: 40px;
+    color: green;
+    font-size: 16px;
+}
+.correct{
+    margin-left: 8px;
+    text-transform: capitalize;
+}
+body{
+    background: #fff;
+}
+.footer{
+    display: none;
+}
+.fa-circle{
+    font-size: 12px;
+    color: #228be6;
+    padding-right: 15px;
+    margin-top: 3px;
+}
+  .container{
+    max-width: 100%;
+  }
+  .codeResult  {
+         width: calc(100% - 60px);
+    float: left;
+
+    }
+input[type=submit]:before{
+    context:"f04b";
+}
+.headerRow{
+    top: 0px;
+    left: -15px;
+}
+.division{
+    float: left;
+    text-align: left;
+}
+    select{
+        height: 39px;
+        width: 110px;
+        background: #209cee;
+        border-color: #209cee;
+        border-radius: 4px;
+        color: #fff;
+    }
+    .code-editor{
+        border-radius: 10px;
+    } 
+    #code12{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+    .division{
+        border: 1px solid #ddd;
+        border-radius: 15px;
+    }
+    #code{
+        margin:30px;
+        height: 200px;
+        border: 1px solid #ddd;
+    }
+    .result1{
+        border-radius: 10px;
+        background: #000;
+        color: #fff;
+        margin:30px;
+        height: 120px;
+        border: 1px solid #ddd;
+        margin-top: 0px;
+    }
+    /*.btn{
+        background: #209cee;
+        border-color: #209cee;
+        border-radius: 5px;
+        margin-left: 50%;
+        height: 42px;
+        width: 115px;
+        color: #fff;
+        font-weight: bold;
+    }*/
+    .ace-xcode .ace_print-margin {
+        width: 0px !important;
+    }
+    .featured-products-section{
+        margin-bottom: 30px;
+    }
+</style>
+
+<style>
+.Loading
+{
+        position: fixed;
+    top: 0;
+    z-index: 999999999999999999999;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    left: 0;
+    opacity: 0.5;
+    color: #fff;
+    font-size: 22px;
+    padding-left: 45%;
+    padding-top: 23%;
+    display: none;
+}
+.QuestionNo {
+    float: left;
+    width: calc(100%);
+    border-bottom: 1px solid #5e64ff;
+    padding-bottom: 10px;
+    font-size: 18px;
+    color: #000;
+    font-weight: 600;
+    margin-left: 0;
+    margin-bottom: 25px;
+    display: none;
+}
+body
+{
+    overflow-x: hidden;
+}
+.options{
+margin-left: 15px;
+    width: calc(100% - 25px);
+}
+.action-btn {
+    border-radius: 2px !important;
+    margin: 8px;
+    text-align: center;
+    width: 181px;
+    font-weight: 600;
+    border-radius: 2px;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 18px;
+    padding-top: 7px;
+}
+
+.review {
+    background: purple;
+    border: none;
+}
+
+.QuestionsOverView {
+    padding: 10px;
+    height: calc( 100% - 136px);
+    margin-top: 0px;
+}
+
+.headerRow {
+    float: left;
+    width: 100%;
+    background: #fff;
+    padding-top: 8px;
+    /* text-align: right; */
+    border-bottom: 1px solid #d3d3d3;
+    margin-bottom: 20px;
+    height: 50px;
+    position: fixed;
+    z-index: 999999999999999999999999999999;
+}
+
+.legend-title {
+    float: left;
+    width: 100%;
+    font-weight: 600;
+    color: #000;
+}
+
+.legend-item {
+    float: left;
+    width: 50%;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.legenditem {
+
+    float: left;
+    width: 25px;
+    border: 1px solid #d3d3d3;
+    height: 25px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+#legendDiv {
+
+    float: left;
+    width: 100%;
+
+    border-top: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.tblQuestions {
+    margin-top: 15px;
+    float: left;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.questionNo {
+    float: left;
+    background: #fff;
+    padding: 8px 5px;
+    border-radius: 5px;
+       width: calc(100% - 25px);
+    border: 1px solid #d3d3d3;
+    font-size: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.rightQuestion {
+    float: left;
+    font-size: 12px;
+    text-align: justify;
+}
+
+.answeredClass {
+    background: #55a417;
+    color: #fff;
+    border: none;
+}
+
+.selectedClass {
+    background: #f22133;
+    color: white;
+    border: none;
+}
+
+.timetitle {
+    color: #000;
+    padding: 5px;
+    float: left;
+    width: 113%;
+   /*  border: 1px solid #d3d3d3; */
+    text-align: left;
+    font-weight: 600;
+    border-bottom: none;
+    padding-left: 5px;
+    margin-left: -5px;
+}
+
+.page_content {
+    padding-top: 0px !important;
+}
+
+.buttons {
+    float: left;
+    width: 83.3%;
+    margin-top: 15px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 15px;
+    border-top: 1px solid #d3d3d3;
+    transform: translate(-12%);
+    -webkit-transform: translate(-12%);
+    text-align: center;
+    background: #fff;
+    z-index: 999999;
+}
+a.btn.btn-primary.action-btn{
+    color: #fff !important;
+}
+
+.QuestionItem {
+    float: left;
+    width: calc(100% - 30px);
+    border: 1px solid #eee;
+    margin-left: 15px;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.QuestionTitle {
+    float: left;
+    width: calc(100% );
+    font-size: 16px;
+    background: #fcfcfc;
+    /*margin-top: -15px;*/ 
+    padding: 10px 0px;
+    border-bottom: 1px solid #eee;
+    line-height: 30px;
+    margin-left: 0;
+    padding: 10px 15px;
+}
+
+.optionItem {
+    float: left;
+    width: calc(100%);
+    padding-left: 40px;
+    /* border: 1px solid #d3d3d3;*/
+    padding-bottom: 15px;
+    /* background: #f6f6f6; */
+    padding-top: 15px;
+    max-width: calc(100% + 30px);
+    font-weight: normal;
+    font-size: 13px;
+}
+
+.hero {
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+.hero h1 {
+    font-size: 40px;
+    font-weight: 200;
+}
+
+.home-login {
+    margin-top: 30px;
+}
+
+.btn-login {
+    width: 80px;
+}
+
+.featured-product-heading,
+.all-products {
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.all-products {
+    font-weight: 300;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+
+
+/**
+ *  This element is created inside your target element
+ *  It is used so that your own element will not need to be altered
+ **/
+
+.time_circles {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+/**
+ *  This is all the elements used to house all text used
+ * in time circles
+ **/
+
+.time_circles>div {
+    position: absolute;
+    text-align: center;
+    width: 45px !important;
+}
+
+
+
+
+/**
+ *  Titles (Days, Hours, etc)
+ **/
+
+.time_circles>div>h4 {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Century Gothic', Arial;
+    font-size: 9px !important;
+    color: #000;
+    font-weight: bold;
+    position: absolute;
+    bottom: -35px;
+    text-align: center;
+    width: 100%;
+    display: none;
+}
+
+.page-content.without-sidebar {
+    padding-top: 0;
+}
+
+.page-head {
+    margin-bottom: -30px;
+    display: none;
+    height: 0;
+}
+
+.textDiv_Seconds {
+    left: 90px !important;
+}
+
+.textDiv_Minutes {
+    left: 40px !important;
+}
+
+.textDiv_Hours span:after {
+    content: ":";
+    position: absolute;
+    right: 0;
+}
+
+.textDiv_Minutes span:after {
+    content: ":";
+    position: absolute;
+    right: 0;
+}
+
+
+
+
+/**
+ *  Time numbers, ie: 12
+ **/
+
+.time_circles>div>span {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-family: 'Century Gothic', Arial;
+    font-size: 300%;
+    margin-top: -5px;
+    font-weight: bold;
+}
+
+.resultHeader {
+    float: left;
+    width: 100%;
+    border: 1px solid #d3d3d3;
+    padding: 15px;
+}
+
+.headerTitle {
+    margin-bottom: 15px;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.resultHeaderTitle {
+    text-align: center;
+    margin-top: 0;
+    float: left;
+    width: calc(100% + 30px);
+    margin-left: -15px;
+    border-bottom: 1px solid #d3d3d3;
+    padding-bottom: 15px;
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 767px) {
+    #MainContent {
+        position: absolute;
+        top: 525px;
+    }
+    #rightContent {
+        position: absolute;
+        top: 80px;
+    }
+}
+
+.container {
+        width: 100% !important;
+    padding: 0;
+}
+
+.page-container {
+    max-width: 100% !important;
+}
+
+header {
+    display: none;
+}
+
+canvas {
+    display: none;
+}
+
+#freeapplication{
+    margin-bottom: 1%;
+}
+
+.timeLeft {
+    position: absolute;
+}
+
+.btn-finish {
+
+    position: fixed;
+    top: 8px;
+    z-index: 99999999999;
+    right: 10px;
+}
+
+@media only screen and (min-width: 968px) {
+    .timeLeft {
+        right: 10%;
+    }
+   #rightContent {
+       background: #fcfcfc;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    padding-top: 0px;
+    border-right: 1px solid #d3d3d3;
+    padding: 0 5px;
+    overflow-y: scroll;
+}
+    #MainContent {
+        margin-top: 20px;
+        margin-left: 25%;
+    }
+    .btn-finish {
+        position: fixed;
+        width: 23%;
+        bottom: 10px;
+        font-size: 18px;
+        padding-top: 6px;
+        padding-bottom: 10px;
+
+        top: auto;
+    }
+}
+
+.attened {
+    border: none;
+    background: #55a417;
+}
+
+.notattened {
+    border: none;
+    background: #f22133;
+}
+
+.notviewed {
+
+    background: #fff;
+}
+
+
+
+.optionItem.active {
+    background: rgba(154, 220, 244, 0.4);
+}
+
+.ReviewedLaterClass {
+    background: purple;
+    color: #fff;
+    border: none;
+}
+
+.ReviewedLaterAnsweredClass {
+    background: purple;
+    color: #fff;
+    border: none;
+}
+.resultSpan
+{
+        font-size: 18px;
+    /* position: absolute; */
+    /* top: 30%; */
+    float: left;
+    margin-top: 25%;
+    width: 100%;
+    text-align: center;
+}
+@media (max-width: 1023px) {
+    .action-btn {
+        width: 30%;
+        float: left;
+        margin: 8px 0;
+        padding: 5px;
+        font-size: 11px;
+        margin-left: 2%;
+    }
+    .buttons {
+        transform: inherit;
+        -webkit-transform: inherit;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 1023px) {
+    .legend-item {
+        width: 100%;
+    }
+}
+.page-content-wrapper
+{
+    background: #fff !important;
+        padding: 0 !important;
+    float: none !important;
+    margin-top: 0 !important;
+}
+.col-md-12
+{
+    padding: 0 15px !important;
+}
+.navbar 
+{
+    display: none ;
+}
+.QuestionsOverView .questionNo
+{
+    width:100%;
+    min-height: 40px;
+}
+.btn-execute-code
+{
+
+    float: left;
+    margin-left: 43%;
+
+}
+#empty
+{
+    float: left;
+    margin-left: 15px;
+}
+.QuestionItem img{
+    max-width: 100%;
+    height: auto;
+}
+</style>
+{%endblock%}
+{% block script %}
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('audio').on('play', function(){
+            let id = $(this).parent().attr('data-id');
+            $('audio').each(function(k, v){
+                let idx = $(v).parent().attr('data-id');
+                if(id != idx){
+                    $(v)[0].pause();
+                }
+            })
+        })
+    })
+</script>
+{% endblock %}

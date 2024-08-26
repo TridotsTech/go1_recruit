@@ -1,0 +1,187 @@
+{% extends "templates/Layout/customweb2.html" %}
+{% block page_content %}
+<div style="margin-top: 20px;min-height: 600px;">
+    {% if monitored=="true" %}
+    <div class="row" style="padding: 25px;">
+        <div class="col-md-6">
+            <div class="information-div">
+                {{instructions}}
+            </div>
+        </div>
+
+    <div class="col-md-6">
+    {% else %}
+    <div class="row" style="padding: 25px;">
+        <div class="col-md-6">
+            <div class="information-div">
+                {%if unmonitored_instructions%}{{unmonitored_instructions}}{%endif%}
+            </div>
+        </div>
+    <div class="col-md-6">
+    {% endif %}
+
+    <div class="detail-div">
+    {% if details %}
+      <h2 class="text-center">
+         <a class="back-login heading-color">{{details[0].questionpaper_name}}</a>
+     </h2>
+     <br>
+
+     <div col="row">
+         <div class="col-md-6 col-sm-6 col-xs-6">
+             <p class="text-right">
+                 <a class="back-login"><b>Candidate Name</b></a>
+             </p>
+         </div>
+         <div class="col-md-6 col-sm-6 col-xs-6">
+             <p class="text-left">
+                 <a class="back-login">{{details[0].candidate_name}}</a>
+             </p>
+         </div>
+     </div>
+
+     <div col="row">
+         <div class="col-md-6 col-sm-6 col-xs-6">
+             <p class="text-right">
+                 <a class="back-login"><b>Candidate E-mail</b></a>
+             </p>
+         </div>
+         <div class="col-md-6 col-sm-6 col-xs-6">
+             <p class="text-left">
+                 <a class="back-login">{{details[0].candidate_email}}</a>
+             </p>
+         </div>
+     </div>
+
+     <div col="row">
+         <div class="col-md-6 col-sm-6 col-xs-6">
+             <p class="text-right">
+                 <a class="back-login"><b>Subject</b></a>
+             </p>
+         </div>
+         <div class="col-md-6 col-sm-6 col-xs-6">
+             <p class="text-left">
+                 <a class="back-login">{{details[0].subject_name}}</a>
+             </p>
+         </div>
+     </div>
+
+     <div col="row">
+         <div class="col-md-6 col-sm-6 col-xs-6">
+             <p class="text-right">
+                 <a class="back-login"><b>Duration</b></a>
+             </p>
+         </div>
+         <div class="col-md-6 col-sm-6 col-xs-6">
+             <p class="text-left">
+                 <a class="back-login">{{details[0].duration_minutes}} mins</a>
+             </p>
+         </div>
+     </div>
+
+     <div col="row">
+         <div class="col-md-6 col-sm-6 col-xs-6">
+             <p class="text-right">
+                 <a class="back-login"><b>Start Time</b></a>
+             </p>
+         </div>
+         <div class="col-md-6 col-sm-6 col-xs-6">
+             <p class="text-left">
+                 <a class="back-login">{{details[0].start_time}}</a>
+             </p>
+         </div>
+     </div>
+
+     <div col="row">
+         <div class="col-md-6 col-sm-6 col-xs-6">
+             <p class="text-right">
+                 <a class="back-login"><b>End Time</b></a>
+             </p>
+         </div>
+         <div class="col-md-6 col-sm-6 col-xs-6">
+             <p class="text-left">
+                 <a class="back-login">{{details[0].end_time}}</a>
+             </p>
+         </div>
+     </div>
+
+    {% endif %}
+    <br>
+    {% if monitored_test=="true" %}
+    <div class="text-center">
+            <a type="button" class="btn btn-warning plan-btn plans-btn" target="_blank" href="{{details[0].zoom_url}}">Start Zoom</a>
+    </div>
+    {% endif %}
+    {% if start_test=="true" %}
+        <div class="text-center">
+            <button type="button" class="btn btn-warning plan-btn plans-btn" onclick="start_test()">Start Test</button>
+        </div>
+    {% else %}
+             <p class="text-center">
+                 <a class="back-login text-danger"><b>{{start_test}}</b></a>
+             </p>
+    {% endif %}
+    </div>
+</div>
+
+
+{% if monitored %}
+{% include "templates/pages/systemrequirements.html" %}
+{% endif %}
+
+
+<style type="text/css">
+    body{
+        overflow-x: hidden;
+    }
+    .text-danger{
+        color: red;
+    }
+    .header {
+       background: url(/assets/go1_recruit/images/header.jpg) center center no-repeat;
+}
+    .detail-div{
+        min-height: 495px;
+        max-width: 600px;
+        background: white;
+        margin: 0px auto;
+        padding: 20px;
+        border: 2px solid #ddd;
+    }
+    .information-div{
+        min-height: 495px;
+        max-width: 800px;
+        background: white;
+        margin: 0px auto;
+        padding: 30px;
+        border: 2px solid #ddd;
+        /*border-radius: 25px;*/
+    }
+    .heading-color{
+        color: #f1743d;
+    font-size: 25px !important;
+    }
+    ol {
+        list-style: upper-roman;
+    }
+    a.back-login {
+    font-weight: normal;
+    font-size: 15px;
+}
+    a.back-login b {
+    font-size: 15px;
+}
+</style>
+{%endblock%}
+
+
+{% block script %}
+<script type="text/javascript">
+    function start_test(){
+        window.location = window.location.origin + "/start_test1?token=" + '{{ token }}'
+    }
+    function start_zoom(){
+        window.location ='{{ details[0].zoom_url }}';
+    }
+</script>
+{% endblock %}

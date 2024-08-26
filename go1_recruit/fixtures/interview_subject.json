@@ -1,0 +1,56 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Interview Subject",
+  "modified": "2024-08-25 22:15:36.603866",
+  "name": "Java",
+  "sub_topic": [],
+  "subject": "Java",
+  "subject_description": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Subject",
+  "modified": "2024-08-25 22:15:36.911155",
+  "name": "SQL",
+  "sub_topic": [],
+  "subject": "SQL",
+  "subject_description": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Subject",
+  "modified": "2024-08-25 22:15:37.028628",
+  "name": "Software Quality Assurance",
+  "sub_topic": [],
+  "subject": "Software Quality Assurance",
+  "subject_description": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Subject",
+  "modified": "2024-08-25 22:15:37.067814",
+  "name": "Automation testing",
+  "sub_topic": [],
+  "subject": "Automation testing",
+  "subject_description": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Subject",
+  "modified": "2024-08-25 22:15:36.333637",
+  "name": "C",
+  "sub_topic": [],
+  "subject": "C",
+  "subject_description": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Subject",
+  "modified": "2024-08-25 22:15:36.699463",
+  "name": "Python",
+  "sub_topic": [],
+  "subject": "Python",
+  "subject_description": null
+ }
+]

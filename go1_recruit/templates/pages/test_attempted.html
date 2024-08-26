@@ -1,0 +1,48 @@
+{% extends base_template_path %}
+
+{%- block title -%}{{_("Test Attempted")}}{%- endblock -%}
+
+{% block content %}
+<style>
+.hero-and-content {
+	background-color: #f5f7fa;
+}
+.header {
+     /*background-color: transparent; */
+    /*background-image: radial-gradient(800px 1000px at center 200px,#6c38a0 0,#351552 100%);*/
+    background: url(/assets/go1_recruit/images/header.jpg) center center no-repeat;
+    background-size: cover;
+}
+html, body {
+	background-color: #f5f7fa;
+}
+{% include "templates/styles/card_style.css" %}
+</style>
+
+<div class='page-card'>
+	<div class='page-card-head'>
+		<span class='indicator darkgrey'>{{_("Test Attempted")}}</span>
+	</div>
+	<p>{{_("This test link has already been attempted !. If any issue please contact the interviewer.")}}</p>
+	{# <div><a href='/' class='btn btn-primary btn-sm'>{{ _("Home") }}</a></div> #}
+</div>
+<style>
+.hero-and-content {
+	background-color: #f5f7fa;
+}
+
+.page-card {
+    max-width: 360px;
+    padding: 15px;
+    margin: 14% auto !important;
+    border: 1px solid #d1d8dd;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.page-card{
+	margin-top: 155px;
+}
+</style>
+{% endblock %}

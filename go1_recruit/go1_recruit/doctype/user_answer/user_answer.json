@@ -1,0 +1,88 @@
+{
+ "creation": "2019-08-27 00:40:31.045324",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "question",
+  "question_id",
+  "answer",
+  "user_answer",
+  "column_break_3",
+  "is_evaluated",
+  "is_correct",
+  "secured_marks",
+  "user_html",
+  "answer_html"
+ ],
+ "fields": [
+  {
+   "fieldname": "question",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "Question",
+   "read_only": 1
+  },
+  {
+   "fieldname": "question_id",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Question Id",
+   "read_only": 1
+  },
+  {
+   "fieldname": "answer",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "Answer",
+   "read_only": 1
+  },
+  {
+   "fieldname": "user_answer",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "User Answer",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_correct",
+   "fieldtype": "Check",
+   "label": "Is Correct"
+  },
+  {
+   "fieldname": "secured_marks",
+   "fieldtype": "Data",
+   "label": "Secured Marks"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_evaluated",
+   "fieldtype": "Check",
+   "label": "Is Evaluated"
+  },
+  {
+   "fieldname": "user_html",
+   "fieldtype": "HTML"
+  },
+  {
+   "fieldname": "answer_html",
+   "fieldtype": "HTML"
+  }
+ ],
+ "istable": 1,
+ "modified": "2019-09-11 13:13:23.522896",
+ "modified_by": "Administrator",
+ "module": "Go1 Recruit",
+ "name": "User Answer",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,371 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "naming_series:",
+ "creation": "2019-08-24 03:08:00.472784",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "question_paper_name",
+  "created_on",
+  "column_break_2",
+  "subject",
+  "column_break_4",
+  "topics",
+  "all_topics",
+  "section_break_14",
+  "noof_questions",
+  "enable_user_video",
+  "noof_candidates",
+  "enable_screen_sharing",
+  "column_break_18",
+  "duration_minutes",
+  "column_break_12",
+  "payment_status",
+  "no_of_candidates_shortlisted",
+  "naming_series",
+  "questions_tab",
+  "test_pattern_section",
+  "question_pattern_type",
+  "auto_generate_questions",
+  "section_break_17",
+  "single_questions",
+  "questin_levels_heading",
+  "question_levels",
+  "column_break_19",
+  "multiple_questions",
+  "column_break_21",
+  "freetext_questions",
+  "column_break_23",
+  "freeform_codecompiler",
+  "test_pattern_html",
+  "sec",
+  "pick_the_question",
+  "questions",
+  "questions_html",
+  "candidates_tab",
+  "sec2",
+  "add_candidates",
+  "candidate_html",
+  "candidate_list",
+  "amended_from",
+  "mail_sent",
+  "shortlisted_candidates_sec",
+  "shortlist_html",
+  "shortlisted_candidates"
+ ],
+ "fields": [
+  {
+   "fieldname": "question_paper_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Question Paper Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "topics",
+   "fieldtype": "Table MultiSelect",
+   "label": "Topics",
+   "options": "Question Paper Topics",
+   "reqd": 1
+  },
+  {
+   "fieldname": "duration_minutes",
+   "fieldtype": "Int",
+   "label": "Duration (Minutes)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_14",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "noof_questions",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "No.of Questions",
+   "reqd": 1
+  },
+  {
+   "fieldname": "noof_candidates",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "No.of Candidates"
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "payment_status",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Payment Status",
+   "options": "Pending\nPaid\nNA",
+   "read_only": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "IQP-"
+  },
+  {
+   "fieldname": "sec",
+   "fieldtype": "Section Break",
+   "label": "Questions"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "questions",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "ignore_user_permissions": 1,
+   "label": "Questions",
+   "options": "Question Paper Questions"
+  },
+  {
+   "fieldname": "sec2",
+   "fieldtype": "Section Break",
+   "label": "Interview Candidates"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "candidate_list",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Candidate List",
+   "options": "Interview Candidates"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Interview Question Paper",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "mail_sent",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Mail Sent",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:(doc.question_pattern_type=='Auto generate questions')",
+   "fieldname": "auto_generate_questions",
+   "fieldtype": "Button",
+   "label": "Auto Generate Pattern"
+  },
+  {
+   "depends_on": "eval:(doc.question_pattern_type=='Manual Selection')",
+   "fieldname": "pick_the_question",
+   "fieldtype": "Button",
+   "label": "Pick the Questions"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "questions_html",
+   "fieldtype": "HTML",
+   "ignore_user_permissions": 1,
+   "label": "Questions html"
+  },
+  {
+   "fieldname": "candidate_html",
+   "fieldtype": "HTML",
+   "label": "Candidate html"
+  },
+  {
+   "fieldname": "add_candidates",
+   "fieldtype": "Button",
+   "label": "Add Candidates"
+  },
+  {
+   "depends_on": "eval:(doc.mail_sent==0)",
+   "fieldname": "test_pattern_section",
+   "fieldtype": "Section Break",
+   "label": "Test Pattern"
+  },
+  {
+   "fieldname": "test_pattern_html",
+   "fieldtype": "HTML",
+   "hidden": 1,
+   "label": "Test Pattern"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Auto generate questions",
+   "fieldname": "question_pattern_type",
+   "fieldtype": "Select",
+   "label": "Pattern Type",
+   "options": "Auto generate questions\nManual Selection"
+  },
+  {
+   "default": "1",
+   "fieldname": "single_questions",
+   "fieldtype": "Check",
+   "label": "Single"
+  },
+  {
+   "fieldname": "column_break_19",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "multiple_questions",
+   "fieldtype": "Check",
+   "label": "Multiple"
+  },
+  {
+   "fieldname": "column_break_21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "freetext_questions",
+   "fieldtype": "Check",
+   "label": "Free Text"
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "freeform_codecompiler",
+   "fieldtype": "Check",
+   "label": "FreeForm with code compiler"
+  },
+  {
+   "fieldname": "questin_levels_heading",
+   "fieldtype": "Heading",
+   "label": "Question Levels"
+  },
+  {
+   "fieldname": "question_levels",
+   "fieldtype": "Table MultiSelect",
+   "label": "Question Levels",
+   "options": "Question Level Link"
+  },
+  {
+   "fieldname": "section_break_17",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Question Types"
+  },
+  {
+   "fieldname": "shortlisted_candidates_sec",
+   "fieldtype": "Section Break",
+   "label": "Shortlisted Candidates"
+  },
+  {
+   "fieldname": "shortlist_html",
+   "fieldtype": "HTML",
+   "label": "Shortlist html"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "shortlisted_candidates",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Shortlisted Candidates",
+   "options": "Shortlisted Candidates"
+  },
+  {
+   "default": "1",
+   "fieldname": "enable_user_video",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Enable Candidate Video Recording?"
+  },
+  {
+   "default": "1",
+   "fieldname": "enable_screen_sharing",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Enable Screen Sharing?"
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Table MultiSelect",
+   "label": "Subject",
+   "options": "Question Paper Subject",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "all_topics",
+   "fieldtype": "Check",
+   "label": "Select all topics"
+  },
+  {
+   "default": "Today",
+   "fieldname": "created_on",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Created On"
+  },
+  {
+   "fieldname": "no_of_candidates_shortlisted",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "No. Of Candidates Shortlisted",
+   "read_only": 1
+  },
+  {
+   "fieldname": "questions_tab",
+   "fieldtype": "Tab Break",
+   "label": "Questions"
+  },
+  {
+   "fieldname": "candidates_tab",
+   "fieldtype": "Tab Break",
+   "label": "Candidates"
+  }
+ ],
+ "hide_toolbar": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-08-24 18:42:08.201451",
+ "modified_by": "Administrator",
+ "module": "Go1 Recruit",
+ "name": "Interview Question Paper",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

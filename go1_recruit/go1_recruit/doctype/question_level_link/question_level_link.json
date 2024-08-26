@@ -1,0 +1,31 @@
+{
+ "actions": [],
+ "creation": "2019-09-19 11:34:27.344966",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "question_level"
+ ],
+ "fields": [
+  {
+   "fieldname": "question_level",
+   "fieldtype": "Link",
+   "label": "Question level ",
+   "options": "Question Level"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2024-06-11 19:27:16.942746",
+ "modified_by": "Administrator",
+ "module": "Go1 Recruit",
+ "name": "Question Level Link",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,108 @@
+<div class="question_pattern_template">
+	<div>
+		<h4 style="margin-top: 0px;">                      
+        	<b>Test Pattern:</b>
+    	</h4>
+    	<div class="test_pattern_type">
+
+    		<div class="custom-control custom-radio custom-control-inline">
+			  <input type="radio" class="custom-control-input" id="AutoGenerateQuestions" name="test_pattern_type" checked>
+			  <label class="custom-control-label" for="AutoGenerateQuestions">Auto generate questions</label>
+			</div>
+
+			<div class="custom-control custom-radio custom-control-inline">
+			  <input type="radio" class="custom-control-input" id="ManualSelection" name="test_pattern_type">
+			  <label class="custom-control-label" for="ManualSelection">Manual Selection</label>
+			</div>
+
+		</div>
+	</div>
+	<br>
+
+	<div class="auto_genereate_template">
+		<div>
+			<h4 style="margin-top: 0px;">                      
+	        	<b>Question Types:</b>
+	    	</h4>
+				<div class="question_types">
+					<div class="form-check form-check-inline">
+					  <input class="form-check-input" type="checkbox" id="Single" value="Single">
+					  <label class="form-check-label" for="Single">Single</label>
+					</div>
+					<div class="form-check form-check-inline">
+					  <input class="form-check-input" type="checkbox" id="Multiple" value="Multiple">
+					  <label class="form-check-label" for="inlineCheckbox2">inlineCheckbox2</label>
+					</div>
+					<div class="form-check form-check-inline">
+					  <input class="form-check-input" type="checkbox" id="Coding Question" value="Coding Question">
+					  <label class="form-check-label" for="Coding Question">Coding Question</label>
+					</div>
+					<div class="form-check form-check-inline">
+					  <input class="form-check-input" type="checkbox" id="Free Text" value="Free Text">
+					  <label class="form-check-label" for="Free Text">Free Text</label>
+					</div>
+				</div>
+		</div>
+		<br>
+		<div>
+			<h4 style="margin-top: 0px;">                      
+	        	<b>Question Levels:</b>
+	    	</h4>
+				<div class="question_levels">
+					{% if levels %}
+						{% for level in levels %}
+							<div class="form-check form-check-inline">
+							  <input class="form-check-input" type="checkbox" id="{{level.question_level}}" value="{{level.question_level}}">
+							  <label class="form-check-label" for="{{level.question_level}}">{{level.question_level}}</label>
+							</div>
+						{% endfor %}
+					{% endif %}
+				</div>
+		</div>
+	</div>
+	
+</div>
+
+<style type="text/css">
+	.form-check-inline {
+	    display: inline-flex;
+	    -webkit-box-align: center;
+	    align-items: center;
+	    padding-left: 0;
+	    margin-right: .75rem;
+	}
+	.form-check {
+	    position: relative;
+	}
+	.form-check-label {
+	    margin-bottom: 0;
+	    padding: 0px 5px;
+	}
+	.custom-control-inline {
+	    display: inline-flex;
+	    margin-right: 1rem;
+	}
+	.custom-control {
+	    position: relative;
+	    min-height: 1.5rem;
+	    padding-left: 1.5rem;
+	}
+	.question_pattern_template{
+		padding: 10px;
+		background-color: #f5f7fa;
+		/*border: 1px solid #ddd;*/
+		border-radius: 10px;
+	}
+	.test_pattern_type{
+		padding: 0rem 2.5rem;
+	}
+	.question_types{
+		padding: 0rem 2.5rem;
+	}
+	.question_levels{
+		padding: 0rem 2.5rem;
+	}
+	.auto_genereate_template{
+		display: block;
+	}
+</style>

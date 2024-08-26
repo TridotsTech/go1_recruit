@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<!-- Built on Frappe. https://frappe.io/ -->
+<html lang="en">
+<head>
+     <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="{{meta_description}}">
+    <meta name="keywords" content="{{meta_keywords}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#ed485f">
+    <title>{% block title %} {{ meta_title | striptags }} {% endblock %}</title>
+	
+	<meta name="generator" content="frappe">
+    {% block favicon %}
+	<link rel="shortcut icon"
+		href="{{ (favicon or "/assets/frappe/images/favicon.png") | abs_url }}"
+		type="image/x-icon">
+	<link rel="icon"
+		href="{{ (favicon or "/assets/frappe/images/favicon.png") | abs_url }}"
+		type="image/x-icon">
+	<!-- GOOGLE WEB FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800" rel="stylesheet">
+
+    <!-- BASE CSS -->
+     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!-- <link href="/assets/go1_recruit/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="/assets/go1_recruit/css/style.css" rel="stylesheet">
+  <link href="/assets/go1_recruit/css/vendors.css" rel="stylesheet">
+  <link href="/assets/go1_recruit/css/icon_fonts/css/all_icons.min.css" rel="stylesheet">
+
+    <!-- YOUR CUSTOM CSS -->
+    <link href="/assets/go1_recruit/css/custom.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/assets/go1_recruit/css/style2.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  {% endblock %}
+	{%- block head -%}
+		{% block meta_block %}{% endblock %}
+		{% if head_html is defined -%}
+		{{ head_html or "" }}
+		{%- endif %}
+		<!-- {%- for link in web_include_css %}
+		<link type="text/css" rel="stylesheet" href="{{ link|abs_url }}">
+		{%- endfor -%} -->
+	    {%- block head_include %}{{ head_include or "" }}{% endblock -%}
+		{%- block style %}{%- endblock -%}
+	{%- endblock -%}
+    <script>
+		window.frappe = {};
+		frappe.ready_events = [];
+		frappe.ready = function(fn) {
+			frappe.ready_events.push(fn);
+		}
+		window.dev_server = {{ dev_server }};
+    </script>
+    {%for tracking_code in social_tracking_code%}
+        {{tracking_code}}
+    {%endfor%}
+    
+</head>
+    
+{% block body %}
+<body  data-path="{{ path }}">
+      {% include "templates/Layout/navbar.html" %}
+      
+<div class="page-section">
+        {% block content %} {% endblock %}
+        <div class = "block-content">
+         {% block page_content %}
+
+
+
+
+         {% endblock %}
+        </div>
+</div>
+        {#% include "templates/Layout/footer1.html" %#}
+        
+     <div id="message_modal" class="modal fade" role="dialog">
+        <div class="modal-dialog" style="z-index: 1050">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body">
+                    
+                </div>                     
+            </div>
+        </div>
+    </div>    
+
+	{% block base_scripts %}
+	<!-- js should be loaded in body! -->
+	
+
+
+
+	<!-- <script type="text/javascript"
+		src="/assets/frappe/js/lib/jquery/jquery.min.js"></script> -->
+    <script src="/assets/go1_recruit/js/jquery-2.2.4.min.js"></script>  
+	 {{ include_script('frappe-web.bundle.js') }}
+<!-- <script type="text/javascript"
+    src="/assets/frappe/js/lib/bootstrap.min.js"></script> -->
+    <script type="text/javascript"
+    src="/assets/go1_recruit/js/bootstrap.min.js"></script>
+    <script src="/assets/go1_recruit/js/jquery-2.2.4.min.js"></script>
+    <script src="/assets/go1_recruit/js/common_scripts.js"></script>
+    <script src="/assets/go1_recruit/js/main.js"></script>
+    <script src="/assets/go1_recruit/assets/validate.js"></script> 
+ 
+	{% endblock %}
+    {%- if js_globals is defined %}
+    <script>
+    {%- for key, value in js_globals.iteritems() %}
+    window.{{ key }} = "{{ value[0] }}";
+    {%- endfor -%}
+    </script>
+    {% endif -%}
+	{%- for link in web_include_js %}
+	<script type="text/javascript" src="{{ link|abs_url }}"></script>
+	{%- endfor -%}
+    {%- block script %}{%- endblock %}
+	<!-- csrf_token -->
+    {%- block body_include %}{{ body_include or "" }}{% endblock -%}
+<style type="text/css">
+  
+   
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+header{
+    padding: 7px 30px;
+}
+@media screen and (max-width: 767px) and (min-width: 320px){
+  /*.navbar-default{
+    background: #5031b0 !important;
+  }*/
+  .navbar-default .navbar-nav .open .dropdown-menu>li>a{
+      color: #777 !important;
+  }
+  .navbar-default .navbar-nav>li>a{
+      padding: 7px 15px;
+  }
+  .navbar-brand{
+      padding: 10px 15px;
+  }
+}
+/*@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+  html {
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    width: 100vh;
+    overflow-x: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+}*/
+.modal-input{
+    -webkit-animation: anim-1 0.3s forwards;
+    animation: anim-1 0.3s forwards;
+    color: #999;
+}
+.err{
+    display: none;
+    color: red;
+}
+.modal .close{
+    font-size:15px;
+}
+.modal .modal-title{
+    font-size: 16px;
+}
+.modal .btn{
+    font-size: 14px;
+}
+.social-logins {
+    position: fixed;
+    top: 35%;
+    left: 0;
+    z-index: 9;
+        width: 50px;
+}
+.share-btn {
+        display: inline-block;
+        color: #ffffff;
+        border: none;
+        padding: 1em;
+        /* width: 4em; */
+        outline: none;
+        text-align: center;
+        margin-left:0px;
+        font-size: 10px;
+        width: 100%;
+    }
+
+        .share-btn i {
+    padding-right: 10px;
+    padding-left: 5px;
+    margin-right:0px;
+    font-size: 20px;
+}
+
+        .share-btn:hover {
+            color: white;
+        }
+        .share-btn.facebook {
+        background: #3B5998;
+    }
+
+   
+    .share-btn.twitter {
+        background: #1b95e0;
+    }
+
+    .share-btn.google {
+        background: #DD3F34 !important;
+    }
+     .share-btn.linkedin {
+        background: #0077b5 !important;
+    }
+      .wa_btn {
+        background: #0dc143;
+        padding: 1em;
+        /* width: 4em; */
+        outline: none;
+        text-align: center;
+      
+        color: #fff;
+        display: none;
+    }
+    @media screen and (max-width: 767px) and (min-width: 320px){
+    .social-logins {
+        width: 35px;
+    }
+     .wa_btn {
+          display: block;
+     }
+     .share-btn {
+      padding: 8px 0;
+     }
+}
+</style>
+ <style>
+        .fb-livechat, .fb-widget {
+            display: none;
+        }
+
+        .ctrlq.fb-button, .ctrlq.fb-close {
+            position: fixed;
+            right: 24px;
+            cursor: pointer;
+        }
+
+        .ctrlq.fb-button {
+            z-index: 1;
+            background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDEyOCAxMjgiIGhlaWdodD0iMTI4cHgiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxMjggMTI4IiB3aWR0aD0iMTI4cHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxnPjxyZWN0IGZpbGw9IiMwMDg0RkYiIGhlaWdodD0iMTI4IiB3aWR0aD0iMTI4Ii8+PC9nPjxwYXRoIGQ9Ik02NCwxNy41MzFjLTI1LjQwNSwwLTQ2LDE5LjI1OS00Niw0My4wMTVjMCwxMy41MTUsNi42NjUsMjUuNTc0LDE3LjA4OSwzMy40NnYxNi40NjIgIGwxNS42OTgtOC43MDdjNC4xODYsMS4xNzEsOC42MjEsMS44LDEzLjIxMywxLjhjMjUuNDA1LDAsNDYtMTkuMjU4LDQ2LTQzLjAxNUMxMTAsMzYuNzksODkuNDA1LDE3LjUzMSw2NCwxNy41MzF6IE02OC44NDUsNzUuMjE0ICBMNTYuOTQ3LDYyLjg1NUwzNC4wMzUsNzUuNTI0bDI1LjEyLTI2LjY1N2wxMS44OTgsMTIuMzU5bDIyLjkxLTEyLjY3TDY4Ljg0NSw3NS4yMTR6IiBmaWxsPSIjRkZGRkZGIiBpZD0iQnViYmxlX1NoYXBlIi8+PC9zdmc+) center no-repeat #0084ff;
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            bottom: 24px;
+            border: 0;
+            outline: 0;
+            border-radius: 60px;
+            -webkit-border-radius: 60px;
+            -moz-border-radius: 60px;
+            -ms-border-radius: 60px;
+            -o-border-radius: 60px;
+            box-shadow: 0 1px 6px rgba(0,0,0,.06),0 2px 32px rgba(0,0,0,.16);
+            -webkit-transition: box-shadow .2s ease;
+            background-size: 80%;
+            transition: all .2s ease-in-out;
+        }
+
+            .ctrlq.fb-button:focus, .ctrlq.fb-button:hover {
+                transform: scale(1.1);
+                box-shadow: 0 2px 8px rgba(0,0,0,.09),0 4px 40px rgba(0,0,0,.24);
+            }
+
+        .fb-widget {
+           background: #fff;
+    z-index: 9999999999;
+    position: fixed;
+    width: 360px;
+    height: 435px;
+    overflow: hidden;
+    opacity: 0;
+    bottom: 0 !important;
+    right: 0 !important;
+    border-radius: 0px;
+    -o-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    box-shadow: 0 5px 40px rgba(0,0,0,.16);
+    -webkit-box-shadow: 0 5px 40px rgba(0,0,0,.16);
+    -moz-box-shadow: 0 5px 40px rgba(0,0,0,.16);
+    -o-box-shadow: 0 5px 40px rgba(0,0,0,.16);
+        }
+
+        .fb-credit {
+            text-align: center;
+            margin-top: 8px;
+        }
+
+            .fb-credit a {
+                transition: none;
+                color: #bec2c9;
+                font-family: Helvetica,Arial,sans-serif;
+                font-size: 12px;
+                text-decoration: none;
+                border: 0;
+                font-weight: 400;
+            }
+
+        .ctrlq.fb-overlay {
+            z-index: 0;
+            position: fixed;
+            height: 100vh;
+            width: 100vw;
+            -webkit-transition: opacity .4s,visibility .4s;
+            transition: opacity .4s,visibility .4s;
+            top: 0;
+            left: 0;
+            background: rgba(0,0,0,.05);
+            display: none;
+        }
+
+        .ctrlq.fb-close {
+    z-index: 4;
+    padding: 0 6px;
+    background: #365899;
+    font-weight: 700;
+    font-size: 11px;
+    color: #fff;
+    margin: 8px;
+    border-radius: 3px;
+    float: right;
+    position: absolute;
+    right: 0;
+}
+
+            .ctrlq.fb-close::after {
+                content: 'x';
+                font-family: sans-serif;
+            }
+            #wh-widget-send-button.wh-widget-left {
+    right: 16px !important;
+    bottom: 140px !important;
+        left: auto !important;
+}
+div.wh-widget-send-button-wrapper div.wh-widget-send-button-wrapper-list>a.wh-widget-button div.wh-widget-button-icon svg {
+    fill: white;
+    width: 45px !important;
+    height: 56px  !important;
+}
+div.wh-widget-send-button-wrapper div.wh-widget-send-button-wrapper-list>a.wh-widget-button div.wh-widget-button-icon {
+    float: left;
+    height: 60px  !important;
+    width: 60px  !important;
+}
+ {%if theme_settings.header_background_color%}
+header.header.sticky
+{
+    background:{{theme_settings.header_background_color}} !important;
+ 
+}
+
+{%endif%}
+ul.dropdown-menu.login1.show {
+    top: 28px !important;
+}
+.dropdown-menu>li>a {
+    display: block;
+    padding: 10px 20px;
+}
+.modal-backdrop.fade {
+   
+    opacity: 0.5;
+}
+ul#top_menu li
+{
+    width:100%;
+    
+}
+   
+     </style>
+    
+
+
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="box_detail">
+                    <h4>Enquire now</h4>
+                    <p class="nopadding">Ex quem dicta delicata usu, zril vocibus maiestatis in qui.</p>
+                    <div id="message-contact"></div>
+                    <form method="post" action="assets/contact.php" id="contactform" autocomplete="off">
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-12 col-sm-6">
+                                <span class="input">
+                                    <input class="input_field" type="text" id="name_contact" name="name_contact">                                    
+                                    <label class="input_label">
+                                        <span class="input__label-content">Your Name</span>
+                                    </label>                                    
+                                </span>
+                                <span class="err contact-name-err">Please enter your name</span>
+                            </div>
+                            <div class="col-xl-6 col-lg-12 col-sm-6">
+                                <span class="input">
+                                    <input class="input_field" type="email" id="email_contact" name="email_contact">
+                                    <label class="input_label">
+                                        <span class="input__label-content">Your email</span>
+                                    </label>                                    
+                                </span>
+                                <span class="err contact-email-err">Please enter your email</span>
+                                <span class="err contact-emailformat-err">Please enter a valid email</span>
+                            </div>
+                        </div>
+                        <!-- /row -->
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-12 col-sm-6">
+                                <span class="input">
+                                    <input class="input_field" type="text" id="phone_contact" name="phone_contact">
+                                    <label class="input_label">
+                                        <span class="input__label-content">Your telephone</span>
+                                    </label>
+                                </span>
+                            </div>
+                            <div class="col-xl-6 col-lg-12 col-sm-6">
+                                <span class="input">
+                                    <!-- <input class="input_field" type="text" id="phone_contact" name="phone_contact"> -->
+                                    <select id="course_contact" class="input_field">
+                                        <option></option>
+                                        {% if all_courses %}{% for item in all_courses %}
+                                        <option value="{{item.name}}">{{item.name}}</option>
+                                        {% endfor %}{% endif %}
+                                    </select>
+                                    <label class="input_label">
+                                        <span class="input__label-content">Course</span>
+                                    </label>
+                                </span>
+                            </div>
+                        </div>
+                        <!-- /row -->
+                        <span class="input">
+                            <textarea class="input_field" id="message_contact" name="message_contact" style="height:120px;"></textarea>
+                            <label class="input_label">
+                                <span class="input__label-content">Your message</span>
+                            </label>                            
+                        </span>
+                        <span class="err contact-message-err">Please enter your message</span>
+                        <span class="input" style="display: none;">
+                            <input class="input_field" type="text" id="verify_contact" name="verify_contact">
+                            <label class="input_label">
+                                <span class="input__label-content">Are you human? 3 + 1 =</span>
+                            </label>
+                        </span>
+                        <hr>
+                        <div style="position:relative;"><input type="button" value="Enquire Now" class="btn_1 full-width" id="submit-contact"></div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="messageModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">                
+                <h4 class="modal-title"></h4>
+                <button type="button" class="close" data-dismiss="modal">
+                    <span class="fa fa-times"></span>
+                </button>
+            </div>
+            <div class="modal-body">
+                
+            </div>           
+        </div>
+    </div>
+</div>
+<!--   <div class="social-logins">
+                                 <a class="share-btn facebook" href="http://www.facebook.com/sharer/sharer.php?u={{currenturl}}" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a class="share-btn twitter"
+                   href="https://twitter.com/share"
+                   data-size="large"
+                   data-text="custom share text"
+                   data-url="{{currenturl}}"
+                   data-hashtags=""
+                   data-via="twitterdev"
+                   data-related="twitterapi,twitter" target="_blank">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a class="share-btn google" target="_blank"
+                   href="https://plus.google.com/share?url={{currenturl}}">
+                    <i class="fa fa-google-plus" aria-hidden="true"></i> 
+                </a>
+                <a class="share-btn linkedin" target="_blank"
+                   href="http://www.linkedin.com/shareArticle?mini=true&url={{currenturl}}">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="whatsapp://send?text={{currenturl}}" id="whatsappShare" data-text="Schedule for @Model.name - tanjai.org" class="wa_btn wa_btn_l share-btn" onClick="ga('send', 'event', { eventCategory: 'Social', eventAction: 'Share', eventLabel: 'WhatsAppShare', eventValue: 0});" >
+
+                    <i class="fa fa-whatsapp" aria-hidden="true"></i> 
+                </a>
+            </div> -->
+{% block modals %}{% endblock %}
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.input_field').change(function(e){
+            if(this.value){
+                $(this).parent().find('.input__label-content').addClass('modal-input')
+            }else{
+                $(this).parent().find('.input__label-content').removeClass('modal-input')
+            }
+        })
+        $('#submit-contact').click(function(){
+            let formData={};
+            formData.name=$('#name_contact').val();
+            formData.email=$('#email_contact').val();
+            formData.phone=$('#phone_contact').val();
+            formData.course=$('#course_contact').val();
+            formData.message=$('#message_contact').val();
+            if(validate_fields(formData,'#myModal')){
+                $.ajax({
+                    type: 'POST',
+                    Accept: 'application/json',
+                    ContentType: 'application/json;charset=utf-8',
+                    url: window.location.origin + '/api/method/events.events.api.insert_contact',
+                    data: formData,
+                    async: true,
+                    success:function(data){
+                        if(data.message){
+                            $('#myModal .modal-footer button').trigger('click')
+                            $('#messageModal .modal-title').text('Success')
+                            $('#messageModal .modal-body').html('Your request have been submitted.')
+                            $('#messageModal').modal('show')   
+                        }
+                    }
+                })
+            }
+        })
+    })
+    function validate_fields(formData,module){
+        $(module+' .contact-email-err').hide()
+        $(module+' .contact-message-err').hide()
+        $(module+' .contact-name-err').hide()
+        let returnData=true;
+        if(!formData.email || !formData.name || !formData.message){
+            returnData=false;
+            if(!formData.email){
+                $(module+' .contact-email-err').show()
+            }
+            if(!formData.message){
+                $(module+' .contact-message-err').show()
+            }
+            if(!formData.name){
+                $(module+' .contact-name-err').show()
+            }
+        }else{            
+            let email_regex=/^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            if(!email_regex.test(formData.email)){
+                returnData=false;
+                $(module+' .contact-emailformat-err').show()
+            }
+        }        
+        return returnData;
+    }
+</script>
+
+{%for tracking_code in tracking_codes%}
+    {{tracking_code}}
+{%endfor%}
+
+<!-- Your customer chat code -->
+<div class="fb-customerchat"
+ page_id="{{fb_page_id}}">
+</div>
+
+</body>
+{% endblock %}
+</html>

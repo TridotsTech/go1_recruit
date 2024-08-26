@@ -1,0 +1,78 @@
+{
+ "creation": "2020-05-13 20:47:38.016713",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "video_conference_room",
+  "email",
+  "subject",
+  "starting_time",
+  "ending_time",
+  "password",
+  "encrypted_url"
+ ],
+ "fields": [
+  {
+   "fieldname": "video_conference_room",
+   "fieldtype": "Link",
+   "label": "Video Conference Room",
+   "options": "Video Conference Room"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "label": "Name / Subject"
+  },
+  {
+   "fieldname": "starting_time",
+   "fieldtype": "Datetime",
+   "label": "Starting Time"
+  },
+  {
+   "fieldname": "password",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Room Password"
+  },
+  {
+   "fieldname": "encrypted_url",
+   "fieldtype": "Long Text",
+   "label": "Encrypted URL",
+   "read_only": 1
+  },
+  {
+   "fieldname": "ending_time",
+   "fieldtype": "Datetime",
+   "label": "Ending Time"
+  }
+ ],
+ "modified": "2020-05-14 11:07:04.213075",
+ "modified_by": "Administrator",
+ "module": "Go1 Recruit",
+ "name": "Video Conference Participant",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

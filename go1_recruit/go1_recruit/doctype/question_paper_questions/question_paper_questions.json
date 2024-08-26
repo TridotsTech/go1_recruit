@@ -1,0 +1,78 @@
+{
+ "actions": [],
+ "creation": "2019-08-24 03:14:02.447199",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "interview_question",
+  "question",
+  "subject",
+  "topic",
+  "question_type",
+  "question_level"
+ ],
+ "fields": [
+  {
+   "fieldname": "interview_question",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "in_list_view": 1,
+   "label": "Question Id",
+   "options": "Interview Question",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "interview_question.question",
+   "fieldname": "question",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "Question",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "interview_question.question_type",
+   "fieldname": "question_type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Question Type",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "interview_question.question_level",
+   "fieldname": "question_level",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Question Level",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "interview_question.subject",
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "label": "Subject",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "interview_question.topic",
+   "fieldname": "topic",
+   "fieldtype": "Data",
+   "label": "Topic",
+   "read_only": 1
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2024-06-11 19:28:47.660234",
+ "modified_by": "Administrator",
+ "module": "Go1 Recruit",
+ "name": "Question Paper Questions",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

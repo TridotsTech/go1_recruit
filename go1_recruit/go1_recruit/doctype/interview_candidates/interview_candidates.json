@@ -1,0 +1,122 @@
+{
+ "creation": "2019-08-26 03:39:19.112781",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "candidate_name",
+  "candidate_email",
+  "candidate_phone",
+  "interviewer_email",
+  "monitored_test",
+  "candidate_video",
+  "record_screen",
+  "time_zone",
+  "start_time",
+  "end_time",
+  "mail_sent",
+  "test_result",
+  "short_listed"
+ ],
+ "fields": [
+  {
+   "fieldname": "candidate_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Candidate Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "candidate_email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Candidate Email",
+   "options": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "interviewer_email",
+   "fieldtype": "Data",
+   "label": "Interviewer Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "time_zone",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Time Zone",
+   "reqd": 1
+  },
+  {
+   "fieldname": "start_time",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Start Date Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_time",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "End  Date Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "candidate_phone",
+   "fieldtype": "Data",
+   "label": "Candidate Phone",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "mail_sent",
+   "fieldtype": "Check",
+   "label": "Mail Sent",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "monitored_test",
+   "fieldtype": "Check",
+   "label": "Monitored test"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "test_result",
+   "fieldtype": "Data",
+   "ignore_user_permissions": 1,
+   "label": "Test Result",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "short_listed",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Short listed"
+  },
+  {
+   "default": "0",
+   "fieldname": "candidate_video",
+   "fieldtype": "Check",
+   "label": "Candidate Video"
+  },
+  {
+   "default": "0",
+   "fieldname": "record_screen",
+   "fieldtype": "Check",
+   "label": "Record Screen"
+  }
+ ],
+ "istable": 1,
+ "modified": "2019-11-27 04:29:13.930950",
+ "modified_by": "Administrator",
+ "module": "Go1 Recruit",
+ "name": "Interview Candidates",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

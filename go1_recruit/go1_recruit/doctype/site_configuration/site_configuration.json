@@ -1,0 +1,262 @@
+{
+ "creation": "2019-10-05 06:07:29.058725",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "login_page_section",
+  "login_left_title",
+  "login_right_title",
+  "column_break_4",
+  "login_shortdescription_heading",
+  "login_short_description",
+  "home_page_section",
+  "home_banner_title",
+  "home_banner_description",
+  "banner_btn_text",
+  "banner_buttonlink",
+  "free_link_text",
+  "free_plan_url",
+  "column_break_10",
+  "banner_hero_image",
+  "banner_bg_image",
+  "banner_line_items",
+  "home_page_waytohire_sec",
+  "home_aboutus_title",
+  "home_aboutus",
+  "waytohire_table",
+  "left_wayto_heading",
+  "left_line_items",
+  "right_wayto_heading",
+  "right_line_items",
+  "homepage_howitworks_section",
+  "howitworks_title",
+  "howitworks_description",
+  "header_links_section",
+  "header_links",
+  "online_interview_sec",
+  "test_not_started",
+  "test_attempted",
+  "column_break_20",
+  "test_time_expired",
+  "zoom_not_initiated",
+  "footer_sec",
+  "footer_short_description"
+ ],
+ "fields": [
+  {
+   "fieldname": "login_page_section",
+   "fieldtype": "Heading",
+   "label": "Login Page"
+  },
+  {
+   "fieldname": "login_left_title",
+   "fieldtype": "Data",
+   "label": "Left Title"
+  },
+  {
+   "fieldname": "login_right_title",
+   "fieldtype": "Data",
+   "label": "Right Title"
+  },
+  {
+   "fieldname": "login_short_description",
+   "fieldtype": "Small Text",
+   "label": "Short Description"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "login_shortdescription_heading",
+   "fieldtype": "Heading",
+   "label": "Short Description"
+  },
+  {
+   "fieldname": "home_page_section",
+   "fieldtype": "Section Break",
+   "label": "Home Page - Banner "
+  },
+  {
+   "fieldname": "home_banner_title",
+   "fieldtype": "Data",
+   "label": "Banner Title"
+  },
+  {
+   "fieldname": "home_banner_description",
+   "fieldtype": "Small Text",
+   "label": "Banner Description"
+  },
+  {
+   "fieldname": "home_aboutus",
+   "fieldtype": "Small Text",
+   "label": "Way to Hire Description"
+  },
+  {
+   "fieldname": "home_aboutus_title",
+   "fieldtype": "Data",
+   "label": "Way to Hire Title"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "footer_sec",
+   "fieldtype": "Section Break",
+   "label": "Footer"
+  },
+  {
+   "fieldname": "footer_short_description",
+   "fieldtype": "Small Text",
+   "label": "Short Description"
+  },
+  {
+   "fieldname": "header_links_section",
+   "fieldtype": "Section Break",
+   "label": "Header Links"
+  },
+  {
+   "fieldname": "header_links",
+   "fieldtype": "Table",
+   "label": "Header Links",
+   "options": "Header Links"
+  },
+  {
+   "fieldname": "online_interview_sec",
+   "fieldtype": "Section Break",
+   "label": "Test Landing Page"
+  },
+  {
+   "fieldname": "test_not_started",
+   "fieldtype": "Small Text",
+   "label": "Test not started"
+  },
+  {
+   "fieldname": "test_attempted",
+   "fieldtype": "Small Text",
+   "label": "Test attempted"
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "test_time_expired",
+   "fieldtype": "Small Text",
+   "label": "Test Time Expired"
+  },
+  {
+   "fieldname": "zoom_not_initiated",
+   "fieldtype": "Small Text",
+   "label": "Zoom not initiated"
+  },
+  {
+   "fieldname": "banner_line_items",
+   "fieldtype": "HTML Editor",
+   "label": "Banner Line Items"
+  },
+  {
+   "fieldname": "banner_hero_image",
+   "fieldtype": "Attach Image",
+   "label": "Banner Hero Image"
+  },
+  {
+   "fieldname": "home_page_waytohire_sec",
+   "fieldtype": "Section Break",
+   "label": "Home Page - Way to Hire "
+  },
+  {
+   "fieldname": "left_wayto_heading",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Left Heading"
+  },
+  {
+   "fieldname": "left_line_items",
+   "fieldtype": "HTML Editor",
+   "hidden": 1,
+   "label": "Left Line Items"
+  },
+  {
+   "fieldname": "right_wayto_heading",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Right Heading"
+  },
+  {
+   "fieldname": "right_line_items",
+   "fieldtype": "HTML Editor",
+   "hidden": 1,
+   "label": "Right Line Items"
+  },
+  {
+   "fieldname": "homepage_howitworks_section",
+   "fieldtype": "Section Break",
+   "label": "Home Page - How it Works"
+  },
+  {
+   "fieldname": "howitworks_title",
+   "fieldtype": "Data",
+   "label": "How it works Title"
+  },
+  {
+   "fieldname": "howitworks_description",
+   "fieldtype": "HTML Editor",
+   "label": "How it works description"
+  },
+  {
+   "fieldname": "banner_btn_text",
+   "fieldtype": "Data",
+   "label": "Banner Button Text"
+  },
+  {
+   "fieldname": "waytohire_table",
+   "fieldtype": "HTML Editor",
+   "label": "Way to hire Table"
+  },
+  {
+   "fieldname": "banner_buttonlink",
+   "fieldtype": "Data",
+   "label": "Banner Button Link"
+  },
+  {
+   "fieldname": "banner_bg_image",
+   "fieldtype": "Attach Image",
+   "label": "Banner Bg Image"
+  },
+  {
+   "fieldname": "free_link_text",
+   "fieldtype": "Data",
+   "label": "Free Link Text"
+  },
+  {
+   "fieldname": "free_plan_url",
+   "fieldtype": "Data",
+   "label": "Free Plan Url"
+  }
+ ],
+ "issingle": 1,
+ "modified": "2021-02-24 06:21:16.023691",
+ "modified_by": "Administrator",
+ "module": "Go1 Recruit",
+ "name": "Site Configuration",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,393 @@
+<header class="header menu_2 ">
+          <div id="preloader"><div data-loader="circle-side"></div></div>
+          <div id="logo">
+             <a class="brand logo " href="/"><img src="/assets/go1_recruit/images/logo.png"></a>
+        </div>
+      </header>
+
+
+<style type="text/css">
+.fa-user{
+	color: #fff;
+    font-size: 21px;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.login-user{
+	display: inline-block !important;
+}
+/*.login{
+	color: #ffffff;
+}*/
+.user-logout{
+	    color: #f06a44 !important
+}
+ul#top_menu {
+    margin: 13px 0 0 0 !important;
+    color: #fff;
+    }
+
+    .hamburger-box {
+    margin-right: 24px;
+}
+.mm-panels>.mm-panel.mm-hasnavbar {
+    padding-top: 44px;
+}
+
+.hamburger-box {
+    margin-right: 5px;
+}
+.close {
+    float: right;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    filter: alpha(opacity=20);
+    opacity: .2;
+    margin-top: -4px;
+}
+ul#top_menu li:last-child {
+    margin-right: 0;
+    position: relative;
+    top: -4px;
+}
+ul#top_menu li a{
+	color: #fff;
+}
+ul#top_menu li a.nav-c.active{
+	color: #615c59;
+}
+.nav-active{
+	color: #dfdfdf
+}
+a.nav-c.active{
+	color: #fff !important;
+	background: #615c59 !important;
+	border-radius: 30px;
+}
+a.nav-c.active::after{
+	position: absolute;
+    content: '';
+ /*   border-bottom: 2px solid #fff !important;*/
+    height: 2px;
+     width: calc(100% - 20px); 
+    /*width: 50%;*/
+/*    bottom: -11px;*/
+    left: 0px;
+        padding: 5px 20px 5px 20px;
+}
+
+
+
+/* NAVIGATION */
+nav {
+ /* width: 80%;*/
+  margin: 0 auto;
+
+ /* box-shadow: 0px 5px 0px #dedede;*/
+}
+nav ul {
+  list-style: none;
+  /*text-align: center;*/
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  display: block;
+ /* padding: 15px;*/
+  text-decoration: none;
+
+ 
+ 
+
+}
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+}
+nav ul li a:hover {
+  color: #555;
+}
+
+
+/* stroke */
+nav.stroke ul li a,
+nav.fill ul li a {
+  position: relative;
+}
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #aaa;
+  height: 1px;
+}
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+
+nav.fill ul li a {
+  transition: all 2s;
+}
+
+nav.fill ul li a:after {
+  text-align: left;
+  content: '.';
+  margin: 0;
+  opacity: 0;
+}
+nav.fill ul li a:hover {
+  color: #fff;
+  z-index: 1;
+}
+nav.fill ul li a:hover:after {
+  z-index: -10;
+  animation: fill 1s forwards;
+  -webkit-animation: fill 1s forwards;
+  -moz-animation: fill 1s forwards;
+  opacity: 1;
+}
+
+/* Circle */
+nav.circle ul li a {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+nav.circle ul li a:after {
+  display: block;
+  position: absolute;
+  margin: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: '.';
+  color: transparent;
+  width: 1px;
+  height: 1px;
+  border-radius: 50%;
+  background: transparent;
+}
+nav.circle ul li a:hover:after {
+  -webkit-animation: circle 1.5s ease-in forwards;
+}
+.plans-btn2:hover{
+      background-color: #615c59 !important;
+}
+
+/* SHIFT */
+nav.shift ul li a {
+  position:relative;
+  z-index: 1;
+}
+nav.shift ul li a:hover {
+  color: #fff;
+}
+nav.shift ul li a:after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 1px;
+  content: '.';
+  color: transparent;
+  background: #615c59;
+  visibility: none;
+  opacity: 0;
+  z-index: -1;
+  border-radius: 30px;
+}
+nav.shift ul li a:hover:after {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+}
+
+
+
+/* Keyframes */
+@-webkit-keyframes fill {
+  0% {
+    width: 0%;
+    height: 1px;
+  }
+  50% {
+    width: 100%;
+    height: 1px;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    background: #333;
+  }
+}
+
+/* Keyframes */
+@-webkit-keyframes circle {
+  0% {
+    width: 1px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    height: 1px;
+    z-index: -1;
+    background: #eee;
+    border-radius: 100%;
+  }
+  100% {
+    background: #aaa;
+    height: 5000%;
+    width: 5000%;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 0;
+  }
+}
+.login-btn{
+  border-radius: 30px;
+  border-color: #ed485f;
+    cursor: pointer;
+   text-align: center;
+    border: 1px solid;
+    padding: 13px 30px;
+
+}
+
+
+/*a.nav-c.active::before{
+	position: absolute;
+    content: '';
+    border-bottom: 2px solid #615c59 !important;
+    height: 2px;
+     width: calc(100% - 20px); 
+    bottom: -15px;
+    left: opx;
+}*/
+
+</style>
+{%block script%}
+<script type="text/javascript"src="/assets/frappe/js/lib/jquery/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="/assets/go1_recruit/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/assets/js/frappe-web.min.js"></script>
+<script type="text/javascript">
+	$( document ).ready(function() {
+		var url=window.location.href;
+		var arr=url.split('/')[3];
+		$('a[href="/' + arr + '"]').addClass('active')
+	});
+	function GotoDashbaord()
+	{
+		$.ajax({
+                    type: 'POST',
+                    Accept: 'application/json',
+                    ContentType: 'application/json;charset=utf-8',
+                    url: window.location.origin + '/api/method/go1_recruit.go1_recruit.api.goto_dashboard',
+                    dataType: "json",
+                    async: false,
+                     headers: {
+                        'X-Frappe-CSRF-Token': '{{csrf_token}}'
+                    },
+                    success: function(data) {
+                    	window.location.href = data.message;
+                    }
+                });
+	}
+
+
+	var toggles = document.querySelectorAll("hamburger");
+
+for (var i = toggles.length - 1; i >= 0; i--) {
+  var toggle = toggles[i];
+  toggleHandler(toggle);
+};
+
+function toggleHandler() {
+	console.log('gdgtgdthdxf')
+  $('#hamburger').on("click", function(e) {
+    e.preventDefault();
+    if (this.classList.contains("is-active") === true) {
+      this.classList.remove("is-active");
+      $('.main-menu').removeClass('mm-opened');
+    } else {
+      this.classList.add("is-active");
+      $(".main-menu").addClass('mm-opened');
+    }
+  });
+}
+	function openNav() {
+  		document.getElementById("menu").style.width = "250px";
+	}
+	function closeNav() {
+  	document.getElementById("menu").style.width = "0";
+	}
+
+// $(document).ready(function(){
+//   $('main-menu').click(function(){
+//     $('nav-c').removeClass("active");
+//     $(this).addClass("active");
+// });
+// });
+</script>
+
+
+
+
+{%endblock%}

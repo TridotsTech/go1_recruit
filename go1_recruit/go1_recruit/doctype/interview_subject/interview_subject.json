@@ -1,0 +1,84 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "field:subject",
+ "creation": "2019-08-24 02:49:35.359949",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "subject",
+  "subject_description",
+  "topics_section",
+  "add_topic",
+  "topic_html",
+  "sub_topic"
+ ],
+ "fields": [
+  {
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Subject",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "topics_section",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Topics"
+  },
+  {
+   "fieldname": "add_topic",
+   "fieldtype": "Button",
+   "hidden": 1,
+   "label": "Add Topic"
+  },
+  {
+   "fieldname": "topic_html",
+   "fieldtype": "HTML",
+   "hidden": 1,
+   "label": "Topic HTML"
+  },
+  {
+   "fieldname": "sub_topic",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Topic ",
+   "options": "Test Topic"
+  },
+  {
+   "fieldname": "subject_description",
+   "fieldtype": "Small Text",
+   "label": "Subject Description"
+  }
+ ],
+ "links": [],
+ "modified": "2024-06-14 16:23:35.193322",
+ "modified_by": "Administrator",
+ "module": "Go1 Recruit",
+ "name": "Interview Subject",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "search_fields": "subject",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,156 @@
+{
+ "creation": "2019-08-26 21:36:38.310426",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "questionpaper_id",
+  "questionpaper_name",
+  "candidate_name",
+  "candidate_email",
+  "interviewer_email",
+  "subject_name",
+  "time_zone",
+  "start_time",
+  "end_time",
+  "duration_minutes",
+  "noof_questions",
+  "encrypted_url",
+  "zoom_url",
+  "test_attempted",
+  "monitored_test",
+  "candidate_video",
+  "record_screen",
+  "meeting_id",
+  "interviewer_url"
+ ],
+ "fields": [
+  {
+   "fieldname": "questionpaper_id",
+   "fieldtype": "Link",
+   "label": "Question Paper ID",
+   "options": "Interview Question Paper"
+  },
+  {
+   "fieldname": "candidate_name",
+   "fieldtype": "Data",
+   "label": "Candidate Name"
+  },
+  {
+   "fieldname": "candidate_email",
+   "fieldtype": "Data",
+   "label": "candidate Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "interviewer_email",
+   "fieldtype": "Data",
+   "label": "Interviewer Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "subject_name",
+   "fieldtype": "Data",
+   "label": "Interview Subject"
+  },
+  {
+   "fieldname": "time_zone",
+   "fieldtype": "Data",
+   "label": "Time Zone"
+  },
+  {
+   "fieldname": "start_time",
+   "fieldtype": "Datetime",
+   "label": "Start Time"
+  },
+  {
+   "fieldname": "end_time",
+   "fieldtype": "Datetime",
+   "label": "End Time"
+  },
+  {
+   "fetch_from": "questionpaper_id.duration_minutes",
+   "fieldname": "duration_minutes",
+   "fieldtype": "Data",
+   "label": "Duration"
+  },
+  {
+   "fieldname": "noof_questions",
+   "fieldtype": "Data",
+   "label": "No.of Questions"
+  },
+  {
+   "fieldname": "encrypted_url",
+   "fieldtype": "Data",
+   "label": "Encrypted Url"
+  },
+  {
+   "default": "0",
+   "fieldname": "test_attempted",
+   "fieldtype": "Check",
+   "label": "Test attempted"
+  },
+  {
+   "fieldname": "zoom_url",
+   "fieldtype": "Long Text",
+   "label": "Zoom Url"
+  },
+  {
+   "fetch_from": "questionpaper_id.question_paper_name",
+   "fieldname": "questionpaper_name",
+   "fieldtype": "Data",
+   "label": "Question Paper name"
+  },
+  {
+   "default": "0",
+   "fieldname": "monitored_test",
+   "fieldtype": "Check",
+   "label": "Monitored Test"
+  },
+  {
+   "fieldname": "meeting_id",
+   "fieldtype": "Data",
+   "label": "Meeting ID"
+  },
+  {
+   "fieldname": "interviewer_url",
+   "fieldtype": "Small Text",
+   "label": "Interviewer Url"
+  },
+  {
+   "default": "0",
+   "fieldname": "candidate_video",
+   "fieldtype": "Check",
+   "label": "Candidate Video"
+  },
+  {
+   "default": "0",
+   "fieldname": "record_screen",
+   "fieldtype": "Check",
+   "label": "Record Screen"
+  }
+ ],
+ "modified": "2019-12-02 10:16:20.676046",
+ "modified_by": "Administrator",
+ "module": "Go1 Recruit",
+ "name": "Question Paper Candidates",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

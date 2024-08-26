@@ -1,0 +1,180 @@
+{% extends "templates/Layout/customweb2.html" %}
+{% block page_content %}
+<link rel="stylesheet" type="text/css" href="/assets/go1_recruit/css/start_test1.css">
+<link rel="stylesheet" type="text/css" href="/assets/go1_recruit/css/RecordRtc/getHTMLMediaElement.css">
+
+<input type="hidden" id="UserInfoId" value="{{user_email}}">
+<input type="hidden" id="IsPublicResult" value="{{PublishResult}}">
+<input type="hidden" id="ExamId" value="{{ExamId}}">
+<input type="hidden" id="scholarship" value="None">
+<input type="hidden" id="allow_submit" value="">
+
+<div id="screen-recorder"></div>
+
+<div class="row">
+    <div class="headerRow">
+        <div class="timeLeft">
+            <span class="timetitle">Time Left</span>
+            <div id="CountDownTimer" data-timer="{{Duration*60}}" style="min-height: 65px;background: white;float:left;width: auto;margin-top: -15px;"></div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div id="video-recorder-html">
+        <div id="toggle-video"><span class="fa fa-angle-double-right"></span></div>
+        <div id="video-recorder"></div>
+    </div>
+    <div class="col-sm-9" id="MainContent">
+        {% if questions %}
+        <div class='featured-products-section' itemscope itemtype="http://schema.org/Product">
+            <div>
+                <div id="search-list" class="row">
+                    {% for item in questions %}
+                    {% set i=loop.index %}
+                    {% set showStyle="display:none" %}
+                    {% if i==1 %}
+                    {% set showStyle="display:block" %}
+                    {% endif %}
+                    <div class="col-sm-12 col-xs-12 product-image-wrapper QuestionItem" data-question_id="{{item.interview_question}}" data-type="{{item.question_type}}" id="QuestionItem-{{i}}" data-name="{{item.name}}" style="{{showStyle}}">
+                        <div>
+                            <div class="QuestionNo" itemprop="name">Question No : {{i}}</div>
+                            <div class="QuestionTitle" itemprop="name">{{ item.question }}</div>
+                            {% if item.question_type=="Single" %}
+                            <div class="options">
+                                {% for optionitem in Answers %}
+                                {% if optionitem.parent==item.interview_question %}
+                                <label class="optionItem">
+                                    <input type="radio" data-correct="{{optionitem.is_correct}}" data-name="{{optionitem.name}}" value="{{optionitem.name}}" style="margin-right:10px;transform: scale(1.35);margin-top: 4px;float: left;" name="rdOption-{{i}}" /><span class="optionvalue">{{optionitem.option | safe}}</span>
+                                </label>
+                                {% endif %}
+                                {% endfor %}
+                            </div>
+                            {% endif %}
+                            {% if item.question_type=="Multiple" %}
+                            <div class="options">
+                                {% for optionitem in Answers %}
+                                {% if optionitem.parent==item.interview_question %}
+                                <label class="optionItem">
+                                    <input type="checkbox" value="{{optionitem.name}}" data-name="{{optionitem.name}}" data-correct="{{optionitem.is_correct}}" style="margin-right:10px;transform: scale(1.35);margin-top: 4px;float: left;" name="rdOption-{{i}}" /><span class="optionvalue">{{optionitem.option | safe }}</span>
+                                </label>
+                                {% endif %}
+                                {% endfor %}
+                            </div>
+                            {% endif %}
+                            {% if item.question_type=="Free Text" %}
+                            <div class="options">
+                                <textarea style="width:100%;height:250px;" id="free_text-{{i}}" class="freetext"></textarea>
+                            </div>
+                            {% endif %}
+                            {% if item.question_type=="Coding Question" %}
+                            <div class="options">
+                                <div class="container">
+                                    <div class="division" style="width: 100%;">
+                                        <div data-id='code-{{i}}' class="code-editing">
+                                            <div id="code-{{i}}" class="code-editor"></div>
+                                        </div>
+                                        <input type="submit" name="execute" value="Execute" class="btn btn-execute-code" data-id="execute-{{i}}" id="execute-{{i}}">
+                                        <select id="empty" class="codelanguage">
+                                            <option value=""></option>
+                                            <option value="python2">python2</option>
+                                            <option value="java">java</option>
+                                            <option value="python3">python3</option>
+                                            <option value="c">c</option>
+                                            <option value="sql">sql</option>
+                                            <option value="php">php</option>
+                                            <option value="vbn">vbn</option>
+                                            <option value="cpp">cpp</option>
+                                            <option value="csharp">csharp</option>
+                                            <option value="c99">c99</option>
+                                            <option value="cobol">cobol</option>
+                                            <option value="icon">icon</option>
+                                            <option value="nodejs">nodejs</option>
+                                            <option value="haskell">haskell</option>
+                                            <option value="go">go</option>
+                                        </select>
+                                        <div class="execute_result" style="display: none;" data-id='savehidden-{{i}}' class="store_dat"></div>
+                                        <input type="hidden" class="hdnCodeCounter" value="0" />
+                                        <p style="margin-left: 30px;float:left;width:100%;">Result</p>
+                                        <div class="result1 codeResult" data-id='result-{{i}}' class="store_dat" id="code_result"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endif %}
+                            {% if item.question_type=="Audio" %}
+                            <div class="options">
+                                <div id="Audio_frm-{{i}}"></div>
+                            </div>
+                            {% endif %}
+                            <div class="buttons">
+                                <a class="btn btn-secondary action-btn" onclick="ReviewLater({{i}})" style="">Review Later</a>
+                                <a class="btn btn-secondary action-btn" onclick="CancelSelection({{i}})" style="">Cancel Selection</a>
+                                <a class="btn btn-primary action-btn nextBtn" id="save" style="float: right;" onclick="goNext({{i+1}})">Next</a>
+                                <a class="btn btn-primary action-btn prev-btn {%if i==1%}disable-btn{%endif%}" id="save" style="float: right;" onclick="goPrev({{i-1}})">Prev</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+    <div class="col-sm-3" id="rightContent">
+        <div class="QuestionsOverView">
+            <span class="timetitle" style="font-size: 17px;padding-left: 0;margin-bottom: 10px;">Questions Overview</span>
+            <div class="tblQuestions">
+                {% for item in questions %}
+                {% set firstQuestion="" %}
+                {% if loop.index==1 %}
+                {% set firstQuestion="selectedClass" %}
+                {% endif %}
+                <a style="cursor:pointer;" class="rightQuestion col-md-3 col-sm-6 col-xs-3" data-toggle="tooltip" title="{{item.name}}" onclick="selectQuestion({{loop.index}})"><span id="questionNo-{{loop.index}}" class="questionNo {{firstQuestion}} {%if loop.index==1%}active-qsn-btn {%else%}disable-qsn-btn{%endif%}">{{loop.index}}</span></a>
+                {% endfor %}
+            </div>
+            <div id="legendDiv" style="float:left;width:100%;">
+                <div class="legend-item">
+                    <div class="attened legenditem"></div>Attempted
+                </div>
+                <div class="legend-item">
+                    <div class="notattened legenditem"></div>Not Attempted
+                </div>
+                <div class="legend-item">
+                    <div class="review legenditem"></div>Review Later
+                </div>
+                <div class="legend-item">
+                    <div class="notviewed legenditem"></div>Not viewed yet
+                </div>
+                <div class="legend-item" style="width: 100%;">
+                    <div class="review legenditem" style="text-align: center;">
+                        <i class="fa fa-check" style="color: #fff;"></i>
+                    </div>Attempted and Marked for review
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-primary btn-finish" onclick="finish()">Finish</button>
+    </div>
+    <div class="col-sm-3" id="rightContent1" style="display: none;"></div>
+</div>
+<div class="Loading">Loading...</div>
+{% endblock %}
+{% block style %}
+{% endblock %}
+{% block script %}
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-1.0.0.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+{{ include_script('frappe-web.bundle.js') }}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.9/ace.js"></script>
+<script src="/assets/go1_recruit/js/RecordRtc/RecordRTC.js"></script>
+<script src="/assets/go1_recruit/js/RecordRtc/RTCMultiConnection.min.js"></script>
+<script src="/assets/go1_recruit/js/RecordRtc/audio-recorder.js"></script>
+<script src="/assets/go1_recruit/js/RecordRtc/video-recorder.js"></script>
+<script src="/assets/go1_recruit/js/RecordRtc/video-conference.js"></script>
+<script src="/assets/go1_recruit/js/RecordRtc/screen-recorder.js"></script>
+<script src="/assets/go1_recruit/js/RecordRtc/getHTMLMediaElement.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/assets/go1_recruit/js/start_test1.js"></script>
+{% endblock %}

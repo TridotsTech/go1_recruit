@@ -1,0 +1,72 @@
+{
+ "autoname": "naming_series:",
+ "creation": "2020-05-13 19:34:20.035023",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "subject",
+  "starting_time",
+  "ending_time",
+  "password",
+  "naming_series"
+ ],
+ "fields": [
+  {
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name / Subject",
+   "reqd": 1
+  },
+  {
+   "fieldname": "starting_time",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Starting Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "password",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Room password"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "VCR-"
+  },
+  {
+   "fieldname": "ending_time",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Ending Time",
+   "reqd": 1
+  }
+ ],
+ "modified": "2020-05-14 11:05:44.817576",
+ "modified_by": "Administrator",
+ "module": "Go1 Recruit",
+ "name": "Video Conference Room",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

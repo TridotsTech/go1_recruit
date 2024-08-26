@@ -1,0 +1,56 @@
+{% extends "templates/Layout/customweb2.html" %}
+{% block page_content %}
+<link rel="stylesheet" type="text/css" href="/assets/go1_recruit/css/RecordRtc/getHTMLMediaElement.css">
+<!-- <link rel="stylesheet" type="text/css" href="/assets/go1_recruit/css/go1_recruit.css"> -->
+<div style="height: 80px;"></div>
+
+<div id="info-section">
+    <h2 class="text-center">{{exam_info.questionpaper_name}}</h2>
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12" style="min-height: 150px;">
+            <div><b>Candidate Name:</b> {{exam_info.candidate_name}}</div>
+            <div><b>Candidate Email:</b> {{exam_info.candidate_email}}</div>        
+            <div><b>Test Duration:</b> {{exam_info.duration_minutes}} Mins</div>
+            <div><b>No. of Questions:</b> {{exam_info.noof_questions}}</div>
+            <div id="not-available"><span class="fa fa-times" style="color: #ce1717;"></span> Candidate is not available</div>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="text-center">
+                <button type="button" class="btn btn-warning plan-btn plans-btn" id="join-room">Join Room</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="videos-section">
+    <div class="row">        
+        <div class="col-md-12 col-sm-12 col-xs-12 mg-20">
+            <div id="remote-videos-container" class="videos-container">
+                <div class="loader">Please wait until your connection is established.</div>
+                <div class="test-completed" style="text-align: center;">
+                    {{exam_info.candidate_name}} has completed the test.
+                    <button type="button" class="btn btn-warning plan-btn plans-btn" onclick="evaluateTest()">Evaluate Test</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12" id="user-video">
+            <div id="videos-container" class="videos-container"></div>
+        </div>
+    </div>
+</div>
+
+{% include "templates/pages/systemrequirements.html" %}
+{% endblock %}
+
+{% block script %}
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-1.0.0.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+{{ include_script('frappe-web.bundle.js') }}
+<script src="/assets/go1_recruit/js/RecordRtc/RecordRTC.js"></script>
+<script src="/assets/go1_recruit/js/RecordRtc/RTCMultiConnection.min.js"></script>
+<script src="/assets/go1_recruit/js/RecordRtc/video-conference.js"></script>
+<script src="/assets/go1_recruit/js/RecordRtc/getHTMLMediaElement.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<!-- <script src="/assets/go1_recruit/js/go1_recruit.js"></script> -->
+{% endblock %}

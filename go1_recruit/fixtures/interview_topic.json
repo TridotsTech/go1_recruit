@@ -1,0 +1,326 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Interview Topic",
+  "modified": "2024-08-25 22:15:58.414724",
+  "name": "Array - C",
+  "subject": "C",
+  "topic": "Array",
+  "topic_description": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Topic",
+  "modified": "2024-08-25 22:15:58.450775",
+  "name": "Pointer - C",
+  "subject": "C",
+  "topic": "Pointer",
+  "topic_description": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Topic",
+  "modified": "2024-08-25 22:15:58.475027",
+  "name": "String - C",
+  "subject": "C",
+  "topic": "String",
+  "topic_description": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Topic",
+  "modified": "2024-08-25 22:15:58.492804",
+  "name": "Recursion - C",
+  "subject": "C",
+  "topic": "Recursion",
+  "topic_description": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Topic",
+  "modified": "2024-08-25 22:15:58.514684",
+  "name": "Searching - C",
+  "subject": "C",
+  "topic": "Searching",
+  "topic_description": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Topic",
+  "modified": "2024-08-25 22:15:58.540459",
+  "name": "Sorting - C",
+  "subject": "C",
+  "topic": "Sorting",
+  "topic_description": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Topic",
+  "modified": "2024-08-25 22:15:58.559570",
+  "name": "Data Structure - C",
+  "subject": "C",
+  "topic": "Data Structure",
+  "topic_description": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Topic",
+  "modified": "2024-08-25 22:15:58.577139",
+  "name": "File Handling - C",
+  "subject": "C",
+  "topic": "File Handling",
+  "topic_description": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Topic",
+  "modified": "2024-08-25 22:15:58.745033",
+  "name": "Multithreading - Java",
+  "subject": "Java",
+  "topic": "Multithreading",
+  "topic_description": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Topic",
+  "modified": "2024-08-25 22:15:58.760381",
+  "name": "Swing - Java",
+  "subject": "Java",
+  "topic": "Swing",
+  "topic_description": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Topic",
+  "modified": "2024-08-25 22:15:58.776266",
+  "name": "Oops Concepts - Java",
+  "subject": "Java",
+  "topic": "Oops Concepts",
+  "topic_description": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Topic",
+  "modified": "2024-08-25 22:15:58.792208",
+  "name": "Encapsulation - Java",
+  "subject": "Java",
+  "topic": "Encapsulation",
+  "topic_description": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Topic",
+  "modified": "2024-08-25 22:15:58.809555",
+  "name": "Polymorphism - Java",
+  "subject": "Java",
+  "topic": "Polymorphism",
+  "topic_description": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Topic",
+  "modified": "2024-08-25 22:15:58.827052",
+  "name": "Overloading - Java",
+  "subject": "Java",
+  "topic": "Overloading",
+  "topic_description": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Topic",
+  "modified": "2024-08-25 22:15:58.854553",
+  "name": "Overriding - Java",
+  "subject": "Java",
+  "topic": "Overriding",
+  "topic_description": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Topic",
+  "modified": "2024-08-25 22:15:58.894344",
+  "name": "Classes - Python",
+  "subject": "Python",
+  "topic": "Classes",
+  "topic_description": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Topic",
+  "modified": "2024-08-25 22:15:58.920701",
+  "name": "Objects - Python",
+  "subject": "Python",
+  "topic": "Objects",
+  "topic_description": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Topic",
+  "modified": "2024-08-25 22:15:58.952599",
+  "name": "Loops - Python",
+  "subject": "Python",
+  "topic": "Loops",
+  "topic_description": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Topic",
+  "modified": "2024-08-25 22:15:58.981994",
+  "name": "Exceptions - Python",
+  "subject": "Python",
+  "topic": "Exceptions",
+  "topic_description": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Topic",
+  "modified": "2024-08-25 22:15:59.012171",
+  "name": "CGI Programming - Python",
+  "subject": "Python",
+  "topic": "CGI Programming",
+  "topic_description": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Topic",
+  "modified": "2024-08-25 22:15:59.037221",
+  "name": "Regular Expressions - Python",
+  "subject": "Python",
+  "topic": "Regular Expressions",
+  "topic_description": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Topic",
+  "modified": "2024-08-25 22:15:59.054035",
+  "name": "Socket Programming - Python",
+  "subject": "Python",
+  "topic": "Socket Programming",
+  "topic_description": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Topic",
+  "modified": "2024-08-25 22:15:59.311389",
+  "name": "My SQL - SQL",
+  "subject": "SQL",
+  "topic": "My SQL",
+  "topic_description": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Topic",
+  "modified": "2024-08-25 22:15:59.328316",
+  "name": "QA Process - Software Quality Assurance",
+  "subject": "Software Quality Assurance",
+  "topic": "QA Process",
+  "topic_description": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Topic",
+  "modified": "2024-08-25 22:15:59.349817",
+  "name": "QA Terminologies - Software Quality Assurance",
+  "subject": "Software Quality Assurance",
+  "topic": "QA Terminologies",
+  "topic_description": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Topic",
+  "modified": "2024-08-25 22:15:59.375507",
+  "name": "Test Case Authoring - Software Quality Assurance",
+  "subject": "Software Quality Assurance",
+  "topic": "Test Case Authoring",
+  "topic_description": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Topic",
+  "modified": "2024-08-25 22:15:59.469809",
+  "name": "Selenium - Software Quality Assurance",
+  "subject": "Software Quality Assurance",
+  "topic": "Selenium",
+  "topic_description": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Topic",
+  "modified": "2024-08-25 22:15:59.490546",
+  "name": "RestAssured - Software Quality Assurance",
+  "subject": "Software Quality Assurance",
+  "topic": "RestAssured",
+  "topic_description": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Topic",
+  "modified": "2024-08-25 22:15:59.508436",
+  "name": "TestNG - Software Quality Assurance",
+  "subject": "Software Quality Assurance",
+  "topic": "TestNG",
+  "topic_description": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Topic",
+  "modified": "2024-08-25 22:15:59.585657",
+  "name": "Xapth, selenium RC, Selenium ID, Webdriver, - Automation testing",
+  "subject": "Automation testing",
+  "topic": "Xapth, selenium RC, Selenium ID, Webdriver,",
+  "topic_description": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Topic",
+  "modified": "2024-08-25 22:27:14.444435",
+  "name": "MYSQL - Software Quality Assurance",
+  "subject": "Software Quality Assurance",
+  "topic": "MYSQL",
+  "topic_description": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Topic",
+  "modified": "2024-08-25 22:27:14.470688",
+  "name": "Mongo DB - Software Quality Assurance",
+  "subject": "Software Quality Assurance",
+  "topic": "Mongo DB",
+  "topic_description": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Topic",
+  "modified": "2024-08-25 22:27:14.559551",
+  "name": "Cucumber - Software Quality Assurance",
+  "subject": "Software Quality Assurance",
+  "topic": "Cucumber",
+  "topic_description": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Topic",
+  "modified": "2024-08-25 22:27:14.585281",
+  "name": "JUnit - Software Quality Assurance",
+  "subject": "Software Quality Assurance",
+  "topic": "JUnit",
+  "topic_description": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Topic",
+  "modified": "2024-08-25 22:27:14.610260",
+  "name": "Jenkins - Software Quality Assurance",
+  "subject": "Software Quality Assurance",
+  "topic": "Jenkins",
+  "topic_description": null
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Topic",
+  "modified": "2024-08-25 22:15:59.080369",
+  "name": "Tuples - Python",
+  "subject": "Python",
+  "topic": "Tuples",
+  "topic_description": null
+ }
+]

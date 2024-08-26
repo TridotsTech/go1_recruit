@@ -1,0 +1,87 @@
+{% extends "templates/Layout/simplelayout.html" %}
+{% block page_content %}
+<div class="container" id="getRoom">
+    <h2 class="text-center">Enter Room Id</h2>
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <!-- <div style="text-align: center"><input type="text" id="roomId" name="roomId" placeholder="Please enter your room id..."><br><br></div> -->
+            <div><b>Subject:</b> {{subject}}</div>
+            <div><b>Starting Time:</b> {{starting_time}}</div>        
+            <div><b>Ending Time:</b> {{ending_time}}</div>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="text-center">
+                <button type="button" class="btn btn-warning plan-btn plans-btn" onclick="start_room()">Join Room</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="meet">
+    
+</div>
+<style type="text/css">
+    #meet{
+        margin-top: 60px;
+    }
+    .hero-and-content {
+    background-color: #f5f7fa;
+    }
+    .header {
+        background: url(/assets/go1_recruit/images/header.jpg) center center no-repeat;
+        background-size: cover;
+    }
+    #getRoom{
+        margin-top: 140px;
+        width: 400px;
+        padding: 20px;
+        border: 1px solid #aaa;
+        border-radius: 10px;
+        background: white;
+    }
+    input#roomId{
+        width: 80%;
+        margin: 20px 0px 40px;
+    }
+</style>
+{% endblock %}
+{% block script %}
+<script src='https://meet.jit.si/external_api.js'></script>
+<script type="text/javascript">
+var domain = 'meet.jit.si';
+var width = $(window).width();
+var api = undefined
+var options = undefined
+$(document).ready(function() {
+// const options = {
+//     roomName: 'JitsiMeetAPIInterviewPortal',
+//     width: width,
+//     height: 600,
+//     parentNode: document.querySelector('#meet')
+// };
+// const api = new JitsiMeetExternalAPI(domain, options);
+});
+function start_room(){
+    // let room_id = $("#roomId").val()
+    // if( room_id != undefined && room_id != '' && room_id != "None"){
+        $("#getRoom").hide()
+        options = {
+            roomName: "{{room_id}}",
+            width: width,
+            height: 600,
+            parentNode: document.querySelector('#meet'),
+                userInfo: {
+                email: '{{email}}',
+                displayName: '{{email}}'
+            }
+        };
+        api = new JitsiMeetExternalAPI(domain, options);
+        // api.executeCommand('password', '{{password}}');
+    // }else{
+    //     alert("Please enter room Id!")
+    // }
+}
+$( window ).unload(function() {
+  api.dispose();
+});
+</script>
+{% endblock %}

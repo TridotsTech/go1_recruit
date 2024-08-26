@@ -1,0 +1,30 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Question Level",
+  "modified": "2024-08-25 22:14:58.291443",
+  "name": "Intermediate",
+  "question_level": "Intermediate"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Question Level",
+  "modified": "2024-08-25 22:14:58.370319",
+  "name": "Advanced",
+  "question_level": "Advanced"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Question Level",
+  "modified": "2024-08-25 22:14:58.336181",
+  "name": "Hard",
+  "question_level": "Hard"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Question Level",
+  "modified": "2024-08-25 22:14:58.353161",
+  "name": "Beginner",
+  "question_level": "Beginner"
+ }
+]

@@ -1,0 +1,742 @@
+{% extends "templates/Layout/customweb2.html" %} 
+{% block title %}
+{% if meta_title %}{{meta_title}}{% else %}{{title}}{% endif %}
+{% endblock %}
+{% block meta_block %}
+{% if google_code %}
+<meta name="google-site-verification" content="{{google_code}}" />
+{% endif %}
+{% endblock %}
+{% block content %} 
+
+<!-- New started -->
+
+{% if slider_banners %}
+<section class="section-padding" id="hamburger-menu">
+    <div class="pd-15">
+        <div class="row">
+            {% for item in slider_banners %}
+            <div class="">
+                <a {% if item.redirect_url %}href="{{item.redirect_url}}"{% endif %}>
+                    <img src="{{item.banner_image}}" class="img-responsive" style="margin-bottom: 5px;">
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+
+
+<!-- <div id="hamburger-menu" onclick=""> <img src="/assets/go1_recruit/images/download1.png" alt="logo" class="lazyload"></div> -->
+<section id="how_it_works">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">How It Works</h2>
+                <!-- <hr class="primary"> -->
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box"> <i class="fa fa-4x fa-user wow bounceIn text-primary-clr servicebox-padd" style="visibility: visible; animation-name: bounceIn;"></i>
+                    <h3 class = "servicebox-padd">Test Creation</h3>
+                    <p class="text-muted servicebox-padd">Recruiter creates an online test and invite candidates</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box"> <i class="fa fa-4x fa-users wow bounceIn text-primary-clr servicebox-padd" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: bounceIn;"></i>
+                    <h3 class="servicebox-padd">Test Conduction</h3>
+                    <p class="text-muted servicebox-padd">Candidates take the test in a proctored online environment.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box"> <i class="fa fa-4x fa-newspaper-o wow bounceIn text-primary-clr servicebox-padd" data-wow-delay=".6s" style="visibility: visible; animation-delay: 0.6s; animation-name: bounceIn;"></i>
+                    <h3 class="servicebox-padd">Reports</h3>
+                    <p class="text-muted servicebox-padd">Recruiter gets a detailed report of evaluated results.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box"> <i class="fa fa-4x fa-filter wow bounceIn text-primary-clr servicebox-padd" data-wow-delay=".9s" style="visibility: visible; animation-delay: 0.9s; animation-name: bounceIn;"></i>
+                    <h3 class="servicebox-padd">Done!</h3>
+                    <p class="text-muted servicebox-padd">Yup. That's all. Recruiter has the list of relevant candidates. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class=" bg-primary-clr" id="usecases">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading code-grd">Many Ways To Use CodeGround</h2>
+                <hr class="primary">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row code-grd1">
+            <div class="col-lg-3 col-md-6 text-center ">
+                <div class="service-box"> <i class="fa fa-4x fa-bank wow bounceIn" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: bounceIn;"></i>
+                    <h3>Campus Recruitment</h3>
+                    <p>Conduct campus placement drives with few clicks.</p>
+                    <h3> <a class="btn btn-inform" href="/#" target="_blank"><span class="text-primary-clr"><i class="fa fa-pencil-square-o"></i> Sample Test</span> </a></h3>
+                    <!-- <div style="margin:10px 0;"><a href="campus-hiring.html" class="link-learn" target="_blank">Learn More</a></div> -->
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box"> <i class="fa fa-4x fa-bullhorn wow bounceIn" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: bounceIn;"></i>
+                    <h3>Walk-ins</h3>
+                    <p>Conduct online walk-ins by hosting public test.</p>
+                    <h3><a class="btn btn-inform" href="/#" target="_blank"><span class="text-primary-clr"><i class="fa fa-pencil-square-o"></i> Sample Test</span><br>
+                    </a> </h3>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box"> <i class="fa fa-4x fa-thumbs-up wow bounceIn" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: bounceIn;"></i>
+                    <h3>Brand Promotion</h3>
+                    <p>Conduct online contest, distribute prizes. Let people know your brand.</p>
+                    <h3><a class="btn btn-inform" href="/#" target="_blank"><span class="text-primary-clr"><i class="fa fa-pencil-square-o"></i> Sample Test</span><br>
+                    </a> </h3>
+                    <!-- <div style="margin:10px 0;"><a href="branding.html" class="link-learn" target="_blank">Learn More</a></div> -->
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box"> <i class="fa fa-4x fa-smile-o wow bounceIn" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: bounceIn;"></i>
+                    <h3>Day-to-day Hiring</h3>
+                    <p>Quick and easy evaluation of candidates pouring in from different sources.</p>
+                    <h3><a class="btn btn-inform" href="/#" target="_blank"><span class="text-primary-clr"><i class="fa fa-pencil-square-o"></i> Sample Test</span><br>
+                    </a> </h3>
+                    <!-- <div style="margin:10px 0;"><a href="online-job-interview.html" class="link-learn" target="_blank">Learn More</a></div> -->
+                </div>
+            </div>
+        </div>
+        <div class="row cg-margin-top">
+            <div class="col-md-12 text-center"> <a class="btn btn-information" href="/#" target="_blank">More ways to use CodeGround</a> </div>
+        </div>
+    </div>
+</section>
+
+
+{% if Items %}
+<section style="margin-bottom: 25px;">
+    <div class="container">
+      <!-- <div class="row">
+                <h1 style="text-align:center !important; padding: 10px 0;" class="header-1 variation_wrap aos-init aos-animate" data-aos="fade-up">Plans</h1>
+                <small class="heading heading-solid center-block"></small>
+                {% if Items[0].plans %}
+        <div class="plans" style="float: right;">
+                {% for item1 in Items[0].plans %}
+                 {% set i=loop.index %}
+                <button value="{{item1.plan}}" class="{{item1.plan}}">{{item1.plan}}</button>
+                {% endfor %}
+        </div>
+        {% endif %}
+    </div> -->
+
+
+    <div class="row">
+        {% for item in Items %}
+        {% set i=loop.index %}
+        <div class="col-md-4 col-sm-6">
+            <div class="subcontainer pricing span3" data-item="{{item.name}}" data-item-name="{{item.item}}" data-price="{{item.price}}">
+                <div class="pricing-header">
+                    {{item.item}}
+                </div>
+                {%if item.price_and_plan %}
+                <div class="pricing-subheader">
+                    {% for item1 in item.price_and_plan %}
+                    {% if item1.plan =="month" %}
+                    <div class="planPrice" data-plan="{{item1.plan}}" data-price="{{item1.price}}">
+                        <sup>$</sup>{{"%0.2f" % item1.price | float}}<span>/ {{item1.plan}}.</span>
+                        <input type="hidden" id="hdnProductRate" value="{{item.price}}">
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+
+                </div>
+                {% endif%}
+                <!-- {%if item.price_and_plan %}
+                <div class="pricing-subheader1">
+                    {% for item2 in item.price_and_plan %}
+                    {% if item2.plan =="year" %}
+                    <div class="planPrice" data-plan="{{item2.plan}}" data-price="{{item2.price}}">
+                        <sup>$</sup>{{"%0.2f" % item2.price | float}}<span>/ {{item2.plan}}.</span>
+                        <input type="hidden" id="hdnProductRate" value="{{item.price}}">
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+
+                </div>
+                {% endif%} -->
+              <!--   {%if item.price_and_plan %}
+                <div class="pricing-subheader2">
+                    {% for item3 in item.price_and_plan %}
+                    {% if item3.plan =="6month" %}
+                    <div class="planPrice" data-plan="{{item3.plan}}" data-price="{{item3.price}}">
+                        <sup>$</sup>{{"%0.2f" % item3.price | float}}<span>/ {{item3.plan}}.</span>
+                        <input type="hidden" id="hdnProductRate" value="{{item.price}}">
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+
+                </div>
+                {% endif%} -->
+                {% if item %}
+                <div class="pricing-list">
+                    <ul>
+                        <li class="price-feature"><i class="icon icon-group"></i>{{item.noof_interviews}} Interviews</li>
+                        <li class="price-feature"><i class="icon icon-group"></i>{{item.noof_candidates}} Members</li>
+                        {% for feature in item.features%}
+                        <li class="price-feature" style="{% if feature.flag==1 %}color:black;{% else %}color:#aaa;{% endif %}"><i class="icon icon-group"></i>{{feature.feature_name}}{% if feature.flag==1 %}<i class="fa fa-check-square" aria-hidden="true" style="float: right;color: green;margin: 4px;"></i>{% else %}<i class="fa fa-times-circle" aria-hidden="true" style="float: right;color: red;margin: 4px;"></i>
+                        {% endif %}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+                <div class="pricing-footer">
+                    <a class="button green" onclick="selectplan(this)">Select</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+</section>
+{% endif %}
+
+
+<section id="test_categories">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Test Types</h2>
+                <hr class="primary">
+            </div>
+        </div>
+    </div>
+    <div class= "container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class=" col-md-4 text-center ">
+                    <div class="service-box">
+                        <div class="wow bounceIn" data-wow-delay=".9s" style="visibility: visible; animation-delay: 0.9s; animation-name: bounceIn;">
+                           <img src="/assets/go1_recruit/images/download2.svg" width="110" class = "test-type" alt="Programming test"> </div>
+                           <h3>Programing Test</h3>
+                           <p> 
+                            Conduct online programming challenges on Java, C, C++, Ruby, JavaScript, Python and PHP. Conduct hackathons to evaluate hands-on technical skills and test Data Structures & Algorithms.
+                        </p>
+                        <h3>
+                            <a class="btn btn-inform" href="/#" target="_blank"><span class="text-primary"><i class="fa fa-pencil-square-o"></i> Sample Test</span>
+                            </a>
+                        </h3>
+                       <!--  <a href="online-aptitude-test.html" class="link-hover " target="_blank">Learn More</a>  -->
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="bg-primary-clr" id="test_categories" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading code-grd">Features</h2>
+                <hr class="primary">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="col-md-12">
+           <div class="col-lg-3 col-md-3 text-center">
+            <div class="service-box"> <i style="color: white; visibility: visible; animation-delay: 0.1s; animation-name: bounceIn;" class="fa fa-4x fa-code wow bounceIn" data-wow-delay=".1s"></i>
+                <h3 class="code-grd code-pad">Online Coding Test</h3>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+</section>
+<!-- New ended -->
+<main>
+    <section class="hero_single">
+        <div class="wrapper">
+            <div class="container">
+                {% if theme_settings.banner_title %}<h3>{theme_settings.banner_title}}</h3>{% endif %}
+                {% if theme_settings.banner_subtitle %}<p>{{theme_settings.banner_subtitle}}</p>{% endif %}
+            </div>
+            <a href="#first_section" class="btn_explore hidden_tablet"><i class="ti-arrow-down"></i></a>
+        </div>
+    </section>
+    <!-- /hero_single -->
+    <div class="features clearfix">
+        <div class="container">
+            <ul>
+                <li><i class="pe-7s-chat"></i>
+                    <h4>Live Chat</h4>
+                </li>
+                <li><i class="pe-7s-call"></i>
+                    <h4>{% if theme_settings.footer_phone %}{{theme_settings.footer_phone}}{% endif %} </h4>
+                </li>
+                <li><i class="pe-7s-mail-open"></i>
+                    <h4>{% if theme_settings.footer_email %}{{theme_settings.footer_email}}{% endif %}</h4>
+                </li>
+            </ul>
+        </div>
+    </div>
+    {% if courses %}
+    <div class="container margin_30_95">
+        <div class="main_title_2">
+            <span><em></em></span>
+            <h2>30+ Courses to Boost Your Career</h2>
+            <p>Discover the Best Course that Suits You!</p>
+        </div>
+        <div class="row" id="courses-list">
+            {% for item in courses %}
+            <div class="col-lg-3 col-md-6 wow" data-wow-offset="150">
+                <a href="/{{item.route}}" class="grid_item">
+                    <figure class="block-reveal" {% if item.background_color %}style="background-color:{{item.background_color}}"{% endif %}>
+                        <!-- <div class="block-horizzontal"></div>       -->                          
+                        <div class="">
+                                    <!-- <h3>CSWIP</h3>
+                                        <small><i class="ti-layers"></i>3.1 welding inspector</small> -->
+                                        <h3>{{item.course_title}}</h3>
+                                        {% if item.sub_title %}<h6>{{item.sub_title}}</h6>{% endif %}
+                                    </div>
+                                </figure>
+                            </a>
+                        </div>
+                        {% endfor %}
+                        <!-- /grid_item -->                    
+                    </div>
+                    <!-- /row -->
+                </div>
+                {% endif %}
+                <!-- /features -->
+                <!-- /container -->
+                {% if events %}
+                <div class="container-fluid margin_120_0" id="first_section">
+                    <div class="main_title_2">
+                        <span><em></em></span>
+                        <h2>Upcoming Events</h2>
+                        <p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
+                    </div>
+                    <div id="reccomended" class="owl-carousel owl-theme">
+                        {% for item in events %}
+                        <div class="item">
+                            <div class="box_grid">
+                                <figure>
+
+                                    <a href="/{{item.route}}">
+                                        <div class="preview"><span>Event Details</span></div><img src="{% if item.image %}{{item.image}}{% else %}/assets/events/img/500-33.jpg{% endif %}" class="img-fluid" alt="">
+                                    </a>
+                                    <div class="price">{{item.start_date}}</div>
+                                </figure>
+                                <div class="wrapper">
+                                <!-- <small>CSWIP</small>
+                                <h3>Summer School 2015</h3>
+                                <p>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris itae erat conuat</p> -->
+                                <h3>{{item.event_name}}</h3>
+                                {% if item.short_description %}{{item.short_description}}{% endif %}
+                            </div>
+                            <ul>
+                                <li><i class="icon_clock_alt"></i> {{item.start_time}}</li>
+                                <li><i class=" icon-location"></i> {{item.event_location}}</li>
+                                <li><a href="/{{item.route}}">View Details</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    <!-- /item -->
+                   <!--  <div class="item" style="display: none;">
+                        <div class="box_grid">
+                            <figure>
+                               
+                                <a href="/eventslist"><img src="/assets/events/img/events.jpg" class="img-fluid" alt=""></a>
+                                <div class="price">30 Sep</div>
+                                <div class="preview"><span>Event Details</span></div>
+                            </figure>
+                            <div class="wrapper">
+                                <small>CSWIP</small>
+                                <h3>Summer School 2015</h3>
+                                <p>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris itae erat conuat</p>
+                            </div>
+                            <ul>
+                                <li><i class="icon_clock_alt"></i> 8:00 am</li>
+                                <li><i class=" icon-location"></i> Chicago, US</li>
+                                <li><a href="/eventslist">View Details</a></li>
+                            </ul>
+                        </div>
+                    </div> -->
+                    <!-- /item -->
+                    <!-- <div class="item" style="display: none;">
+                        <div class="box_grid">
+                            <figure>
+                               
+                                <a href="/eventslist"><img src="/assets/events/img/events.jpg" class="img-fluid" alt=""></a>
+                                <div class="price">30 Sep</div>
+                                <div class="preview"><span>Event Details</span></div>
+                            </figure>
+                            <div class="wrapper">
+                                <small>CSWIP</small>
+                                <h3>Summer School 2015</h3>
+                                <p>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris itae erat conuat</p>
+                            </div>
+                            <ul>
+                                <li><i class="icon_clock_alt"></i> 8:00 am</li>
+                                <li><i class=" icon-location"></i> Chicago, US</li>
+                                <li><a href="/eventslist">View Details</a></li>
+                            </ul>
+                        </div>
+                    </div> -->
+                    <!-- /item -->
+                    <!-- <div class="item" style="display: none;">
+                        <div class="box_grid">
+                            <figure>
+                               
+                                <a href="/eventslist"><img src="/assets/events/img/events.jpg" class="img-fluid" alt=""></a>
+                                <div class="price">30 Sep</div>
+                                <div class="preview"><span>Event Details</span></div>
+                            </figure>
+                            <div class="wrapper">
+                                <small>CSWIP</small>
+                                <h3>Summer School 2015</h3>
+                                <p>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris itae erat conuat</p>
+                            </div>
+                            <ul>
+                                <li><i class="icon_clock_alt"></i> 8:00 am</li>
+                                <li><i class=" icon-location"></i> Chicago, US</li>
+                                <li><a href="/eventslist">View Details</a></li>
+                            </ul>
+                        </div>
+                    </div> -->
+                    <!-- /item -->
+                    <!-- <div class="item" style="display: none;">
+                        <div class="box_grid">
+                            <figure>
+                               
+                                <a href="/eventslist"><img src="/assets/events/img/events.jpg" class="img-fluid" alt=""></a>
+                                <div class="price">30 Sep</div>
+                                <div class="preview"><span>Event Details</span></div>
+                            </figure>
+                            <div class="wrapper">
+                                <small>CSWIP</small>
+                                <h3>Summer School 2015</h3>
+                                <p>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris itae erat conuat</p>
+                            </div>
+                            <ul>
+                                <li><i class="icon_clock_alt"></i> 8:00 am</li>
+                                <li><i class=" icon-location"></i> Chicago, US</li>
+                                <li><a href="/eventslist">View Details</a></li>
+                            </ul>
+                        </div>
+                    </div> -->
+                    <!-- /item -->
+                    <!-- <div class="item" style="display: none;">
+                        <div class="box_grid">
+                            <figure>
+                               
+                                <a href="/eventslist"><img src="/assets/events/img/events.jpg" class="img-fluid" alt=""></a>
+                                <div class="price">30 Sep</div>
+                                <div class="preview"><span>Event Details</span></div>
+                            </figure>
+                            <div class="wrapper">
+                                <small>CSWIP</small>
+                                <h3>Summer School 2015</h3>
+                                <p>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris itae erat conuat</p>
+                            </div>
+                            <ul>
+                                <li><i class="icon_clock_alt"></i> 8:00 am</li>
+                                <li><i class=" icon-location"></i> Chicago, US</li>
+                                <li><a href="/eventslist">View Details</a></li>
+                            </ul>
+                        </div>
+                    </div> -->
+                    <!-- /item -->
+                </div>
+                <!-- /carousel -->
+                <div class="container">
+                    <p class="btn_home_align"><a href="/events" class="btn_1 rounded">View all Events</a></p>
+                </div>
+                <!-- /container -->
+                <!--       <hr> -->
+            </div>
+            {% endif %}
+            {% if blogs %}
+            <div class="bg_color_1">
+                <div class="container margin_120_95">
+                    <div class="main_title_2">
+                        <span><em></em></span>
+                        <h2>Blogs</h2>
+                        <p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
+                    </div>
+                    <div class="row">
+                        {% for item in blogs %}
+                        <div class="col-lg-6">
+                            <a class="box_news" href="/{{item.route}}">
+                                <figure><img src="{% if item.avatar %}{{item.avatar}}{% else %}/assets/events/img/150-150.jpg{% endif %}" alt="">
+                                    <!-- <figcaption></figcaption> -->
+                                </figure>
+                                <ul>
+                                    <li>{{item.user}}</li>
+                                    <li>{{item.published_date}}</li>
+                                </ul>
+                                <!-- <h4>Pri oportere scribentur eu</h4>
+                                    <p>Cu eum alia elit, usu in eius appareat, deleniti sapientem honestatis eos ex. In ius esse ullum vidisse....</p> -->
+                                    <h4>{{item.blog_name}}</h4>
+                                    {% if item.short_description %}
+                                    {% if item.short_description | length>150 %}
+                                    {{item.short_description[:150]}}...
+                                    {% else %}
+                                    {{item.short_description}}
+                                    {% endif %}
+                                    {% endif %}
+                                </a>
+                            </div>
+                            {% endfor %}
+                            <!-- /box_news -->
+                            <div class="col-lg-6" style="display: none;">
+                                <a class="box_news" href="#0">
+                                    <figure><img src="/assets/events/img/blog.jpg" alt="">
+                                        <figcaption><strong>28</strong>Dec</figcaption>
+                                    </figure>
+                                    <ul>
+                                        <li>Jhon Doe</li>
+                                        <li>20.11.2017</li>
+                                    </ul>
+                                    <h4>Duo eius postea suscipit ad</h4>
+                                    <p>Cu eum alia elit, usu in eius appareat, deleniti sapientem honestatis eos ex. In ius esse ullum vidisse....</p>
+                                </a>
+                            </div>
+                            <!-- /box_news -->
+                            <div class="col-lg-6" style="display: none;">
+                                <a class="box_news" href="#0">
+                                    <figure><img src="/assets/events/img/blog.jpg" alt="">
+                                        <figcaption><strong>28</strong>Dec</figcaption>
+                                    </figure>
+                                    <ul>
+                                        <li>Luca Robinson</li>
+                                        <li>20.11.2017</li>
+                                    </ul>
+                                    <h4>Elitr mandamus cu has</h4>
+                                    <p>Cu eum alia elit, usu in eius appareat, deleniti sapientem honestatis eos ex. In ius esse ullum vidisse....</p>
+                                </a>
+                            </div>
+                            <!-- /box_news -->
+                            <div class="col-lg-6" style="display: none;">
+                                <a class="box_news" href="#0">
+                                    <figure><img src="/assets/events/img/blog.jpg" alt="">
+                                        <figcaption><strong>28</strong>Dec</figcaption>
+                                    </figure>
+                                    <ul>
+                                        <li>Paula Rodrigez</li>
+                                        <li>20.11.2017</li>
+                                    </ul>
+                                    <h4>Id est adhuc ignota delenit</h4>
+                                    <p>Cu eum alia elit, usu in eius appareat, deleniti sapientem honestatis eos ex. In ius esse ullum vidisse....</p>
+                                </a>
+                            </div>
+                            <!-- /box_news -->
+                        </div>
+                        <!-- /row -->
+                        <p class="btn_home_align"><a href="/blogs" class="btn_1 rounded">View blogs</a></p>
+                    </div>
+                    <!-- /container -->
+                </div>
+                {% endif %}
+                <!-- /bg_color_1 -->
+
+                <div class="call_section">
+                    {% if testimonials %}
+                    <div class="container">
+                        <div class="main_title_2">
+                            <span><em></em></span>
+                            <h2 style="color:#fff">Testimonial</h2>
+                        </div>
+                        <div class="row">
+                            <div class="reviews-container">
+                                {% for item in testimonials %}
+                                <div class="review-box clearfix">
+                                    <figure class="rev-thumb"><img src="{% if item.image %} {{item.image}}{%else%}/assets/events/img/testimonial.jpg{% endif %}" alt="">
+                                    </figure>
+                                    <div class="rev-content" style="background: #fff;">
+                                        <div class="rev-info">
+                                            {{item.full_name}} {% if item.designation %}- {{item.designation}}{% endif %}
+                                        </div>
+                                        <div class="rev-text">
+                                            <p>
+                                                {{item.message}}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                                <!-- /review-box -->
+                                <div class="review-box clearfix" style="display: none;">
+                                    <figure class="rev-thumb"><img src="/assets/events/img/test.jpg" alt="">
+                                    </figure>
+                                    <div class="rev-content" style="background: #fff;">
+
+                                        <div class="rev-info">
+                                            Keerthana - Marketing Executive
+                                        </div>
+                                        <div class="rev-text">
+                                            <p>
+                                                Good training, Specific and clear in the concepts. Trainer was very helpful and clears the doubt. Overall good place for digital marketing training.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /review-box -->
+                                <div class="review-box clearfix" style="display: none;">
+                                    <figure class="rev-thumb"><img src="/assets/events/img/test.jpg" alt="">
+                                    </figure>
+                                    <div class="rev-content" style="background: #fff;">
+
+                                        <div class="rev-info">
+                                            Keerthana - Marketing Executive
+
+                                        </div>
+                                        <div class="rev-text">
+                                            <p>
+                                                Good training, Specific and clear in the concepts. Trainer was very helpful and clears the doubt. Overall good place for digital marketing training.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /review-box -->
+                            </div>
+                        }
+                    </div></div>                <!-- /review-container -->
+                    {% endif %}
+                </div>
+
+                {%if certificates%}
+                <div class="container margin_60_35">
+                    <div class="main_title_2">
+                        <span><em></em></span>
+                        <h2>15+ Certifications to Add Value to Your Career</h2>
+                        <p>Industry recognised courses to re-discover your learning!</p>
+                    </div>
+                    <div class="grid">
+                        <ul class="magnific-gallery">
+                   <!--  <li>
+                        <figure>
+                            <img src="/assets/events/img/certificate.jpg" alt="">
+                            <figcaption>
+                                <div class="caption-content">
+                                    <a href="/assets/events/img/certificate-big.jpg" title="Astron Certifications" data-effect="mfp-zoom-in">
+                                        <i class="pe-7s-albums"></i>
+                                        <p>Astron Certifications</p>
+                                    </a>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="/assets/events/img/certificate.jpg" alt="">
+                            <figcaption>
+                                <div class="caption-content">
+                                    <a href="/assets/events/img/certificate-big.jpg" title="Astron Certifications" data-effect="mfp-zoom-in">
+                                        <i class="pe-7s-albums"></i>
+                                        <p>Astron Certifications</p>
+                                    </a>
+                                </div>
+
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="/assets/events/img/certificate.jpg" alt="">
+                            <figcaption>
+                                <div class="caption-content">
+                                    <a href="/assets/events/img/certificate-big.jpg" title="Astron Certifications" data-effect="mfp-zoom-in">
+                                        <i class="pe-7s-albums"></i>
+                                        <p>Astron Certifications</p>
+                                    </a>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="/assets/events/img/certificate.jpg" alt="">
+                            <figcaption>
+                                <div class="caption-content">
+                                    <a href="/assets/events/img/certificate-big.jpg" title="Astron Certifications" data-effect="mfp-zoom-in">
+                                        <i class="pe-7s-albums"></i>
+                                        <p>Astron Certifications</p>
+                                    </a>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </li> -->
+                    {%for item in certificates%}
+                    <li>
+                        <figure>
+                            <img src="{{item.certificate_image}}" alt="">
+                            <figcaption>
+                                <div class="caption-content">
+                                    <a href="{{item.certificate_image}}" title="Astron Certifications" data-effect="mfp-zoom-in">
+                                        <i class="pe-7s-albums"></i>
+                                        <p>{{item.title}}</p>
+                                    </a>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    {%endfor%}
+                    
+                </ul>
+            </div>
+            <!-- /grid gallery -->
+        </div>
+        {%endif%}
+
+        <!--/call_section-->
+    </main>
+    <style type="text/css">
+        #courses-list .block-reveal{
+            text-align: center;
+            height: 180px;
+            padding: 55px 0;
+            background: #a9a9a9;
+        }
+        #courses-list .block-reveal h3,#courses-list .block-reveal h6{
+            color: #fff;
+        }
+        #courses-list .block-reveal h3{
+            font-size: 20px;
+        }
+        #courses-list .block-reveal h6{
+            font-size: 15px;
+        }
+        {%if theme_settings.home_bg_color%}
+        .hero_single .wrapper
+        {
+            background:{{theme_settings.home_bg_color}};
+            opacity:0.8;
+        }
+
+        {%endif%}
+        {%if theme_settings.home_bg_image%}
+        .hero_single:before {
+            background-image: url({{theme_settings.home_bg_image}}) !important;
+            background-size: contain;
+        }
+        {%endif%}
+
+
+        
+</style>
+{% endblock %}

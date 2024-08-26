@@ -1,0 +1,290 @@
+<div id="overlay"></div>
+    <div id="CheckRequirement" class="modal fade" role="dialog" data-backdrop="false" aria-hidden="true">
+        <div class="modal-dialog" style="z-index: 1050">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="row" style="border-bottom: 1px solid #ddd;padding-bottom: 10px;">
+                        <div class="col-md-12">
+                            <div style="font-weight: 600;">
+                                <span class="fa fa-desktop"></span> System Check
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 requirements">
+                            <div class="col-md-3 parts">
+                                <div class="check-title">Browser</div>
+                                <div><span class="fa fa-desktop"></span></div>
+                                <div class="br-req req-text">Required</div>
+                                <div class="browser-name"></div>
+                                <div class="browser-success success-msg">
+                                    <span class="fa fa-check"></span> Supported
+                                </div>
+                                <div class="browser-error error-msg">
+                                    <span class="fa fa-times"></span> Not Supported
+                                </div>
+                            </div>
+                            {% if user_video %}
+                            <div class="col-md-3 parts">
+                                <div class="check-title">Camera</div>
+                                <div><span class="fa fa-camera"></span></div>
+                                <div class="req-text">Required</div>
+                                <div class="camera-success success-msg">
+                                    <span class="fa fa-check"></span> Found
+                                </div>
+                                <div class="camera-error error-msg">
+                                    <span class="fa fa-times"></span> Not Found
+                                </div>
+                            </div>
+                            <div class="col-md-3 parts">
+                                <div class="check-title">Microphone</div>
+                                <div><span class="fa fa-microphone"></span></div>
+                                <div class="req-text">Required</div>
+                                <div class="mic-success success-msg">
+                                    <span class="fa fa-check"></span> Found
+                                </div>
+                                <div class="mic-error error-msg">
+                                    <span class="fa fa-times"></span> Not Found
+                                </div>
+                            </div>
+                            {% endif %}
+                            <div class="col-md-3 parts">
+                                <div class="check-title">Speakers</div>
+                                <!-- <div><span class="fa fa-chrome"></span></div> -->
+                                <div style="display: none;"><audio controls src="/assets/go1_recruit/audio/test-audio.mp3" id="test-audio"></audio></div>
+                                <div><img id="play-icon" src="/assets/go1_recruit/images/play-pause-icon.jpg" style="height: 35px;"></div>
+                                <div>Play to Test</div>
+                            </div>
+                        </div>
+                    </div>
+                    {% if user_video %}
+                    <div style="padding: 5px;border-bottom: 1px solid #ddd;">
+                        <div id="video-container"></div>
+                    </div>
+                    {% endif %}
+                    <div class="row" style="padding: 10px 0;">
+                        <div class="col-md-9">
+                            <div class="error-list">
+                                <div class="browser-error error-msg">
+                                    <p>Your current browser is not supported. Please use any modern browsers</p>
+                                </div>
+                                <div class="camera-error error-msg">
+                                    <p>Unable to detect your camera. You can try changing permissions for this site and retry.</p>
+                                </div>
+                                <div class="mic-error error-msg">
+                                    <p>Unable to detect your microphone. You can try changing permissions for this site and retry.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-success" onclick="close_req_popup()" id="proceedBtn" disabled="disabled">Proceed</button>
+                            <button class="btn btn-warning" onclick="check_navigator_requirements()" id="retryBtn" style="display: none;">Retry</button>
+                        </div>
+                    </div>
+                </div>                     
+            </div>
+        </div>
+    </div>
+</div>
+<style type="text/css">
+    #CheckRequirement.fade .modal-dialog{
+    transform: none;
+    -webkit-transform: none;
+    margin-top: 30px;
+}
+#overlay{
+    background: #0000008a;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+.success-msg, .error-msg{
+    display: none;
+    font-size: 13px;
+    padding: 5px;
+    font-weight: 600;
+}
+.success-msg{
+    color: #0da20d;
+}
+.error-msg {
+    color: #ce1717;
+}
+.requirements{
+    text-align: center;
+    padding: 2% 0%;
+    border-bottom: 1px solid #ddd;
+}
+.requirements .parts{
+    min-height: 110px;
+}
+audio {
+    max-width: 265px;
+}
+.browser-name{
+    font-weight: 600;
+    font-size: 14px;
+}
+.show-retry, .req-completed{
+    display: none;
+}
+.check-title {
+    font-size: 14px;
+}
+#proceedBtn, #retryBtn{
+    float: right;
+}
+#video-container{
+    min-height: 175px;
+    margin: auto;
+    width: 300px;
+    background: #222222e6;
+}
+video{
+    position: relative;
+}
+</style>
+{% block script %}
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-1.0.0.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<!-- <script type="text/javascript" src="/assets/js/frappe-web.min.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.9/ace.js"></script>
+<script src="/assets/go1_recruit/js/RecordRtc/RecordRTC.js"></script>
+<script src="/assets/go1_recruit/js/RecordRtc/RTCMultiConnection.min.js"></script>
+<script src="/assets/go1_recruit/js/RecordRtc/video-conference.js"></script>
+<script src="/assets/go1_recruit/js/RecordRtc/video-recorder.js"></script>
+<script src="/assets/go1_recruit/js/RecordRtc/audio-recorder.js"></script>
+<script src="/assets/go1_recruit/js/RecordRtc/getHTMLMediaElement.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script type="text/javascript"> 
+    $(document).ready(function(){
+        var play = 0
+        $('#play-icon').click(function(){
+            if(play){
+                $('#test-audio').trigger('pause');
+                play = 0;
+            } else{
+                $('#test-audio').trigger('play');
+                play = 1;
+            }      
+        });
+    }) 
+    var recordVideo;
+    var check = 0;
+    var enable_user_video = '{{user_video}}';
+    if('{{monitored}}' == 'true'){
+        var browser;
+        if(navigator.userAgent.indexOf('Edge') !== -1 && (!!navigator.msSaveOrOpenBlob || !!navigator.msSaveBlob))
+            browser = 'Edge';
+        else if(/^((?!chrome|android).)*safari/i.test(navigator.userAgent))
+            browser = 'Safari';
+        else if(navigator.userAgent.indexOf('Chrome'))
+            browser = 'Chrome';
+        else if(navigator.userAgent.indexOf('Firefox'))
+            browser = 'Firefox';
+        else if(navigator.userAgent.indexOf('Opera'))
+            browser = 'Opera';
+        var browser_compatible = false;
+        let app_version = navigator.userAgent;
+        let browser_versioning = app_version.split(`${browser}/`)[1];
+        let version = browser_versioning.split(' ')[0].split('.')[0];
+        if(browser == 'Chrome' && parseInt(version) >= 28){
+            browser_compatible = true;
+        } else if(browser == 'Edge' && parseInt(version) >= 12){
+            browser_compatible = true;
+        } else if(browser == 'Safari' && parseInt(version) >= 11){
+            browser_compatible = true;
+        } else if(browser == 'Firefox' && parseInt(version) >= 22){
+            browser_compatible = true;
+        } else if(browser == 'Opera' && parseInt(version) >= 18){
+            browser_compatible = true;
+        }
+        $('.browser-name').text(`${browser} ${version}`);
+        if(browser_compatible){
+            $('.browser-success').show();
+            $('.browser-error').hide();
+            $('.br-req').hide();
+            check = check + 1;
+        } else{
+            $('.browser-error').show();
+            $('.browser-success').hide();
+        }
+        // $('#CheckRequirement').modal('show')
+        $('#CheckRequirement').show();
+        $('#CheckRequirement').addClass("show");
+        $('#overlay').show();
+        if(check == 1){
+            check_navigator_requirements();
+        }
+    }
+    function check_navigator_requirements(){
+        if(enable_user_video == '1')
+            check_camera();
+        else{
+            $('#proceedBtn').removeAttr('disabled');
+            $('#retryBtn').hide();
+            $('#proceedBtn').show();
+            $('.error-list .error-msg').hide();
+        }
+    }
+    function check_camera(){
+        navigator.mediaDevices.getUserMedia({
+            video: true
+        }).then(async function(stream) {
+            $('.camera-success').show();
+            check = check + 1;
+            check_audio()
+        }).catch(async function(stream){
+            $('.camera-error').show();
+            $('.show-retry').show();
+            $('#retryBtn').show();
+            $('#proceedBtn').hide();
+        });
+    }
+    function check_audio(){
+        navigator.mediaDevices.getUserMedia({
+            audio: true
+        }).then(async function(stream) {
+            $('.mic-success').show();
+            check = check + 1;
+            if(check == 3){
+                $('#proceedBtn').removeAttr('disabled');
+                $('#proceedBtn').show();
+                $('#retryBtn').hide();
+                $('.error-list .error-msg').hide();
+                enable_video()
+            }
+        }).catch(async function(stream){
+            $('.mic-error').show();
+            $('.show-retry').show();
+            $('#retryBtn').show();
+            $('#proceedBtn').hide();
+        });
+    }
+    function close_req_popup(){
+        // $('#CheckRequirement').modal('hide');
+        $('#CheckRequirement').hide();
+        $('#CheckRequirement').removeClass("show");
+        $('#overlay').hide();
+        $('body').removeClass('modal-open');
+        if(recordVideo && recordVideo.recorder)
+            recordVideo.stop_video_recording();
+        try{
+            initConference();
+        } catch(e){}
+    }    
+    function enable_video(){
+        var date = new Date();
+        var roomid = date.getDate() + date.getMonth() + date.getFullYear() + (Math.random()*100000)
+        recordVideo = new RecordVideo({
+            video: document.getElementById('video-container'),
+            record_video: false
+        })
+    } 
+</script>
+{% endblock %}

@@ -1,0 +1,65 @@
+video {
+    position: relative;
+}
+.hero-and-content {
+    background-color: #f5f7fa;
+}
+.header {
+    background: url(/assets/go1_recruit/images/header.jpg) center center no-repeat;
+    background-size: cover;
+}
+.media-box video {
+    opacity: 1;
+}
+.videos-container {
+    min-height: 200px;
+    max-width: 90%;
+}
+.media-container {
+    width: 100%;
+    margin-right: 10px;
+}
+.mg-20 {
+    margin: 20px 0;
+}
+.bdl {
+    border-left: 1px solid #ddd;
+}
+#info-section {
+    margin: auto;
+    max-width: 500px;
+    border: 1px solid #6b6969;
+    box-shadow: 3px 3px 3px 2px #ddd!important;
+    background: #fff;
+    padding: 15px;       
+}
+#videos-section, #not-available, .test-completed, .result-btn {
+    display: none;
+}
+#videos-section {
+    padding: 0 4%;
+}
+#not-available {
+    padding: 6px 10px;
+    font-weight: 600;
+    border: 1px solid;
+    border-radius: 22px;
+    margin-top: 10px;
+    color: #ce1717;
+}
+.loader, .test-completed {
+    margin: auto;
+    max-width: 500px;
+    padding: 7%;
+    font-weight: 800;
+    font-size: 20px;
+    background: #fff;
+    border: 1px solid #222;
+}
+#user-video {
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    width: 200px;
+    bottom: 0;
+}

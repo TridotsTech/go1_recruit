@@ -1,0 +1,5614 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:26.238828",
+  "name": "IQ-00001",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>What is output of following code −</div><div><br></div>",
+  "question_level": "Hard",
+  "question_type": "Coding Question",
+  "reference_code": "<div>s = ''mnopqr ''</div><div>i = ''m ''</div><div>while i in s:</div><div>print('i', end= '' '')</div>",
+  "subject": "Python",
+  "topic": "Tuples - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:26.304416",
+  "name": "IQ-00002",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>aaaaa</div>",
+  "question_level": "Advanced",
+  "question_type": "Coding Question",
+  "reference_code": "<div>aaaa</div>",
+  "subject": "Java",
+  "topic": "Overriding - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:26.325573",
+  "name": "IQ-00003",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>Write a code to rearrange first and last elements of a list</div>",
+  "question_level": "Hard",
+  "question_type": "Coding Question",
+  "reference_code": "<div>asdf</div>",
+  "subject": "Python",
+  "topic": "Tuples - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:26.345120",
+  "name": "IQ-00004",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>write program using socket program?</div>",
+  "question_level": "Beginner",
+  "question_type": "Coding Question",
+  "reference_code": "<div>print('welcome to python')</div>",
+  "subject": "Python",
+  "topic": "Socket Programming - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:26.365552",
+  "name": "IQ-00005",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>write a program for subtraction of the number?</div>",
+  "question_level": "Beginner",
+  "question_type": "Coding Question",
+  "reference_code": "<div>int a,b,c;</div><div>c=a-b;</div><div>System.out.println(c);</div>",
+  "subject": "Java",
+  "topic": "Swing - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:26.386572",
+  "name": "IQ-00006",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>write a program for multiplication of two numbers?</div>",
+  "question_level": "Intermediate",
+  "question_type": "Coding Question",
+  "reference_code": "<div>public class T{</div><div>public static void main(String[] args){</div><div>int a,b,c;</div><div>c=a*b;</div><div>System.out.println(c);</div><div>}}</div>",
+  "subject": "Java",
+  "topic": "Swing - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:26.405226",
+  "name": "IQ-00007",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>write a program for addition of two numbers?</div>",
+  "question_level": "Beginner",
+  "question_type": "Coding Question",
+  "reference_code": "<div>int a,b,c;</div><div>c=a+b;</div><div>System.out.println(c);</div>",
+  "subject": "Java",
+  "topic": "Swing - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:26.424075",
+  "name": "IQ-00008",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>write a sample program using python Tuples?</div>",
+  "question_level": "Advanced",
+  "question_type": "Coding Question",
+  "reference_code": "<div>print('welcome to python')</div>",
+  "subject": "Python",
+  "topic": "Tuples - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:26.442835",
+  "name": "IQ-00009",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>write program for loops python?</div>",
+  "question_level": "Hard",
+  "question_type": "Coding Question",
+  "reference_code": "<div>print('python')</div>",
+  "subject": "Python",
+  "topic": "Loops - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:26.461090",
+  "name": "IQ-00010",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>aaa</div>",
+  "question_level": "Beginner",
+  "question_type": "Coding Question",
+  "reference_code": "<div>aaa</div>",
+  "subject": "Java",
+  "topic": "Overriding - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:26.479504",
+  "name": "IQ-00011",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>aa</div>",
+  "question_level": "Advanced",
+  "question_type": "Coding Question",
+  "reference_code": "<div>aaa</div>",
+  "subject": "Java",
+  "topic": "Polymorphism - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:26.498904",
+  "name": "IQ-00012",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>aaa</div>",
+  "question_level": "Advanced",
+  "question_type": "Coding Question",
+  "reference_code": "<div>aaa</div>",
+  "subject": "Java",
+  "topic": "Overriding - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:26.516764",
+  "name": "IQ-00013",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>write program using socket program?</div>",
+  "question_level": "Beginner",
+  "question_type": "Coding Question",
+  "reference_code": "<div>print('welcome to python')</div>",
+  "subject": "Python",
+  "topic": "Socket Programming - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:26.541549",
+  "name": "IQ-00014",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 1,
+    "option": "<div>Portability </div>",
+    "parent": "IQ-00014",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>Modularity </div>",
+    "parent": "IQ-00014",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>Flexibility </div>",
+    "parent": "IQ-00014",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>Speed </div>",
+    "parent": "IQ-00014",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>What are the key features in C programming language?</div>",
+  "question_level": "Beginner",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "C",
+  "topic": "Array - C"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:26.576125",
+  "name": "IQ-00015",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 0,
+    "option": "<div><span style=\"background-color: rgb(253, 253, 253); color: rgb(85, 85, 85);\">A data structure that shows a hierarchical behaviour</span></div>",
+    "parent": "IQ-00015",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div><span style=\"background-color: rgb(253, 253, 253); color: rgb(85, 85, 85);\">Container of objects of similar types</span></div>",
+    "parent": "IQ-00015",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div><span style=\"background-color: rgb(253, 253, 253); color: rgb(85, 85, 85);\">Arrays are immutable once initialised</span></div>",
+    "parent": "IQ-00015",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div><span style=\"background-color: rgb(253, 253, 253); color: rgb(85, 85, 85);\">Array is not a data structure</span></div>",
+    "parent": "IQ-00015",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div><span style=\"background-color: rgb(253, 253, 253); color: rgb(85, 85, 85);\"> Which of these best describes an array?</span></div>",
+  "question_level": "Beginner",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "C",
+  "topic": "Array - C"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:26.620194",
+  "name": "IQ-00016",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 0,
+    "option": "<div><span style=\"background-color: rgb(253, 253, 253); color: rgb(85, 85, 85);\">int arr[3] = (1,2,3);</span></div>",
+    "parent": "IQ-00016",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div><span style=\"background-color: rgb(253, 253, 253); color: rgb(85, 85, 85);\">int arr(3) = {1,2,3};</span></div>",
+    "parent": "IQ-00016",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div><span style=\"background-color: rgb(253, 253, 253); color: rgb(85, 85, 85);\">int arr[3] = {1,2,3};</span></div>",
+    "parent": "IQ-00016",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>i<span style=\"background-color: rgb(253, 253, 253); color: rgb(85, 85, 85);\">nt arr(3) = (1,2,3);</span></div>",
+    "parent": "IQ-00016",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div><span style=\"background-color: rgb(253, 253, 253); color: rgb(85, 85, 85);\"> How do you initialize an array in C?</span></div>",
+  "question_level": "Beginner",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "C",
+  "topic": "Array - C"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:26.658162",
+  "name": "IQ-00017",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 0,
+    "option": "<div>4</div>",
+    "parent": "IQ-00017",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>5</div>",
+    "parent": "IQ-00017",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div><span style=\"background-color: rgb(253, 253, 253); color: rgb(85, 85, 85);\">ArrayIndexOutOfBoundsException</span></div>",
+    "parent": "IQ-00017",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div><span style=\"background-color: rgb(253, 253, 253); color: rgb(85, 85, 85);\">InavlidInputException</span></div>",
+    "parent": "IQ-00017",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div><span style=\"background-color: rgb(253, 253, 253); color: rgb(85, 85, 85);\">What is the output of the following piece of code?</span></div><div><br></div><pre spellcheck=\"false\" class=\"ql-code-block-container\"><div style=\"text-align: justify;\" class=\"ql-code-block\" data-language=\"plain\">public class array</div><div style=\"text-align: justify;\" class=\"ql-code-block\" data-language=\"plain\">{</div><div style=\"text-align: justify;\" class=\"ql-code-block\" data-language=\"plain\">\tpublic static void main(String args[])</div><div style=\"text-align: justify;\" class=\"ql-code-block\" data-language=\"plain\">\t{</div><div style=\"text-align: justify;\" class=\"ql-code-block\" data-language=\"plain\">\t\tint []arr = {1,2,3,4,5};</div><div style=\"text-align: justify;\" class=\"ql-code-block\" data-language=\"plain\">\t\tSystem.out.println(arr[5]);</div><div style=\"text-align: justify;\" class=\"ql-code-block\" data-language=\"plain\">\t}</div><div style=\"text-align: justify;\" class=\"ql-code-block\" data-language=\"plain\">}</div></pre><div><br></div>",
+  "question_level": "Beginner",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "C",
+  "topic": "Array - C"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:26.701597",
+  "name": "IQ-00018",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 0,
+    "option": "<div><span style=\"background-color: rgb(253, 253, 253); color: rgb(85, 85, 85);\">int arr[] = new int(3);</span></div>",
+    "parent": "IQ-00018",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div><span style=\"background-color: rgb(253, 253, 253); color: rgb(85, 85, 85);\">int arr[];</span></div>",
+    "parent": "IQ-00018",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div><span style=\"background-color: rgb(253, 253, 253); color: rgb(85, 85, 85);\"> int arr[] = new int[3];</span></div>",
+    "parent": "IQ-00018",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div><span style=\"background-color: rgb(253, 253, 253); color: rgb(85, 85, 85);\"> int arr() = new int(3);</span></div>",
+    "parent": "IQ-00018",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div><span style=\"background-color: rgb(253, 253, 253); color: rgb(85, 85, 85);\">How do you instantiate an array in Java?</span></div>",
+  "question_level": "Beginner",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "C",
+  "topic": "Array - C"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:26.744414",
+  "name": "IQ-00019",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 0,
+    "option": "<div>i<span style=\"background-color: rgb(253, 253, 253); color: rgb(85, 85, 85);\">nt[] arr;</span></div>",
+    "parent": "IQ-00019",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div><span style=\"background-color: rgb(253, 253, 253); color: rgb(85, 85, 85);\">int arr[[]];</span></div>",
+    "parent": "IQ-00019",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div><span style=\"background-color: rgb(253, 253, 253); color: rgb(85, 85, 85);\">int[][]arr;</span></div>",
+    "parent": "IQ-00019",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div><span style=\"background-color: rgb(253, 253, 253); color: rgb(85, 85, 85);\">int[[]] arr;</span></div>",
+    "parent": "IQ-00019",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div><span style=\"background-color: rgb(253, 253, 253); color: rgb(85, 85, 85);\">Which of the following is a correct way to declare a multidimensional array in Java?</span></div>",
+  "question_level": "Beginner",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "C",
+  "topic": "Array - C"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:26.778540",
+  "name": "IQ-00020",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 1,
+    "option": "<div><span style=\"background-color: rgb(253, 253, 253); color: rgb(85, 85, 85);\">3 and 5</span></div>",
+    "parent": "IQ-00020",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div><span style=\"background-color: rgb(253, 253, 253); color: rgb(85, 85, 85);\">5 and 3</span></div>",
+    "parent": "IQ-00020",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div><span style=\"background-color: rgb(253, 253, 253); color: rgb(85, 85, 85);\">2 and 4</span></div>",
+    "parent": "IQ-00020",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div><span style=\"background-color: rgb(253, 253, 253); color: rgb(85, 85, 85);\">4 and 2</span></div>",
+    "parent": "IQ-00020",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div><span style=\"background-color: rgb(253, 253, 253); color: rgb(85, 85, 85);\"> What is the output of the following piece of code?</span></div><div><br></div><pre spellcheck=\"false\" class=\"ql-code-block-container\"><div style=\"text-align: justify;\" class=\"ql-code-block\" data-language=\"plain\">public class array</div><div style=\"text-align: justify;\" class=\"ql-code-block\" data-language=\"plain\">{</div><div style=\"text-align: justify;\" class=\"ql-code-block\" data-language=\"plain\">\tpublic static void main(String args[])</div><div style=\"text-align: justify;\" class=\"ql-code-block\" data-language=\"plain\">\t{</div><div style=\"text-align: justify;\" class=\"ql-code-block\" data-language=\"plain\">\t\tint []arr = {1,2,3,4,5};</div><div style=\"text-align: justify;\" class=\"ql-code-block\" data-language=\"plain\">\t\tSystem.out.println(arr[2]);</div><div style=\"text-align: justify;\" class=\"ql-code-block\" data-language=\"plain\">\t\tSystem.out.println(arr[4]);</div><div style=\"text-align: justify;\" class=\"ql-code-block\" data-language=\"plain\">\t}</div><div style=\"text-align: justify;\" class=\"ql-code-block\" data-language=\"plain\">}</div></pre><div><br></div>",
+  "question_level": "Beginner",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "C",
+  "topic": "Array - C"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:26.817228",
+  "name": "IQ-00021",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 0,
+    "option": "<div><span style=\"background-color: rgb(253, 253, 253); color: rgb(85, 85, 85);\">Compile-time</span></div>",
+    "parent": "IQ-00021",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div><span style=\"background-color: rgb(253, 253, 253); color: rgb(85, 85, 85);\">Not an error</span></div>",
+    "parent": "IQ-00021",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div><span style=\"background-color: rgb(253, 253, 253); color: rgb(85, 85, 85);\">Run-time</span></div>",
+    "parent": "IQ-00021",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div><span style=\"background-color: rgb(253, 253, 253); color: rgb(85, 85, 85);\">Not an exception at all</span></div>",
+    "parent": "IQ-00021",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div><span style=\"background-color: rgb(253, 253, 253); color: rgb(85, 85, 85);\">When does the ArrayIndexOutOfBoundsException occur?</span></div>",
+  "question_level": "Beginner",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "C",
+  "topic": "Array - C"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:26.851290",
+  "name": "IQ-00022",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 0,
+    "option": "<div><span style=\"background-color: rgb(253, 253, 253); color: rgb(85, 85, 85);\">Binary trees</span></div>",
+    "parent": "IQ-00022",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div><span style=\"background-color: rgb(253, 253, 253); color: rgb(85, 85, 85);\">Scheduling of processes</span></div>",
+    "parent": "IQ-00022",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div><span style=\"background-color: rgb(253, 253, 253); color: rgb(85, 85, 85);\">Caching</span></div>",
+    "parent": "IQ-00022",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div><span style=\"background-color: rgb(253, 253, 253); color: rgb(85, 85, 85);\">Spatial locality</span></div>",
+    "parent": "IQ-00022",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div><span style=\"background-color: rgb(253, 253, 253); color: rgb(85, 85, 85);\">Which of the following concepts make extensive use of arrays?</span></div>",
+  "question_level": "Beginner",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "C",
+  "topic": "Array - C"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:26.884932",
+  "name": "IQ-00023",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 0,
+    "option": "<div><span style=\"background-color: rgb(253, 253, 253); color: rgb(85, 85, 85);\">Objects of mixed data types can be stored</span></div>",
+    "parent": "IQ-00023",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div><span style=\"background-color: rgb(253, 253, 253); color: rgb(85, 85, 85);\"> Elements in an array cannot be sorted</span></div>",
+    "parent": "IQ-00023",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div><span style=\"background-color: rgb(253, 253, 253); color: rgb(85, 85, 85);\">Index of first element of an array is 1</span></div>",
+    "parent": "IQ-00023",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div><span style=\"background-color: rgb(253, 253, 253); color: rgb(85, 85, 85);\"> Easier to store elements of same data type</span></div>",
+    "parent": "IQ-00023",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div><span style=\"background-color: rgb(253, 253, 253); color: rgb(85, 85, 85);\">What are the advantages of arrays?</span></div>",
+  "question_level": "Beginner",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "C",
+  "topic": "Array - C"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:26.918582",
+  "name": "IQ-00024",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 0,
+    "option": "<div><span style=\"background-color: rgb(253, 253, 253); color: rgb(85, 85, 85);\">Data structure like queue or stack cannot be implemented</span></div>",
+    "parent": "IQ-00024",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div><span style=\"background-color: rgb(253, 253, 253); color: rgb(85, 85, 85);\"> There are chances of wastage of memory space if elements inserted in an array are lesser than the allocated size</span></div>",
+    "parent": "IQ-00024",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div><span style=\"background-color: rgb(253, 253, 253); color: rgb(85, 85, 85);\">Index value of an array can be negative</span></div>",
+    "parent": "IQ-00024",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div><span style=\"background-color: rgb(253, 253, 253); color: rgb(85, 85, 85);\"> Elements are sequentially accessed</span></div>",
+    "parent": "IQ-00024",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div><span style=\"background-color: rgb(253, 253, 253); color: rgb(85, 85, 85);\"> What are the disadvantages of arrays?</span></div>",
+  "question_level": "Intermediate",
+  "question_type": "Multiple",
+  "reference_code": null,
+  "subject": "C",
+  "topic": "Pointer - C"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:26.951592",
+  "name": "IQ-00025",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 0,
+    "option": "<div>15</div>",
+    "parent": "IQ-00025",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div>19</div>",
+    "parent": "IQ-00025",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>11</div>",
+    "parent": "IQ-00025",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div>60</div>",
+    "parent": "IQ-00025",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div><span style=\"background-color: rgb(253, 253, 253); color: rgb(85, 85, 85);\"> Assuming int is of 4bytes, what is the size of int arr[15];?</span></div>",
+  "question_level": "Intermediate",
+  "question_type": "Multiple",
+  "reference_code": null,
+  "subject": "C",
+  "topic": "Pointer - C"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:26.984420",
+  "name": "IQ-00026",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 0,
+    "option": "<div>10</div>",
+    "parent": "IQ-00026",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div><span style=\"background-color: rgb(253, 253, 253); color: rgb(85, 85, 85);\">Some garbage value</span></div>",
+    "parent": "IQ-00026",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div><span style=\"background-color: rgb(253, 253, 253); color: rgb(85, 85, 85);\">Compile time error</span></div>",
+    "parent": "IQ-00026",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div><span style=\"background-color: rgb(253, 253, 253); color: rgb(85, 85, 85);\">Segmentation fault/code crash</span></div>",
+    "parent": "IQ-00026",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div><span style=\"background-color: rgb(253, 253, 253); color: rgb(85, 85, 85);\">What will be the output of the following C code?</span></div><pre spellcheck=\"false\" class=\"ql-code-block-container\"><div style=\"text-align: justify;\" class=\"ql-code-block\" data-language=\"plain\"> #include &lt;stdio.h&gt;</div><div style=\"text-align: justify;\" class=\"ql-code-block\" data-language=\"plain\">  void foo(int*);</div><div style=\"text-align: justify;\" class=\"ql-code-block\" data-language=\"plain\">  int main()</div><div style=\"text-align: justify;\" class=\"ql-code-block\" data-language=\"plain\">  {</div><div style=\"text-align: justify;\" class=\"ql-code-block\" data-language=\"plain\">    int i = 10;</div><div style=\"text-align: justify;\" class=\"ql-code-block\" data-language=\"plain\">    foo((&amp;i)++);</div><div style=\"text-align: justify;\" class=\"ql-code-block\" data-language=\"plain\">  }</div><div style=\"text-align: justify;\" class=\"ql-code-block\" data-language=\"plain\">  void foo(int *p)</div><div style=\"text-align: justify;\" class=\"ql-code-block\" data-language=\"plain\">  {</div><div style=\"text-align: justify;\" class=\"ql-code-block\" data-language=\"plain\">    printf(\"%d\\n\", *p);</div><div style=\"text-align: justify;\" class=\"ql-code-block\" data-language=\"plain\">  }</div></pre><div><br></div>",
+  "question_level": "Intermediate",
+  "question_type": "Multiple",
+  "reference_code": null,
+  "subject": "C",
+  "topic": "Pointer - C"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:27.022162",
+  "name": "IQ-00027",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 1,
+    "option": "<div>10</div>",
+    "parent": "IQ-00027",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div>Complile Error</div>",
+    "parent": "IQ-00027",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>35</div>",
+    "parent": "IQ-00027",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>66</div>",
+    "parent": "IQ-00027",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>What is the output of this C code?</div><div><br></div><div>int *f();</div><div>int main()</div><div>{</div><div>int *p = f();</div><div>printf(\"%d\\n\", *p);</div><div>}</div><div>int *f()</div><div>{</div><div>int j = 10;</div><div>return &amp;j;</div>",
+  "question_level": "Intermediate",
+  "question_type": "Multiple",
+  "reference_code": null,
+  "subject": "C",
+  "topic": "Pointer - C"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:27.061380",
+  "name": "IQ-00028",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 1,
+    "option": "<div><span style=\"color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);\">Representation of NULL pointer</span></div>",
+    "parent": "IQ-00028",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">Representation of void pointer</span></div>",
+    "parent": "IQ-00028",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>Error</div>",
+    "parent": "IQ-00028",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">None of above</span></div>",
+    "parent": "IQ-00028",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">What is (void*)0?</span></div>",
+  "question_level": "Intermediate",
+  "question_type": "Multiple",
+  "reference_code": null,
+  "subject": "C",
+  "topic": "Pointer - C"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:27.097005",
+  "name": "IQ-00029",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 0,
+    "option": "<div><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">char p = *malloc(100);</span></div>",
+    "parent": "IQ-00029",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">char *p = (char) malloc(100);</span></div>",
+    "parent": "IQ-00029",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">char *p = (char*)malloc(100);</span></div>",
+    "parent": "IQ-00029",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>c<span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">har *p = (char *)(malloc*)(100);</span></div>",
+    "parent": "IQ-00029",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>C<span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">an you combine the following two statements into one?</span></div><pre spellcheck=\"false\" class=\"ql-code-block-container\"><div class=\"ql-code-block\" data-language=\"plain\">char *p;</div><div class=\"ql-code-block\" data-language=\"plain\">p = (char*) malloc(100);</div></pre><div><br></div>",
+  "question_level": "Intermediate",
+  "question_type": "Multiple",
+  "reference_code": null,
+  "subject": "C",
+  "topic": "Pointer - C"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:27.130882",
+  "name": "IQ-00030",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 0,
+    "option": "<div><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">stdio.h</span></div>",
+    "parent": "IQ-00030",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div><span style=\"background-color: rgb(255, 255, 255);\">stddef.h</span></div>",
+    "parent": "IQ-00030",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">stdio.h and stddef.h</span></div>",
+    "parent": "IQ-00030",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>math.h</div>",
+    "parent": "IQ-00030",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>I<span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">n which header file is the NULL macro defined?</span></div>",
+  "question_level": "Intermediate",
+  "question_type": "Multiple",
+  "reference_code": null,
+  "subject": "C",
+  "topic": "Pointer - C"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:27.162903",
+  "name": "IQ-00031",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 1,
+    "option": "<div><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">near=2 far=4 huge=4</span></div>",
+    "parent": "IQ-00031",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">near=4 far=8 huge=8</span></div>",
+    "parent": "IQ-00031",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">near=2 far=8 huge=2</span></div>",
+    "parent": "IQ-00031",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">near=4 far=4 huge=8</span></div>",
+    "parent": "IQ-00031",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>How many bytes are occupied by near, far and huge pointers (DOS)?</div>",
+  "question_level": "Intermediate",
+  "question_type": "Multiple",
+  "reference_code": null,
+  "subject": "C",
+  "topic": "Pointer - C"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:27.222251",
+  "name": "IQ-00032",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 0,
+    "option": "<div>.</div>",
+    "parent": "IQ-00032",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>&amp;</div>",
+    "parent": "IQ-00032",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>*</div>",
+    "parent": "IQ-00032",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div>-&gt;</div>",
+    "parent": "IQ-00032",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">If a variable is a pointer to a structure, then which of the following operator is used to access data members of the structure through the pointer variable?</span></div>",
+  "question_level": "Intermediate",
+  "question_type": "Multiple",
+  "reference_code": null,
+  "subject": "C",
+  "topic": "Pointer - C"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:27.264965",
+  "name": "IQ-00033",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 0,
+    "option": "<div><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">((((a+i)+j)+k)+l)</span></div>",
+    "parent": "IQ-00033",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">*(*(*(*(a+i)+j)+k)+l)</span></div>",
+    "parent": "IQ-00033",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">(((a+i)+j)+k+l)</span></div>",
+    "parent": "IQ-00033",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">((a+i)+j+k+l)</span></div>",
+    "parent": "IQ-00033",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div><br></div><div>What would be the equivalent pointer expression for referring the array element a[i][j][k][l]</div><div><br></div>",
+  "question_level": "Intermediate",
+  "question_type": "Multiple",
+  "reference_code": null,
+  "subject": "C",
+  "topic": "Pointer - C"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:27.289315",
+  "name": "IQ-00034",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">What will be the output of following program ?</span></div><div><br></div><div>#include &lt;stdio.h&gt;</div><div>int main()</div><div>{</div><div>    char str[]=\"Hello%s%dFriends\";</div><div>    printf(str);</div><div>    printf(\"\\n\");</div><div>    printf(\"%s\",str);</div><div>    return 0;</div><div>}</div><div><br></div>",
+  "question_level": "Advanced",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "C",
+  "topic": "String - C"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:27.311237",
+  "name": "IQ-00035",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div><span style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\">What will be the output of following program ?</span></div><div>#include &lt;stdio.h&gt;</div><div>#include &lt;string.h&gt;</div><div>int main()</div><div>{</div><div>    if( printf(\"Hello\") == strlen(\"Hello\") )</div><div>        printf(\"...Friends\");</div><div>    else</div><div>        printf(\"...Enemies\");</div><div>    return 0;</div><div>}</div><div><br></div>",
+  "question_level": "Advanced",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "C",
+  "topic": "String - C"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:27.332612",
+  "name": "IQ-00036",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div><span style=\"background-color: rgb(255, 255, 255); color: rgba(0, 0, 0, 0.84);\">What is the output of following program?</span></div><div>#include&lt;stdio.h&gt; </div><div>void swap(char *str1, char *str2) </div><div>{ </div><div>  char *temp = str1; </div><div>  str1 = str2; </div><div>  str2 = temp; </div><div>}  </div><div>    </div><div>int main() </div><div>{ </div><div>  char *str1 = \"Geeks\"; </div><div>  char *str2 = \"Quiz\"; </div><div>  swap(str1, str2); </div><div>  printf(\"str1 is %s, str2 is %s\", str1, str2); </div><div>  return 0; </div><div>} </div><div><br></div>",
+  "question_level": "Advanced",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "C",
+  "topic": "String - C"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:27.355670",
+  "name": "IQ-00037",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div><span style=\"background-color: rgb(255, 255, 255); color: rgba(0, 0, 0, 0.84);\">Predict the output?</span></div><div>#include &lt;stdio.h&gt; </div><div>int fun(char *str1) </div><div>{ </div><div>  char *str2 = str1; </div><div>  while(*++str1); </div><div>  return (str1-str2); </div><div>} </div><div>  </div><div>int main() </div><div>{ </div><div>  char *str = \"GeeksQuiz\"; </div><div>  printf(\"%d\", fun(str)); </div><div>  return 0; </div><div>} </div><div><br></div>",
+  "question_level": "Advanced",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "C",
+  "topic": "String - C"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:27.379608",
+  "name": "IQ-00038",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div><span style=\"background-color: rgb(255, 255, 255); color: rgba(0, 0, 0, 0.84);\">What is the output of following program?</span></div><div><br></div><pre spellcheck=\"false\" class=\"ql-code-block-container\"><div class=\"ql-code-block\"># include &lt;stdio.h&gt;</div><div class=\"ql-code-block\"> </div><div class=\"ql-code-block\">int main()</div><div class=\"ql-code-block\">{</div><div class=\"ql-code-block\">   char str1[] = \"GeeksQuiz\";</div><div class=\"ql-code-block\">   char str2[] = {'G', 'e', 'e', 'k', 's', 'Q', 'u', 'i', 'z'};</div><div class=\"ql-code-block\">   int n1 = sizeof(str1)/sizeof(str1[0]);</div><div class=\"ql-code-block\">   int n2 = sizeof(str2)/sizeof(str2[0]);</div><div class=\"ql-code-block\">   printf(\"n1 = %d, n2 = %d\", n1, n2);</div><div class=\"ql-code-block\">   return 0;</div><div class=\"ql-code-block\">}</div></pre><div><br></div>",
+  "question_level": "Advanced",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "C",
+  "topic": "String - C"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:27.400500",
+  "name": "IQ-00039",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>What is the equivalent code of the following statement in WHILE LOOP format?</div>",
+  "question_level": "Advanced",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "C",
+  "topic": "String - C"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:27.435334",
+  "name": "IQ-00040",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>What is a stack?</div>",
+  "question_level": "Advanced",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "C",
+  "topic": "String - C"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:27.461377",
+  "name": "IQ-00041",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>What is a sequential access file?</div>",
+  "question_level": "Advanced",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "C",
+  "topic": "String - C"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:27.511079",
+  "name": "IQ-00043",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>what is the difference between polymorphism and abstraction?</div>",
+  "question_level": "Advanced",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Polymorphism - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:27.531430",
+  "name": "IQ-00044",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>what is Encapsulation?</div>",
+  "question_level": "Intermediate",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Encapsulation - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:27.550961",
+  "name": "IQ-00045",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>what is polymorphism?</div>",
+  "question_level": "Advanced",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Polymorphism - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:27.570899",
+  "name": "IQ-00046",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<h4>What is method overloading?</h4><div><br></div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Overloading - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:27.590868",
+  "name": "IQ-00047",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<h4>What are rules of method overloading?</h4><div><br></div>",
+  "question_level": "Intermediate",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Overloading - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:27.611989",
+  "name": "IQ-00048",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<h4>Can we overload static methods in java?</h4><div><br></div>",
+  "question_level": "Advanced",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Overloading - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:27.636939",
+  "name": "IQ-00049",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<h4><strong>What is method overriding?</strong></h4><div><br></div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Overriding - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:27.658619",
+  "name": "IQ-00050",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<h4>Can you override private methods in java?</h4><div><br></div>",
+  "question_level": "Intermediate",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Overriding - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:27.681829",
+  "name": "IQ-00051",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<h4>What are rules of method overriding?</h4><div><br></div>",
+  "question_level": "Hard",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Overriding - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:27.705189",
+  "name": "IQ-00052",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>what is the difference between method overloading and overriding?</div><div><br></div>",
+  "question_level": "Hard",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Overloading - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:27.724565",
+  "name": "IQ-00053",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<h4>Can you override private methods in java?</h4><div><br></div>",
+  "question_level": "Hard",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Overriding - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:27.746042",
+  "name": "IQ-00054",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>Why we use the method overloading?</div>",
+  "question_level": "Hard",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Overloading - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:27.766979",
+  "name": "IQ-00055",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>overriding?</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Overriding - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:27.788457",
+  "name": "IQ-00056",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>rfffffffffffdcxfd</div>",
+  "question_level": "Hard",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Overriding - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:27.821966",
+  "name": "IQ-00057",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 1,
+    "option": "<div>Both must have the same method name.</div>",
+    "parent": "IQ-00057",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>Both must have different argument lists.</div>",
+    "parent": "IQ-00057",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>Have different return types.</div>",
+    "parent": "IQ-00057",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>Have different access modifiers.</div>",
+    "parent": "IQ-00057",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>what are the rules for method overloading?</div>",
+  "question_level": "Hard",
+  "question_type": "Multiple",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Overloading - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:27.869238",
+  "name": "IQ-00059",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>What is Tuples in python?</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Tuples - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:27.892451",
+  "name": "IQ-00060",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>Difference between overriding and overloading</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Overriding - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:27.927965",
+  "name": "IQ-00061",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 0,
+    "option": "<div><em>Initial threads</em>, the threads that execute initial application code.</div>",
+    "parent": "IQ-00061",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>The <em>event dispatch thread</em>, where all event-handling code is executed. Most code that interacts with the Swing framework must also execute on this thread.</div>",
+    "parent": "IQ-00061",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div><em>Worker threads</em>, also known as <em>background threads</em>, where time-consuming background tasks are executed.</div>",
+    "parent": "IQ-00061",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div>All of the above</div>",
+    "parent": "IQ-00061",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>what are the rules of swings in java?</div>",
+  "question_level": "Intermediate",
+  "question_type": "Multiple",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Swing - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:27.963512",
+  "name": "IQ-00062",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 1,
+    "option": "<div><strong>Abstraction</strong></div>",
+    "parent": "IQ-00062",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div><strong>Encapsulation</strong></div>",
+    "parent": "IQ-00062",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div><strong>Inheritance</strong></div>",
+    "parent": "IQ-00062",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>what are the concepts in oops?</div><div><br></div>",
+  "question_level": "Intermediate",
+  "question_type": "Multiple",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Oops Concepts - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:27.996371",
+  "name": "IQ-00063",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div><strong>What is the difference between invokeAndWait and invokeLater?</strong></div><div><br></div><div><br></div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Swing - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:28.016514",
+  "name": "IQ-00064",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div><strong>Does Swing is thread-safe?</strong></div>",
+  "question_level": "Intermediate",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Swing - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:28.035896",
+  "name": "IQ-00065",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div><strong>What is Event-Dispatcher-Thread (EDT) in Swing?</strong></div>",
+  "question_level": "Intermediate",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Swing - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:28.058140",
+  "name": "IQ-00066",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 1,
+    "option": "<div> Declare the variable of the class as private.</div>",
+    "parent": "IQ-00066",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div>Provide public setter and getter methods to modify the values of variables.</div>",
+    "parent": "IQ-00066",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div><strong>How to achieve encapsulation in Java?</strong></div>",
+  "question_level": "Intermediate",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Encapsulation - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:28.113084",
+  "name": "IQ-00067",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 1,
+    "option": "<div>It also provides us with maintainability, flexibility, and extensibility to our code.</div>",
+    "parent": "IQ-00067",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div>The fields of a class can be made read-only or write-only.</div>",
+    "parent": "IQ-00067",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div>A class can have total control over what is stored in its fields.</div>",
+    "parent": "IQ-00067",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div><strong>What are the main benefits of using encapsulation in Java?</strong></div>",
+  "question_level": "Intermediate",
+  "question_type": "Multiple",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Encapsulation - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:28.140976",
+  "name": "IQ-00068",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div><strong>What are the advantages of Encapsulation?</strong></div><div> </div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Encapsulation - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:28.166540",
+  "name": "IQ-00069",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div><strong>What are the advantages of Encapsulation?</strong></div><div> </div>",
+  "question_level": "Intermediate",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Encapsulation - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:28.189511",
+  "name": "IQ-00070",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 1,
+    "option": "<div>It allows the state of an object to be accessed and modified through behavior.</div>",
+    "parent": "IQ-00070",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div>It reduces the coupling of modules and increases the cohesion inside them.</div>",
+    "parent": "IQ-00070",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div><strong>What are the features of Encapsulation?</strong></div>",
+  "question_level": "Intermediate",
+  "question_type": "Multiple",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Encapsulation - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:28.214500",
+  "name": "IQ-00071",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div><strong>What is Encapsulation in Java? Why is it called Data hiding?</strong></div>",
+  "question_level": "Hard",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Encapsulation - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:28.250293",
+  "name": "IQ-00072",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<h3>What are the advantages of multi threading?</h3><div><br></div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Multithreading - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:28.284624",
+  "name": "IQ-00073",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<h3>What is the purpose of wait() method in Java?</h3><div><br></div>",
+  "question_level": "Intermediate",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Multithreading - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:28.316919",
+  "name": "IQ-00074",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 0,
+    "option": "<div>The process of communication between synchronized threads is termed as inter-thread communication.</div>",
+    "parent": "IQ-00074",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>Inter-thread communication is used to avoid thread polling in Java.</div>",
+    "parent": "IQ-00074",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<h3>What do you understand by inter-thread communication?</h3><div><br></div>",
+  "question_level": "Beginner",
+  "question_type": "Multiple",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Multithreading - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:28.337497",
+  "name": "IQ-00075",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<h3>Differentiate between process and thread?</h3><div><br></div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Multithreading - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:28.359018",
+  "name": "IQ-00076",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 1,
+    "option": "<div>A thread is a lightweight sub process.</div>",
+    "parent": "IQ-00076",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div>Threads share the process resources, but still, they execute independently.</div>",
+    "parent": "IQ-00076",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<h3>What is the thread?</h3><div><br></div>",
+  "question_level": "Hard",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Multithreading - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:28.384826",
+  "name": "IQ-00077",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 1,
+    "option": "<div>Threads share the same address space</div>",
+    "parent": "IQ-00077",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div>The thread is lightweight.</div>",
+    "parent": "IQ-00077",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div>The cost of communication between the processes is low.</div>",
+    "parent": "IQ-00077",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<h3>What is multi threading?</h3><div><br></div>",
+  "question_level": "Hard",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Multithreading - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:28.409403",
+  "name": "IQ-00078",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div><strong>Difference between method overloading and overriding?</strong></div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Polymorphism - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:28.454520",
+  "name": "IQ-00079",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 0,
+    "option": "<div>Single task can be done in different way</div>",
+    "parent": "IQ-00079",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>Method overloading(compile time polymorphism),method overriding(run time polymorphism)</div>",
+    "parent": "IQ-00079",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div>All of the above</div>",
+    "parent": "IQ-00079",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div><strong>What is polymorphism and what are the types of it?</strong></div>",
+  "question_level": "Intermediate",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Polymorphism - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:28.492513",
+  "name": "IQ-00080",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 0,
+    "option": "<div>FILE is a stream</div>",
+    "parent": "IQ-00080",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div> FILE is a buffered stream</div>",
+    "parent": "IQ-00080",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>Which of the following true about FILE *fp</div>",
+  "question_level": "Beginner",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "C",
+  "topic": "File Handling - C"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:28.518585",
+  "name": "IQ-00081",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 0,
+    "option": "<div>Recursion</div>",
+    "parent": "IQ-00081",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>recursion2</div>",
+    "parent": "IQ-00081",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>what is recursion?</div>",
+  "question_level": "Intermediate",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "C",
+  "topic": "Recursion - C"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:28.549176",
+  "name": "IQ-00082",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 1,
+    "option": "<div>A Pointer in C is used to allocate memory</div>",
+    "parent": "IQ-00082",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>Not allocate memory</div>",
+    "parent": "IQ-00082",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>what is pointer in c?</div>",
+  "question_level": "Hard",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "C",
+  "topic": "Pointer - C"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:28.583306",
+  "name": "IQ-00083",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 1,
+    "option": "<div>Internal sorting</div>",
+    "parent": "IQ-00083",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div>External sorting</div>",
+    "parent": "IQ-00083",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>what are the types of sorting in c?</div>",
+  "question_level": "Intermediate",
+  "question_type": "Multiple",
+  "reference_code": null,
+  "subject": "C",
+  "topic": "Sorting - C"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:28.607794",
+  "name": "IQ-00084",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 1,
+    "option": "<div>specialized format for organizing and storing <strong>data</strong>.</div>",
+    "parent": "IQ-00084",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>No data structure in c</div>",
+    "parent": "IQ-00084",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>what is data structure?</div>",
+  "question_level": "Hard",
+  "question_type": "Multiple",
+  "reference_code": null,
+  "subject": "C",
+  "topic": "Data Structure - C"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:28.637663",
+  "name": "IQ-00085",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 0,
+    "option": "<div>Array is set of million data type</div>",
+    "parent": "IQ-00085",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>Arrays objects store multiple variables with the same type.</div>",
+    "parent": "IQ-00085",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>It can hold primitive types and object references</div>",
+    "parent": "IQ-00085",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>Arrays are always fixed</div>",
+    "parent": "IQ-00085",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div>All of the above</div>",
+    "parent": "IQ-00085",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>what do you mean by array?</div>",
+  "question_level": "Advanced",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "C",
+  "topic": "Array - C"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:28.660215",
+  "name": "IQ-00086",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>Assume a non-empty list <code style=\"background-color: rgb(246, 246, 246); color: rgb(34, 34, 34);\">a</code>. Write a one-line <code style=\"background-color: rgb(246, 246, 246); color: rgb(34, 34, 34);\">while</code> loop that uses the <code style=\"background-color: rgb(246, 246, 246); color: rgb(34, 34, 34);\">list.pop()</code> method to remove all the values from <code style=\"background-color: rgb(246, 246, 246); color: rgb(34, 34, 34);\">a</code>.</div><div><br></div><div><br></div>",
+  "question_level": "Advanced",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Loops - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:28.679451",
+  "name": "IQ-00087",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>After execution of the following code, what is the value of s?</div><div><br></div><div>Python</div><pre spellcheck=\"false\" class=\"ql-code-block-container\"><div class=\"ql-code-block\" data-language=\"plain\">s = \"\"</div><div class=\"ql-code-block\" data-language=\"plain\"> 2 </div><div class=\"ql-code-block\" data-language=\"plain\"> 3 n = 5</div><div class=\"ql-code-block\" data-language=\"plain\"> 4 while n &gt; 0:</div><div class=\"ql-code-block\" data-language=\"plain\"> 5   n -= 1</div><div class=\"ql-code-block\" data-language=\"plain\"> 6   if (n % 2) == 0:</div><div class=\"ql-code-block\" data-language=\"plain\"> 7     continue</div><div class=\"ql-code-block\" data-language=\"plain\"> 8 </div><div class=\"ql-code-block\" data-language=\"plain\"> 9   a = ['foo', 'bar', 'baz']</div><div class=\"ql-code-block\" data-language=\"plain\">10   while a:</div><div class=\"ql-code-block\" data-language=\"plain\">11     s += str(n) + a.pop(0)</div><div class=\"ql-code-block\" data-language=\"plain\">12     if len(a) &lt; 2:</div><div class=\"ql-code-block\" data-language=\"plain\">13       break</div></pre><div><br></div><div><br></div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Loops - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:28.707590",
+  "name": "IQ-00088",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 0,
+    "option": "<div>All of them.</div><div><br></div><div><br></div>",
+    "parent": "IQ-00088",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div>None of them.</div><div><br></div><div><br></div>",
+    "parent": "IQ-00088",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>It depends on the code in the body of the loop.</div><div><br></div><div><br></div>",
+    "parent": "IQ-00088",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>All but the last.</div><div><br></div><div><br></div>",
+    "parent": "IQ-00088",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>Consider these while loop headers:</div><div><br></div><div>Python</div><pre spellcheck=\"false\" class=\"ql-code-block-container\"><div class=\"ql-code-block\" data-language=\"plain\">while True:…</div></pre><div><br></div><div>Python</div><pre spellcheck=\"false\" class=\"ql-code-block-container\"><div class=\"ql-code-block\" data-language=\"plain\">a = ['foo', 'bar', 'baz', 'qux', 'corge']</div><div class=\"ql-code-block\" data-language=\"plain\">while a:…</div></pre><div><br></div><div>Python</div><pre spellcheck=\"false\" class=\"ql-code-block-container\"><div class=\"ql-code-block\" data-language=\"plain\">n = 100</div><div class=\"ql-code-block\" data-language=\"plain\">while n &gt; 0:…</div></pre><div><br></div><div>Python</div><pre spellcheck=\"false\" class=\"ql-code-block-container\"><div class=\"ql-code-block\" data-language=\"plain\">while {}:…</div></pre><div><br></div><div><br></div>",
+  "question_level": "Intermediate",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Loops - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:28.736389",
+  "name": "IQ-00089",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 1,
+    "option": "<div>Yes</div>",
+    "parent": "IQ-00089",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>No</div>",
+    "parent": "IQ-00089",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>Will the print() statement on line 5 will be executed in this case:</div><div><br></div><div>Python</div><pre spellcheck=\"false\" class=\"ql-code-block-container\"><div class=\"ql-code-block\" data-language=\"plain\">a = ['foo', 'bar', 'baz', 'qux', 'corge']</div><div class=\"ql-code-block\" data-language=\"plain\"> 2 while a:</div><div class=\"ql-code-block\" data-language=\"plain\"> 3   print(a.pop())</div><div class=\"ql-code-block\" data-language=\"plain\"> 4 else:</div><div class=\"ql-code-block\" data-language=\"plain\"> 5   print('Done.')</div></pre><div><br></div><div><br></div>",
+  "question_level": "Beginner",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Loops - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:28.765101",
+  "name": "IQ-00090",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 0,
+    "option": "<div>This code generates the same output as the code in the previous question, but the loop never terminates.</div><div><br></div><div><br></div>",
+    "parent": "IQ-00090",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>This code displays all the items in a.</div><div><br></div><div><br></div>",
+    "parent": "IQ-00090",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>This code behaves identically to the code in the previous question.</div><div><br></div><div><br></div>",
+    "parent": "IQ-00090",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div>This code doesn’t generate any output.</div><div><br></div><div><br></div>",
+    "parent": "IQ-00090",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>This code is identical to the code in the previous question except that the break statement is replaced by a continue statement:</div><div><br></div><div>Python</div><pre spellcheck=\"false\" class=\"ql-code-block-container\"><div class=\"ql-code-block\" data-language=\"plain\">a = ['foo', 'bar', 'baz', 'qux', 'corge']</div><div class=\"ql-code-block\" data-language=\"plain\"> 2 while a:</div><div class=\"ql-code-block\" data-language=\"plain\"> 3   if len(a) &lt; 3:</div><div class=\"ql-code-block\" data-language=\"plain\"> 4     continue</div><div class=\"ql-code-block\" data-language=\"plain\"> 5   print(a.pop())</div><div class=\"ql-code-block\" data-language=\"plain\"> 6 print('Done.')</div></pre><div>How does that change the behavior?</div><div><br></div><div><br></div>",
+  "question_level": "Intermediate",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Loops - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:28.819122",
+  "name": "IQ-00091",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 0,
+    "option": "<pre spellcheck=\"false\" class=\"ql-code-block-container\"><div class=\"ql-code-block\" data-language=\"plain\">corge</div><div class=\"ql-code-block\" data-language=\"plain\">qux</div><div class=\"ql-code-block\" data-language=\"plain\">baz</div><div class=\"ql-code-block\" data-language=\"plain\">bar</div><div class=\"ql-code-block\" data-language=\"plain\">foo</div><div class=\"ql-code-block\" data-language=\"plain\">Done.</div></pre><div><br></div>",
+    "parent": "IQ-00091",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>corge</div><div>qux</div><div>baz</div><div>Done.</div><div><br></div>",
+    "parent": "IQ-00091",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>corge</div><div>qux</div><div>baz</div><div><br></div>",
+    "parent": "IQ-00091",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div>The snippet doesn’t generate any output.</div><div><br></div><div><br></div>",
+    "parent": "IQ-00091",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>What is the output of the following code snippet:</div><div><br></div><div>Python</div><pre spellcheck=\"false\" class=\"ql-code-block-container\"><div class=\"ql-code-block\" data-language=\"plain\">a = ['foo', 'bar', 'baz', 'qux', 'corge']</div><div class=\"ql-code-block\" data-language=\"plain\"> 2 while a:</div><div class=\"ql-code-block\" data-language=\"plain\"> 3   if len(a) &lt; 3:</div><div class=\"ql-code-block\" data-language=\"plain\"> 4     break</div><div class=\"ql-code-block\" data-language=\"plain\"> 5   print(a.pop())</div><div class=\"ql-code-block\" data-language=\"plain\"> 6 print('Done.')</div></pre><div><br></div><div><br></div>",
+  "question_level": "Advanced",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Loops - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:28.863343",
+  "name": "IQ-00092",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 0,
+    "option": "<div>Done.</div><div><br></div>",
+    "parent": "IQ-00092",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>('baz', 3)</div><div>('bar', 2)</div><div>('foo', 1)</div><div>Done.</div>",
+    "parent": "IQ-00092",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>The snippet doesn’t generate any output.</div><div><br></div><div><br></div>",
+    "parent": "IQ-00092",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div>foo</div><div>bar</div><div>baz</div><div><br></div>",
+    "parent": "IQ-00092",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>What is the output of this code snippet:</div><div><br></div><div>Python</div><pre spellcheck=\"false\" class=\"ql-code-block-container\"><div class=\"ql-code-block\" data-language=\"plain\">d = {'foo': 1, 'bar': 2, 'baz': 3}</div><div class=\"ql-code-block\" data-language=\"plain\">while len(d) &gt; 3:print(d.popitem())</div><div class=\"ql-code-block\" data-language=\"plain\">print('Done.')</div></pre><div><br></div><div><br></div>",
+  "question_level": "Hard",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Loops - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:28.906093",
+  "name": "IQ-00093",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 0,
+    "option": "<div>('baz', 3)</div><div>('bar', 2)</div><div>('foo', 1)</div><div>Done.</div><div><br></div>",
+    "parent": "IQ-00093",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>foo</div><div>bar</div><div>baz</div><div><br></div>",
+    "parent": "IQ-00093",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>The snippet doesn’t generate any output.</div><div><br></div><div><br></div>",
+    "parent": "IQ-00093",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div>Done.</div><div><br></div>",
+    "parent": "IQ-00093",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>What is the output of the following code snippet:</div><div><br></div><div>Python</div><pre spellcheck=\"false\" class=\"ql-code-block-container\"><div class=\"ql-code-block\" data-language=\"plain\">d = {'foo': 1, 'bar': 2, 'baz': 3}</div><div class=\"ql-code-block\" data-language=\"plain\">while d:print(d.popitem())</div><div class=\"ql-code-block\" data-language=\"plain\">print('Done.')</div></pre><div><br></div><div><br></div>",
+  "question_level": "Intermediate",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Loops - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:28.973622",
+  "name": "IQ-00094",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 0,
+    "option": "<div>indefinite</div><div><br></div><div><br></div>",
+    "parent": "IQ-00094",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>definite</div><div><br></div><div><br></div>",
+    "parent": "IQ-00094",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>indeterminate</div>",
+    "parent": "IQ-00094",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div>discriminant</div>",
+    "parent": "IQ-00094",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>A while loop in Python is used for what type of iteration?</div><div><br></div><div><br></div>",
+  "question_level": "Intermediate",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Regular Expressions - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:29.009330",
+  "name": "IQ-00095",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>Write Python code to create a tuple with a single element, the string 'foo', and assign it to a variable called t.</div><div><br></div><div><br></div>",
+  "question_level": "Intermediate",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Tuples - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:29.033311",
+  "name": "IQ-00096",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 1,
+    "option": "<div>a[2:2] = [3, 4, 5, 6]</div><div><br></div><div><br></div>",
+    "parent": "IQ-00096",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>You have a list a defined as follows:</div><div><br></div><div>Python</div><pre spellcheck=\"false\" class=\"ql-code-block-container\"><div class=\"ql-code-block\" data-language=\"plain\">a = [1, 2, 7, 8]</div></pre><div>Write a Python statement using slice assignment that will fill in the missing values so that a equals [1, 2, 3, 4, 5, 6, 7, 8].</div><div><br></div><div><br></div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Tuples - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:29.071790",
+  "name": "IQ-00097",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 0,
+    "option": "<div>&gt;&gt;&gt; print(a[-6])</div><div>Traceback (most recent call last):</div><div> File \"&lt;stdin&gt;\", line 1, in &lt;module&gt;</div><div>IndexError: list index out of range</div>",
+    "parent": "IQ-00097",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div>&gt;&gt;&gt; max(a[2:4] + ['grault'])</div><div>'qux'</div>",
+    "parent": "IQ-00097",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>&gt;&gt;&gt; print(a[4::-2])</div><div>['quux', 'baz', 'foo']</div>",
+    "parent": "IQ-00097",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>&gt;&gt;&gt; print(a[-5:-3])</div><div>['bar', 'baz']</div>",
+    "parent": "IQ-00097",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>&gt;&gt;&gt; a[:] is a</div><div>True</div>",
+    "parent": "IQ-00097",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>Assume the following list definition:</div><div><br></div><div>&gt;&gt;&gt; a = ['foo', 'bar', 'baz', 'qux', 'quux', 'corge']</div><div>Several short REPL sessions are shown below. Which display correct output?</div><div><br></div><div><br></div>",
+  "question_level": "Hard",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Tuples - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:29.120666",
+  "name": "IQ-00098",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 0,
+    "option": "<div>All elements in a list must be of the same type</div>",
+    "parent": "IQ-00098",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>These represent the same list:</div><div><br></div><div>['a', 'b', 'c']</div><div><br></div><div>['c', 'a', 'b']</div>",
+    "parent": "IQ-00098",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>A list may contain any type of object except another list</div>",
+    "parent": "IQ-00098",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div>There is no conceptual limit to the size of a list</div>",
+    "parent": "IQ-00098",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div>A given object may appear in a list more than once</div>",
+    "parent": "IQ-00098",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>Which of the following are true of Python lists?</div>",
+  "question_level": "Intermediate",
+  "question_type": "Multiple",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Tuples - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:29.148884",
+  "name": "IQ-00099",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>overloading?</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Overloading - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:29.168589",
+  "name": "IQ-00100",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>What are the key features of Python.</div>",
+  "question_level": "Hard",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Loops - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:29.191519",
+  "name": "IQ-00101",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 0,
+    "option": "<div>fgfgf</div>",
+    "parent": "IQ-00101",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>svfgf</div>",
+    "parent": "IQ-00101",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>overriding?</div><div><br></div>",
+  "question_level": "Intermediate",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Overriding - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:29.214662",
+  "name": "IQ-00102",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 0,
+    "option": "<div>3</div>",
+    "parent": "IQ-00102",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>5</div>",
+    "parent": "IQ-00102",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>what is socket programming?</div>",
+  "question_level": "Intermediate",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Socket Programming - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:29.233524",
+  "name": "IQ-00103",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>What is Socket?</div>",
+  "question_level": "Advanced",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Socket Programming - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:29.250977",
+  "name": "IQ-00104",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>Consider the following nested list definition:</div><div><br></div><div>Python</div><div>x = [10, [3.141, 20, [30, 'baz', 2.718]], 'foo']</div><div><br></div><div><span style=\"background-color: rgb(255, 255, 255); color: rgb(34, 34, 34);\">A schematic for this list is shown below:</span></div><div><a href=\"https://files.realpython.com/media/t.1f34566719c8.png\" style=\"background-color: transparent; color: rgb(54, 118, 171);\"><img src=\"https://files.realpython.com/media/t.1f34566719c8.png\" alt=\"Nest list example\" width=\"1728\" height=\"1263\"></a></div><div><span style=\"background-color: rgb(255, 255, 255); color: rgb(34, 34, 34);\">What is the expression that returns the </span><code style=\"background-color: rgb(246, 246, 246); color: rgb(34, 34, 34);\">'z'</code><span style=\"background-color: rgb(255, 255, 255); color: rgb(34, 34, 34);\"> in </span><code style=\"background-color: rgb(246, 246, 246); color: rgb(34, 34, 34);\">'baz'</code><span style=\"background-color: rgb(255, 255, 255); color: rgb(34, 34, 34);\">?</span></div><div><br></div><div><br></div>",
+  "question_level": "Hard",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Tuples - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:29.271135",
+  "name": "IQ-00105",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>what is string?explain in detail</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "C",
+  "topic": "String - C"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:29.297556",
+  "name": "IQ-00106",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 0,
+    "option": "<div>ttakkks</div>",
+    "parent": "IQ-00106",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>mmmkkk</div>",
+    "parent": "IQ-00106",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>write a script for a rest client</div>",
+  "question_level": "Advanced",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Encapsulation - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:29.321929",
+  "name": "IQ-00107",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>what are the types of exception?</div>",
+  "question_level": "Intermediate",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Exceptions - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:29.346154",
+  "name": "IQ-00108",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 1,
+    "option": "<div>Yes</div>",
+    "parent": "IQ-00108",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>No</div>",
+    "parent": "IQ-00108",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>Not Applicable</div>",
+    "parent": "IQ-00108",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>Is method Over-riding better than non-overriding methods?</div>",
+  "question_level": "Beginner",
+  "question_type": "Multiple",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Overriding - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:29.367850",
+  "name": "IQ-00109",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>Explain socket programming?</div>",
+  "question_level": "Intermediate",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Socket Programming - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:29.409556",
+  "name": "IQ-00110",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 1,
+    "option": "<div>yes</div>",
+    "parent": "IQ-00110",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>No</div>",
+    "parent": "IQ-00110",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>what is python?</div>",
+  "question_level": "Intermediate",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Tuples - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:29.477812",
+  "name": "IQ-00111",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 0,
+    "option": "<div>del a[2]</div>",
+    "parent": "IQ-00111",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>a[2:3] = []</div><div><br></div>",
+    "parent": "IQ-00111",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>a.remove(3)</div>",
+    "parent": "IQ-00111",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>a[2] = []</div><div><br></div>",
+    "parent": "IQ-00111",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>a[2:2] = []</div><div><br></div>",
+    "parent": "IQ-00111",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>yes</div>",
+    "parent": "IQ-00111",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div>No</div>",
+    "parent": "IQ-00111",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>List a is defined as follows:</div><div><br></div><div>a = [1, 2, 3, 4, 5]</div><div>Which of the following statements removes the middle element 3 from a so that it equals [1, 2, 4, 5]?</div><div><br></div><div><br></div>",
+  "question_level": "Intermediate",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Tuples - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:29.521927",
+  "name": "IQ-00112",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 0,
+    "option": "<div>The values of x and y are unchanged</div>",
+    "parent": "IQ-00112",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>Both x and y are 5</div><div><br></div><div><br></div>",
+    "parent": "IQ-00112",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>The values of x and y are swapped</div><div><br></div><div><br></div>",
+    "parent": "IQ-00112",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>Both x and y are -5</div><div><br></div><div><br></div>",
+    "parent": "IQ-00112",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>yes</div>",
+    "parent": "IQ-00112",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div>No</div>",
+    "parent": "IQ-00112",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>Assume x and y are assigned as follows:</div><div><br></div><pre spellcheck=\"false\" class=\"ql-code-block-container\"><div class=\"ql-code-block\" data-language=\"plain\">x = 5</div><div class=\"ql-code-block\" data-language=\"plain\">y = -5</div></pre><div>What is the effect of this statement:</div><div><br></div><pre spellcheck=\"false\" class=\"ql-code-block-container\"><div class=\"ql-code-block\" data-language=\"plain\">x, y = (y, x)[::-1]</div></pre><div><br></div><div><br></div>",
+  "question_level": "Intermediate",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Tuples - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:29.572895",
+  "name": "IQ-00113",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 0,
+    "option": "<div>a.append(['d', 'e'])</div><div><br></div>",
+    "parent": "IQ-00113",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>a[-1:] = ['d', 'e']</div><div><br></div>",
+    "parent": "IQ-00113",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>a.extend(['d', 'e'])</div><div><br></div>",
+    "parent": "IQ-00113",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>a[len(a):] = ['d', 'e']</div><div><br></div>",
+    "parent": "IQ-00113",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>a += ['d', 'e']</div>",
+    "parent": "IQ-00113",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>a += 'de'</div>",
+    "parent": "IQ-00113",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>yes</div>",
+    "parent": "IQ-00113",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div>No</div>",
+    "parent": "IQ-00113",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>List a is defined as follows:</div><div><br></div><div>Python</div><div>a = ['a', 'b', 'c']</div><div><br></div><div>Which of the following statements adds 'd' and 'e' to the end of a, so that it then equals ['a', 'b', 'c', 'd', 'e']:</div><div><br></div><div><br></div>",
+  "question_level": "Intermediate",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Tuples - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:29.608002",
+  "name": "IQ-00114",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 0,
+    "option": "<div>4</div>",
+    "parent": "IQ-00114",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>6</div>",
+    "parent": "IQ-00114",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>2</div>",
+    "parent": "IQ-00114",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>yes</div>",
+    "parent": "IQ-00114",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div>No</div>",
+    "parent": "IQ-00114",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>Consider this assignment statement:</div><div><br></div><div><br></div>",
+  "question_level": "Intermediate",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Tuples - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:29.641728",
+  "name": "IQ-00115",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 0,
+    "option": "<div>t[1] = 'qux'</div><div><br></div>",
+    "parent": "IQ-00115",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<pre spellcheck=\"false\" class=\"ql-code-block-container\"><div class=\"ql-code-block\" data-language=\"plain\">t[1:1] = 'qux'</div></pre><div><br></div>",
+    "parent": "IQ-00115",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>yes</div>",
+    "parent": "IQ-00115",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<pre spellcheck=\"false\" class=\"ql-code-block-container\"><div class=\"ql-code-block\" data-language=\"plain\">t(1) = 'qux'</div></pre>",
+    "parent": "IQ-00115",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div>No</div>",
+    "parent": "IQ-00115",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>Suppose you have the following tuple definition:</div><div><br></div><pre spellcheck=\"false\" class=\"ql-code-block-container\"><div class=\"ql-code-block\" data-language=\"plain\">t = ('foo', 'bar', 'baz')</div></pre><div>Which of the following statements replaces the second element ('bar') with the string 'qux':</div><div><br></div><div><br></div>",
+  "question_level": "Intermediate",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Tuples - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:29.666033",
+  "name": "IQ-00116",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>what are the operators in Operators in python?</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Tuples - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:29.685390",
+  "name": "IQ-00117",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>What is Tuples</div>",
+  "question_level": "Hard",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Tuples - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:29.702822",
+  "name": "IQ-00118",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>What is CGI</div>",
+  "question_level": "Hard",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "CGI Programming - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:29.724074",
+  "name": "IQ-00119",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 1,
+    "option": "<div>Yes</div>",
+    "parent": "IQ-00119",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>No</div>",
+    "parent": "IQ-00119",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>what is overriding?</div>",
+  "question_level": "Advanced",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Overriding - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:29.753304",
+  "name": "IQ-00120",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 1,
+    "option": "<div>Yes</div>",
+    "parent": "IQ-00120",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>No</div>",
+    "parent": "IQ-00120",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>what is polymorphism?</div>",
+  "question_level": "Intermediate",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Polymorphism - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:29.783756",
+  "name": "IQ-00121",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>write a sql query to join 2 tables employee and salary based on employee id</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "SQL",
+  "topic": "My SQL - SQL"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:29.807318",
+  "name": "IQ-00122",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 0,
+    "option": "<div>Yes</div>",
+    "parent": "IQ-00122",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div>No</div>",
+    "parent": "IQ-00122",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>Explain polymorphism?</div>",
+  "question_level": "Intermediate",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Polymorphism - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:29.834258",
+  "name": "IQ-00123",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 1,
+    "option": "<div>yes</div>",
+    "parent": "IQ-00123",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div>No</div>",
+    "parent": "IQ-00123",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>what is cgi?</div>",
+  "question_level": "Intermediate",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "CGI Programming - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:29.863930",
+  "name": "IQ-00124",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 1,
+    "option": "<div>No\t</div>",
+    "parent": "IQ-00124",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div>Yes</div>",
+    "parent": "IQ-00124",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>Test is mandatory?</div>",
+  "question_level": "Intermediate",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Loops - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:29.896094",
+  "name": "IQ-00125",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 0,
+    "option": "<div>answer 1</div>",
+    "parent": "IQ-00125",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div>answer 2</div>",
+    "parent": "IQ-00125",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>What are immutable and mutable datatypes in python?</div>",
+  "question_level": "Beginner",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Socket Programming - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:29.922661",
+  "name": "IQ-00126",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>Sample question</div>",
+  "question_level": "Advanced",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Overloading - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:29.954451",
+  "name": "IQ-00127",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 0,
+    "option": "<div>Type error</div>",
+    "parent": "IQ-00127",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>' '</div>",
+    "parent": "IQ-00127",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div>-1</div>",
+    "parent": "IQ-00127",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>Not Found</div>",
+    "parent": "IQ-00127",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>What is output for − (raining'. find('z') )?</div>",
+  "question_level": "Hard",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Tuples - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:29.988830",
+  "name": "IQ-00128",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 0,
+    "option": "<div>*</div>",
+    "parent": "IQ-00128",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div>=</div>",
+    "parent": "IQ-00128",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>+</div>",
+    "parent": "IQ-00128",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>%</div>",
+    "parent": "IQ-00128",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>Which operator is right-associative</div>",
+  "question_level": "Advanced",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Loops - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:30.030682",
+  "name": "IQ-00129",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 0,
+    "option": "<div>m m m m m …..</div>",
+    "parent": "IQ-00129",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div>i i i i i i i i……..</div>",
+    "parent": "IQ-00129",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>m n o p q r</div>",
+    "parent": "IQ-00129",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>no output</div>",
+    "parent": "IQ-00129",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>What is output of following </div>",
+  "question_level": "Advanced",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Tuples - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:30.082819",
+  "name": "IQ-00130",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 1,
+    "option": "<div>bla 1</div>",
+    "parent": "IQ-00130",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>bla 2</div>",
+    "parent": "IQ-00130",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>Implement a factorial calculator in Java</div>",
+  "question_level": "Beginner",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Overloading - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:30.129275",
+  "name": "IQ-00131",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 1,
+    "option": "<div>bla 11</div>",
+    "parent": "IQ-00131",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div>bla 2</div>",
+    "parent": "IQ-00131",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>bla 3</div>",
+    "parent": "IQ-00131",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>implement factorial</div>",
+  "question_level": "Hard",
+  "question_type": "Multiple",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Overriding - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:30.160228",
+  "name": "IQ-00132",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>write sql statement to count number of mployees in meployee table</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "SQL",
+  "topic": "My SQL - SQL"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:30.214537",
+  "name": "IQ-00133",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 0,
+    "option": "<div>ans 1</div>",
+    "parent": "IQ-00133",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div>ans 2</div>",
+    "parent": "IQ-00133",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>bla bla 1</div>",
+  "question_level": "Beginner",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Overriding - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:30.252312",
+  "name": "IQ-00134",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 1,
+    "option": "<div>aaa</div>",
+    "parent": "IQ-00134",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div>aaaa</div>",
+    "parent": "IQ-00134",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>xxxxx</div>",
+    "parent": "IQ-00134",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>bla iter</div>",
+  "question_level": "Intermediate",
+  "question_type": "Multiple",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Overriding - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:30.326204",
+  "name": "IQ-00135",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>aaa</div>",
+  "question_level": "Advanced",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Overriding - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:30.386177",
+  "name": "IQ-00136",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>write a sample program for multi threading?</div>",
+  "question_level": "Advanced",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Multithreading - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:30.432990",
+  "name": "IQ-00138",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>what is My SQL?</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "SQL",
+  "topic": "My SQL - SQL"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:30.482689",
+  "name": "IQ-00140",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>what is sorting?</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "C",
+  "topic": "Sorting - C"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:30.503810",
+  "name": "IQ-00141",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>what is encapsulation?</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Encapsulation - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:30.526566",
+  "name": "IQ-00142",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>Difference b/w polymorphism and encapsulation?</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Polymorphism - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:30.562264",
+  "name": "IQ-00143",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>what is difference b/w SQL and my SQL</div>",
+  "question_level": "Hard",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "SQL",
+  "topic": "My SQL - SQL"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:30.589413",
+  "name": "IQ-00144",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>what is Loops in python?</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Loops - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:30.622396",
+  "name": "IQ-00145",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 1,
+    "option": "<div>Tuples</div>",
+    "parent": "IQ-00145",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>Loops</div>",
+    "parent": "IQ-00145",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>which one of the following is efficient?</div>",
+  "question_level": "Beginner",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Tuples - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:30.656293",
+  "name": "IQ-00146",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>test</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "SQL",
+  "topic": "My SQL - SQL"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:30.677733",
+  "name": "IQ-00147",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>test</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "SQL",
+  "topic": "My SQL - SQL"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:30.699816",
+  "name": "IQ-00148",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>What is overloading</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Overloading - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:30.720732",
+  "name": "IQ-00149",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>what is sql</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "SQL",
+  "topic": "My SQL - SQL"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:30.744372",
+  "name": "IQ-00150",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 1,
+    "option": "<div>correct option</div>",
+    "parent": "IQ-00150",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>Wrong option</div>",
+    "parent": "IQ-00150",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>Compare MySQL vs SQL Server?</div>",
+  "question_level": "Hard",
+  "question_type": "Multiple",
+  "reference_code": null,
+  "subject": "SQL",
+  "topic": "My SQL - SQL"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:30.764599",
+  "name": "IQ-00151",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>Differentiate between list and tuples</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Tuples - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:30.788446",
+  "name": "IQ-00152",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 1,
+    "option": "<div>2correct</div>",
+    "parent": "IQ-00152",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>wrong</div>",
+    "parent": "IQ-00152",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>None</div>",
+    "parent": "IQ-00152",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>sql 1?</div>",
+  "question_level": "Beginner",
+  "question_type": "Multiple",
+  "reference_code": null,
+  "subject": "SQL",
+  "topic": "My SQL - SQL"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:30.810184",
+  "name": "IQ-00153",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>What is Storred Procedure?</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "SQL",
+  "topic": "My SQL - SQL"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:30.829035",
+  "name": "IQ-00154",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>Query for inner join</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "SQL",
+  "topic": "My SQL - SQL"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:30.850763",
+  "name": "IQ-00155",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 1,
+    "option": "<div>correct</div>",
+    "parent": "IQ-00155",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>wrong</div>",
+    "parent": "IQ-00155",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>sql2?</div>",
+  "question_level": "Beginner",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "SQL",
+  "topic": "My SQL - SQL"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:30.876986",
+  "name": "IQ-00156",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>sql?</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "SQL",
+  "topic": "My SQL - SQL"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:30.901291",
+  "name": "IQ-00157",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 1,
+    "option": "<div>correct</div>",
+    "parent": "IQ-00157",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>wrong</div>",
+    "parent": "IQ-00157",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>what is Regular expressions?</div>",
+  "question_level": "Advanced",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Regular Expressions - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:30.927989",
+  "name": "IQ-00158",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 1,
+    "option": "<div>correct</div>",
+    "parent": "IQ-00158",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>wrong</div>",
+    "parent": "IQ-00158",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>what is Regular Expressions in python?</div>",
+  "question_level": "Advanced",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Regular Expressions - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:30.950942",
+  "name": "IQ-00159",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>what Regular Expressions - Python</div>",
+  "question_level": "Hard",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Regular Expressions - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:30.970839",
+  "name": "IQ-00160",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>Define sql</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "SQL",
+  "topic": "My SQL - SQL"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:30.990400",
+  "name": "IQ-00161",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>define sql</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "SQL",
+  "topic": "My SQL - SQL"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:31.010988",
+  "name": "IQ-00162",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>dsfsfrs</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "SQL",
+  "topic": "My SQL - SQL"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:31.032785",
+  "name": "IQ-00163",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>what is Exceptions - Python?</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Exceptions - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:31.052040",
+  "name": "IQ-00164",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>rthtrhrthtr</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "SQL",
+  "topic": "My SQL - SQL"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:31.071560",
+  "name": "IQ-00165",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>Write query for left join</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "SQL",
+  "topic": "My SQL - SQL"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:31.091602",
+  "name": "IQ-00166",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>Whet is left join</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "SQL",
+  "topic": "My SQL - SQL"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:31.111338",
+  "name": "IQ-00167",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>qfdewd</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "SQL",
+  "topic": "My SQL - SQL"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:31.129827",
+  "name": "IQ-00168",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>what is Objects - Python?</div>",
+  "question_level": "Advanced",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Objects - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:31.150153",
+  "name": "IQ-00169",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>test</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "SQL",
+  "topic": "My SQL - SQL"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:31.171051",
+  "name": "IQ-00170",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>test</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "SQL",
+  "topic": "My SQL - SQL"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:31.193170",
+  "name": "IQ-00171",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>test</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "SQL",
+  "topic": "My SQL - SQL"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:31.217568",
+  "name": "IQ-00172",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>sccwedw</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "SQL",
+  "topic": "My SQL - SQL"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:31.241169",
+  "name": "IQ-00173",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>what is Regular Expressions - Python?</div>",
+  "question_level": "Advanced",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Regular Expressions - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:31.265050",
+  "name": "IQ-00174",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>What is inner join</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "SQL",
+  "topic": "My SQL - SQL"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:31.295340",
+  "name": "IQ-00175",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 1,
+    "option": "<div>correct</div>",
+    "parent": "IQ-00175",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>wrong</div>",
+    "parent": "IQ-00175",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>what is sql?</div>",
+  "question_level": "Beginner",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "SQL",
+  "topic": "My SQL - SQL"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:31.319512",
+  "name": "IQ-00176",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>cxzvz</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "SQL",
+  "topic": "My SQL - SQL"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:31.337519",
+  "name": "IQ-00177",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>vereee</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "SQL",
+  "topic": "My SQL - SQL"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:31.354524",
+  "name": "IQ-00178",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>what is Loops - Python</div>",
+  "question_level": "Advanced",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Loops - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:31.373815",
+  "name": "IQ-00179",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>what is Tuples?</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Tuples - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:31.392837",
+  "name": "IQ-00180",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>df</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Loops - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:31.419411",
+  "name": "IQ-00181",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 1,
+    "option": "<div>String</div>",
+    "parent": "IQ-00181",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>Object</div>",
+    "parent": "IQ-00181",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>What are the Java primitive types ?</div>",
+  "question_level": "Beginner",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Overriding - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:31.440677",
+  "name": "IQ-00182",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>aa</div>",
+  "question_level": "Hard",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Polymorphism - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:31.464419",
+  "name": "IQ-00183",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 1,
+    "option": "<div>correct</div>",
+    "parent": "IQ-00183",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div>wrong</div>",
+    "parent": "IQ-00183",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>None</div>",
+    "parent": "IQ-00183",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>sql?</div>",
+  "question_level": "Beginner",
+  "question_type": "Multiple",
+  "reference_code": null,
+  "subject": "SQL",
+  "topic": "My SQL - SQL"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:31.486692",
+  "name": "IQ-00184",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>Define Overriding</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Overriding - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:31.506617",
+  "name": "IQ-00185",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>what is Objects - Python?</div>",
+  "question_level": "Intermediate",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Objects - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:31.528342",
+  "name": "IQ-00186",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>what is swing?</div>",
+  "question_level": "Advanced",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Swing - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:31.548957",
+  "name": "IQ-00187",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>what is loops?</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Loops - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:31.573388",
+  "name": "IQ-00188",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>what is loops?</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Loops - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:31.595384",
+  "name": "IQ-00189",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>what is loops?</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Loops - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:31.620083",
+  "name": "IQ-00190",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>what is loops?</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Loops - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:31.645551",
+  "name": "IQ-00191",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>overriding</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Overriding - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:31.666574",
+  "name": "IQ-00192",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>My SQL?</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "SQL",
+  "topic": "My SQL - SQL"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:31.688292",
+  "name": "IQ-00193",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 1,
+    "option": "<div>cc</div>",
+    "parent": "IQ-00193",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div>bbb</div>",
+    "parent": "IQ-00193",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>aaa</div>",
+  "question_level": "Beginner",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Overriding - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:31.770581",
+  "name": "IQ-00197",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>sql-my sql ?</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "SQL",
+  "topic": "My SQL - SQL"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:31.839944",
+  "name": "IQ-00199",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 1,
+    "option": "<div>aaa</div>",
+    "parent": "IQ-00199",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div>ccc</div>",
+    "parent": "IQ-00199",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>aaa</div>",
+  "question_level": "Beginner",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Overriding - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:31.878254",
+  "name": "IQ-00200",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 0,
+    "option": "<div>aaa</div>",
+    "parent": "IQ-00200",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>qqq</div>",
+    "parent": "IQ-00200",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>aaa</div>",
+  "question_level": "Hard",
+  "question_type": "Multiple",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Overloading - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:31.899876",
+  "name": "IQ-00201",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>aa</div>",
+  "question_level": "Advanced",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Oops Concepts - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:31.920409",
+  "name": "IQ-00202",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>what is sorting?</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "C",
+  "topic": "Sorting - C"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:31.984876",
+  "name": "IQ-00204",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>What is traceability and how do you report it ? Please list the fields needed to achieve traceability ?</div>",
+  "question_level": "Intermediate",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Software Quality Assurance",
+  "topic": "QA Terminologies - Software Quality Assurance"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:32.085226",
+  "name": "IQ-00205",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>What is bug triage ? </div>",
+  "question_level": "Intermediate",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Software Quality Assurance",
+  "topic": "QA Process - Software Quality Assurance"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:32.167832",
+  "name": "IQ-00206",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>What is cross-browser testing and why do we need to do it ? How will you evaluate and identify which browsers to test on ?</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Software Quality Assurance",
+  "topic": "QA Terminologies - Software Quality Assurance"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:32.189588",
+  "name": "IQ-00207",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>Explain the following types of testing ?</div><div>- Integration</div><div>- Sanity</div><div>- Regression</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Software Quality Assurance",
+  "topic": "QA Terminologies - Software Quality Assurance"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:32.210769",
+  "name": "IQ-00208",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>aaa</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Polymorphism - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:32.234352",
+  "name": "IQ-00209",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>what is selenium?</div>",
+  "question_level": "Intermediate",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Software Quality Assurance",
+  "topic": "Selenium - Software Quality Assurance"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:32.270859",
+  "name": "IQ-00210",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 1,
+    "option": "<div>yes</div>",
+    "parent": "IQ-00210",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>No</div>",
+    "parent": "IQ-00210",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div><strong>What is Python? What are the benefits of using Python?</strong></div><div><br></div>",
+  "question_level": "Advanced",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Tuples - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:32.303977",
+  "name": "IQ-00211",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>What is Class and objects?</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Overriding - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:32.375029",
+  "name": "IQ-00213",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 1,
+    "option": "<div>a</div>",
+    "parent": "IQ-00213",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>b</div>",
+    "parent": "IQ-00213",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>write sample program using tuples?</div>",
+  "question_level": "Advanced",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Tuples - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:32.428209",
+  "name": "IQ-00214",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 0,
+    "option": "<div>3</div>",
+    "parent": "IQ-00214",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>5</div>",
+    "parent": "IQ-00214",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>10</div>",
+    "parent": "IQ-00214",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>what is socket programming?</div>",
+  "question_level": "Beginner",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Socket Programming - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:32.543353",
+  "name": "IQ-00217",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>Dummy Audio Question ?</div>",
+  "question_level": "Beginner",
+  "question_type": "Audio",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Classes - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:32.580472",
+  "name": "IQ-00218",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>Explain Difference between list and Tuple ?</div>",
+  "question_level": "Beginner",
+  "question_type": "Audio",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Classes - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:32.616415",
+  "name": "IQ-00219",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>Explain Objects in Python</div>",
+  "question_level": "Hard",
+  "question_type": "Audio",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Objects - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:32.652991",
+  "name": "IQ-00220",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>Explain OOPS concept in Python</div>",
+  "question_level": "Advanced",
+  "question_type": "Audio",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Objects - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:32.719883",
+  "name": "IQ-00221",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 0,
+    "option": "<div><span style=\"background-color: rgb(255, 255, 255); color: rgb(84, 84, 84);\">A </span><strong style=\"background-color: rgb(255, 255, 255); color: rgb(106, 106, 106);\"><em>class</em></strong><span style=\"background-color: rgb(255, 255, 255); color: rgb(84, 84, 84);\"> is a code template for creating objects. Objects have member variables and have behaviour associated with them.</span></div>",
+    "parent": "IQ-00221",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 1,
+    "option": "<div><span style=\"background-color: rgb(255, 255, 255); color: rgb(84, 84, 84);\"> In </span><strong style=\"background-color: rgb(255, 255, 255); color: rgb(106, 106, 106);\"><em>python</em></strong><span style=\"background-color: rgb(255, 255, 255); color: rgb(84, 84, 84);\"> a </span><strong style=\"background-color: rgb(255, 255, 255); color: rgb(106, 106, 106);\"><em>class</em></strong><span style=\"background-color: rgb(255, 255, 255); color: rgb(84, 84, 84);\"> is created by the keyword </span><strong style=\"background-color: rgb(255, 255, 255); color: rgb(106, 106, 106);\"><em>class</em></strong><span style=\"background-color: rgb(255, 255, 255); color: rgb(84, 84, 84);\"> .</span></div>",
+    "parent": "IQ-00221",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>What is class?</div>",
+  "question_level": "Beginner",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Classes - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:32.792689",
+  "name": "IQ-00222",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>Define overriding in java?</div>",
+  "question_level": "Beginner",
+  "question_type": "Audio",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Overriding - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:32.855221",
+  "name": "IQ-00223",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>Define overloading in java?</div>",
+  "question_level": "Beginner",
+  "question_type": "Audio",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Overloading - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:32.921393",
+  "name": "IQ-00224",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>Difference between overriding and overloading?</div>",
+  "question_level": "Beginner",
+  "question_type": "Audio",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Polymorphism - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:32.959180",
+  "name": "IQ-00225",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>what are the types in oops concept?</div>",
+  "question_level": "Beginner",
+  "question_type": "Audio",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Oops Concepts - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:32.983692",
+  "name": "IQ-00226",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>what are the types of polymorphism?</div>",
+  "question_level": "Beginner",
+  "question_type": "Audio",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Polymorphism - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:33.058332",
+  "name": "IQ-00229",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>Whats is Loops in Python?</div>",
+  "question_level": "Intermediate",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Python",
+  "topic": "Loops - Python"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:33.076511",
+  "name": "IQ-00230",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>what is java?</div>",
+  "question_level": "Hard",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Overloading - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:33.094666",
+  "name": "IQ-00231",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>test?</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Overriding - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:33.131495",
+  "name": "IQ-00233",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>What is difference between overriding and overloading?</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Java",
+  "topic": "Overriding - Java"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:33.158594",
+  "name": "IQ-00234",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 0,
+    "option": "<div>Dynamic data</div>",
+    "parent": "IQ-00234",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>Static data</div>",
+    "parent": "IQ-00234",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<ol><li data-list=\"ordered\">What is Xpath?</li></ol>",
+  "question_level": "Beginner",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "Automation testing",
+  "topic": "Xapth, selenium RC, Selenium ID, Webdriver, - Automation testing"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:33.185320",
+  "name": "IQ-00235",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>1.What is automation testing?</div>",
+  "question_level": "Beginner",
+  "question_type": "Audio",
+  "reference_code": null,
+  "subject": "Automation testing",
+  "topic": "Xapth, selenium RC, Selenium ID, Webdriver, - Automation testing"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:33.211069",
+  "name": "IQ-00236",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 0,
+    "option": "<div>Selenium 2</div>",
+    "parent": "IQ-00236",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>Selenium 3</div>",
+    "parent": "IQ-00236",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<ol><li data-list=\"ordered\">What is selenium RC?</li></ol>",
+  "question_level": "Beginner",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "Automation testing",
+  "topic": "Xapth, selenium RC, Selenium ID, Webdriver, - Automation testing"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:33.240525",
+  "name": "IQ-00237",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 0,
+    "option": "<div>Locator</div>",
+    "parent": "IQ-00237",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>Id</div>",
+    "parent": "IQ-00237",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<ol><li data-list=\"ordered\">What is Assert?</li></ol>",
+  "question_level": "Beginner",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "Automation testing",
+  "topic": "Xapth, selenium RC, Selenium ID, Webdriver, - Automation testing"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:33.268709",
+  "name": "IQ-00238",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 0,
+    "option": "<div>Absolute</div>",
+    "parent": "IQ-00238",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>Relative</div>",
+    "parent": "IQ-00238",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<ol><li data-list=\"ordered\">What are the types of Xpath?</li></ol>",
+  "question_level": "Beginner",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "Automation testing",
+  "topic": "Xapth, selenium RC, Selenium ID, Webdriver, - Automation testing"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:33.304117",
+  "name": "IQ-00239",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 1,
+    "option": "<div><strong style=\"background-color: rgb(255, 255, 255); color: rgb(54, 65, 76);\">inheritance</strong><span style=\"background-color: rgb(255, 255, 255); color: rgb(54, 65, 76);\"> is a process in which one object acquires all the properties</span></div>",
+    "parent": "IQ-00239",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div><span style=\"background-color: rgb(255, 255, 255); color: rgb(54, 65, 76);\">means having many forms</span></div>",
+    "parent": "IQ-00239",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>what is Inheritance in c++?</div>",
+  "question_level": "Beginner",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "Software Quality Assurance",
+  "topic": "Test Case Authoring - Software Quality Assurance"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:33.364613",
+  "name": "IQ-00241",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 1,
+    "option": "<div>1</div>",
+    "parent": "IQ-00241",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>0</div>",
+    "parent": "IQ-00241",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>test123</div>",
+  "question_level": "Beginner",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "Software Quality Assurance",
+  "topic": "RestAssured - Software Quality Assurance"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:33.410276",
+  "name": "IQ-00243",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>demo</div>",
+  "question_level": "Beginner",
+  "question_type": "Audio",
+  "reference_code": null,
+  "subject": "Software Quality Assurance",
+  "topic": "TestNG - Software Quality Assurance"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:33.456336",
+  "name": "IQ-00245",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>What is use of triggers? </div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "SQL",
+  "topic": "My SQL - SQL"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:16:33.477181",
+  "name": "IQ-00246",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>wwww</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Automation testing",
+  "topic": "Xapth, selenium RC, Selenium ID, Webdriver, - Automation testing"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:27:14.636891",
+  "name": "IQ-00251",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>what is J unit framework</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Software Quality Assurance",
+  "topic": "JUnit - Software Quality Assurance"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:27:14.663945",
+  "name": "IQ-00252",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>test1?</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Software Quality Assurance",
+  "topic": "JUnit - Software Quality Assurance"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:27:14.690619",
+  "name": "IQ-00253",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>aaaa</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Software Quality Assurance",
+  "topic": "JUnit - Software Quality Assurance"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:27:14.718475",
+  "name": "IQ-00254",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>what is Cucumber in selenium?</div>",
+  "question_level": "Beginner",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Software Quality Assurance",
+  "topic": "Cucumber - Software Quality Assurance"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:27:14.745360",
+  "name": "IQ-00255",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>Please explain the steps to install cucumber?</div>",
+  "question_level": "Beginner",
+  "question_type": "Audio",
+  "reference_code": null,
+  "subject": "Software Quality Assurance",
+  "topic": "Cucumber - Software Quality Assurance"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:27:14.776254",
+  "name": "IQ-00256",
+  "naming_series": "IQ-",
+  "options": [
+   {
+    "is_correct": 1,
+    "option": "<div>yes</div>",
+    "parent": "IQ-00256",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   },
+   {
+    "is_correct": 0,
+    "option": "<div>no</div>",
+    "parent": "IQ-00256",
+    "parentfield": "options",
+    "parenttype": "Interview Question"
+   }
+  ],
+  "question": "<div>Please explain the steps to install cucumber?</div>",
+  "question_level": "Beginner",
+  "question_type": "Single",
+  "reference_code": null,
+  "subject": "Software Quality Assurance",
+  "topic": "Cucumber - Software Quality Assurance"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Interview Question",
+  "is_private": 0,
+  "modified": "2024-08-25 22:27:14.812549",
+  "name": "IQ-00257",
+  "naming_series": "IQ-",
+  "options": [],
+  "question": "<div>Advanced Question?</div>",
+  "question_level": "Advanced",
+  "question_type": "Free Text",
+  "reference_code": null,
+  "subject": "Software Quality Assurance",
+  "topic": "Cucumber - Software Quality Assurance"
+ }
+]
