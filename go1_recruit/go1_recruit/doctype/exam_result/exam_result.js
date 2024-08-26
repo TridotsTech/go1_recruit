@@ -177,7 +177,7 @@ frappe.ui.form.on('Exam Result', {
             
             frappe.confirm(__(msg), () => {
                 frappe.call({
-                    method: 'go1_recruit.go1_recruit.doctype.exam_result.exam_result.insert_mailTo_candidates1',
+                    method: 'go1_recruit.go1_recruit.doctype.exam_result.exam_result.insert_mail_to_candidates1',
                     args: {
                         exam_result_id: cur_frm.doc.name,
                         question_paper_id: cur_frm.doc.exam_id,

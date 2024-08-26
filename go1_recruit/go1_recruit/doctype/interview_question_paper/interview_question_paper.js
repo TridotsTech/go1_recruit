@@ -291,23 +291,25 @@ mail_candidates: function(frm) {
     if (frm.doc.questions.length > 0 && frm.doc.candidate_list.length > 0) {
         
         frappe.call({
-            method: 'go1_recruit.go1_recruit.doctype.interview_question_paper.interview_question_paper.insert_mailTo_candidates',
+            method: 'go1_recruit.go1_recruit.doctype.interview_question_paper.interview_question_paper.insert_mail_to_candidates',
             args: {
                 question_paper_id: cur_frm.doc.name
             },
             callback: function(r) {
                 if(r.message){
-                if (r.message.status == "success") {
-                    var msg= "Mail has been sent to the interview members!";
-                   
-                    frappe.show_alert(msg);
-                    frappe.current_mailCount = r.message.count
-                } else if (r.message.status == "failure") {
-                    var msg = "<h6>Mail for the existing candidates has already been sent!</h6> <br><h6>Please add new candidates and try again.</h6>"
-                   
-                    
-                    frappe.throw(__(msg))
-                }
+					var message = ""
+					if (r.message.status == "success") {
+						message= "Mail has been sent to the interview members!";
+					
+						frappe.show_alert(message);
+						frappe.current_mailCount = r.message.count
+					} else if (r.message.status == "failure") {
+						message = "<h6>Mail for the existing candidates has already been sent!</h6> <br><h6>Please add new candidates and try again.</h6>"
+						frappe.throw(__(message))
+					} else if (r.message.status == "default_email_not_set") {
+						message = "Please set a default email account for outgoing messages in this site."	
+						frappe.throw(__(message))
+					}
                 }
             }
         });

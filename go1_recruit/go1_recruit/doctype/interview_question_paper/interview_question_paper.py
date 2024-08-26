@@ -117,8 +117,10 @@ def update_questions_for_question_paper(questions,question_paper_id):
 
 
 @frappe.whitelist()
-def insert_mailTo_candidates(question_paper_id):
+def insert_mail_to_candidates(question_paper_id):
 	try:
+		if not frappe.db.get_value("Email Account",{"default_outgoing" : 1}, ["name"]):
+			return {'status':'default_email_not_set'}
 		candidates = frappe.db.sql('''select name, candidate_name, candidate_email, interviewer_email, time_zone, start_time, end_time, monitored_test,candidate_video,record_screen from `tabInterview Candidates` where parent=%(paper_id)s and mail_sent=0''',{'paper_id':question_paper_id},as_dict=1)
 		count = frappe.db.sql('''SELECT count(name) AS count FROM `tabInterview Candidates` where parent=%(paper_id)s and mail_sent=0''',{'paper_id':question_paper_id},as_dict=1)
 		interview_questions=frappe.db.sql('''SELECT count(name) as total_qsn FROM `tabQuestion Paper Questions` WHERE parent=%(paper_id)s''',{'paper_id':question_paper_id},as_dict=1)
@@ -178,7 +180,7 @@ def insert_mailTo_candidates(question_paper_id):
 			return {'status':'failure'}
 
 	except Exception:
-		frappe.log_error(frappe.get_traceback(), "go1_recruit.go1_recruit.doctype.interview_question_paper.interview_question_paper.insert_mailTo_candidates")
+		frappe.log_error(frappe.get_traceback(), "go1_recruit.go1_recruit.doctype.interview_question_paper.interview_question_paper.insert_mail_to_candidates")
   
   
 
@@ -268,7 +270,7 @@ def create_level_and_type_combination2(subject,topic,types,levels):
 	condition='' 
 	
 	for question in combination:
-		questions=frappe.db.sql('''select count(question) as count,question_type,question_level from `tabInterview Question` where question_type=%(question_type)s and question_level=%(question_level)s and subject in ({0}) and topic in ({1}) and status='Accepted' {conditions} having count>0'''.format(subjects_lists[:-1],topic_lists[:-1],conditions=condition),{"question_type":question[0],"question_level":question[1]},as_dict=1)
+		questions=frappe.db.sql('''select count(question) as count,question_type,question_level from `tabInterview Question` where question_type=%(question_type)s and question_level=%(question_level)s and subject in ({0}) and topic in ({1}) {conditions} having count>0'''.format(subjects_lists[:-1],topic_lists[:-1],conditions=condition),{"question_type":question[0],"question_level":question[1]},as_dict=1)
 		if len(questions)>0:
 			ques_list={}
 			ques_list['question_type'] = question[0]
@@ -299,7 +301,7 @@ def get_random_questions(questions,question_paper_id,subject,topic):
 			question_type = item['question_type']
 			question_level = item['question_level']
 			
-			generated_question = frappe.db.sql('''select name,subject,topic,question,question_type,question_level from `tabInterview Question` where question_type=%(question_type)s and question_level=%(question_level)s and subject in ({0}) and topic in ({1}) and status='Accepted' {condition} order by rand() limit {limit} '''.format(subjects_lists[:-1],topic_lists[:-1],limit=no_of_questions,condition=condition),{"question_type":question_type,"question_level":question_level},as_dict=1)
+			generated_question = frappe.db.sql('''select name,subject,topic,question,question_type,question_level from `tabInterview Question` where question_type=%(question_type)s and question_level=%(question_level)s and subject in ({0}) and topic in ({1}) {condition} order by rand() limit {limit} '''.format(subjects_lists[:-1],topic_lists[:-1],limit=no_of_questions,condition=condition),{"question_type":question_type,"question_level":question_level},as_dict=1)
 			questions_list+=generated_question
 	return questions_list
 
