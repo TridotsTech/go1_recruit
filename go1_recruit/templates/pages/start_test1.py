@@ -13,7 +13,7 @@ no_cache = 1
 no_sitemap = 1
 
 def get_encrypted_url_details(token):
-    return frappe.db.sql('''select name, questionpaper_id, meeting_id, candidate_name, candidate_email, test_attempted, time_zone, start_time, end_time, monitored_test, candidate_video, record_screen, interviewer_email from `tabQuestion Paper Candidates` where encrypted_url=%(token)s''', {'token': token}, as_dict=1)
+    return frappe.db.sql('''select name, questionpaper_id, meeting_id, candidate_name, candidate_email, test_attempted, time_zone, start_time, end_time, monitored_test, candidate_video, record_screen, interviewer_email from `tabQuestion Paper Candidates` where encrypted_url=%(token)s''', {'token': '{0}/online_interview1?token={1}'.format(frappe.utils.get_url(), token)}, as_dict=1)
 
 def get_exam_result(candidate_email, question_id):
     return frappe.db.get_all('Exam Result', fields=['exam_id'], filters={'user': candidate_email, 'exam_id': question_id})
