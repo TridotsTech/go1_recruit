@@ -16,6 +16,7 @@ def get_context(context):
     try:
         go1_recruit_settings = frappe.get_single('Go1 Recruit Settings')
         token = frappe.form_dict.token
+        frappe.log_error("Token",frappe.form_dict.token)
         context.token = token
 
         candidate_details = get_candidate_details(token)

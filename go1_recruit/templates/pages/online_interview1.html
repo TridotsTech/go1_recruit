@@ -178,10 +178,11 @@
 {% block script %}
 <script type="text/javascript">
     function start_test(){
+		console.log(window.location.origin)
         window.location = window.location.origin + "/start_test1?token=" + '{{ token }}'
     }
-    function start_zoom(){
-        window.location ='{{ details[0].zoom_url }}';
-    }
+    // function start_zoom(){
+    //     window.location ='{{ details[0].zoom_url }}';
+    // }
 </script>
 {% endblock %}
