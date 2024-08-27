@@ -33,12 +33,13 @@ def get_context(context):
 
 
 def get_candidate_details(token):
+    encrypted_url = '{0}/online_interview1?token={1}'.format(frappe.utils.get_url(), token)
     return frappe.db.sql('''
         SELECT name, questionpaper_id, meeting_id, questionpaper_name, candidate_name, candidate_email, 
         test_attempted, time_zone, start_time, end_time, duration_minutes, subject_name, monitored_test, zoom_url 
         FROM `tabQuestion Paper Candidates` 
-        WHERE encrypted_url=%(token)s
-    ''', {'token': token}, as_dict=1)
+        WHERE encrypted_url=%(encrypted_url)s
+    ''', {'encrypted_url': encrypted_url}, as_dict=1)
 
 
 def handle_monitored_test(context, candidate_details, go1_recruit_settings):

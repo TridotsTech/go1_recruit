@@ -1,11 +1,11 @@
 frappe.ui.form.on('Interview Question', {
     subject: function(frm) {
-        if (frm.doc.subject) {
-            frm.set_value('topic','')
-            frm.set_query("topic", function() {
+        if (cur_frm.doc.subject) {
+            cur_frm.set_value('topic','')
+            cur_frm.set_query("topic", function() {
                 return {
                     "filters": {
-                        "subject": frm.doc.subject
+                        "subject": cur_frm.doc.subject
                     }
                 }
             })
@@ -15,18 +15,18 @@ frappe.ui.form.on('Interview Question', {
     refresh:function(frm){
         $('button[data-fieldname="add_options"]').addClass('btn-primary')
         $('button[data-fieldname="add_options"]').removeClass('btn-xs')
-        frm.trigger('options_html')
+        cur_frm.trigger('options_html')
     },
 
     add_options:function(frm){
-        frm.edit_option=0;
-        frm.trigger('option_dialog')
+        cur_frm.edit_option=0;
+        cur_frm.trigger('option_dialog')
     },
 
     option_dialog:function(frm){
         let title='Add Options';
         let primary_text='Add';
-        if(frm.edit_option==1){
+        if(cur_frm.edit_option==1){
             title='Edit Option';
             primary_text='Save'
         }
@@ -50,9 +50,9 @@ frappe.ui.form.on('Interview Question', {
 
         dialog.set_primary_action(__(primary_text),function(){
             let values=dialog.get_values();
-            if(frm.edit_option!=1){
+            if(cur_frm.edit_option!=1){
                 if(values.option != '<div><br></div>'){
-                            let child=frappe.model.add_child(frm.doc, "Question Option", "options");
+                            let child=frappe.model.add_child(cur_frm.doc, "Question Option", "options");
                             child.option=values.option;
                             child.is_correct=values.is_correct;
                 }
@@ -62,14 +62,14 @@ frappe.ui.form.on('Interview Question', {
                         frappe.throw(__(msg))
                     }
             }else{
-                frappe.model.set_value('Question Option', frm.option.name, 'option', values.option)
-                frappe.model.set_value('Question Option', frm.option.name, 'is_correct', values.is_correct)
+                frappe.model.set_value('Question Option', cur_frm.option.name, 'option', values.option)
+                frappe.model.set_value('Question Option', cur_frm.option.name, 'is_correct', values.is_correct)
             }  
 
             cur_frm.refresh_field("options");
             dialog.hide();
            
-            if(!frm.doc.__islocal)
+            if(!cur_frm.doc.__islocal)
                 cur_frm.save();
              cur_frm.trigger('options_html')
 
@@ -81,7 +81,7 @@ frappe.ui.form.on('Interview Question', {
     },
 
     options_html:function(frm){
-        let wrapper = $(frm.get_field('options_html').wrapper).empty();
+        let wrapper = $(cur_frm.get_field('options_html').wrapper).empty();
         let table_html=$(`<table class="table table-bordered" style="cursor:pointer; margin:0px;">
             <thead>
                 <tr>
@@ -92,9 +92,9 @@ frappe.ui.form.on('Interview Question', {
             </thead>
             <tbody></tbody>
         </table>`).appendTo(wrapper);
-        if(frm.doc.options){
-            if(frm.doc.options.length>0){
-                frm.doc.options.map( f => {
+        if(cur_frm.doc.options){
+            if(cur_frm.doc.options.length>0){
+                cur_frm.doc.options.map( f => {
                     if(f.is_correct==1){
                         f.correct_value='Yes';
                     }else{
@@ -117,7 +117,7 @@ frappe.ui.form.on('Interview Question', {
         else{
             table_html.find('tbody').append(`<tr><td colspan="3">No records found!</td></tr>`);
         }
-        $(frm.get_field('options_html').wrapper).find('tbody .btn-danger').on('click', function(){
+        $(cur_frm.get_field('options_html').wrapper).find('tbody .btn-danger').on('click', function(){
                 let id=$(this).parent().parent().attr('data-id');
                 let idx=$(this).parent().parent().attr('data-idx');
                 var msg ="Do you want to delete this option?"
@@ -131,7 +131,7 @@ frappe.ui.form.on('Interview Question', {
                             name:id
                         },
                         callback:function(f){
-                            frm.trigger('options_html')
+                            cur_frm.trigger('options_html')
                             cur_frm.reload_doc()
                         }
                     })                        
@@ -140,12 +140,12 @@ frappe.ui.form.on('Interview Question', {
         })
 
 
-        $(frm.get_field('options_html').wrapper).find('tbody .btn-warning').on('click', function(){
+        $(cur_frm.get_field('options_html').wrapper).find('tbody .btn-warning').on('click', function(){
             let id=$(this).parent().parent().attr('data-id');
             let idx=$(this).parent().parent().attr('data-idx');
-            frm.option=frm.doc.options.find(obj=>obj.name==id);
-            frm.edit_option=1;
-            frm.trigger('option_dialog');
+            cur_frm.option=cur_frm.doc.options.find(obj=>obj.name==id);
+            cur_frm.edit_option=1;
+            cur_frm.trigger('option_dialog');
         })
     }
 

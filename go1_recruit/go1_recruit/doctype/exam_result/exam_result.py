@@ -96,7 +96,7 @@ def insert_mailTo_candidates1(exam_result_id,question_paper_id,email):
 			exam_result_sharing.question_paper_name = user_list[0].questionpaper_name
 			exam_result_sharing.candidate_name = user_list[0].candidate_name
 			exam_result_sharing.subject = interview_subject
-			exam_result_sharing.encrypted_url = encrypted
+			exam_result_sharing.encrypted_url = '{0}/result?token={1}'.format(frappe.utils.get_url(), encrypted)
 			exam_result_sharing.save(ignore_permissions=True)
 		return {'status':'success'}
 	else:

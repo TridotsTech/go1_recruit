@@ -3,9 +3,9 @@
 
 frappe.ui.form.on('Video Conference Room', {
 	refresh: function(frm) {
-		if (!frm.doc.__islocal) {
-            frm.add_custom_button(__('Invite Participants'), function() {
-                frm.trigger('send_mail')
+		if (!cur_frm.doc.__islocal) {
+            cur_frm.add_custom_button(__('Invite Participants'), function() {
+                cur_frm.trigger('send_mail')
             });        }
 		},
 	send_mail: function(frm) {

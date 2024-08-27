@@ -94,8 +94,8 @@ def get_questions_list(**kwargs):
    		
      
 		start=(int(kwargs.get('page_no'))-1)*int(kwargs.get('page_len'))
-		total_count=frappe.db.sql('''select ifnull(count(*),0) as count from `tabInterview Question` where status="Accepted" {0}'''.format(condition),as_dict=1)
-		questions_list=frappe.db.sql('''select name,subject,topic,question,question_type,question_level,is_private from `tabInterview Question` where status="Accepted" {0} limit {1},{2}'''.format(condition,start,int(kwargs.get('page_len'))),as_dict=1)
+		total_count=frappe.db.sql('''select ifnull(count(*),0) as count from `tabInterview Question` where 1=1 {0}'''.format(condition),as_dict=1)
+		questions_list=frappe.db.sql('''select name,subject,topic,question,question_type,question_level,is_private from `tabInterview Question` where 1=1 {0} limit {1},{2}'''.format(condition,start,int(kwargs.get('page_len'))),as_dict=1)
 		return {'questions':questions_list,'count':total_count[0].count}
 
 	except Exception:
@@ -156,7 +156,7 @@ def insert_mail_to_candidates(question_paper_id):
 					question_paper_candidates.zoom_url=zoom_url
 					question_paper_candidates.meeting_id=meeting_id
 					question_paper_candidates.monitored_test=x.monitored_test
-					question_paper_candidates.encrypted_url = encrypted
+					question_paper_candidates.encrypted_url = '{0}/online_interview1?token={1}'.format(frappe.utils.get_url(), encrypted)
      
      
 					if x.monitored_test == 1:

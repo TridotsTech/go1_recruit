@@ -5,19 +5,19 @@ frappe.provide("go1_recruit.interview_question_paper");
 frappe.ui.form.on('Interview Question Paper', {
   
     refresh: function(frm) {
-        frm.trigger('options_html')
+        cur_frm.trigger('options_html')
         //Topic 
         $('div[data-fieldname="topics"]').on('click', function() {
             var questions_lists = []
-            if (frm.doc.topics) {
-                questions_lists = frm.doc.topics.map(val => val.topic)
+            if (cur_frm.doc.topics) {
+                questions_lists = cur_frm.doc.topics.map(val => val.topic)
             }
             var subjects_lists = []
-            if (frm.doc.subject) {
-                subjects_lists = frm.doc.subject.map(val => val.subjects)
+            if (cur_frm.doc.subject) {
+                subjects_lists = cur_frm.doc.subject.map(val => val.subjects)
             }
             if (questions_lists.length > 0 && subjects_lists.length >0) {
-                frm.set_query("topics", function(doc) {
+                cur_frm.set_query("topics", function(doc) {
                     return {
                         "filters": {
                             "subject": ["in",subjects_lists],
@@ -33,12 +33,12 @@ frappe.ui.form.on('Interview Question Paper', {
         $('[data-fieldname="subject"] .control-input.form-control.table-multiselect').click(function(){
            
             var questions_lists = []
-            if (frm.doc.subject) {
-                questions_lists = frm.doc.subject.map(val => val.subjects)
+            if (cur_frm.doc.subject) {
+                questions_lists = cur_frm.doc.subject.map(val => val.subjects)
             }
             if (questions_lists.length > 0) {
 
-                frm.set_query("subject", function(doc) {
+                cur_frm.set_query("subject", function(doc) {
                     return {
                         "filters": {
                             "name": ["not in", questions_lists]
@@ -48,7 +48,7 @@ frappe.ui.form.on('Interview Question Paper', {
             }
             else{
 
-                frm.set_query("subject", function(doc) {
+                cur_frm.set_query("subject", function(doc) {
                     return {
                         "filters": {
                             "name": ["not in", []]
@@ -66,7 +66,7 @@ frappe.ui.form.on('Interview Question Paper', {
 
 
         $('.addQuestions').click(function() {
-            frm.trigger('get_all_questions_list')
+            cur_frm.trigger('get_all_questions_list')
         })
        
 
@@ -80,7 +80,7 @@ frappe.ui.form.on('Interview Question Paper', {
     
         frappe.call({
             method: 'go1_recruit.go1_recruit.doctype.interview_question_paper.interview_question_paper.questionpaper_candidates_count',
-            args: { questionpaper_id: frm.doc.name },
+            args: { questionpaper_id: cur_frm.doc.name },
             async: false,
             callback: function(data) {
                 frappe.candidates_mailed_count = data.message[0].count;
@@ -88,32 +88,32 @@ frappe.ui.form.on('Interview Question Paper', {
         })
 
       
-        if (frm.doc.docstatus == 1) {
-            frm.add_custom_button(__('Mail Candidates'), function() {
-                if (frm.doc.mail_sent == 0) {
+        if (cur_frm.doc.docstatus == 1) {
+            cur_frm.add_custom_button(__('Mail Candidates'), function() {
+                if (cur_frm.doc.mail_sent == 0) {
                     var msg="Do you want to mail this question paper to the candidates?<br><br><b>NOTE:</b>You can not add/remove question after mailing the candidates!";
                 
                     frappe.confirm(__(msg), () => {
-                        frm.trigger('mail_candidates')
+                        cur_frm.trigger('mail_candidates')
                     });
                 } else {
                     var msg="Do you want to mail this question paper to the candidates?<br><br><b>NOTE:</b>You can not add/remove question after mailing the candidates!";
                   
                     frappe.confirm(__(msg), () => {
-                        frm.trigger('mail_candidates')
+                        cur_frm.trigger('mail_candidates')
                     });
                 }
             });
         }
 
-        if (frm.doc.docstatus == 1) {
-             frm.add_custom_button(__('Copy Question Paper'), function() {
+        if (cur_frm.doc.docstatus == 1) {
+             cur_frm.add_custom_button(__('Copy Question Paper'), function() {
                     var msg="Are you sure want to duplicate this Question Paper?";
                      frappe.confirm(__(msg), () => {
                          frappe.call({
                             method: 'go1_recruit.go1_recruit.doctype.interview_question_paper.interview_question_paper.validate_question_paper',
                             args: {
-                                "question_paper_id":frm.doc.name
+                                "question_paper_id":cur_frm.doc.name
                             },
                             async: false,
                             callback: function(r) {
@@ -164,21 +164,21 @@ frappe.ui.form.on('Interview Question Paper', {
 
 
     pick_the_question: function(frm) {
-        frm.trigger('get_all_questions_list')
+        cur_frm.trigger('get_all_questions_list')
     },
 
 
 
 subject: function(frm) {
-    if (frm.doc.subject) {
-        frm.set_value('topics', '')
+    if (cur_frm.doc.subject) {
+        cur_frm.set_value('topics', '')
         var subjects_lists = []
 
-        if (frm.doc.subject) {
-            subjects_lists = frm.doc.subject.map(val => val.subjects)
+        if (cur_frm.doc.subject) {
+            subjects_lists = cur_frm.doc.subject.map(val => val.subjects)
         }
 
-        frm.set_query("topics", function() {                
+        cur_frm.set_query("topics", function() {                
             return {
                 "filters": {
                     "subject": ["in", subjects_lists]
@@ -187,12 +187,12 @@ subject: function(frm) {
         })
 
 
-        if(frm.doc.all_topics == 1){
+        if(cur_frm.doc.all_topics == 1){
             var all_topic = []
             var subjects = []
 
-            for(var i=0; i<frm.doc.subject.length; i++){
-                var subject = frm.doc.subject[i].subjects;
+            for(var i=0; i<cur_frm.doc.subject.length; i++){
+                var subject = cur_frm.doc.subject[i].subjects;
                 subjects.push({"name":subject})
             }
             
@@ -211,7 +211,7 @@ subject: function(frm) {
                 }
             })
 
-            frm.set_value('topics', all_topic)
+            cur_frm.set_value('topics', all_topic)
             cur_frm.refresh_field("topics");
         }
     }
@@ -219,12 +219,12 @@ subject: function(frm) {
 
 
 all_topics: function(frm){
-    frm.set_value('topics', '')
-    if(frm.doc.all_topics == 1){
+    cur_frm.set_value('topics', '')
+    if(cur_frm.doc.all_topics == 1){
             var all_topic = []
             var subjects = []
-            for(var i=0; i<frm.doc.subject.length; i++){
-                var subject = frm.doc.subject[i].subjects;
+            for(var i=0; i<cur_frm.doc.subject.length; i++){
+                var subject = cur_frm.doc.subject[i].subjects;
                 subjects.push({"name":subject})
             }
             frappe.call({
@@ -241,7 +241,7 @@ all_topics: function(frm){
                     }
                 }
             })
-            frm.set_value('topics', all_topic)
+            cur_frm.set_value('topics', all_topic)
             cur_frm.refresh_field("topics");
         }
 },
@@ -249,31 +249,31 @@ all_topics: function(frm){
 
 get_all_questions_list: function(frm) {
     let d = {
-        'subject': frm.doc.subject,
-        'topics': frm.doc.topics,
+        'subject': cur_frm.doc.subject,
+        'topics': cur_frm.doc.topics,
         'page_no': 1,
         'page_len': 5
     }
-    frm.questions_list = [];
+    cur_frm.questions_list = [];
     new go1_recruit.PickQuestions({
-        subject: frm.doc.subject,
-        topics: frm.doc.topics,
+        subject: cur_frm.doc.subject,
+        topics: cur_frm.doc.topics,
         page_len: 3,
-        no_of_questions: frm.doc.noof_questions,
-        questions_list: frm.doc.questions
+        no_of_questions: cur_frm.doc.noof_questions,
+        questions_list: cur_frm.doc.questions
     })
 },
 
 get_all_questions_list1: function(frm) {
     frappe.call({
         method: 'go1_recruit.go1_recruit.doctype.interview_question_paper.interview_question_paper.create_level_and_type_combination',
-        args: { subject: frm.doc.subject, topic: frm.doc.topics },
+        args: { subject: cur_frm.doc.subject, topic: cur_frm.doc.topics },
         async: false,
         callback: function(data) {
             if (data.message) {
                 if (data.message.length > 0) {
                     
-                    frm.combination = data.message;
+                    cur_frm.combination = data.message;
                     let combination = data.message;
                     questions_dialog2(combination);
                 }
@@ -288,7 +288,7 @@ get_all_questions_list1: function(frm) {
 
 
 mail_candidates: function(frm) {
-    if (frm.doc.questions.length > 0 && frm.doc.candidate_list.length > 0) {
+    if (cur_frm.doc.questions.length > 0 && cur_frm.doc.candidate_list.length > 0) {
         
         frappe.call({
             method: 'go1_recruit.go1_recruit.doctype.interview_question_paper.interview_question_paper.insert_mail_to_candidates',
@@ -304,7 +304,7 @@ mail_candidates: function(frm) {
 						frappe.show_alert(message);
 						frappe.current_mailCount = r.message.count
 					} else if (r.message.status == "failure") {
-						message = "<h6>Mail for the existing candidates has already been sent!</h6> <br><h6>Please add new candidates and try again.</h6>"
+						message = "Mail for the existing candidates has already been sent!<br>Please add new candidates and try again."
 						frappe.throw(__(message))
 					} else if (r.message.status == "default_email_not_set") {
 						message = "Please set a default email account for outgoing messages in this site."	
@@ -314,11 +314,11 @@ mail_candidates: function(frm) {
             }
         });
         
-    } else if (frm.doc.questions.length == 0) {
+    } else if (cur_frm.doc.questions.length == 0) {
         var msg="Please add questions!"
         
         frappe.msgprint(__(msg))
-    } else if (frm.doc.candidate_list.length == 0) {
+    } else if (cur_frm.doc.candidate_list.length == 0) {
         var msg="Please add candidates!"
         
         frappe.msgprint(__(msg))
@@ -327,10 +327,10 @@ mail_candidates: function(frm) {
 
 
 options_html: function(frm) {
-    if (!frm.doc.__islocal) {
-    let wrapper = $(frm.get_field('questions_html').wrapper).empty();
+    if (!cur_frm.doc.__islocal) {
+    let wrapper = $(cur_frm.get_field('questions_html').wrapper).empty();
     let table_html = ""
-    if (frm.doc.mail_sent == 0) {
+    if (cur_frm.doc.mail_sent == 0) {
         table_html = $(`<table class="table table-bordered" style="cursor:pointer; margin:0px;">
             <thead>
                 <tr>
@@ -361,12 +361,12 @@ options_html: function(frm) {
         </table>`).appendTo(wrapper);
     }
     var s_no = 0
-    if (frm.doc.questions.length > 0) {
-        frm.doc.questions.map(f => {
+    if (cur_frm.doc.questions.length > 0) {
+        cur_frm.doc.questions.map(f => {
             s_no += 1;
             f.s_no = s_no;
             let row_data = ""
-            if (frm.doc.mail_sent == 0) {
+            if (cur_frm.doc.mail_sent == 0) {
                 row_data = $(`<tr data-id="${f.name}" data-idx="${f.idx}">
                     <td>${f.s_no}</td>
                     <td>${f.question}</td>
@@ -392,7 +392,7 @@ options_html: function(frm) {
     } else {
         table_html.find('tbody').append(`<tr><td colspan="7" align="center">No records found!</td></tr>`);
     }
-    $(frm.get_field('questions_html').wrapper).find('tbody .btn-danger').on('click', function() {
+    $(cur_frm.get_field('questions_html').wrapper).find('tbody .btn-danger').on('click', function() {
         let id = $(this).parent().parent().attr('data-id');
         var msg = "Do you want to delete this question?"
         
@@ -404,7 +404,7 @@ options_html: function(frm) {
                         name: id
                     },
                     callback: function(f) {
-                        frm.trigger('options_html')
+                        cur_frm.trigger('options_html')
                         cur_frm.reload_doc()
                     }
                 })
@@ -469,11 +469,11 @@ function auto_generate_questions_dialog(frm) {
 
 
     let height = String($(window).height() - 40) + "px"
-    $(dialog.$wrapper).find('.modal-content').css("height", height);
+    // $(dialog.$wrapper).find('.modal-content').css("height", height);
     $(dialog.$wrapper).find('div[data-fieldname="modal_question_levels"]').css('margin-top', '-30px')
-    $(dialog.$wrapper).find('button[data-fieldname="refresh"]').parent().parent().parent().parent().css({"z-index":"99999999"})
+    // $(dialog.$wrapper).find('button[data-fieldname="refresh"]').parent().parent().parent().parent().css({"z-index":"99999999"})
 
-    $(dialog.$wrapper).find('button[data-fieldname="refresh"]').css({"padding": "5px 10px", "float": "right", "background": "#488fdb", "color": "white","z-index":"999999"})
+    $(dialog.$wrapper).find('button[data-fieldname="refresh"]').css({"padding": "5px 10px", "margin-right":"10px", "float": "right", "background": "#488fdb", "color": "white"})
     $(dialog.$wrapper).find('div[data-fieldname="modal_single_questions"]').parent().parent().removeClass('col-sm-6')
     $(dialog.$wrapper).find('div[data-fieldname="modal_single_questions"]').parent().parent().addClass('col-sm-3')
     $(dialog.$wrapper).find('div[data-fieldname="modal_single_questions"]').parent().parent().parent().parent().css('padding', '0px')
@@ -488,7 +488,7 @@ function auto_generate_questions_dialog(frm) {
     $(dialog.$wrapper).find('button[data-fieldname="apply_pattern"]').removeClass('btn-xs');
     $(dialog.$wrapper).find('button[data-fieldname="apply_pattern"]').addClass('btn-sm btn-primary');
     dialog.$wrapper.find('.form-section').css('max-height', height)
-    dialog.$wrapper.find('.form-section').css('overflow-y', 'auto')
+    // dialog.$wrapper.find('.form-section').css('overflow-y', 'auto')
     dialog.$wrapper.find('.buttons').find($(".btn-primary")).attr("disabled", true);
 
     
@@ -656,7 +656,24 @@ function auto_generate_questions_dialog(frm) {
     function html_pattern(dialog) {
         var max_count = cur_frm.doc.noof_questions
         var html = '<input type="hidden" id="hdnAttributeOptionid"/><p>Please choose the pattern and number of question</p><table class="table table-bordered" id="OptionsData"><thead style="background: #F7FAFC;"><tr><!--<th></th>--><th style="width: 30%;">Question Type</th><th style="width: 30%;">Question Level</th><th style="width: 15%;">Available Questions</th><th style="width: 15%;">Number Of Questions</th></tr></thead>';
-        html += '<tbody>';
+        html += `<script>
+					function IncrementQty(element) {
+						var input = element.siblings('input[name="question"]');
+						var max = parseInt(input.attr('max'));
+						var value = parseInt(input.val());
+						if (value < max) {
+							input.val(value + 1);
+						}
+					}
+					function DecrementQty(element) {
+						var input = element.siblings('input[name="question"]');
+						var value = parseInt(input.val());
+						if (value > 0) {
+							input.val(value - 1);
+						}
+					}
+				</script>`
+		html += '<tbody>';
         if (questions_list.length > 0) {
             
             
@@ -747,10 +764,10 @@ function key_press_validation(element) {
 frappe.ui.form.on('Interview Question Paper', {
     refresh: function(frm) {
         var subjects_lists = []
-            if (frm.doc.subject) {
-                subjects_lists = frm.doc.subject.map(val => val.subjects)
+            if (cur_frm.doc.subject) {
+                subjects_lists = cur_frm.doc.subject.map(val => val.subjects)
             }
-        frm.set_query("topics", function(doc) {
+        cur_frm.set_query("topics", function(doc) {
             return {
                 "filters": {
                     "subject": ["in",subjects_lists]
@@ -1302,14 +1319,14 @@ frappe.ui.form.on('Interview Question Paper', {
     refresh: function(frm) {
         // $('button[data-fieldname="add_candidates"]').addClass('btn-primary')
         // $('button[data-fieldname="add_candidates"]').removeClass('btn-xs')
-        frm.trigger('candidate_html')
-        frm.trigger('shortlist_html')
+        cur_frm.trigger('candidate_html')
+        cur_frm.trigger('shortlist_html')
     },
 
 
     add_candidates: function(frm) {
-        frm.edit_option = 0;
-        frm.trigger('option_dialog')
+        cur_frm.edit_option = 0;
+        cur_frm.trigger('option_dialog')
     },
 
 
@@ -1512,9 +1529,9 @@ frappe.ui.form.on('Interview Question Paper', {
                 let allow = false;
                 let allow2 = true;
                 var emails = []
-                for (var i = 0; i < frm.doc.candidate_list.length; i++) {
+                for (var i = 0; i < cur_frm.doc.candidate_list.length; i++) {
                  
-                    emails.push(frm.doc.candidate_list[i].candidate_email)
+                    emails.push(cur_frm.doc.candidate_list[i].candidate_email)
                 }
                 if (jQuery.inArray(values.candidate_email, emails) == -1) {
 
@@ -1538,7 +1555,7 @@ frappe.ui.form.on('Interview Question Paper', {
                 if (allow) {
                     if(allow2){
                         let today = frappe.datetime.add_days(frappe.datetime.nowdate())
-                        let child = frappe.model.add_child(frm.doc, "Interview Candidates", "candidate_list");
+                        let child = frappe.model.add_child(cur_frm.doc, "Interview Candidates", "candidate_list");
                         child.candidate_name = values.candidate_name;
                         child.candidate_email = values.candidate_email;
                         child.candidate_phone = values.candidate_phone;
@@ -1576,7 +1593,7 @@ frappe.ui.form.on('Interview Question Paper', {
 
 
     candidate_html: function(frm) {
-        let wrapper = $(frm.get_field('candidate_html').wrapper).empty();
+        let wrapper = $(cur_frm.get_field('candidate_html').wrapper).empty();
         let table_html = $(`
             <table class="table table-bordered" style="margin:0px;">
                 <thead>
@@ -1599,9 +1616,9 @@ frappe.ui.form.on('Interview Question Paper', {
     
         let s_no = 0;
     
-        if (frm.doc.candidate_list) {
-            if (frm.doc.candidate_list.length > 0) {
-                frm.doc.candidate_list.map(f => {
+        if (cur_frm.doc.candidate_list) {
+            if (cur_frm.doc.candidate_list.length > 0) {
+                cur_frm.doc.candidate_list.map(f => {
                     s_no += 1;
                     f.s_no = s_no;
                     f.interviewer_email_1 = f.interviewer_email || "";
@@ -1653,16 +1670,16 @@ frappe.ui.form.on('Interview Question Paper', {
             table_html.find('tbody').append(`<tr><td colspan="10">No records found!</td></tr>`);
         }
     
-        $(frm.get_field('candidate_html').wrapper).find('tbody .view-candidate').on('click', function() {
+        $(cur_frm.get_field('candidate_html').wrapper).find('tbody .view-candidate').on('click', function() {
             let id = $(this).parent().parent().attr('data-id');
-            frm.option = frm.doc.candidate_list.find(obj => obj.name == id);
-            frm.trigger('candidates_dialog');
+            cur_frm.option = cur_frm.doc.candidate_list.find(obj => obj.name == id);
+            cur_frm.trigger('candidates_dialog');
         });
     
-        $(frm.get_field('candidate_html').wrapper).find('tbody .delete-candidate').on('click', function() {
+        $(cur_frm.get_field('candidate_html').wrapper).find('tbody .delete-candidate').on('click', function() {
             let id = $(this).parent().parent().attr('data-id');
-            frm.option = frm.doc.candidate_list.find(obj => obj.name == id);
-            if (frm.option.mail_sent == 0) {
+            cur_frm.option = cur_frm.doc.candidate_list.find(obj => obj.name == id);
+            if (cur_frm.option.mail_sent == 0) {
                 var msg = "Do you want to delete this candidate?";
                 frappe.confirm(__(msg), () => {
                     if (id) {
@@ -1681,23 +1698,23 @@ frappe.ui.form.on('Interview Question Paper', {
             }
         });
     
-        $(frm.get_field('candidate_html').wrapper).find('tbody .short-list').on('click', function() {
+        $(cur_frm.get_field('candidate_html').wrapper).find('tbody .short-list').on('click', function() {
             let id = $(this).parent().parent().attr('data-id');
-            frm.option = frm.doc.candidate_list.find(obj => obj.name == id);
-            if (frm.option.short_listed == 0) {
-                if (frm.option.test_result && frm.option.test_result !== "" && frm.option.test_result !== "Not Evaluated") {
+            cur_frm.option = cur_frm.doc.candidate_list.find(obj => obj.name == id);
+            if (cur_frm.option.short_listed == 0) {
+                if (cur_frm.option.test_result && cur_frm.option.test_result !== "" && cur_frm.option.test_result !== "Not Evaluated") {
                     var msg = "Do you want to short list this candidate?";
                     frappe.confirm(__(msg), () => {
                         if (id) {
                             frappe.model.set_value("Interview Candidates", id, "short_listed", 1);
-                            let child = frappe.model.add_child(frm.doc, "Shortlisted Candidates", "shortlisted_candidates");
-                            child.candidate_name = frm.option.candidate_name;
-                            child.candidate_email = frm.option.candidate_email;
-                            child.candidate_phone = frm.option.candidate_phone;
-                            child.candidate_email = frm.option.candidate_email;
-                            child.interviewer_email = frm.option.interviewer_email;
-                            child.monitored_test = frm.option.monitored_test;
-                            child.test_result = frm.option.test_result;
+                            let child = frappe.model.add_child(cur_frm.doc, "Shortlisted Candidates", "shortlisted_candidates");
+                            child.candidate_name = cur_frm.option.candidate_name;
+                            child.candidate_email = cur_frm.option.candidate_email;
+                            child.candidate_phone = cur_frm.option.candidate_phone;
+                            child.candidate_email = cur_frm.option.candidate_email;
+                            child.interviewer_email = cur_frm.option.interviewer_email;
+                            child.monitored_test = cur_frm.option.monitored_test;
+                            child.test_result = cur_frm.option.test_result;
                             cur_frm.refresh_field("shortlisted_candidates");
     
                             cur_frm.save_or_update();
@@ -1804,7 +1821,7 @@ frappe.ui.form.on('Interview Question Paper', {
             ]
         });
     
-        if (frm.option.monitored_test_1 === "No") {
+        if (cur_frm.option.monitored_test_1 === "No") {
             $(dialog.$wrapper).find('div[data-fieldname="candidate_video2"]').hide();
             $(dialog.$wrapper).find('div[data-fieldname="record_screen2"]').hide();
             $(dialog.$wrapper).find('div[data-fieldname="interviewer_email_2"]').hide();
@@ -1814,27 +1831,27 @@ frappe.ui.form.on('Interview Question Paper', {
             $(dialog.$wrapper).find('div[data-fieldname="interviewer_email_2"]').show();
         }
     
-        dialog.get_field('candidate_name_2').set_input(frm.option.candidate_name);
+        dialog.get_field('candidate_name_2').set_input(cur_frm.option.candidate_name);
         dialog.get_field('candidate_name_2').refresh();
-        dialog.get_field('candidate_email_2').set_input(frm.option.candidate_email);
+        dialog.get_field('candidate_email_2').set_input(cur_frm.option.candidate_email);
         dialog.get_field('candidate_email_2').refresh();
-        dialog.get_field('candidate_phone_2').set_input(frm.option.candidate_phone);
+        dialog.get_field('candidate_phone_2').set_input(cur_frm.option.candidate_phone);
         dialog.get_field('candidate_phone_2').refresh();
-        dialog.get_field('interviewer_email_2').set_input(frm.option.interviewer_email_1);
+        dialog.get_field('interviewer_email_2').set_input(cur_frm.option.interviewer_email_1);
         dialog.get_field('interviewer_email_2').refresh();
-        dialog.get_field('time_zone_2').set_input(frm.option.time_zone);
+        dialog.get_field('time_zone_2').set_input(cur_frm.option.time_zone);
         dialog.get_field('time_zone_2').refresh();
-        dialog.get_field('start_time_2').set_input(frm.option.start_time);
+        dialog.get_field('start_time_2').set_input(cur_frm.option.start_time);
         dialog.get_field('start_time_2').refresh();
-        dialog.get_field('end_time_2').set_input(frm.option.end_time);
+        dialog.get_field('end_time_2').set_input(cur_frm.option.end_time);
         dialog.get_field('end_time_2').refresh();
-        dialog.get_field('monitored_test_2').set_input(frm.option.monitored_test_1);
+        dialog.get_field('monitored_test_2').set_input(cur_frm.option.monitored_test_1);
         dialog.get_field('monitored_test_2').refresh();
-        dialog.get_field('mail_sent_2').set_input(frm.option.mail_sent_1);
+        dialog.get_field('mail_sent_2').set_input(cur_frm.option.mail_sent_1);
         dialog.get_field('mail_sent_2').refresh();
-        dialog.get_field('candidate_video2').set_input(frm.option.candidate_video_1);
+        dialog.get_field('candidate_video2').set_input(cur_frm.option.candidate_video_1);
         dialog.get_field('candidate_video2').refresh();
-        dialog.get_field('record_screen2').set_input(frm.option.record_screen_1);
+        dialog.get_field('record_screen2').set_input(cur_frm.option.record_screen_1);
         dialog.get_field('record_screen2').refresh();
     
         dialog.show();
@@ -1844,7 +1861,7 @@ frappe.ui.form.on('Interview Question Paper', {
 
 
     shortlist_html: function(frm) {
-        let wrapper = $(frm.get_field('shortlist_html').wrapper).empty();
+        let wrapper = $(cur_frm.get_field('shortlist_html').wrapper).empty();
         let table_html = $(`<table class="table table-bordered" style="margin:0px;">
             <thead>
                 <tr>
@@ -1862,9 +1879,9 @@ frappe.ui.form.on('Interview Question Paper', {
         </table>`).appendTo(wrapper);
     
         let s_no = 0;
-        if (frm.doc.shortlisted_candidates) {
-            if (frm.doc.shortlisted_candidates.length > 0) {
-                frm.doc.shortlisted_candidates.forEach(candidate => {
+        if (cur_frm.doc.shortlisted_candidates) {
+            if (cur_frm.doc.shortlisted_candidates.length > 0) {
+                cur_frm.doc.shortlisted_candidates.forEach(candidate => {
                     s_no += 1;
                     candidate.s_no = s_no;
                     candidate.interviewer_email_3 = candidate.interviewer_email || "";
@@ -1891,10 +1908,10 @@ frappe.ui.form.on('Interview Question Paper', {
             table_html.find('tbody').append(`<tr><td colspan="8" align="center">No candidates shortlisted!</td></tr>`);
         }
     
-        $(frm.get_field('shortlist_html').wrapper).find('tbody .remove-candidate').on('click', function() {
+        $(cur_frm.get_field('shortlist_html').wrapper).find('tbody .remove-candidate').on('click', function() {
             let id = $(this).closest('tr').attr('data-id');
             let idx = $(this).closest('tr').attr('data-idx');
-            frm.option = frm.doc.shortlisted_candidates.find(candidate => candidate.name === id);
+            cur_frm.option = cur_frm.doc.shortlisted_candidates.find(candidate => candidate.name === id);
     
             frappe.confirm(__('Do you want to remove this candidate from shortlist?'), () => {
                 if (id) {
@@ -1902,8 +1919,8 @@ frappe.ui.form.on('Interview Question Paper', {
                         method: 'go1_recruit.go1_recruit.doctype.interview_question_paper.interview_question_paper.remove_candidate',
                         args: {
                             name: id,
-                            email: frm.option.candidate_email,
-                            parent: frm.option.parent
+                            email: cur_frm.option.candidate_email,
+                            parent: cur_frm.option.parent
                         },
                         callback: function() {
                             cur_frm.save_or_update();

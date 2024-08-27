@@ -1,4 +1,5 @@
 {
+ "actions": [],
  "creation": "2019-08-26 21:36:38.310426",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -81,7 +82,7 @@
   },
   {
    "fieldname": "encrypted_url",
-   "fieldtype": "Data",
+   "fieldtype": "Small Text",
    "label": "Encrypted Url"
   },
   {
@@ -130,7 +131,8 @@
    "label": "Record Screen"
   }
  ],
- "modified": "2019-12-02 10:16:20.676046",
+ "links": [],
+ "modified": "2024-08-26 18:42:52.084755",
  "modified_by": "Administrator",
  "module": "Go1 Recruit",
  "name": "Question Paper Candidates",
@@ -152,5 +154,6 @@
  "quick_entry": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
+ "states": [],
  "track_changes": 1
 }

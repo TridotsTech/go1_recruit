@@ -7,21 +7,21 @@ frappe.ui.form.on('Exam Result', {
     refresh: function(frm) {
         $('*[data-fieldname="user_answer"]').find('.grid-footer').hide();
 
-        if (frm.doc.status == "Evaluated") {
-            frm.add_custom_button(__('Share Result'), function() {
-                frm.trigger('send_mail')
+        if (cur_frm.doc.status == "Evaluated") {
+            cur_frm.add_custom_button(__('Share Result'), function() {
+                cur_frm.trigger('send_mail')
             });
-            frm.trigger('generate_chart') 
+            cur_frm.trigger('generate_chart') 
         }
-        frm.trigger('generate_video_html')
+        cur_frm.trigger('generate_video_html')
         $("head").append('<style>.apexcharts-canvas{height:120px !important;}.apexcharts-datalabel-label{display: none;}.chart_box{min-height:unset !important;}</style>');
 
-        if (!frm.doc.__islocal) {
-            if (frm.doc.user_answer) {
-                frm.trigger('answer_html')
+        if (!cur_frm.doc.__islocal) {
+            if (cur_frm.doc.user_answer) {
+                cur_frm.trigger('answer_html')
             }
-            if (frm.doc.user && frm.doc.user_answer) {
-                frm.trigger('user_html')
+            if (cur_frm.doc.user && cur_frm.doc.user_answer) {
+                cur_frm.trigger('user_html')
             }
         }
     },
@@ -31,7 +31,7 @@ frappe.ui.form.on('Exam Result', {
         frappe.call({
             method: 'go1_recruit.go1_recruit.doctype.exam_result.exam_result.get_percentage_basedon_topics',
             args: {
-                exam_result_id: frm.doc.name
+                exam_result_id: cur_frm.doc.name
             },
             callback: function(data) {
                 $("div[data-fieldname='chart_section']").css({
@@ -39,7 +39,7 @@ frappe.ui.form.on('Exam Result', {
                     "width": "100%",
                     "display": "none"
                 })
-                let wrapper = $(frm.get_field('chart_section').wrapper).empty();
+                let wrapper = $(cur_frm.get_field('chart_section').wrapper).empty();
                 let row_data = $('<div id="chart-row" class="row" style="background: #fafbfc;border-bottom: 1px solid #d1d8dd;border-radius: 0;margin-left: -20px;margin-right: -20px;margin-top: -15px;border-top: 1px solid #d1d8dd;"></div>').appendTo(wrapper);
 
                 if (data.message) {
@@ -138,19 +138,19 @@ frappe.ui.form.on('Exam Result', {
 
 
     generate_video_html: function(frm) {
-        let wrapper = $(frm.get_field('video_html').wrapper).empty();
+        let wrapper = $(cur_frm.get_field('video_html').wrapper).empty();
         var user_video = '';
         var Screen_video = '';
-        if (frm.doc.screen_video || frm.doc.user_video) {
-            $(frm.get_field('video_html').wrapper).parent().parent().parent().parent().show();
-            if (frm.doc.user_video) {
-                let html = $('<div class="row" style="background: #fafbfc;border-bottom: 1px solid #d1d8dd;border-radius: 0;margin-left: -30px;margin-right: -30px;margin-top: -15px;"><div class="col-md-12" style="padding: 20px 30px;"><a href="' + window.location.origin + frm.doc.user_video + '" style="font-weight: 600;" target="_blank">Play Candidate Video<i class="fa fa-file-video-o" aria-hidden="true" style="font-size: 19px;padding-left:15px"></i></a></div></div>').appendTo(wrapper);
+        if (cur_frm.doc.screen_video || cur_frm.doc.user_video) {
+            $(cur_frm.get_field('video_html').wrapper).parent().parent().parent().parent().show();
+            if (cur_frm.doc.user_video) {
+                let html = $('<div class="row" style="background: #fafbfc;border-bottom: 1px solid #d1d8dd;border-radius: 0;margin-left: -30px;margin-right: -30px;margin-top: -15px;"><div class="col-md-12" style="padding: 20px 30px;"><a href="' + window.location.origin + cur_frm.doc.user_video + '" style="font-weight: 600;" target="_blank">Play Candidate Video<i class="fa fa-file-video-o" aria-hidden="true" style="font-size: 19px;padding-left:15px"></i></a></div></div>').appendTo(wrapper);
             }
-            if (frm.doc.screen_video) {
-                let html = $('<div class="row" style="background: #fafbfc;border-bottom: 1px solid #d1d8dd;border-radius: 0;margin-left: -30px;margin-right: -30px;margin-top: -15px;"><div class="col-md-12" style="padding: 20px 30px;"><a href="' + window.location.origin + frm.doc.screen_video + '" style="font-weight: 600;" target="_blank">Play Screen Video<i class="fa fa-file-video-o" aria-hidden="true" style="font-size: 19px;padding-left:15px"></i></a></div></div>').appendTo(wrapper);
+            if (cur_frm.doc.screen_video) {
+                let html = $('<div class="row" style="background: #fafbfc;border-bottom: 1px solid #d1d8dd;border-radius: 0;margin-left: -30px;margin-right: -30px;margin-top: -15px;"><div class="col-md-12" style="padding: 20px 30px;"><a href="' + window.location.origin + cur_frm.doc.screen_video + '" style="font-weight: 600;" target="_blank">Play Screen Video<i class="fa fa-file-video-o" aria-hidden="true" style="font-size: 19px;padding-left:15px"></i></a></div></div>').appendTo(wrapper);
             }
         }else{
-            $(frm.get_field('video_html').wrapper).parent().parent().parent().parent().hide();
+            $(cur_frm.get_field('video_html').wrapper).parent().parent().parent().parent().hide();
         }
     },
 
@@ -205,7 +205,7 @@ frappe.ui.form.on('Exam Result', {
     },
 
     answer_html: function(frm) {
-        let wrapper = $(frm.get_field('answer_html').wrapper).empty();
+        let wrapper = $(cur_frm.get_field('answer_html').wrapper).empty();
         let html = $(`<div style="float:left;width:100%;">
             <table class="table table-bordered" style="cursor:pointer;margin: 15px 0 10px 0;">
                 <thead>
@@ -223,7 +223,7 @@ frappe.ui.form.on('Exam Result', {
 
 
         var s_no = 0
-        frm.doc.user_answer.map(f => {
+        cur_frm.doc.user_answer.map(f => {
             if (f.is_evaluated) {
                 if (f.is_correct == 1) {
                     f.actions = '';
@@ -284,7 +284,7 @@ frappe.ui.form.on('Exam Result', {
 
 
 
-        $(frm.get_field('answer_html').wrapper).find('tbody .btn-danger').on('click', function() {
+        $(cur_frm.get_field('answer_html').wrapper).find('tbody .btn-danger').on('click', function() {
             let id = $(this).parent().parent().attr('data-id');
             frappe.model.set_value('User Answer', id, 'is_evaluated', 1)
             frappe.model.set_value('User Answer', id, 'is_correct', 0)
@@ -296,7 +296,7 @@ frappe.ui.form.on('Exam Result', {
             $(this).parent().parent().find('.Red').show();
             cur_frm.refresh_fields();
         })
-        $(frm.get_field('answer_html').wrapper).find('tbody .btn-success').on('click', function() {
+        $(cur_frm.get_field('answer_html').wrapper).find('tbody .btn-success').on('click', function() {
             let id = $(this).parent().parent().attr('data-id');
             frappe.model.set_value('User Answer', id, 'is_evaluated', 1)
             frappe.model.set_value('User Answer', id, 'is_correct', 1)
@@ -310,7 +310,7 @@ frappe.ui.form.on('Exam Result', {
 
             cur_frm.refresh_fields();
         })
-        $(frm.get_field('answer_html').wrapper).find('tbody .btn-warning').on('click', function() {
+        $(cur_frm.get_field('answer_html').wrapper).find('tbody .btn-warning').on('click', function() {
             let id = $(this).parent().parent().attr('data-id');
             frappe.model.set_value('User Answer', id, 'is_evaluated', '')
             frappe.model.set_value('User Answer', id, 'is_correct', '')
@@ -322,9 +322,9 @@ frappe.ui.form.on('Exam Result', {
             $(this).parent().parent().find('.Red').hide();
 
         })
-        $(frm.get_field('answer_html').wrapper).find('audio').on('play', function(){
+        $(cur_frm.get_field('answer_html').wrapper).find('audio').on('play', function(){
             let id = $(this).parent().parent().attr('data-id');
-            $(frm.get_field('answer_html').wrapper).find('audio').each(function(k, v){
+            $(cur_frm.get_field('answer_html').wrapper).find('audio').each(function(k, v){
                 let idx = $(v).parent().parent().attr('data-id')
                 if(id != idx){
                     $(v)[0].pause();
@@ -334,7 +334,7 @@ frappe.ui.form.on('Exam Result', {
     },
 
     user_html: function(frm) {
-        let wrapper = $(frm.get_field('user_html').wrapper).empty();
+        let wrapper = $(cur_frm.get_field('user_html').wrapper).empty();
         frappe.call({
             method: 'go1_recruit.go1_recruit.doctype.exam_result.exam_result.get_user_information',
             args: {
