@@ -86,10 +86,13 @@ def get_context(context):
 	
 	QuestionId = encrypt_url[0].questionpaper_id
 	exam_result_id = get_exam_result(encrypt_url[0].candidate_email, QuestionId)
+ 
 	if frappe.local.session.data.csrf_token:
 		context.csrf_token=frappe.local.session.data.csrf_token
+		frappe.log_error("CSRF", context.csrf_token)
 	else:
 		context.csrf_token=''
+  
 	for shop in exam_result_id:
 		if shop.exam_id == QuestionId:
 			exam_result = get_exam_result_details(QuestionId)
