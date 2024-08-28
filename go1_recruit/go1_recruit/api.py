@@ -16,7 +16,7 @@ def boot_session(bootinfo):
 		from frappe.utils import get_site_name
 		bootinfo.sitename = get_site_name(frappe.local.request.host)
 	except Exception:
-		frappe.log_error(frappe.get_traceback(), "go1_recruit.go1_recruit.api.boot_session") 	
+		frappe.log_error(frappe.get_traceback(), title="go1_recruit.go1_recruit.api.boot_session") 	
 
 def update_website_context(context):
 	alert_messages = frappe.get_single('Alert Messages')
@@ -53,7 +53,7 @@ def goto_dashboard():
 @frappe.whitelist(allow_guest=True)
 def insert_exam_result(doc):
 	exam_result=json.loads(doc)
-	test_attempted=frappe.db.sql('''UPDATE `tabQuestion Paper Candidates` SET test_attempted=1 WHERE encrypted_url=%(token)s''',{'token':exam_result.get("token")})
+	test_attempted=frappe.db.sql('''UPDATE `tabQuestion Paper Candidates` SET test_attempted=1 WHERE encrypted_url=%(token)s''',{'token':'{0}/online_interview1?token={1}'.format(frappe.utils.get_url(), exam_result.get("token"))})
 	result_doc=frappe.new_doc("Exam Result")
 	result_doc.exam_id=exam_result.get("exam_id")
 	result_doc.exam_start_date=exam_result.get("exam_start_date")
@@ -167,6 +167,7 @@ def insert_exam_result_user_answers(doc,token):
 			result_value.append(result)
 			exam_result_save=frappe.get_doc('Exam Result',x.get("parent"))
 			exam_result_save.save(ignore_permissions=True)
+		frappe.log_error("Result", result_value)
 		return result_value[-1]
 	except Exception:
-		frappe.log_error(frappe.get_traceback(), "ecommerce_business_store.ecommerce_business_store.api.insert_exam_result_user_answers")
+		frappe.log_error(frappe.get_traceback(), title="ecommerce_business_store.ecommerce_business_store.api.insert_exam_result_user_answers")

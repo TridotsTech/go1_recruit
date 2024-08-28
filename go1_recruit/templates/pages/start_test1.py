@@ -107,7 +107,7 @@ def get_context(context):
     if encrypt_url[0].test_attempted == 0:
         ExamId = encrypt_url[0].questionpaper_id
         User = encrypt_url[0].candidate_email
-        frappe.log_error(title="User", message=User)
+        # frappe.log_error(title="User", message=User)
         context.ExamId = ExamId
         
         questions = []
@@ -183,5 +183,5 @@ def execute(code2,lang1):
 		url=json.loads(url)
 		return url 
 	except Exception:
-		frappe.log_error(frappe.get_traceback(), "go1_recruit.go1_recruit.templates.pages.start_test.execute") 
+		frappe.log_error(frappe.get_traceback(), title="go1_recruit.go1_recruit.templates.pages.start_test.execute") 
 

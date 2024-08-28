@@ -1927,7 +1927,7 @@ for (var i = 0; i < QuestionAnswers.length; i++) {
             },
             success: function(data) {
                 // console.log("-----------------------------------------data")
-                // console.log(data)
+                console.log(data)
                 // console.log(data.message)
                 var exam = data.message
                 let subjects=[];
