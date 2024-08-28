@@ -52,19 +52,23 @@ def goto_dashboard():
 
 @frappe.whitelist(allow_guest=True)
 def insert_exam_result(doc):
-	exam_result=json.loads(doc)
-	test_attempted=frappe.db.sql('''UPDATE `tabQuestion Paper Candidates` SET test_attempted=1 WHERE encrypted_url=%(token)s''',{'token':'{0}/online_interview1?token={1}'.format(frappe.utils.get_url(), exam_result.get("token"))})
-	result_doc=frappe.new_doc("Exam Result")
-	result_doc.exam_id=exam_result.get("exam_id")
-	result_doc.exam_start_date=exam_result.get("exam_start_date")
-	result_doc.exam_end_date=exam_result.get("exam_end_date")
-	result_doc.user=exam_result.get("user")
-	if exam_result.get('user_video'):
-		result_doc.user_video = exam_result.get('user_video')
-	if exam_result.get('screen_video'):
-		result_doc.screen_video = exam_result.get('screen_video')
-	result_doc.save(ignore_permissions=True)
-	return result_doc
+	try:
+		exam_result=json.loads(doc)
+		test_attempted=frappe.db.sql('''UPDATE `tabQuestion Paper Candidates` SET test_attempted=1 WHERE encrypted_url=%(token)s''',{'token':'{0}/online_interview1?token={1}'.format(frappe.utils.get_url(), exam_result.get("token"))})
+		result_doc=frappe.new_doc("Exam Result")
+		result_doc.exam_id=exam_result.get("exam_id")
+		result_doc.exam_start_date=exam_result.get("exam_start_date")
+		result_doc.exam_end_date=exam_result.get("exam_end_date")
+		result_doc.user=exam_result.get("user")
+		if exam_result.get('user_video'):
+			result_doc.user_video = exam_result.get('user_video')
+		if exam_result.get('screen_video'):
+			result_doc.screen_video = exam_result.get('screen_video')
+		result_doc.save(ignore_permissions=True)
+		frappe.log_error("Exam Result", result_doc)
+		return result_doc
+	except Exception:
+		frappe.log_error(frappe.get_traceback(), title="ecommerce_business_store.ecommerce_business_store.api.insert_exam_result")
 
 @frappe.whitelist(allow_guest=True)
 def insert_exam_result_user_answers(doc,token):
