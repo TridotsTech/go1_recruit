@@ -68,7 +68,7 @@ def insert_exam_result(doc):
 		frappe.log_error("Exam Result", result_doc)
 		return result_doc
 	except Exception:
-		frappe.log_error(frappe.get_traceback(), title="ecommerce_business_store.ecommerce_business_store.api.insert_exam_result")
+		frappe.log_error(title="ecommerce_business_store.ecommerce_business_store.api.insert_exam_result", message=frappe.get_traceback())
 
 @frappe.whitelist(allow_guest=True)
 def insert_exam_result_user_answers(doc,token):
@@ -174,4 +174,4 @@ def insert_exam_result_user_answers(doc,token):
 		frappe.log_error("Result", result_value)
 		return result_value[-1]
 	except Exception:
-		frappe.log_error(frappe.get_traceback(), title="ecommerce_business_store.ecommerce_business_store.api.insert_exam_result_user_answers")
+		frappe.log_error("ecommerce_business_store.ecommerce_business_store.api.insert_exam_result_user_answers", frappe.get_traceback())
