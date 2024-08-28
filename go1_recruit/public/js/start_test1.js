@@ -1663,6 +1663,7 @@ if (isClosed == 0) {
 }
 
 function SubmitAnswers() {
+	console.log("submit answers called")
 $(".btn-finish").hide();
 $(".Loading").show();
 if ($(".QuestionItem:last-child").attr("data-type") == "Single") {
@@ -1861,7 +1862,7 @@ for (var i = 0; i < QuestionAnswers.length; i++) {
             "exam_id":$("#ExamId").val(),
             "token":'{{token}}'
         }
-
+console.log(exam_result)
   $.ajax({
             type: 'POST',
             Accept: 'application/json',

@@ -53,9 +53,9 @@ def goto_dashboard():
 @frappe.whitelist(allow_guest=True)
 def insert_exam_result(doc):
 	try:
-		frappe.log_error("Exam Doc", doc)
-		frappe.log_error("Exam Doc", type(doc))
 		exam_result=json.loads(doc)
+		frappe.log_error("Exam Doc", exam_result)
+		frappe.log_error("Token", exam_result.get('token'))
 		test_attempted=frappe.db.sql('''UPDATE `tabQuestion Paper Candidates` SET test_attempted=1 WHERE encrypted_url=%(token)s''',{'token':'{0}/online_interview1?token={1}'.format(frappe.utils.get_url(), exam_result.get("token"))})
 		result_doc=frappe.new_doc("Exam Result")
 		result_doc.exam_id=exam_result.get("exam_id")
