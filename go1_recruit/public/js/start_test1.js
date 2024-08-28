@@ -1663,7 +1663,7 @@ if (isClosed == 0) {
 }
 
 function SubmitAnswers() {
-	console.log("submit answers called")
+	// console.log("submit answers called")
 $(".btn-finish").hide();
 $(".Loading").show();
 if ($(".QuestionItem:last-child").attr("data-type") == "Single") {
@@ -1862,7 +1862,7 @@ for (var i = 0; i < QuestionAnswers.length; i++) {
             "exam_id":$("#ExamId").val(),
             "token":'{{token}}'
         }
-console.log(exam_result)
+// console.log(exam_result)
   $.ajax({
             type: 'POST',
             Accept: 'application/json',
@@ -1928,7 +1928,7 @@ console.log(exam_result)
             },
             success: function(data) {
                 // console.log("-----------------------------------------data")
-                console.log(data)
+                // console.log(data)
                 // console.log(data.message)
                 var exam = data.message
                 let subjects=[];
@@ -1939,7 +1939,7 @@ console.log(exam_result)
                 for(let i=0; i<data.message['exam_info'].length; i++){
                    topics.push(data.message['exam_info'][i].topic); 
                 }
-                console.log(subjects)
+                // console.log(subjects)
                 var subject = subjects.filter(function(elem, index, self) {
                       return index === self.indexOf(elem);
                   });
