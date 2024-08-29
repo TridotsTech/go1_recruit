@@ -3,7 +3,7 @@ $(document).ready(function() {
     var roomid = '{{ room_id }}';
     var conference;
     var count = 1;
-
+	console.log('{{ user_email }}')
     // Initialize the connection
     initSocketConnection();
 
@@ -20,6 +20,7 @@ $(document).ready(function() {
         });
         frappe.socketio.on('room-connected', function() {
             showVideoSection();
+			removeLoader()
         });
     }
 
