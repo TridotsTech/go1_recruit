@@ -2160,3 +2160,35 @@ $('#search-list .nextBtn, #search-list .prev-btn').click(function(){
     })
 })
 })
+
+frappe.call({
+	method:"go1_recruit.templates.pages.start_test1.get_context",
+	async:false,
+	callback: function(context){
+		console.log(context)
+		var go1_recruit_settings = context.go1_recruit_settings
+		var user_video = context.user_video 
+		var screen_sharing = context.screen_sharing
+		var candidate_video = context.candidate_video
+		var record_screen = context.record_screen
+		var token = context.token
+		var code = context.code
+		var count = context.count
+		var not_attempted = context.not_attempt
+		var email = context.email
+		var user_list1 = context.user_list1
+		var attempt = context.attempt
+		var exam_info1 = context.exam_info1
+		var Duration = context.Duration
+		var ExamId = context.ExamId
+		var candidate_name = context.candidate_name
+		var roomid = context.roomid
+		var questions = context.questions
+		var userlog = context.userlog
+		var Answers = context.Answers
+		var Duration = context.Duration
+		var user_email = context.user_email
+		var monitored = context.monitored
+		var user_video = context.user_video
+	}
+})

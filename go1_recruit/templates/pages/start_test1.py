@@ -70,8 +70,10 @@ def get_encryption_key():
 
 	return frappe.local.conf.encryption_key
 
-
-def get_context(context):
+@frappe.whitelist(allow_guest=True)
+def get_context(context=None):
+	if not context:
+		context = frappe._dict()
 	context.go1_recruit_settings = frappe.get_single('Go1 Recruit Settings')
 	Token = frappe.form_dict.token
 	context.user_video = context.screen_sharing = 0
