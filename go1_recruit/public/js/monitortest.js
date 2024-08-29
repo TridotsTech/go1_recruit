@@ -37,8 +37,8 @@ $(document).ready(function() {
 		console.log(room_id)
 		console.log(roomid)
         if (room_id === roomid) {
+			isRoomExist = 1;
 			console.log(isRoomExist)
-            isRoomExist = 1;
             conference.join_room(isRoomExist);
         }
     }

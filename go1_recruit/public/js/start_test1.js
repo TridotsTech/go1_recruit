@@ -1086,16 +1086,16 @@ $("#CountDownTimer").TimeCircles({ time: { Days: { show: false }, Hours: { show:
 function(unit, value, total) {
     if (total < 0) {
         $("#CountDownTimer").TimeCircles().stop();
-        /*$("#confirmText").text("Your time is up. Click ok to submit your answers or click cancel to reload.");
-        $("#btnCancel").hide();*/
+        $("#confirmText").text("Your time is up. Click ok to submit your answers or click cancel to reload.");
+        $("#btnCancel").hide();
         $("#btnClose").hide();
         if (isClosed == 0) {
             alert("Your time is up. Click ok to submit your answers or click cancel to reload.");
             frappe.run_serially([
                 () => {
                     if(monitored == 1){
-                        // video_recorder.stop_video_recording();
-                        // screen_recorder.stop_recording();
+                        video_recorder.stop_video_recording();
+                        screen_recorder.stop_recording();
                         conference.leave_room();
                     }
                 },
@@ -1105,7 +1105,7 @@ function(unit, value, total) {
             ])
         }
         isClosed = 1;
-        //submitAnswers();
+        submitAnswers();
     }
 
 }
@@ -2075,6 +2075,7 @@ else
 var screen_recorder, video_recorder, monitored, conference;
 try{
 monitored = '{{monitored}}';
+console.log(monitored)
 if(monitored == '1'){
    
     var enable_candidate_video = false;
