@@ -2075,11 +2075,12 @@ else
 var screen_recorder, video_recorder, monitored, conference;
 try{
 monitored = '{{monitored}}';
+monitored = '1';
 console.log(monitored)
 if(monitored == '1'){
    
-    var enable_candidate_video = false;
-    var enable_screen_share = false;
+    var enable_candidate_video = true;
+    var enable_screen_share = true;
     if('{{candidate_video}}' == '1'){
         enable_candidate_video = true;
     }
@@ -2090,38 +2091,69 @@ if(monitored == '1'){
         videosContainer: document.getElementById('video-recorder'),
         remoteVideosContainer: document.getElementById('video-recorder'),
         recordConference: true,
-        roomid: '{{roomid}}',
+        roomid: "5kn50d19p7",
         filename: 'checkfilerecord-',
         enable_video: enable_candidate_video,
         screen_share: enable_screen_share,
         record_seperately: true,
-        video_filename: 'Video{{ExamId}}{{user}}-',
-        screen_filename: 'Screen{{ExamId}}{{user}}-',
+        video_filename: 'VideoIQP-00032kartheek@tridotstech.com-',
+        screen_filename: 'ScreenIQP-00032kartheek@tridotstech.com-',
         video_fieldname: 'user_video',
         screen_fieldname: 'screen_video',
         doctype: 'Exam Result',
         auto_join: true,
-        username: '{{candidate_name}}',
+        username: 'Kartheek',
         show_user_screen_sharing: false,
         show_remote_users_media: false,
         enable_option_buttons: false,
         allow_open_room: true
     });
+    // conference = new RTCConference({
+    //     videosContainer: document.getElementById('video-recorder'),
+    //     remoteVideosContainer: document.getElementById('video-recorder'),
+    //     recordConference: true,
+    //     roomid: '{{roomid}}',
+    //     filename: 'checkfilerecord-',
+    //     enable_video: enable_candidate_video,
+    //     screen_share: enable_screen_share,
+    //     record_seperately: true,
+    //     video_filename: 'Video{{ExamId}}{{user}}-',
+    //     screen_filename: 'Screen{{ExamId}}{{user}}-',
+    //     video_fieldname: 'user_video',
+    //     screen_fieldname: 'screen_video',
+    //     doctype: 'Exam Result',
+    //     auto_join: true,
+    //     username: '{{candidate_name}}',
+    //     show_user_screen_sharing: false,
+    //     show_remote_users_media: false,
+    //     enable_option_buttons: false,
+    //     allow_open_room: true
+    // });
 	
-    conference.connection.extra.full_name = '{{candidate_name}}';
-    conference.connection.userid = '{{user_email}}'
+    // conference.connection.extra.full_name = '{{candidate_name}}';
+    // conference.connection.userid = '{{user_email}}'
+    // conference.connection.updateExtraData();
+    // conference.join_room();
+   
+    // if('{{candidate_video}}' == '1'){
+    //   conference.enable_video_share();
+    // }
+    // if('{{record_screen}}' == '1'){
+    //     conference.share_user_screen();
+    // }
+    // if(enable_candidate_video){
+    //     $('#toggle-video').show();
+    // }
+    // if(!enable_screen_share){
+    //     start_timer();
+    // }
+    conference.connection.extra.full_name = 'Kartheek';
+    conference.connection.userid = 'kartheek@tridotstech.com'
     conference.connection.updateExtraData();
     conference.join_room();
-   
-    if('{{candidate_video}}' == '1'){
-      conference.enable_video_share();
-    }
-    if('{{record_screen}}' == '1'){
-        conference.share_user_screen();
-    }
-    if(enable_candidate_video){
-        $('#toggle-video').show();
-    }
+	conference.enable_video_share();
+	conference.share_user_screen();
+	$('#toggle-video').show();
     if(!enable_screen_share){
         start_timer();
     }
