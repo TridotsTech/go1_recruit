@@ -222,7 +222,9 @@ video{
         if(check == 1){
             check_navigator_requirements();
         }
-    }
+    }else{
+		$('#overlay').hide();
+	}
     function check_navigator_requirements(){
         if(enable_user_video == '1')
             check_camera();
