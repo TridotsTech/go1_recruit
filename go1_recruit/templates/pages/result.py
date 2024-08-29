@@ -19,7 +19,7 @@ def get_context(context):
 	go1_recruit_settings=frappe.get_single('Go1 Recruit Settings')
 	Token = frappe.form_dict.token
 	context.token=Token
-	encrypt_url=frappe.db.sql('''select exam_result_id,email from `tabExam Result Sharing` where encrypted_url=%(token)s''',{'token':Token},as_dict=1)
+	encrypt_url=frappe.db.sql('''select exam_result_id,email from `tabExam Result Sharing` where encrypted_url=%(token)s''',{'token':'{0}/online_interview1?token={1}'.format(frappe.utils.get_url(), Token)},as_dict=1)
 	if encrypt_url:
 		exam_id = encrypt_url[0].exam_result_id
 		question_id = frappe.get_doc('Exam Result',exam_id)
