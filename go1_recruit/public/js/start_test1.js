@@ -1862,7 +1862,8 @@ for (var i = 0; i < QuestionAnswers.length; i++) {
             "exam_id":$("#ExamId").val(),
             "token":'{{token}}'
         }
-// console.log(exam_result)
+console.log('{{csrf_token}}')
+console.log('{{token}}')
   $.ajax({
             type: 'POST',
             Accept: 'application/json',

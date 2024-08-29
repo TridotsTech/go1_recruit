@@ -54,8 +54,8 @@ def goto_dashboard():
 def insert_exam_result(doc):
 	try:
 		exam_result=json.loads(doc)
-		frappe.log_error("Exam Doc", exam_result)
-		frappe.log_error("Token", exam_result.get('token'))
+		# frappe.log_error("Exam Doc", exam_result)
+		# frappe.log_error("Token", exam_result.get('token'))
 		test_attempted=frappe.db.sql('''UPDATE `tabQuestion Paper Candidates` SET test_attempted=1 WHERE encrypted_url=%(token)s''',{'token':'{0}/online_interview1?token={1}'.format(frappe.utils.get_url(), exam_result.get("token"))})
 		result_doc=frappe.new_doc("Exam Result")
 		result_doc.exam_id=exam_result.get("exam_id")
@@ -67,7 +67,7 @@ def insert_exam_result(doc):
 		if exam_result.get('screen_video'):
 			result_doc.screen_video = exam_result.get('screen_video')
 		result_doc.save(ignore_permissions=True)
-		frappe.log_error("Exam Result", result_doc)
+		# frappe.log_error("Exam Result", result_doc)
 		return result_doc
 	except Exception:
 		frappe.log_error(title="ecommerce_business_store.ecommerce_business_store.api.insert_exam_result", message=frappe.get_traceback())
@@ -173,7 +173,7 @@ def insert_exam_result_user_answers(doc,token):
 			result_value.append(result)
 			exam_result_save=frappe.get_doc('Exam Result',x.get("parent"))
 			exam_result_save.save(ignore_permissions=True)
-		frappe.log_error("Result", result_value)
+		# frappe.log_error("Result", result_value)
 		return result_value[-1]
 	except Exception:
 		frappe.log_error("ecommerce_business_store.ecommerce_business_store.api.insert_exam_result_user_answers", frappe.get_traceback())
