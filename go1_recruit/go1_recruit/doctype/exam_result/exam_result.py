@@ -73,7 +73,7 @@ def get_user_information(user,exam_id):
 
 
 @frappe.whitelist()
-def insert_mailTo_candidates1(exam_result_id,question_paper_id,email):
+def insert_mail_to_candidates1(exam_result_id,question_paper_id,email):
 	user_list = frappe.db.sql('''select questionpaper_name,subject_name,candidate_name from `tabQuestion Paper Candidates` where questionpaper_id=%(id)s''',{'id':question_paper_id},as_dict=1)
 	email=json.loads(email)
 	question_paper = frappe.get_doc('Exam Result',exam_result_id)
