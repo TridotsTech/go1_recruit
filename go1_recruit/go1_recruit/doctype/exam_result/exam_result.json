@@ -196,8 +196,9 @@
    "fieldtype": "HTML"
   }
  ],
+ "hide_toolbar": 1,
  "links": [],
- "modified": "2024-06-14 13:48:06.864444",
+ "modified": "2024-08-29 11:36:46.592570",
  "modified_by": "Administrator",
  "module": "Go1 Recruit",
  "name": "Exam Result",

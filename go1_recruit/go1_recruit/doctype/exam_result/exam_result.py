@@ -132,7 +132,7 @@ def get_percentage_basedon_topics(exam_result_id):
                        			q.subject, q.topic, count(a.question_id) as question_count, sum(a.is_correct) as is_correct, FORMAT((sum(a.is_correct)/count(a.question_id))*100, 2) as percentage, FORMAT(100-((sum(a.is_correct)/count(a.question_id))*100), 2) as wrong
 							from 
        							`tabInterview Question` q 
-							inner join `
+							inner join
        							`tabUser Answer` a 
 							on 
        							a.question_id=q.name 
