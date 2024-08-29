@@ -193,5 +193,5 @@ def execute(code2,lang1):
 		url=json.loads(url)
 		return url 
 	except Exception:
-		frappe.log_error(frappe.get_traceback(), title="go1_recruit.go1_recruit.templates.pages.start_test.execute") 
+		frappe.log_error("go1_recruit.go1_recruit.templates.pages.start_test.execute", frappe.get_traceback()) 
 
