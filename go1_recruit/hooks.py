@@ -135,6 +135,12 @@ fixtures = [
 		"filters": {
 			"name": ["in", ["Candidate Link for Assessment", "Interviewer Link for Assessment", "Exam Results Link"]]
 		}
+	},
+	{
+		"doctype":"Timezone Format",
+		"filters": {
+			"name":["in", ["Asia/Kolkata"]]
+		}
 	}
 ]
 
