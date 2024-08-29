@@ -1665,7 +1665,7 @@ if (isClosed == 0) {
 function SubmitAnswers() {
 	// console.log("submit answers called")
 $(".btn-finish").hide();
-$(".Loading").show();
+$(".Loading").show(); 
 if ($(".QuestionItem:last-child").attr("data-type") == "Single") {
     // console.log($(".QuestionItem:last-child").find("input[type='radio']:checked").length);
     if ($(".QuestionItem:last-child").find("input[type='radio']:checked").length > 0) {
