@@ -1661,7 +1661,6 @@ if (isClosed == 0) {
 }
 // isClosed = 1;//code commented by shankar anand 0n 2-09-2019
 }
-
 function SubmitAnswers() {
 	// console.log("submit answers called")
 $(".btn-finish").hide();
@@ -1860,22 +1859,29 @@ for (var i = 0; i < QuestionAnswers.length; i++) {
             "secured__marks": TestResult.SecuredMarks,
             // "question_and_answers": TestResult.QuestionAnswers,
             "exam_id":$("#ExamId").val(),
-            "token":'{{token}}'
+            "token":window.location.href.split("token=")[1]
         }
 console.log('{{csrf_token}}')
-console.log('{{token}}')
-  $.ajax({
-            type: 'POST',
-            Accept: 'application/json',
-            ContentType: 'application/json;charset=utf-8',
-            url: window.location.origin + '/api/method/go1_recruit.go1_recruit.api.insert_exam_result',
-            data: { 'doc': JSON.stringify(exam_result) },
-            dataType: "json",
-            async: false,
-            headers:{
-                'X-Frappe-CSRF-Token':'{{csrf_token}}'
-            },
-             success: function(Responseresult) {
+frappe.call({
+	"method":'go1_recruit.go1_recruit.api.insert_exam_result',
+	args:{ 'doc': JSON.stringify(exam_result) },
+	async:false,
+	callback: function(Responseresult){
+
+// 	}
+// })
+//   $.ajax({
+//             type: 'POST',
+//             Accept: 'application/json',
+//             ContentType: 'application/json;charset=utf-8',
+//             url: window.location.origin + '/api/method/go1_recruit.go1_recruit.api.insert_exam_result',
+//             data: { 'doc': JSON.stringify(exam_result) },
+//             dataType: "json",
+//             async: false,
+//             headers:{
+//                 'X-Frappe-CSRF-Token':'{{csrf_token}}'
+//             },
+            //  success: function(Responseresult) {
                 var resultName=Responseresult.message.name;
                 var resultUserName=Responseresult.message.user;
                 if(monitored == 1){
@@ -1913,21 +1919,26 @@ console.log('{{token}}')
            // console.log(valueObj)
            //  console.log("========valueObj")
         }
-        var token = '{{frappe.form_dict.token}}';
+        // var token = window.location.href.split("token=")[1];
         // console.log('-------------------------------------------------')
         // console.log(token)
-        $.ajax({
-            type: 'POST',
-            Accept: 'application/json',
-            ContentType: 'application/json;charset=utf-8',
-            url: window.location.origin + '/api/method/go1_recruit.go1_recruit.api.insert_exam_result_user_answers',
-            data: { 'doc': JSON.stringify(valuesDocss),'token':token },
-            dataType: "json",
-            async: false,
-            headers:{
-                'X-Frappe-CSRF-Token':'{{csrf_token}}'
-            },
-            success: function(data) {
+		frappe.call({
+			"method":'go1_recruit.go1_recruit.api.insert_exam_result_user_answers',
+			args:{ 'doc': JSON.stringify(valuesDocss),'token':window.location.href.split("token=")[1] },
+			async:false,
+			callback: function(data){
+        // $.ajax({
+        //     type: 'POST',
+        //     Accept: 'application/json',
+        //     ContentType: 'application/json;charset=utf-8',
+        //     url: window.location.origin + '/api/method/go1_recruit.go1_recruit.api.insert_exam_result_user_answers',
+        //     data: { 'doc': JSON.stringify(valuesDocss),'token':token },
+        //     dataType: "json",
+        //     async: false,
+        //     headers:{
+        //         'X-Frappe-CSRF-Token':'{{csrf_token}}'
+        //     },
+        //     success: function(data) {
                 // console.log("-----------------------------------------data")
                 // console.log(data)
                 // console.log(data.message)

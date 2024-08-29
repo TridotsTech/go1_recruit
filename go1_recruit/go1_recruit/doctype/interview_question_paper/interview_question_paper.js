@@ -471,7 +471,8 @@ function auto_generate_questions_dialog(frm) {
     let height = String($(window).height() - 40) + "px"
     // $(dialog.$wrapper).find('.modal-content').css("height", height);
     $(dialog.$wrapper).find('div[data-fieldname="modal_question_levels"]').css('margin-top', '-30px')
-    // $(dialog.$wrapper).find('button[data-fieldname="refresh"]').parent().parent().parent().parent().css({"z-index":"99999999"})
+    $(dialog.$wrapper).find('button[data-fieldname="refresh"]').parent().parent().parent().parent().css({"z-index":"9999999"})
+    $(dialog.$wrapper).find('[class="modal-header"]').css({"z-index":"99999999"})
 
     $(dialog.$wrapper).find('button[data-fieldname="refresh"]').css({"padding": "5px 10px", "margin-right":"10px", "float": "right", "background": "#488fdb", "color": "white"})
     $(dialog.$wrapper).find('div[data-fieldname="modal_single_questions"]').parent().parent().removeClass('col-sm-6')
