@@ -6,7 +6,7 @@
         <div>
             <div id="search-list">
                 {% for item in answer1 %}
-                    {% set i=loop.index %} 
+                    {% set i=loop.index %}  	 	
                     <div class="col-sm-12 col-xs-12 product-image-wrapper QuestionItem">
                         <div>
                             <div class="QuestionNo" itemprop="name">Question No : {{i}}</div>
@@ -15,24 +15,24 @@
                            {%if item.question_type=="Single" %}
                             <div class="options">
                                 <label class="optionItem">
-                                    <div class="optionvalue icon" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%; text-transform: capitalize;">Correct Answer</span> <div style="float:left;width: calc(100%);">{{item.answer}}</div>
+                                    <div class="optionvalue" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%; text-transform: capitalize;">Correct Answer</span> <div style="float:left;width: calc(100%);">{{item.answer}}</div>
                                          </div>
                                 </label>
                                 <label class="optionItem">
-                                    <div class="optionvalue icon" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">User Answer</span> <div style="float:left;width: calc(100%);">{{item.user_answer}}</div>
+                                    <div class="optionvalue" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">User Answer</span> <div style="float:left;width: calc(100%);">{{item.user_answer}}</div>
                                          </div>
                                 </label>
                                 <label class="optionItem">
                                     {%if item.is_correct==1 %}
-                                    <div class="optionvalue icon" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">Result</span><div style="float:left;width: calc(100%);"><button class="btn btn-success"><span class="fa fa-check"></span> Correct</button></div>
+                                    <div class="optionvalue" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">Result</span><div style="float:left;width: calc(100%);"><button class="btn btn-success"><span class="fa fa-check"></span> Correct</button></div>
                                          </div>
                                          {% endif %}
                                           {%if (item.user_answer|trim ) != "" and item.is_correct==0 %}
-                                    <div class="optionvalue icon" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">Result</span> <div style="float:left;width: calc(100%);"><button class="btn btn-danger"><span class="fa fa-times"></span> Wrong</button></div>
+                                    <div class="optionvalue" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">Result</span> <div style="float:left;width: calc(100%);"><button class="btn btn-danger"><span class="fa fa-times"></span> Wrong</button></div>
                                          </div>
                                          {% endif %}
                                          {%if (item.user_answer|trim )=="" and item.is_correct==0 %}
-                                         <div class="optionvalue icon" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">Result</span> <div style="float:left;width: calc(100%);"><button class="btn btn-info"><span class="fa fa-times"></span> Not Attempted</button></div>
+                                         <div class="optionvalue" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">Result</span> <div style="float:left;width: calc(100%);"><button class="btn btn-info"><span class="fa fa-times"></span> Not Attempted</button></div>
                                          </div>
                                          {% endif %}
 
@@ -44,24 +44,24 @@
                             {%if item.question_type=="Multiple" %}
                             <div class="options">
                                  <label class="optionItem">
-                                    <div class="optionvalue icon" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%; text-transform: capitalize;">Correct Answer</span> <div style="float:left;width: calc(100%);">{{item.answer}}</div>
+                                    <div class="optionvalue" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%; text-transform: capitalize;">Correct Answer</span> <div style="float:left;width: calc(100%);">{{item.answer}}</div>
                                          </div>
                                 </label>
                                 <label class="optionItem">
-                                    <div class="optionvalue icon" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">User Answer</span> <div style="float:left;width: calc(100%);">{{item.user_answer}}</div>
+                                    <div class="optionvalue" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">User Answer</span> <div style="float:left;width: calc(100%);">{{item.user_answer}}</div>
                                          </div>
                                 </label>
                                 <label class="optionItem">
                                     {%if item.is_correct==1 %}
-                                    <div class="optionvalue icon" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">Result</span><div style="float:left;width: calc(100%);"><button class="btn btn-success"><span class="fa fa-check"></span> Correct</button></div>
+                                    <div class="optionvalue" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">Result</span><div style="float:left;width: calc(100%);"><button class="btn btn-success"><span class="fa fa-check"></span> Correct</button></div>
                                          </div>
                                          {% endif %}
                                           {%if (item.user_answer|trim ) != "" and item.is_correct==0 %}
-                                    <div class="optionvalue icon" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">Result</span> <div style="float:left;width: calc(100%);"><button class="btn btn-danger"><span class="fa fa-times"></span> Wrong</button></div>
+                                    <div class="optionvalue" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">Result</span> <div style="float:left;width: calc(100%);"><button class="btn btn-danger"><span class="fa fa-times"></span> Wrong</button></div>
                                          </div>
                                          {% endif %}
                                          {%if (item.user_answer|trim )=="" and item.is_correct==0 %}
-                                         <div class="optionvalue icon" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">Result</span> <div style="float:left;width: calc(100%);"><button class="btn btn-info"><span class="fa fa-times"></span> Not Attempted</button></div>
+                                         <div class="optionvalue" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">Result</span> <div style="float:left;width: calc(100%);"><button class="btn btn-info"><span class="fa fa-times"></span> Not Attempted</button></div>
                                          </div>
                                          {% endif %}
 
@@ -79,20 +79,20 @@
                             {% if (item.user_answer|trim ) != "" %}
                             <div class="options">
                              <label class="optionItem">
-                                    <div class="optionvalue icon" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">User Answer</span> <div style="float:left;width: calc(100%);">{{item.user_answer}}</div>
+                                    <div class="optionvalue" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">User Answer</span> <div style="float:left;width: calc(100%);">{{item.user_answer}}</div>
                                          </div>
                                 </label>
                                 <label class="optionItem">
                                     {%if item.is_correct==1 %}
-                                    <div class="optionvalue icon" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">Result</span><div style="float:left;width: calc(100%);"><button class="btn btn-success"><span class="fa fa-check"></span> Correct</button></div>
+                                    <div class="optionvalue" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">Result</span><div style="float:left;width: calc(100%);"><button class="btn btn-success"><span class="fa fa-check"></span> Correct</button></div>
                                          </div>
                                          {% endif %}
                                           {%if (item.user_answer|trim ) != "" and item.is_correct==0 %}
-                                    <div class="optionvalue icon" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">Result</span> <div style="float:left;width: calc(100%);"><button class="btn btn-danger"><span class="fa fa-times"></span> Wrong</button></div>
+                                    <div class="optionvalue" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">Result</span> <div style="float:left;width: calc(100%);"><button class="btn btn-danger"><span class="fa fa-times"></span> Wrong</button></div>
                                          </div>
                                          {% endif %}
                                          {%if (item.user_answer|trim )=="" and item.is_correct==0 %}
-                                         <div class="optionvalue icon" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">Result</span> <div style="float:left;width: calc(100%);"><button class="btn btn-info"><span class="fa fa-times"></span> Not Attempted</button></div>
+                                         <div class="optionvalue" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">Result</span> <div style="float:left;width: calc(100%);"><button class="btn btn-info"><span class="fa fa-times"></span> Not Attempted</button></div>
                                          </div>
                                          {% endif %}
 
@@ -110,20 +110,20 @@
                             {% if (item.user_answer|trim ) != "" %}
                             <div class="options">
                              <label class="optionItem">
-                                    <div class="optionvalue icon" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">User Answer</span> <div style="float:left;width: calc(100%);" data-id="{{item.name}}"><audio controls><source src="{{item.user_answer}}" type="audio/mpeg">Your browser does not support the audio tag.</audio></div>
+                                    <div class="optionvalue" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">User Answer</span> <div style="float:left;width: calc(100%);" data-id="{{item.name}}"><audio controls><source src="{{item.user_answer}}" type="audio/mpeg">Your browser does not support the audio tag.</audio></div>
                                          </div>
                                 </label>
                                 <label class="optionItem">
                                     {%if item.is_correct==1 %}
-                                    <div class="optionvalue icon" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">Result</span><div style="float:left;width: calc(100%);"><button class="btn btn-success"><span class="fa fa-check"></span> Correct</button></div>
+                                    <div class="optionvalue" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">Result</span><div style="float:left;width: calc(100%);"><button class="btn btn-success"><span class="fa fa-check"></span> Correct</button></div>
                                          </div>
                                          {% endif %}
                                           {%if (item.user_answer|trim ) != "" and item.is_correct==0 %}
-                                    <div class="optionvalue icon" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">Result</span> <div style="float:left;width: calc(100%);"><button class="btn btn-danger"><span class="fa fa-times"></span> Wrong</button></div>
+                                    <div class="optionvalue" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">Result</span> <div style="float:left;width: calc(100%);"><button class="btn btn-danger"><span class="fa fa-times"></span> Wrong</button></div>
                                          </div>
                                          {% endif %}
                                          {%if (item.user_answer|trim )=="" and item.is_correct==0 %}
-                                         <div class="optionvalue icon" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">Result</span> <div style="float:left;width: calc(100%);"><button class="btn btn-info"><span class="fa fa-times"></span> Not Attempted</button></div>
+                                         <div class="optionvalue" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">Result</span> <div style="float:left;width: calc(100%);"><button class="btn btn-info"><span class="fa fa-times"></span> Not Attempted</button></div>
                                          </div>
                                          {% endif %}
 
@@ -142,20 +142,20 @@
                             {% if (item.user_answer|trim ) != "" %}
                             <div class="options">
                              <label class="optionItem">
-                                    <div class="optionvalue icon" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">User Answer</span> <div style="float:left;width: calc(100%);">{{item.user_answer}}</div>
+                                    <div class="optionvalue" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">User Answer</span> <div style="float:left;width: calc(100%);">{{item.user_answer}}</div>
                                          </div>
                                 </label>
                                 <label class="optionItem">
                                     {%if item.is_correct==1 %}
-                                    <div class="optionvalue icon" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">Result</span><div style="float:left;width: calc(100%);"><button class="btn btn-success"><span class="fa fa-check"></span> Correct</button></div>
+                                    <div class="optionvalue" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">Result</span><div style="float:left;width: calc(100%);"><button class="btn btn-success"><span class="fa fa-check"></span> Correct</button></div>
                                          </div>
                                          {% endif %}
                                           {%if (item.user_answer|trim ) != "" and item.is_correct==0 %}
-                                    <div class="optionvalue icon" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">Result</span> <div style="float:left;width: calc(100%);"><button class="btn btn-danger"><span class="fa fa-times"></span> Wrong</button></div>
+                                    <div class="optionvalue" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">Result</span> <div style="float:left;width: calc(100%);"><button class="btn btn-danger"><span class="fa fa-times"></span> Wrong</button></div>
                                          </div>
                                          {% endif %}
                                          {%if (item.user_answer|trim )=="" and item.is_correct==0 %}
-                                         <div class="optionvalue icon" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">Result</span> <div style="float:left;width: calc(100%);"><button class="btn btn-info"><span class="fa fa-times"></span> Not Attempted</button></div>
+                                         <div class="optionvalue" style="display: flex;"><span style="float: left;margin-right: 10px;font-weight: bold;width: 20%;text-transform: capitalize;">Result</span> <div style="float:left;width: calc(100%);"><button class="btn btn-info"><span class="fa fa-times"></span> Not Attempted</button></div>
                                          </div>
                                          {% endif %}
 
@@ -177,55 +177,56 @@
     <div class="col-sm-3" id="rightContent">
         <div class="timetitle" style="border-bottom: 1px solid #d3d3d3">
         <h3 class="timetitle1" style="font-size: 18px;">Result Overview</h3></div>
+		<script>console.log("{{exam_info1}}")</script>
          {% if exam_info1 %}
             {% for item in exam_info1 %}
             {% set comma = joiner(",") %}
         <div class="QuestionsOverView">
             <div class="tblQuestions">
                 {% if user_list1 %}
-                <div class="optionvalue1 icon">
+                <div class="optionvalue1">
                  <span class="info">Name</span> <div class="marks">{{user_list1}}</div></div>
                 {% endif %}
-                  <div class="optionvalue1 icon">
+                  <div class="optionvalue1">
                  <span class="info">Question Paper Name</span> <div class="marks">{{item.question_paper_name}}
                 </div>
             </div>
-             <div class="optionvalue1 icon">
+             <div class="optionvalue1">
                 <span class="info">Email</span> <div class="marks">{{email}}</div>
                 </div>
-                  <div class="optionvalue1 icon">
+                  <div class="optionvalue1">
                 <span class="info">Total Number of Questions</span> <div class="marks">{{over_all_question}}
                 </div></div>
-                  <div class="optionvalue1 icon">
+                  <div class="optionvalue1">
                  <span class="info">Number of Question Attempted</span> <div class="marks">{{attempt}}
                 </div>
             </div>
-              <div class="optionvalue1 icon">
+              <div class="optionvalue1">
                 <span class="info">Number of Question Not Attempted</span> <div class="marks">{{not_attempt}}
                 </div>
             </div>
-              <div class="optionvalue1 icon">
+              <div class="optionvalue1">
                  <span class="info">Number of Correct Answers</span> <div class="marks">{{correct}}
                 </div>
             </div>
-              <div class="optionvalue1 icon">
+              <div class="optionvalue1">
 
                  <span class="info">Number of Wrong Answers</span> <div class="marks">{{wrong}}
                 </div></div>
-                  <div class="optionvalue1 icon">
+                  <div class="optionvalue1">
                 <span class="info">Total Secured Marks</span> <div class="marks">{{secured_marks}}
                 </div></div>
                 {% if grade %}
-                  <div class="optionvalue1 icon">
+                  <div class="optionvalue1">
                <span class="info">Grade</span> <div class="marks">{{grade}}
                 </div></div>{% endif %}
-              <div class="optionvalue1 icon">
+              <div class="optionvalue1">
                 <!-- <span class="info">Subject</span> <div class="marks">{{item.subject}}</div> -->
                 {% if item.subject %}
                 <span class="info">Subjects</span> <div class="marks">{% for subject1 in item.subject %}{{subject1.subjects}} {% if not loop.last %}, {% endif %}{% endfor %}
                 </div>{% endif %}
             </div>
-              <div class="optionvalue1 icon">
+              <div class="optionvalue1">
                 {% if item.topic %}
                 <span class="info">Topics</span> <div class="marks">{% for topic1 in item.topic %}{{topic1.topic}} {% if not loop.last %}, {% endif %}{% endfor %}
                 </div>{% endif %}</div>
