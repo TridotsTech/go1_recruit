@@ -178,7 +178,7 @@ video{
     var check = 0;
     var enable_user_video = '{{user_video}}';
 	console.log('{{monitored}}')
-    if('{{monitored}}' == 'true'){
+    if('{{monitored}}' == true){
         var browser;
         if(navigator.userAgent.indexOf('Edge') !== -1 && (!!navigator.msSaveOrOpenBlob || !!navigator.msSaveBlob))
             browser = 'Edge';
