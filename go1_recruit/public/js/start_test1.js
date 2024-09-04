@@ -2075,7 +2075,7 @@ else
 var screen_recorder, video_recorder, monitored, conference;
 try{
 monitored = '{{monitored}}';
-monitored = '1';
+// monitored = '1';
 console.log(monitored)
 if(monitored == '1'){
    
