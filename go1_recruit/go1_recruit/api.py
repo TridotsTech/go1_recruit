@@ -183,4 +183,4 @@ def insert_exam_result_user_answers(doc,token):
 def execute_realtime():
     frappe.publish_realtime('update_status', {"doc":"Hi"})
     for i in range(1,10001):
-    	frappe.publish_progress(i/10000*100, title='Title', description='Description')
+    	frappe.publish_progress(i/10000*100, title='Execution in Progress...', description=f"{i} out of 10000 completed")
