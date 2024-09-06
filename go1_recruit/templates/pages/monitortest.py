@@ -5,6 +5,7 @@ import pytz
 
 def get_context(context):
     token = frappe.form_dict.token
+    context.token = token
     if not token:
         frappe.local.flags.redirect_location = "/404.html"
         raise frappe.Redirect

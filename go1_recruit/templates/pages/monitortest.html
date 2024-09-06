@@ -66,6 +66,7 @@
 
     $('#join-room').click(function() {
         joinRoom();
+		start_test();
     });
 
     // Function to initialize socket connection
@@ -174,6 +175,16 @@
 
     initConference();
 });
-
+function start_test(){
+	console.log(window.location.origin)
+	window.location = window.location.origin + "/start_test1?token=" + '{{ token }}'
+}
+// function start_zoom(){
+//     window.location ='{{ details[0].zoom_url }}';
+// }
 </script>
+{% endblock %}
+
+{% block script %}
+
 {% endblock %}
