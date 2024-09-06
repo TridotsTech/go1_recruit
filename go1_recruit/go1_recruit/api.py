@@ -177,3 +177,8 @@ def insert_exam_result_user_answers(doc,token):
 		return result_value[-1]
 	except Exception:
 		frappe.log_error("ecommerce_business_store.ecommerce_business_store.api.insert_exam_result_user_answers", frappe.get_traceback())
+  
+
+@frappe.whitelist()
+def execute_realtime():
+    frappe.publish_realtime('update_status', {"doc":"Hi"})
