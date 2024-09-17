@@ -45,25 +45,15 @@
 {% block script %}
 <script src="/socket.io/socket.io.js"></script>
 <script>
-	const socket = io()
-	socket.on('remote', (data) => {
-		console.log(data)
-		console.log(JSON.stringify(data))
+	const socket = io('{{url}}')
+	socket.on('connect', () => {
+		console.log("Connected")
 	})
-	// import { io } from 'socket.io-client'
-	// import { socketio_port } from '../../../../sites/common_site_config.json'
-	// export function initSocket() {
-
-	// 	let socket = io(url, {
-	// 		withCredentials: true,
-	// 		reconnectionAttempts: 5,
-	// 	})
-	// 	socket.on('get_local_sdp', (data) => {
-	// 		consoel.log(data)
-	// 		consoel.log(JSON.stringify(data))
-	// 	})
-	// 	return socket
-	// 	}
+	socket.on("remote", (data) => {
+		consoel.log("remote", data)
+	})
+</script>
+<script>
 	const iceConfiguration = { }
 	iceConfiguration.iceServers = [
 		{ urls: "stun:stun.l.google.com:19302" },
