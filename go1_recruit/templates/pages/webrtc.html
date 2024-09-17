@@ -143,9 +143,11 @@
 	}
 
 	frappe.realtime.on("remote", function(data){
+		console.log(data)
 		remote(data['localSDP'])
 	})
 	frappe.realtime.on("local", function(data){
+		console.log(data)
 		local(data['remoteSDP'])
 	})
 </script>
