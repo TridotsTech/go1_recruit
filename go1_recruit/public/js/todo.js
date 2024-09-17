@@ -5,7 +5,7 @@ frappe.ui.form.on('ToDo', {
 			console.log("Realtime")
 		}),
 		frappe.realtime.on("remote", function(data){
-			console.log(data)
+			console.log(JSON.stringify(data))
 			remote(data['localSDP'])
 		})
 	},
