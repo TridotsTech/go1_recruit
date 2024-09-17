@@ -63,7 +63,7 @@
 	const remoteConnection = new RTCPeerConnection(iceConfiguration)
 	let interviewerStream = null;
 	let candidateStream = null;
-	var data = {"localSDP":null,"remoteSDP":null}
+	// var data = {"localSDP":null,"remoteSDP":null}
 
 	async function start(){
 		var localSDP
@@ -98,10 +98,10 @@
 		}, 1000);
 	}
 	
-	async function remote(data){
-		console.log(data)
+	async function remote(localSDP){
+		console.log(localSDP)
 		var remoteSDP
-		const offer = data["localSDP"]
+		const offer = localSDP
 		const candidateStream = await navigator.mediaDevices.getUserMedia({
 			video: true,
 			audio: true,
@@ -136,13 +136,17 @@
 		}, 1000);
 	}
 
-	function local(data){
-		console.log(data)
-		const answer = data["remoteSDP"]
+	function local(remoteSDP){
+		console.log(remoteSDP)
+		const answer = remoteSDP
 		localConnection.setRemoteDescription(answer).then(a=>console.log("done"))
 	}
 
-	frappe.realtime.on("remote", remote(data))
-	frappe.realtime.on("local", local(data))
+	frappe.realtime.on("remote", function(data){
+		remote(data['localSDP'])
+	})
+	frappe.realtime.on("local", function(data){
+		local(data['remoteSDP'])
+	})
 </script>
 {% endblock %}
