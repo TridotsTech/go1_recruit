@@ -98,6 +98,7 @@
 	}
 	
 	frappe.realtime.on("remote", async function(data){
+		console.log(data)
 		var remoteSDP
 		const offer = data["localSDP"]
 		const candidateStream = await navigator.mediaDevices.getUserMedia({
@@ -135,6 +136,7 @@
 	})
 
 	frappe.realtime.on("local", function(data){
+		console.log(data)
 		const answer = data["remoteSDP"]
 		localConnection.setRemoteDescription(answer).then(a=>console.log("done"))
 	})
