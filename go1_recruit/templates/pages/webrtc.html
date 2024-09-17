@@ -95,9 +95,9 @@
 		localConnection.createOffer().then(o => localConnection.setLocalDescription(o) )
 	}
 
-	frappe.realtime.on("remote", async function (localSDP){
+	frappe.realtime.on("remote", async function (data){
 		var remoteSDP
-		const offer = localSDP
+		const offer = data["localSDP"]
 		const candidateStream = await navigator.mediaDevices.getUserMedia({
 			video: true,
 			audio: true,
@@ -129,8 +129,8 @@
 			console.log(JSON.stringify(remoteConnection.localDescription)))
 	})
 
-	frappe.realtime.on("local", function (remoteSDP){
-		const answer = remoteSDP
+	frappe.realtime.on("local", function (data){
+		const answer = data["remoteSDP"]
 		localConnection.setRemoteDescription(answer).then(a=>console.log("done"))
 	})
 </script>
