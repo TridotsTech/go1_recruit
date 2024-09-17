@@ -51,9 +51,9 @@
 	let protocol = port ? 'http' : 'https'
 	let url = `${protocol}://${host}${port}/${siteName}`
 	socket = io(url)
-	socket.on('local', (data) => {
-		consoel.log(data)
-		consoel.log(JSON.stringify(data))
+	socket.on('remote', (data) => {
+		console.log(data)
+		console.log(JSON.stringify(data))
 	})
 	// import { io } from 'socket.io-client'
 	// import { socketio_port } from '../../../../sites/common_site_config.json'
