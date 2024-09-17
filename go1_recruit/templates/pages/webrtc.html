@@ -91,11 +91,13 @@
 			console.log(JSON.stringify(localConnection.localDescription))
 			localSDP = localConnection.localDescription
 		}
-		frappe.call({"method":"go1_recruit.go1_recruit.api.get_local_sdp", "args":{"localSDP":localSDP}})
 		localConnection.createOffer().then(o => localConnection.setLocalDescription(o) )
+		setTimeout(() => {
+			frappe.call({"method":"go1_recruit.go1_recruit.api.get_local_sdp", "args":{"localSDP":localSDP}})
+		}, 1000);
 	}
-
-	frappe.realtime.on("remote", async function (data){
+	
+	frappe.realtime.on("remote", async function(data){
 		var remoteSDP
 		const offer = data["localSDP"]
 		const candidateStream = await navigator.mediaDevices.getUserMedia({
@@ -122,14 +124,17 @@
 				interviewerStream.addTrack(ev.track);
 			}
 		};
-		frappe.call({"method":"go1_recruit.go1_recruit.api.get_remote_sdp", "args":{"remoteSDP":remoteSDP}})
+
 		// openCall(remoteConnection)
 		remoteConnection.setRemoteDescription(offer).then(a=>console.log("done"))
 		await remoteConnection.createAnswer().then(a => remoteConnection.setLocalDescription(a)).then(a=>
-			console.log(JSON.stringify(remoteConnection.localDescription)))
+		console.log(JSON.stringify(remoteConnection.localDescription)))
+		setTimeout(() => {
+			frappe.call({"method":"go1_recruit.go1_recruit.api.get_remote_sdp", "args":{"remoteSDP":remoteSDP}})
+		}, 1000);
 	})
 
-	frappe.realtime.on("local", function (data){
+	frappe.realtime.on("local", function(data){
 		const answer = data["remoteSDP"]
 		localConnection.setRemoteDescription(answer).then(a=>console.log("done"))
 	})
