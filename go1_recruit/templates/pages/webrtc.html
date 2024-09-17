@@ -51,7 +51,7 @@
 	let protocol = port ? 'http' : 'https'
 	let url = `${protocol}://${host}${port}/${siteName}`
 	socket = io(url)
-	socket.on('get_local_sdp', (data) => {
+	socket.on('local', (data) => {
 		consoel.log(data)
 		consoel.log(JSON.stringify(data))
 	})
