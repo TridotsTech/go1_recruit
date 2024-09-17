@@ -13,7 +13,7 @@ $(document).ready(function() {
 
     // Function to initialize socket connection
     function initSocketConnection() {
-        frappe.socketio = io.connect(frappe.socketio.get_host(9000), { secure: true });
+        frappe.socketio = io.connect('https://muazkhan.com:9001/', { secure: true });
         frappe.socketio.on('room-created', function(room_id) {
             autoConnectRoom(room_id);
             isRoomExist = 1;
