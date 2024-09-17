@@ -1,0 +1,137 @@
+{% extends "templates/web.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebRTC</title>
+    <!--<link rel="stylesheet" href="main.css">-->
+</head>
+<body>
+    <h1>This is a test for WebRTC Peer-to-Peer Video Chat.</h1>
+    <div id="videos">
+        <video class="video-player" id="interviewer" autoplay playsinline>No Support</video>
+        <video class="video-player" id="candidate" autoplay playsinline></video>
+        <textarea class="text-box" id="local-text"></textarea>
+        <textarea class="text-box" id="remote-text"></textarea>
+        <button id="send-local" onclick="localSend()">Local Send</button>
+        <button id="send-remote" onclick="remoteSend()">Remote Send</button>
+    </div>
+</body>
+<!--<script src="main.js"></script>-->
+</html>
+{% endblock %}
+{% block style %}
+<style>
+	#videos{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap:2em;
+	}
+	.video-player{
+		background-color:black; 
+		width:100%;
+		height:300px;
+	}
+	.text-box{
+		/*background-color:black; */
+		width:100%;
+		height:300px;
+	}
+</style>
+{% endblock %}
+{% block script %}
+<script>
+	
+	const iceConfiguration = { }
+	iceConfiguration.iceServers = [
+		{ urls: "stun:stun.l.google.com:19302" },
+		{ urls: "stun:stun.l.google.com:5349" },
+		{ urls: "stun:stun1.l.google.com:3478" },
+		{ urls: "stun:stun1.l.google.com:5349" },
+		{ urls: "stun:stun2.l.google.com:19302" },
+		{ urls: "stun:stun2.l.google.com:5349" },
+		{ urls: "stun:stun3.l.google.com:3478" },
+		{ urls: "stun:stun3.l.google.com:5349" },
+		{ urls: "stun:stun4.l.google.com:19302" },
+		{ urls: "stun:stun4.l.google.com:5349" }
+	];
+
+	const localConnection = new RTCPeerConnection(iceConfiguration)
+	const remoteConnection = new RTCPeerConnection(iceConfiguration)
+	let interviewerStream = null;
+	let candidateStream = null;
+
+	async function start(){
+		var localSDP
+		const interviewerStream = await navigator.mediaDevices.getUserMedia({
+			video: true,
+			audio: false,
+		});
+		document.getElementById("interviewer").srcObject = interviewerStream;
+		for (const track of interviewerStream.getTracks()) {
+			localConnection.addTrack(track, interviewerStream);
+		}
+		localConnection.ontrack = (ev) => {
+			if (ev.streams && ev.streams[0]) {
+				document.getElementById("candidate").srcObject = ev.streams[0];
+			} else {
+				if (!candidateStream) {
+				candidateStream = new MediaStream();
+				document.getElementById("candidate").srcObject = candidateStream;
+				}
+				candidateStream.addTrack(ev.track);
+			}
+		};
+		
+		localConnection.onicecandidate = e =>  {
+		console.log("New ICE candidate on localConnection, Reprinting SDP")
+			console.log(JSON.stringify(localConnection.localDescription))
+			localSDP = localConnection.localDescription
+		}
+		frappe.call({"method":"go1_recruit.go1_recruit.api.get_local_sdp", "args":{"localSDP":localSDP}})
+		localConnection.createOffer().then(o => localConnection.setLocalDescription(o) )
+	}
+
+	frappe.realtime.on("remote", async function (localSDP){
+		var remoteSDP
+		const offer = localSDP
+		const candidateStream = await navigator.mediaDevices.getUserMedia({
+			video: true,
+			audio: true,
+		});
+		document.getElementById("candidate").srcObject = candidateStream
+		for (const track of candidateStream.getTracks()) {
+			remoteConnection.addTrack(track, candidateStream)
+		}
+		remoteConnection.onicecandidate = e =>  {
+			console.log("New ICE candidate on remoteConnection. Reprinting SDP")
+			console.log(JSON.stringify(remoteConnection.localDescription) )
+			remoteSDP = remoteConnection.localDescription
+		}
+		remoteConnection.ontrack = (ev) => {
+			if (ev.streams && ev.streams[0]) {
+				document.getElementById("interviewer").srcObject = ev.streams[0];
+			} else {
+				if (!interviewerStream) {
+				interviewerStream = new MediaStream();
+				document.getElementById("interviewer").srcObject = interviewerStream;
+				}
+				interviewerStream.addTrack(ev.track);
+			}
+		};
+		frappe.call({"method":"go1_recruit.go1_recruit.api.get_remote_sdp", "args":{"remoteSDP":remoteSDP}})
+		// openCall(remoteConnection)
+		remoteConnection.setRemoteDescription(offer).then(a=>console.log("done"))
+		await remoteConnection.createAnswer().then(a => remoteConnection.setLocalDescription(a)).then(a=>
+			console.log(JSON.stringify(remoteConnection.localDescription)))
+	})
+
+	frappe.realtime.on("local", function (remoteSDP){
+		const answer = remoteSDP
+		localConnection.setRemoteDescription(answer).then(a=>console.log("done"))
+	})
+</script>
+{% endblock %}
