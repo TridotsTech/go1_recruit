@@ -45,6 +45,12 @@
 {% block script %}
 <script src="/socket.io/socket.io.js"></script>
 <script>
+	let host = window.location.hostname
+	let siteName = window.site_name
+	let port = window.location.port ? `:9000` : ''
+	let protocol = port ? 'http' : 'https'
+	let url = `${protocol}://${host}${port}/${siteName}`
+	socket = io(url)
 	socket.on('get_local_sdp', (data) => {
 		consoel.log(data)
 		consoel.log(JSON.stringify(data))
@@ -52,11 +58,6 @@
 	// import { io } from 'socket.io-client'
 	// import { socketio_port } from '../../../../sites/common_site_config.json'
 	// export function initSocket() {
-	// 	let host = window.location.hostname
-	// 	let siteName = window.site_name
-	// 	let port = window.location.port ? `:${socketio_port}` : ''
-	// 	let protocol = port ? 'http' : 'https'
-	// 	let url = `${protocol}://${host}${port}/${siteName}`
 
 	// 	let socket = io(url, {
 	// 		withCredentials: true,
