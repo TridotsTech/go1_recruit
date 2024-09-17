@@ -63,6 +63,7 @@
 	const remoteConnection = new RTCPeerConnection(iceConfiguration)
 	let interviewerStream = null;
 	let candidateStream = null;
+	var data;
 
 	async function start(){
 		var localSDP
@@ -140,7 +141,7 @@
 		const answer = data["remoteSDP"]
 		localConnection.setRemoteDescription(answer).then(a=>console.log("done"))
 	}
-	
+
 	frappe.realtime.on("remote", remote(data))
 	frappe.realtime.on("local", local(data))
 </script>
