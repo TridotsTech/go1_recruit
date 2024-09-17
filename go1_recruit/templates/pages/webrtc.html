@@ -63,7 +63,7 @@
 	const remoteConnection = new RTCPeerConnection(iceConfiguration)
 	let interviewerStream = null;
 	let candidateStream = null;
-	var data;
+	var data = {"localSDP":null,"remoteSDP":null}
 
 	async function start(){
 		var localSDP
