@@ -134,6 +134,7 @@
 		// setTimeout(() => {
 		// 	frappe.call({"method":"go1_recruit.go1_recruit.api.get_local_sdp", "args":{"localSDP":localSDP}})
 		// }, 5000);
+		return localSDP
 	}
 	
 	async function remote(localSDP){
@@ -178,6 +179,12 @@
 		console.log(remoteSDP)
 		const answer = remoteSDP
 		localConnection.setRemoteDescription(answer).then(a=>console.log("Remote Description in local is Set"))
+	}
+
+	if ('{{user_type}}' === 'interviewer'){
+		start().then(value => {
+			console.log(value)
+		})
 	}
 
 	setTimeout(() => {
