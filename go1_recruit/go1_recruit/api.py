@@ -194,5 +194,9 @@ def get_remote_sdp(remoteSDP):
     frappe.publish_realtime("local", {"remoteSDP":json.loads(remoteSDP)})
     
 @frappe.whitelist()
+def check_candidate_presence():
+    frappe.publish_realtime('check_candidate_presence')
+    
+@frappe.whitelist()
 def notify_interviewer():
     frappe.publish_realtime("candidate_joined")
