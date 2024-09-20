@@ -121,6 +121,7 @@
 			console.log('remote stream', ev)
 			if (ev.streams && ev.streams[0]) {
 				document.getElementById("candidate").srcObject = ev.streams[0];
+				document.getElementById("candidate-screen").srcObject = ev.streams[0];
 			} else {
 				if (!candidateStream) {
 					candidateStream = new MediaStream();
@@ -163,12 +164,14 @@
 		document.getElementById("candidate").srcObject = candidateStream
 		document.getElementById("candidate-screen").srcObject = candidateScreenStream
 		for (var track of candidateStream.getTracks()) {
+			track['type']='candidate'
 			console.log('Candidate Stream', candidateStream)
 			remoteConnection.addTrack(track, candidateStream)
 		}
 		for (var track of candidateScreenStream.getTracks()){
+			track['type']='candidate-screen'
 			console.log('Candidate Screen Stream', candidateScreenStream)
-			remoteConnection.addTrack(track, candidateStream)
+			remoteConnection.addTrack(track, candidateScreenStream)
 		}
 		remoteConnection.onicecandidate = e =>  {
 			console.log("New ICE candidate on remoteConnection. Reprinting SDP")
