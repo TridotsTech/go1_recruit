@@ -185,18 +185,18 @@ def execute_realtime():
     # for i in range(1,10001):
     # 	frappe.publish_progress(i/10000*100, title='Execution in Progress...', description=f"{i} out of 10000 completed")
     
-@frappe.whitelist()
+@frappe.whitelist(allow_guest=True)
 def offer(localSDP):
     frappe.publish_realtime("offer", {"localSDP":json.loads(localSDP)})
     
-@frappe.whitelist()
+@frappe.whitelist(allow_guest=True)
 def answer(remoteSDP):
     frappe.publish_realtime("answer", {"remoteSDP":json.loads(remoteSDP)})
     
-@frappe.whitelist()
+@frappe.whitelist(allow_guest=True)
 def check_candidate_presence():
     frappe.publish_realtime('check_candidate_presence')
     
-@frappe.whitelist()
+@frappe.whitelist(allow_guest=True)
 def notify_interviewer():
     frappe.publish_realtime("candidate_joined")
