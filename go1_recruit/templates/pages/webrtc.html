@@ -123,11 +123,15 @@
 				document.getElementById("candidate").srcObject = ev.streams[0];
 			} else {
 				if (!candidateStream) {
-				candidateStream = new MediaStream();
-				document.getElementById("candidate").srcObject = candidateStream;
+					candidateStream = new MediaStream();
+					document.getElementById("candidate").srcObject = candidateStream;
 				}
 				candidateStream.addTrack(ev.track);
-
+				if (!candidateScreenStream){
+					candidateScreenStream = new MediaStream();
+					document.getElementById("candidate-screen").srcObject = candidateScreenStream;
+				}
+				candidateScreenStream.addTrack(ev.track);
 			}
 		};
 		
@@ -159,9 +163,11 @@
 		document.getElementById("candidate").srcObject = candidateStream
 		document.getElementById("candidate-screen").srcObject = candidateScreenStream
 		for (var track of candidateStream.getTracks()) {
+			console.log('Candidate Stream', candidateStream)
 			remoteConnection.addTrack(track, candidateStream)
 		}
 		for (var track of candidateScreenStream.getTracks()){
+			console.log('Candidate Screen Stream', candidateScreenStream)
 			remoteConnection.addTrack(track, candidateScreenStream)
 		}
 		remoteConnection.onicecandidate = e =>  {
