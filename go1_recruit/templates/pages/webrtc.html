@@ -45,13 +45,14 @@
 {% block script %}
 <script src="/socket.io/socket.io.js"></script>
 <script>
-	const socket = io('{{url}}')
-	socket.on('connect', () => {
-		console.log("Connected")
-	})
-	socket.on("remote", (data) => {
-		consoel.log("remote", data)
-	})
+	frappe.realtime.emit("hello")
+	// const socket = io('{{url}}')
+	// socket.on('connect', () => {
+	// 	console.log("Connected")
+	// })
+	// socket.on("remote", (data) => {
+	// 	consoel.log("remote", data)
+	// })
 </script>
 <script>
 	const iceConfiguration = { }
