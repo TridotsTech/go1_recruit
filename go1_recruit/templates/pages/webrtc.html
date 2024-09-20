@@ -183,7 +183,7 @@
 		localConnection.setRemoteDescription(answer).then(a=>console.log("Remote Description in local is Set"))
 	}
 	
-	async function listen_to_candidate(){
+	async function listen_for_candidate(){
 		while(!candidateJoined) {
 			await new Promise(resolve => setTimeout(resolve, 5000))
 			frappe.call({
@@ -196,15 +196,13 @@
 		interviewerJoined = 1
 		start()
 		if (!candidateJoined){
-			listen_to_candidate()
+			listen_for_candidate()
 		}
 	}
-	// if ('{{user_type}}' === 'candidate'){
-	// 	candidateJoined = 1
-	// 	frappe.call({
-	// 		'method':'go1_recruit.go1_recruit.api.notify_interviewer'
-	// 	})
-	// }
+
+	if ('{{user_type}}' === 'candidate'){
+		candidateJoined = 1
+	}
 
 	setTimeout(() => {
 		frappe.realtime.on('check_candidate_presence', function(){
@@ -215,10 +213,9 @@
 		})
 		frappe.realtime.on('candidate_joined', function(){
 			candidateJoined = 1
-			console.log('Candidate has Joined')
-			if ('{{user_type}}' === 'interviewer'){
+			if ('{{user_type}}' === 'candidate'){
+				console.log('Candidate has Joined')
 				remote(localSDP)
-				// frappe.call({"method":"go1_recruit.go1_recruit.api.get_local_sdp", "args":{"localSDP":localSDP}})
 			}
 		})
 	}, 1000);
