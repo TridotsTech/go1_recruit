@@ -118,8 +118,8 @@
 			localConnection.addTrack(track, interviewerStream);
 		}
 		localConnection.ontrack = (ev) => {
+			console.log('remote stream', ev)
 			if (ev.streams && ev.streams[0]) {
-				console.log('remote stream', ev)
 				document.getElementById("candidate").srcObject = ev.streams[0];
 			} else {
 				if (!candidateStream) {
