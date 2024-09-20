@@ -182,21 +182,23 @@
 		const answer = remoteSDP
 		localConnection.setRemoteDescription(answer).then(a=>console.log("Remote Description in local is Set"))
 	}
-
+	
+	async function listen_to_candidate(){
+		while(!candidateJoined) {
+			await new Promise(resolve => setTimeout(resolve, 5000))
+			frappe.call({
+				'method':'go1_recruit.go1_recruit.api.check_candidate_presence'
+			})
+		}
+	}
+	
 	if ('{{user_type}}' === 'interviewer'){
 		interviewerJoined = 1
 		start()
 		if (!candidateJoined){
-			while(!candidateJoined) {
-				setInterval(() => {
-					frappe.call({
-						'method':'go1_recruit.go1_recruit.api.check_candidate_presence'
-					})
-				}, 5000);
-			}
+			listen_to_candidate()
 		}
 	}
-
 	// if ('{{user_type}}' === 'candidate'){
 	// 	candidateJoined = 1
 	// 	frappe.call({
