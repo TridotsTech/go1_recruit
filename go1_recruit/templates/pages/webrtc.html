@@ -191,7 +191,7 @@
 			})
 		}
 	}
-	
+
 	if ('{{user_type}}' === 'interviewer'){
 		interviewerJoined = 1
 		start()
@@ -217,7 +217,8 @@
 			candidateJoined = 1
 			console.log('Candidate has Joined')
 			if ('{{user_type}}' === 'interviewer'){
-				frappe.call({"method":"go1_recruit.go1_recruit.api.get_local_sdp", "args":{"localSDP":localSDP}})
+				remote(localSDP)
+				// frappe.call({"method":"go1_recruit.go1_recruit.api.get_local_sdp", "args":{"localSDP":localSDP}})
 			}
 		})
 	}, 1000);
