@@ -186,12 +186,12 @@ def execute_realtime():
     # 	frappe.publish_progress(i/10000*100, title='Execution in Progress...', description=f"{i} out of 10000 completed")
     
 @frappe.whitelist()
-def remote(localSDP):
-    frappe.publish_realtime("remote", {"localSDP":json.loads(localSDP)})
+def offer(localSDP):
+    frappe.publish_realtime("offer", {"localSDP":json.loads(localSDP)})
     
 @frappe.whitelist()
-def get_remote_sdp(remoteSDP):
-    frappe.publish_realtime("local", {"remoteSDP":json.loads(remoteSDP)})
+def answer(remoteSDP):
+    frappe.publish_realtime("answer", {"remoteSDP":json.loads(remoteSDP)})
     
 @frappe.whitelist()
 def check_candidate_presence():
