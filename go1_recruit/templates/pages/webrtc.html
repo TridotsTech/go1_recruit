@@ -102,6 +102,8 @@
 	let candidateStream = null;
 	var localSDP = null;
 	var remoteSDP = null;
+	var interviewerJoined = 0;
+	var candidateJoined = 0;
 
 	async function start(){
 		const interviewerStream = await navigator.mediaDevices.getUserMedia({
@@ -134,7 +136,7 @@
 		// setTimeout(() => {
 		// 	frappe.call({"method":"go1_recruit.go1_recruit.api.get_local_sdp", "args":{"localSDP":localSDP}})
 		// }, 5000);
-		return localSDP
+		// return localSDP
 	}
 	
 	async function remote(localSDP){
@@ -182,19 +184,37 @@
 	}
 
 	if ('{{user_type}}' === 'interviewer'){
-		start().then(value => {
-			console.log(value)
-		})
+		interviewerJoined = 1
+		if (candidateJoined === 0){
+			start()
+		}else{
+			start()
+			setTimeout(() => {
+				frappe.call({"method":"go1_recruit.go1_recruit.api.get_local_sdp", "args":{"localSDP":localSDP}})
+			}, 5000);
+		}
+	}
+
+	if ('{{user_type}}' === 'candidate'){
+		candidateJoined = 1
+		if (interviewerJoined === 1){
+			frappe.call({
+				'method':'go1_recruit.go1_recruit.api.notify_interviewer'
+			})
+		}
 	}
 
 	setTimeout(() => {
 		frappe.realtime.on("remote", function(data){
 			console.log(data)
 			remote(data['localSDP'])
-		})
+		}),
 		frappe.realtime.on("local", function(data){
 			console.log(data)
 			local(data['remoteSDP'])
+		}),
+		frappe.realtime.on('candidate_joined', function(){
+			frappe.call({"method":"go1_recruit.go1_recruit.api.get_local_sdp", "args":{"localSDP":localSDP}})
 		})
 	}, 1000);
 </script>
