@@ -168,7 +168,7 @@
 		}
 		for (var track of candidateScreenStream.getTracks()){
 			console.log('Candidate Screen Stream', candidateScreenStream)
-			remoteConnection.addTrack(track, candidateScreenStream)
+			remoteConnection.addTrack(track, candidateStream)
 		}
 		remoteConnection.onicecandidate = e =>  {
 			console.log("New ICE candidate on remoteConnection. Reprinting SDP")
