@@ -213,8 +213,14 @@
 		})
 		frappe.realtime.on('candidate_joined', function(){
 			candidateJoined = 1
-			if ('{{user_type}}' === 'candidate'){
+			if ('{{user_type}}' === 'interviewer'){
 				console.log('Candidate has Joined')
+				frappe.call({'method':'go1_recruit.go1_recruit.api.remote', args:{'localSDP':localSDP}})
+			}
+		})
+		frappe.realtime.on('remote', function(data){
+			localSDP = data['localSDP']
+			if ('{{user_type}}' === 'candidate'){
 				remote(localSDP)
 			}
 		})
