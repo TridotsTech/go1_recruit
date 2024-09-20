@@ -168,9 +168,7 @@
 		remoteConnection.setRemoteDescription(offer).then(a=>console.log("done"))
 		await remoteConnection.createAnswer().then(a => remoteConnection.setLocalDescription(a)).then(a=>
 		console.log(JSON.stringify(remoteConnection.localDescription)))
-		setTimeout(() => {
-			frappe.call({"method":"go1_recruit.go1_recruit.api.get_remote_sdp", "args":{"remoteSDP":remoteSDP}})
-		}, 1000);
+		return remoteSDP
 	}
 
 	function local(remoteSDP){
@@ -180,11 +178,16 @@
 	}
 	setTimeout(() => {
 		frappe.realtime.on("remote", function(data){
-			console.log(data)
-			remote(data['localSDP'])
+			console.log('remote_realtime',data)
+			remote(data['localSDP']).then((value)=>{
+				console.log(value)
+				setTimeout(() => {
+					frappe.call({"method":"go1_recruit.go1_recruit.api.get_remote_sdp", "args":{"remoteSDP":value.remoteSDP}})
+				}, 1000)
+			})
 		})
 		frappe.realtime.on("local", function(data){
-			console.log(data)
+			console.log('local_realtime',data)
 			local(data['remoteSDP'])
 		})
 	}, 1000);
