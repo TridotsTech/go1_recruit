@@ -195,10 +195,8 @@ def answer(remoteSDP):
     
 @frappe.whitelist(allow_guest=True)
 def check_candidate_presence():
-    frappe.log_error('candidate Presence Test')
     frappe.publish_realtime('check_candidate_presence')
     
 @frappe.whitelist(allow_guest=True)
 def notify_interviewer():
-    frappe.log_error('candidate Presence Test')
     frappe.publish_realtime("candidate_joined")
