@@ -12,8 +12,9 @@
 <body>
     <h1>This is a test for WebRTC Peer-to-Peer Video Chat.</h1>
     <div id="videos">
+        <video class="video-player" id="candidate-screen" autoplay playsinline>No Support</video>
         <video class="video-player" id="interviewer" autoplay playsinline>No Support</video>
-        <video class="video-player" id="candidate" autoplay playsinline></video>
+        <video class="video-player" id="candidate" autoplay playsinline>No Support</video>
         <textarea class="text-box" id="local-text"></textarea>
         <textarea class="text-box" id="remote-text"></textarea>
         <button id="send-local" onclick="localSend()">Local Send</button>
@@ -100,6 +101,7 @@
 	const remoteConnection = new RTCPeerConnection(iceConfiguration)
 	let interviewerStream = null;
 	let candidateStream = null;
+	let candidateScreenStream = null;
 	var localSDP = null;
 	var remoteSDP = null;
 	var interviewerJoined = null;
@@ -117,6 +119,7 @@
 		}
 		localConnection.ontrack = (ev) => {
 			if (ev.streams && ev.streams[0]) {
+				console.log('remote stream', ev)
 				document.getElementById("candidate").srcObject = ev.streams[0];
 			} else {
 				if (!candidateStream) {
@@ -124,6 +127,7 @@
 				document.getElementById("candidate").srcObject = candidateStream;
 				}
 				candidateStream.addTrack(ev.track);
+
 			}
 		};
 		
@@ -146,10 +150,19 @@
 			video: true,
 			audio: true,
 		});
+		const candidateScreenStream = await navigator.mediaDevices.getDisplayMedia({
+			video: {
+                cursor: "always"
+            },
+            audio: false
+		})
 		document.getElementById("candidate").srcObject = candidateStream
+		document.getElementById("candidate-screen").srcObject = candidateScreenStream
 		for (var track of candidateStream.getTracks()) {
-			console.log('remote stream', track)
 			remoteConnection.addTrack(track, candidateStream)
+		}
+		for (var track of candidateScreenStream.getTracks()){
+			remoteConnection.addTrack(track, candidateScreenStream)
 		}
 		remoteConnection.onicecandidate = e =>  {
 			console.log("New ICE candidate on remoteConnection. Reprinting SDP")
