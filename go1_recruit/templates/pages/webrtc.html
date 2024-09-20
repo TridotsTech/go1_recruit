@@ -109,8 +109,8 @@
 			audio: false,
 		});
 		document.getElementById("interviewer").srcObject = interviewerStream;
-		for (const track of interviewerStream.getTracks()) {
-			console.log('local stream',ev)
+		for (var track of interviewerStream.getTracks()) {
+			console.log('local stream',track)
 			localConnection.addTrack(track, interviewerStream);
 		}
 		localConnection.ontrack = (ev) => {
@@ -145,8 +145,8 @@
 			audio: true,
 		});
 		document.getElementById("candidate").srcObject = candidateStream
-		for (const track of candidateStream.getTracks()) {
-			console.log('remote stream', ev)
+		for (var track of candidateStream.getTracks()) {
+			console.log('remote stream', track)
 			remoteConnection.addTrack(track, candidateStream)
 		}
 		remoteConnection.onicecandidate = e =>  {
