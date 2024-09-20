@@ -139,7 +139,7 @@
 		// return localSDP
 	}
 	
-	async function offer(localSDP){
+	async function offerSDP(localSDP){
 		console.log(localSDP)
 		const offer = localSDP
 		const candidateStream = await navigator.mediaDevices.getUserMedia({
@@ -177,7 +177,7 @@
 		}, 5000);
 	}
 
-	function answer(remoteSDP){
+	function answerSDP(remoteSDP){
 		console.log(remoteSDP)
 		const answer = remoteSDP
 		localConnection.setRemoteDescription(answer).then(a=>console.log("Remote Description in local is Set"))
@@ -186,6 +186,7 @@
 	async function listen_for_candidate(){
 		while(!candidateJoined) {
 			await new Promise(resolve => setTimeout(resolve, 5000))
+			console.log('Awaiting Candidate')
 			frappe.call({
 				'method':'go1_recruit.go1_recruit.api.check_candidate_presence'
 			})
@@ -220,13 +221,13 @@
 		})
 		frappe.realtime.on('offer', function(data){
 			if ('{{user_type}}' === 'candidate' && !localSDP){
-				offer(data['localSDP'])
+				offerSDP(data['localSDP'])
 			}
 			localSDP = data['localSDP']
 		})
 		frappe.realtime.on('answer', function(data){
 			if ('{{user_type}}' === 'interviewer' && !remoteSDP){
-				answer(data['remoteSDP'])
+				answerSDP(data['remoteSDP'])
 			}
 			remoteSDP = data['remoteSDP']
 		})
