@@ -100,10 +100,10 @@
 	const remoteConnection = new RTCPeerConnection(iceConfiguration)
 	let interviewerStream = null;
 	let candidateStream = null;
-	// var data = {"localSDP":null,"remoteSDP":null}
+	var localSDP = null;
+	var remoteSDP = null;
 
 	async function start(){
-		var localSDP
 		const interviewerStream = await navigator.mediaDevices.getUserMedia({
 			video: true,
 			audio: false,
@@ -138,7 +138,6 @@
 	
 	async function remote(localSDP){
 		console.log(localSDP)
-		var remoteSDP
 		const offer = localSDP
 		const candidateStream = await navigator.mediaDevices.getUserMedia({
 			video: true,

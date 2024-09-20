@@ -187,10 +187,8 @@ def execute_realtime():
     
 @frappe.whitelist()
 def get_local_sdp(localSDP):
-    frappe.log_error('LocalSDP', localSDP)
     frappe.publish_realtime("remote", {"localSDP":json.loads(localSDP)})
     
 @frappe.whitelist()
 def get_remote_sdp(remoteSDP):
-    frappe.log_error('remoteSDP', remoteSDP)
     frappe.publish_realtime("local", {"remoteSDP":json.loads(remoteSDP)})

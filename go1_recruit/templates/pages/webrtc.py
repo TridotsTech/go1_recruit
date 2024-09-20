@@ -1,10 +1,7 @@
 import frappe
 
-# def get_context(context):
-# 	context.frappe = frappe
-# 	context.url = frappe.utils.get_url()
-
-# 	context.call = call_socket()
+def get_context(context):
+	context.user_type = frappe.form_dict.user
 
 # @frappe.whitelist()
 # def call_socket():
