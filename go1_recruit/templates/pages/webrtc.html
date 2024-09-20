@@ -44,16 +44,7 @@
 {% endblock %}
 {% block script %}
 <script src="/socket.io/socket.io.js"></script>
-<script>
-	frappe.realtime.emit("hello")
-	// const socket = io('{{url}}')
-	// socket.on('connect', () => {
-	// 	console.log("Connected")
-	// })
-	// socket.on("remote", (data) => {
-	// 	consoel.log("remote", data)
-	// })
-</script>
+
 <script>
 	const iceConfiguration = { }
 	iceConfiguration.iceServers = [
@@ -61,14 +52,50 @@
 		{ urls: "stun:stun.l.google.com:5349" },
 		{ urls: "stun:stun1.l.google.com:3478" },
 		{ urls: "stun:stun1.l.google.com:5349" },
+		{ urls: 'stun:stun1.l.google.com:19302' },
 		{ urls: "stun:stun2.l.google.com:19302" },
 		{ urls: "stun:stun2.l.google.com:5349" },
 		{ urls: "stun:stun3.l.google.com:3478" },
 		{ urls: "stun:stun3.l.google.com:5349" },
 		{ urls: "stun:stun4.l.google.com:19302" },
-		{ urls: "stun:stun4.l.google.com:5349" }
+		{ urls: "stun:stun4.l.google.com:5349" },
+        { urls: "stun:stun.relay.metered.ca:80" },
+		{
+			urls: "turn:global.relay.metered.ca:80",
+			username: "99aa7fcd9147f6e490b02a14",
+			credential: "ypHMJDCHLtOwX2fp",
+		},
+		{
+			urls: "turn:global.relay.metered.ca:80?transport=tcp",
+			username: "99aa7fcd9147f6e490b02a14",
+			credential: "ypHMJDCHLtOwX2fp",
+		},
+		{
+			urls: "turn:global.relay.metered.ca:443",
+			username: "99aa7fcd9147f6e490b02a14",
+			credential: "ypHMJDCHLtOwX2fp",
+		},
+		{
+			urls: "turns:global.relay.metered.ca:443?transport=tcp",
+			username: "99aa7fcd9147f6e490b02a14",
+			credential: "ypHMJDCHLtOwX2fp",
+		}
 	];
-
+	iceConfiguration.iceServers.push({
+		urls: 'stun:muazkhan.com:3478',
+		credential: 'muazkh',
+		username: 'hkzaum'
+	});
+	iceConfiguration.iceServers.push({
+		urls: 'turns:muazkhan.com:5349',
+		credential: 'muazkh',
+		username: 'hkzaum'
+	});
+	iceConfiguration.iceServers.push({
+		urls: 'turn:muazkhan.com:3478',
+		credential: 'muazkh',
+		username: 'hkzaum'
+	});
 	const localConnection = new RTCPeerConnection(iceConfiguration)
 	const remoteConnection = new RTCPeerConnection(iceConfiguration)
 	let interviewerStream = null;
@@ -151,14 +178,15 @@
 		const answer = remoteSDP
 		localConnection.setRemoteDescription(answer).then(a=>console.log("done"))
 	}
-
-	frappe.realtime.on("remote", function(data){
-		console.log(data)
-		remote(data['localSDP'])
-	})
-	frappe.realtime.on("local", function(data){
-		console.log(data)
-		local(data['remoteSDP'])
-	})
+	setTimeout(() => {
+		frappe.realtime.on("remote", function(data){
+			console.log(data)
+			remote(data['localSDP'])
+		})
+		frappe.realtime.on("local", function(data){
+			console.log(data)
+			local(data['remoteSDP'])
+		})
+	}, 1000);
 </script>
 {% endblock %}
