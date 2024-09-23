@@ -180,15 +180,15 @@
 		document.getElementById("candidate").srcObject = candidateStream
 		document.getElementById("candidate-screen").srcObject = candidateScreenStream
 		for (const track of candidateStream.getTracks()) {
-			track['type']='candidate'
-			console.log('Candidate Stream', candidateStream)
-			remoteStream.addTrack(track)
+			track['stream_type'] = 'candidate'
+			console.log('Candidate Stream', track)
+			// remoteStream.addTrack(track)
 			remoteConnection.addTrack(track, candidateStream)
 		}
 		for (const track of candidateScreenStream.getTracks()){
-			track['type']='candidate-screen'
-			console.log('Candidate Screen Stream', candidateScreenStream)
-			remoteStream.addTrack(track)
+			track['stream_type'] = 'candidate-screen'
+			console.log('Candidate Screen Stream', track)
+			// remoteStream.addTrack(track)
 			remoteConnection.addTrack(track, candidateScreenStream)
 		}
 		// for (const track of remoteStream.getTracks()){
@@ -201,7 +201,7 @@
 			remoteSDP = remoteConnection.localDescription
 		}
 		remoteConnection.ontrack = (ev) => {
-			console.log(ev)
+			// console.log(ev)
 			if (ev.streams && ev.streams[0]) {
 				document.getElementById("interviewer").srcObject = ev.streams[0];
 			// } else {
@@ -212,11 +212,11 @@
 			// 	interviewerStream.addTrack(ev.track);
 			}
 		};
-
 		// openCall(remoteConnection)
 		remoteConnection.setRemoteDescription(offer).then(a=>console.log("Local Description in remote is Set"))
 		await remoteConnection.createAnswer().then(a => remoteConnection.setLocalDescription(a)).then(a=>
 		console.log(JSON.stringify(remoteConnection.localDescription)))
+		console.log(remoteConnection)
 		setTimeout(() => {
 			frappe.call({"method":"go1_recruit.go1_recruit.api.answer", "args":{"remoteSDP":remoteSDP}})
 		}, 5000);
