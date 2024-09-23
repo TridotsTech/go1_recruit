@@ -12,8 +12,8 @@
 <body>
     <h1>This is a test for WebRTC Peer-to-Peer Video Chat.</h1>
     <div id="videos">
-        <video class="video-player" id="candidate-screen" autoplay playsinline>No Support</video>
         <video class="video-player" id="interviewer" autoplay playsinline>No Support</video>
+        <video class="video-player" id="candidate-screen" autoplay playsinline>No Support</video>
         <video class="video-player" id="candidate" autoplay playsinline>No Support</video>
         <!-- <textarea class="text-box" id="local-text"></textarea>
         <textarea class="text-box" id="remote-text"></textarea>
@@ -132,18 +132,18 @@
 			console.log('remote stream', ev)
 			if (ev.streams && ev.streams[0]) {
 				document.getElementById("candidate").srcObject = ev.streams[0];
-				document.getElementById("candidate-screen").srcObject = ev.streams[0];
-			} else {
-				if (!candidateStream) {
-					candidateStream = new MediaStream();
-					document.getElementById("candidate").srcObject = candidateStream;
-				}
-				candidateStream.addTrack(ev.track);
-				if (!candidateScreenStream){
-					candidateScreenStream = new MediaStream();
-					document.getElementById("candidate-screen").srcObject = candidateScreenStream;
-				}
-				candidateScreenStream.addTrack(ev.track);
+				// document.getElementById("candidate-screen").srcObject = ev.streams[0];
+			// } else {
+			// 	if (!candidateStream) {
+			// 		candidateStream = new MediaStream();
+			// 		document.getElementById("candidate").srcObject = candidateStream;
+			// 	}
+			// 	candidateStream.addTrack(ev.track);
+			// 	if (!candidateScreenStream){
+			// 		candidateScreenStream = new MediaStream();
+			// 		document.getElementById("candidate-screen").srcObject = candidateScreenStream;
+			// 	}
+			// 	candidateScreenStream.addTrack(ev.track);
 			}
 		};
 		
@@ -178,12 +178,12 @@
 		for (var track of candidateStream.getTracks()) {
 			track['type']='candidate'
 			console.log('Candidate Stream', candidateStream)
-			remoteStream.addTrack(track, candidateStream)
+			remoteStream.addTrack(track)
 		}
 		for (var track of candidateScreenStream.getTracks()){
 			track['type']='candidate-screen'
 			console.log('Candidate Screen Stream', candidateScreenStream)
-			remoteStream.addTrack(track, candidateScreenStream)
+			remoteStream.addTrack(track)
 		}
 		for (var track of remoteStream.getTracks()){
 			console.log('Remote Stream', remoteStream)
@@ -197,12 +197,12 @@
 		remoteConnection.ontrack = (ev) => {
 			if (ev.streams && ev.streams[0]) {
 				document.getElementById("interviewer").srcObject = ev.streams[0];
-			} else {
-				if (!interviewerStream) {
-				interviewerStream = new MediaStream();
-				document.getElementById("interviewer").srcObject = interviewerStream;
-				}
-				interviewerStream.addTrack(ev.track);
+			// } else {
+			// 	if (!interviewerStream) {
+			// 	interviewerStream = new MediaStream();
+			// 	document.getElementById("interviewer").srcObject = interviewerStream;
+			// 	}
+			// 	interviewerStream.addTrack(ev.track);
 			}
 		};
 
