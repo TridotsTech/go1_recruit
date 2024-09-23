@@ -15,10 +15,10 @@
         <video class="video-player" id="candidate-screen" autoplay playsinline>No Support</video>
         <video class="video-player" id="interviewer" autoplay playsinline>No Support</video>
         <video class="video-player" id="candidate" autoplay playsinline>No Support</video>
-        <textarea class="text-box" id="local-text"></textarea>
+        <!-- <textarea class="text-box" id="local-text"></textarea>
         <textarea class="text-box" id="remote-text"></textarea>
         <button id="send-local" onclick="localSend()">Local Send</button>
-        <button id="send-remote" onclick="remoteSend()">Remote Send</button>
+        <button id="send-remote" onclick="remoteSend()">Remote Send</button> -->
     </div>
 </body>
 <!--<script src="main.js"></script>-->
@@ -28,7 +28,7 @@
 <style>
 	#videos{
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: 1fr 1fr 1fr;
 		gap:2em;
 	}
 	.video-player{
@@ -106,6 +106,17 @@
 	var remoteSDP = null;
 	var interviewerJoined = null;
 	var candidateJoined = null;
+	const interviewerVideo = document.getElementById("interviewer")
+	const candidateVideo = document.getElementById("candidate")
+	const candidateScreen = document.getElementById("candidate-screen")
+
+	if ('{{user_type}}' == 'interviewer'){
+		interviewerVideo.muted = true
+	}
+	if ('{{user_type}}' == 'candidate'){
+		candidateScreen.muted = true
+		candidateVideo.muted = true
+	}
 
 	async function start(){
 		const interviewerStream = await navigator.mediaDevices.getUserMedia({
@@ -151,6 +162,7 @@
 	async function offerSDP(localSDP){
 		console.log(localSDP)
 		const offer = localSDP
+		const remoteStream = new MediaStream
 		const candidateStream = await navigator.mediaDevices.getUserMedia({
 			video: true,
 			audio: true,
@@ -166,12 +178,16 @@
 		for (var track of candidateStream.getTracks()) {
 			track['type']='candidate'
 			console.log('Candidate Stream', candidateStream)
-			remoteConnection.addTrack(track, candidateStream)
+			remoteStream.addTrack(track, candidateStream)
 		}
 		for (var track of candidateScreenStream.getTracks()){
 			track['type']='candidate-screen'
 			console.log('Candidate Screen Stream', candidateScreenStream)
-			remoteConnection.addTrack(track, candidateScreenStream)
+			remoteStream.addTrack(track, candidateScreenStream)
+		}
+		for (var track of remoteStream.getTracks()){
+			console.log('Remote Stream', remoteStream)
+			remoteConnection.addTrack(track, remoteStream)
 		}
 		remoteConnection.onicecandidate = e =>  {
 			console.log("New ICE candidate on remoteConnection. Reprinting SDP")
