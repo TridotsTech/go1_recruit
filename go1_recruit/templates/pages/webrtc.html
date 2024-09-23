@@ -129,7 +129,7 @@
 			localConnection.addTrack(track, interviewerStream);
 		}
 		localConnection.ontrack = (ev) => {
-			console.log('remote stream', ev.streams[0].track)
+			console.log('remote stream', ev)
 			if (ev.streams && ev.streams[0]) {
 				const track = ev.streams[0].track
 				if (track){
@@ -201,6 +201,7 @@
 			remoteSDP = remoteConnection.localDescription
 		}
 		remoteConnection.ontrack = (ev) => {
+			console.log(ev)
 			if (ev.streams && ev.streams[0]) {
 				document.getElementById("interviewer").srcObject = ev.streams[0];
 			// } else {
