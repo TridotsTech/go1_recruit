@@ -80,6 +80,21 @@
 			urls: "turns:global.relay.metered.ca:443?transport=tcp",
 			username: "99aa7fcd9147f6e490b02a14",
 			credential: "ypHMJDCHLtOwX2fp",
+		},
+		{
+			urls: "turn:192.168.0.136:3478",
+			username: "jp",
+			password: "Test@123"
+		},
+		{
+			urls: "turn:192.168.0.156:3478",
+			username: "jp",
+			password: "Test@123"
+		},
+		{
+			urls: "turn:49.204.131.86:3478",
+			username: "jp",
+			password: "Test@123"
 		}
 	];
 	iceConfiguration.iceServers.push({
@@ -102,6 +117,7 @@
 	let interviewerStream = null;
 	let candidateStream = null;
 	let candidateScreenStream = null;
+	let remoteStream = null;
 	var localSDP = null;
 	var remoteSDP = null;
 	var interviewerJoined = null;
@@ -133,9 +149,9 @@
 			console.log('Remote Stream', ev)
 			if (ev.streams && ev.streams[0]) {
 				if (track.label.includes('screen')){
-					document.getElementById("candidate-screen").srcObject = new MediaStream([track])
+					document.getElementById("candidate-screen").srcObject = ev.streams[0]
 				} else {
-					document.getElementById("candidate").srcObject = new MediaStream([track])
+					document.getElementById("candidate").srcObject = ev.streams[0]
 				}
 			}
 		};
@@ -151,7 +167,6 @@
 	async function offerSDP(localSDP){
 		console.log(localSDP)
 		const offer = localSDP
-		const remoteStream = new MediaStream
 		const candidateStream = await navigator.mediaDevices.getUserMedia({
 			video: true,
 			audio: true,
