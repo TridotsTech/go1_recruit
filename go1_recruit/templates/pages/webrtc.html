@@ -129,10 +129,14 @@
 			localConnection.addTrack(track, interviewerStream);
 		}
 		localConnection.ontrack = (ev) => {
-			console.log('remote stream', ev)
+			console.log('remote stream', ev.streams[0].track)
 			if (ev.streams && ev.streams[0]) {
-				document.getElementById("candidate").srcObject = ev.streams[0];
-				// document.getElementById("candidate-screen").srcObject = ev.streams[0];
+				const track = ev.streams[0].track
+				if (track.label.includes('screen')){
+					document.getElementById("candidate-screen").srcObject = ev.streams[0];
+				}else{
+					document.getElementById("candidate").srcObject = ev.streams[0];
+				}
 			// } else {
 			// 	if (!candidateStream) {
 			// 		candidateStream = new MediaStream();
@@ -175,20 +179,22 @@
 		})
 		document.getElementById("candidate").srcObject = candidateStream
 		document.getElementById("candidate-screen").srcObject = candidateScreenStream
-		for (var track of candidateStream.getTracks()) {
+		for (const track of candidateStream.getTracks()) {
 			track['type']='candidate'
 			console.log('Candidate Stream', candidateStream)
 			remoteStream.addTrack(track)
+			remoteConnection.addTrack(track, candidateStream)
 		}
-		for (var track of candidateScreenStream.getTracks()){
+		for (const track of candidateScreenStream.getTracks()){
 			track['type']='candidate-screen'
 			console.log('Candidate Screen Stream', candidateScreenStream)
 			remoteStream.addTrack(track)
+			remoteConnection.addTrack(track, candidateScreenStream)
 		}
-		for (var track of remoteStream.getTracks()){
-			console.log('Remote Stream', remoteStream)
-			remoteConnection.addTrack(track, remoteStream)
-		}
+		// for (const track of remoteStream.getTracks()){
+		// 	console.log('Remote Stream', remoteStream)
+		// 	remoteConnection.addTrack(track, remoteStream)
+		// }
 		remoteConnection.onicecandidate = e =>  {
 			console.log("New ICE candidate on remoteConnection. Reprinting SDP")
 			console.log(JSON.stringify(remoteConnection.localDescription) )
