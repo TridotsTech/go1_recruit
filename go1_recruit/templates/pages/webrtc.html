@@ -132,7 +132,7 @@
 			console.log('remote stream', ev.streams[0].track)
 			if (ev.streams && ev.streams[0]) {
 				const track = ev.streams[0].track
-				if (track.label.includes('screen')){
+				if (track){
 					document.getElementById("candidate-screen").srcObject = ev.streams[0];
 				}else{
 					document.getElementById("candidate").srcObject = ev.streams[0];
