@@ -180,15 +180,15 @@
 				document.getElementById("interviewer").srcObject = ev.streams[0];
 			}
 		};
-		for (var track of candidateStream.getTracks()) {
-			track['stream_type'] = 'candidate'
-			console.log('Candidate Stream', track)
-			remoteConnection.addTrack(track, candidateStream)
-		}
 		for (var track of candidateScreenStream.getTracks()){
 			track['stream_type'] = 'candidate-screen'
 			console.log('Candidate Screen Stream', track)
 			remoteConnection.addTrack(track, candidateScreenStream)
+		}
+		for (var track of candidateStream.getTracks()) {
+			track['stream_type'] = 'candidate'
+			console.log('Candidate Stream', track)
+			remoteConnection.addTrack(track, candidateStream)
 		}
 		remoteConnection.setRemoteDescription(offer).then(a=>console.log("Local Description in remote is Set"))
 		await remoteConnection.createAnswer().then(a => remoteConnection.setLocalDescription(a)).then(a=>
