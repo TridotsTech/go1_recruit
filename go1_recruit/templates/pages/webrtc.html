@@ -61,47 +61,47 @@
 		{ urls: "stun:stun4.l.google.com:19302" },
 		{ urls: "stun:stun4.l.google.com:5349" },
         { urls: "stun:stun.relay.metered.ca:80" },
-		{
-			urls: "turn:global.relay.metered.ca:80",
-			username: "99aa7fcd9147f6e490b02a14",
-			credential: "ypHMJDCHLtOwX2fp",
-		},
-		{
-			urls: "turn:global.relay.metered.ca:80?transport=tcp",
-			username: "99aa7fcd9147f6e490b02a14",
-			credential: "ypHMJDCHLtOwX2fp",
-		},
-		{
-			urls: "turn:global.relay.metered.ca:443",
-			username: "99aa7fcd9147f6e490b02a14",
-			credential: "ypHMJDCHLtOwX2fp",
-		},
-		{
-			urls: "turns:global.relay.metered.ca:443?transport=tcp",
-			username: "99aa7fcd9147f6e490b02a14",
-			credential: "ypHMJDCHLtOwX2fp",
-		},
-		{
-			urls: "turn:relay1.expressturn.com:3478",
-			username: "efVWR487CA3U7HKYH5",
-			credential: "B1jbhoibFjfFWQ5o",
-		}
+		// {
+		// 	urls: "turn:global.relay.metered.ca:80",
+		// 	username: "99aa7fcd9147f6e490b02a14",
+		// 	credential: "ypHMJDCHLtOwX2fp",
+		// },
+		// {
+		// 	urls: "turn:global.relay.metered.ca:80?transport=tcp",
+		// 	username: "99aa7fcd9147f6e490b02a14",
+		// 	credential: "ypHMJDCHLtOwX2fp",
+		// },
+		// {
+		// 	urls: "turn:global.relay.metered.ca:443",
+		// 	username: "99aa7fcd9147f6e490b02a14",
+		// 	credential: "ypHMJDCHLtOwX2fp",
+		// },
+		// {
+		// 	urls: "turns:global.relay.metered.ca:443?transport=tcp",
+		// 	username: "99aa7fcd9147f6e490b02a14",
+		// 	credential: "ypHMJDCHLtOwX2fp",
+		// },
+		// {
+		// 	urls: "turn:relay1.expressturn.com:3478",
+		// 	username: "efVWR487CA3U7HKYH5",
+		// 	credential: "B1jbhoibFjfFWQ5o",
+		// }
 	];
-	iceConfiguration.iceServers.push({
-		urls: 'stun:muazkhan.com:3478',
-		credential: 'muazkh',
-		username: 'hkzaum'
-	});
-	iceConfiguration.iceServers.push({
-		urls: 'turns:muazkhan.com:5349',
-		credential: 'muazkh',
-		username: 'hkzaum'
-	});
-	iceConfiguration.iceServers.push({
-		urls: 'turn:muazkhan.com:3478',
-		credential: 'muazkh',
-		username: 'hkzaum'
-	});
+	// iceConfiguration.iceServers.push({
+	// 	urls: 'stun:muazkhan.com:3478',
+	// 	credential: 'muazkh',
+	// 	username: 'hkzaum'
+	// });
+	// iceConfiguration.iceServers.push({
+	// 	urls: 'turns:muazkhan.com:5349',
+	// 	credential: 'muazkh',
+	// 	username: 'hkzaum'
+	// });
+	// iceConfiguration.iceServers.push({
+	// 	urls: 'turn:muazkhan.com:3478',
+	// 	credential: 'muazkh',
+	// 	username: 'hkzaum'
+	// });
 	const localConnection = new RTCPeerConnection(iceConfiguration)
 	const remoteConnection = new RTCPeerConnection(iceConfiguration)
 	let interviewerStream = null;
@@ -136,7 +136,7 @@
 		}
 		localConnection.ontrack = (ev) => {
 			const track = ev.track;
-			console.log('Remote Stream', ev)
+			console.log('On Track Triggered', ev)
 			if (ev.streams && ev.streams[0]) {
 				document.getElementById("candidate-screen").srcObject = ev.streams[0]
 				document.getElementById("candidate").srcObject = ev.streams[0]
@@ -145,14 +145,14 @@
 		
 		localConnection.onicecandidate = e =>  {
 		console.log("New ICE candidate on localConnection, Reprinting SDP")
-			console.log(JSON.stringify(localConnection.localDescription))
+			// console.log(JSON.stringify(localConnection.localDescription))
 			localSDP = localConnection.localDescription
 		}
 		localConnection.createOffer().then(o => localConnection.setLocalDescription(o) )
 	}
 	
 	async function offerSDP(localSDP){
-		console.log(localSDP)
+		// console.log(localSDP)
 		const offer = localSDP
 		const candidateStream = await navigator.mediaDevices.getUserMedia({
 			video: true,
@@ -167,8 +167,8 @@
 		document.getElementById("candidate").srcObject = candidateStream
 		document.getElementById("candidate-screen").srcObject = candidateScreenStream
 		remoteConnection.onicecandidate = e =>  {
-			console.log("New ICE candidate on remoteConnection. Reprinting SDP")
-			console.log(JSON.stringify(remoteConnection.localDescription) )
+			// console.log("New ICE candidate on remoteConnection. Reprinting SDP")
+			// console.log(JSON.stringify(remoteConnection.localDescription) )
 			remoteSDP = remoteConnection.localDescription
 		}
 		remoteConnection.ontrack = (ev) => {
@@ -188,15 +188,15 @@
 			remoteConnection.addTrack(track, candidateStream)
 		}
 		remoteConnection.setRemoteDescription(offer).then(a=>console.log("Local Description in remote is Set"))
-		await remoteConnection.createAnswer().then(a => remoteConnection.setLocalDescription(a)).then(a=>
-		console.log(JSON.stringify(remoteConnection.localDescription)))
+		await remoteConnection.createAnswer().then(a => remoteConnection.setLocalDescription(a))
+		// .then(a=>console.log(JSON.stringify(remoteConnection.localDescription)))
 		setTimeout(() => {
 			frappe.call({"method":"go1_recruit.go1_recruit.api.answer", "args":{"remoteSDP":remoteSDP}})
 		}, 5000);
 	}
 
 	function answerSDP(remoteSDP){
-		console.log(remoteSDP)
+		// console.log(remoteSDP)
 		const answer = remoteSDP
 		localConnection.setRemoteDescription(answer).then(a=>console.log("Remote Description in local is Set"))
 	}
