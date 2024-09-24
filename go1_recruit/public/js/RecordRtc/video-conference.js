@@ -54,7 +54,7 @@ RTCConference = Class.extend({
         let me = this;
         // this.getUserMedia();
         this.connection = new RTCMultiConnection();
-        this.connection.socketURL = '/';
+        this.connection.socketURL = 'https://muazkhan.com:9001/';
         if (this.username)
             this.connection.extra.full_name = this.username;
         let session = {};
@@ -199,7 +199,28 @@ RTCConference = Class.extend({
                 'stun:stun2.l.google.com:19302',
                 'stun:stun.l.google.com:19302?transport=udp',
             ]
-        }];
+        },
+		{
+			urls: 'stun:muazkhan.com:3478',
+			credential: 'muazkh',
+			username: 'hkzaum'
+		},
+		{
+			urls: 'turns:muazkhan.com:5349',
+			credential: 'muazkh',
+			username: 'hkzaum'
+		},
+		{
+			urls: 'turn:muazkhan.com:3478',
+			credential: 'muazkh',
+			username: 'hkzaum'
+		},
+		{
+			urls: "turn:relay1.expressturn.com:3478",
+			username: "efVWR487CA3U7HKYH5",
+			credential: "B1jbhoibFjfFWQ5o",
+		}
+	];
     },
     bandwidthHandler: function() {
         let me = this;
