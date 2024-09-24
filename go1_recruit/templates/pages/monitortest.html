@@ -143,25 +143,79 @@
             }
         });
     }
-
+	const localConnection = new RTCPeerConnection(iceConfiguration)
+	const interviewerVideo = document.getElementById("interviewer")
+	var candidateJoined = 0
+	async function start(){
+		const interviewerStream = await navigator.mediaDevices.getUserMedia({
+			video: true,
+			audio: false,
+		});
+		document.getElementById("interviewer").srcObject = interviewerStream;
+		for (var track of interviewerStream.getTracks()) {
+			console.log('local stream',track)
+			localConnection.addTrack(track, interviewerStream);
+		}
+		localConnection.ontrack = (ev) => {
+			const track = ev.track;
+			console.log('On Track Triggered', ev)
+			if (ev.streams && ev.streams[0]) {
+				document.getElementById("candidate-screen").srcObject = ev.streams[0]
+				document.getElementById("candidate").srcObject = ev.streams[0]
+			}
+		};
+		
+		localConnection.onicecandidate = e =>  {
+		console.log("New ICE candidate on localConnection, Reprinting SDP")
+			// console.log(JSON.stringify(localConnection.localDescription))
+			localSDP = localConnection.localDescription
+		}
+		localConnection.createOffer().then(o => localConnection.setLocalDescription(o) )
+	}
+	function answerSDP(remoteSDP){
+		// console.log(remoteSDP)
+		const answer = remoteSDP
+		localConnection.setRemoteDescription(answer).then(a=>console.log("Remote Description in local is Set"))
+	}
+	async function listen_for_candidate(){
+		while(!candidateJoined) {
+			await new Promise(resolve => setTimeout(resolve, 5000))
+			console.log('Awaiting Candidate')
+			frappe.call({
+				'method':'go1_recruit.go1_recruit.api.check_candidate_presence'
+			})
+		}
+	}
+	if (!candidateJoined){
+			listen_for_candidate()
+		}
+		setTimeout(() => {
+		frappe.realtime.on('candidate_joined', function(){
+			frappe.call({'method':'go1_recruit.go1_recruit.api.offer', args:{'localSDP':localSDP}})
+			candidateJoined = 1
+		})
+		frappe.realtime.on('answer', function(data){
+			answerSDP(data['remoteSDP'])
+		})
+	}, 1000);
     // Initialize conference
-    function initConference() {
-        conference = new RTCConference({
-            videosContainer: document.getElementById('videos-container'),
-            remoteVideosContainer: document.getElementById('remote-videos-container'),
-            recordConference: false,
-            roomid: roomid,
-            enable_video: true,
-            auto_join: true,
-            show_user_screen_sharing: true,
-            show_remote_users_media: true,
-            enable_option_buttons: true,
-            allow_open_room: false
-        });
+    // function initConference() {
+    //     conference = new RTCConference({
+    //         videosContainer: document.getElementById('videos-container'),
+    //         remoteVideosContainer: document.getElementById('remote-videos-container'),
+    //         recordConference: false,
+    //         roomid: roomid,
+    //         enable_video: true,
+    //         auto_join: true,
+    //         show_user_screen_sharing: true,
+    //         show_remote_users_media: true,
+    //         enable_option_buttons: true,
+    //         allow_open_room: false
+    //     });
 
-        conference.connection.errors.ROOM_NOT_AVAILABLE = "Candidate hasn't started the test yet. Please wait until the candidate starts their test.";
-        conference.connection.errors.ROOM_FULL = "Only one interviewer can see the candidate's test.";
-    }
+    //     conference.connection.errors.ROOM_NOT_AVAILABLE = "Candidate hasn't started the test yet. Please wait until the candidate starts their test.";
+    //     conference.connection.errors.ROOM_FULL = "Only one interviewer can see the candidate's test.";
+    // }
 
     // Generate random ID
     function makeid(length) {
@@ -173,7 +227,8 @@
         return result;
     }
 
-    initConference();
+    // initConference();
+	start()
 });
 function start_test(){
 	// console.log(window.location.origin)

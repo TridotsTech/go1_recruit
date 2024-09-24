@@ -2269,27 +2269,101 @@ if(monitored == '1'){
     if('{{record_screen}}' == '1'){
         enable_screen_share = true; 
     }
-    conference = new RTCConference({
-        videosContainer: document.getElementById('video-recorder'),
-        remoteVideosContainer: document.getElementById('video-recorder'),
-        recordConference: true,
-        roomid: "5kn50d19p7",
-        filename: 'checkfilerecord-',
-        enable_video: enable_candidate_video,
-        screen_share: enable_screen_share,
-        record_seperately: true,
-        video_filename: 'VideoIQP-00032kartheek@tridotstech.com-',
-        screen_filename: 'ScreenIQP-00032kartheek@tridotstech.com-',
-        video_fieldname: 'user_video',
-        screen_fieldname: 'screen_video',
-        doctype: 'Exam Result',
-        auto_join: true,
-        username: 'Kartheek',
-        show_user_screen_sharing: false,
-        show_remote_users_media: false,
-        enable_option_buttons: false,
-        allow_open_room: true
-    });
+	const iceConfiguration = { }
+	iceConfiguration.iceServers = [
+		{ urls: "stun:stun.l.google.com:19302" }
+	];
+	iceConfiguration.iceServers.push({
+		urls: 'stun:muazkhan.com:3478',
+		credential: 'muazkh',
+		username: 'hkzaum'
+	});
+	iceConfiguration.iceServers.push({
+		urls: 'turns:muazkhan.com:5349',
+		credential: 'muazkh',
+		username: 'hkzaum'
+	});
+	iceConfiguration.iceServers.push({
+		urls: 'turn:muazkhan.com:3478',
+		credential: 'muazkh',
+		username: 'hkzaum'
+	});
+	const remoteConnection = new RTCPeerConnection(iceConfiguration)
+	const candidateVideo = document.getElementById("video-recorder")
+
+	async function offerSDP(localSDP){
+		// console.log(localSDP)
+		const offer = localSDP
+		const candidateStream = await navigator.mediaDevices.getUserMedia({
+			video: true,
+			audio: true,
+		});
+		const candidateScreenStream = await navigator.mediaDevices.getDisplayMedia({
+			video: {
+                cursor: "always"
+            },
+            audio: false
+		})
+		document.getElementById("candidate").srcObject = candidateStream
+		document.getElementById("candidate-screen").srcObject = candidateScreenStream
+		remoteConnection.onicecandidate = e =>  {
+			// console.log("New ICE candidate on remoteConnection. Reprinting SDP")
+			// console.log(JSON.stringify(remoteConnection.localDescription) )
+			remoteSDP = remoteConnection.localDescription
+		}
+		remoteConnection.ontrack = (ev) => {
+			console.log("On Track Triggered", ev)
+			if (ev.streams && ev.streams[0]) {
+				document.getElementById("interviewer").srcObject = ev.streams[0];
+			}
+		};
+		for (var track of candidateScreenStream.getTracks()){
+			track['stream_type'] = 'candidate-screen'
+			console.log('Candidate Screen Stream', track)
+			remoteConnection.addTrack(track, candidateScreenStream)
+		}
+		for (var track of candidateStream.getTracks()) {
+			track['stream_type'] = 'candidate'
+			console.log('Candidate Stream', track)
+			remoteConnection.addTrack(track, candidateStream)
+		}
+		remoteConnection.setRemoteDescription(offer).then(a=>console.log("Local Description in remote is Set"))
+		await remoteConnection.createAnswer().then(a => remoteConnection.setLocalDescription(a))
+		// .then(a=>console.log(JSON.stringify(remoteConnection.localDescription)))
+		setTimeout(() => {
+			frappe.call({"method":"go1_recruit.go1_recruit.api.answer", "args":{"remoteSDP":remoteSDP}})
+		}, 5000);
+	}
+	setTimeout(() => {
+		frappe.realtime.on('check_candidate_presence', function(){
+			interviewerJoined = 1
+			frappe.call({"method":"go1_recruit.go1_recruit.api.notify_interviewer"})
+		})
+		frappe.realtime.on('offer', function(data){
+			offerSDP(data['localSDP'])
+		})
+	}, 1000);
+    // conference = new RTCConference({
+    //     videosContainer: document.getElementById('video-recorder'),
+    //     remoteVideosContainer: document.getElementById('video-recorder'),
+    //     recordConference: true,
+    //     roomid: "5kn50d19p7",
+    //     filename: 'checkfilerecord-',
+    //     enable_video: enable_candidate_video,
+    //     screen_share: enable_screen_share,
+    //     record_seperately: true,
+    //     video_filename: 'VideoIQP-00032kartheek@tridotstech.com-',
+    //     screen_filename: 'ScreenIQP-00032kartheek@tridotstech.com-',
+    //     video_fieldname: 'user_video',
+    //     screen_fieldname: 'screen_video',
+    //     doctype: 'Exam Result',
+    //     auto_join: true,
+    //     username: 'Kartheek',
+    //     show_user_screen_sharing: false,
+    //     show_remote_users_media: false,
+    //     enable_option_buttons: false,
+    //     allow_open_room: true
+    // });
     // conference = new RTCConference({
     //     videosContainer: document.getElementById('video-recorder'),
     //     remoteVideosContainer: document.getElementById('video-recorder'),
@@ -2329,22 +2403,26 @@ if(monitored == '1'){
     // if(!enable_screen_share){
     //     start_timer();
     // }
-    conference.connection.extra.full_name = 'Kartheek';
-    conference.connection.userid = 'kartheek@tridotstech.com'
-    conference.connection.updateExtraData();
-    conference.join_room();
-	conference.enable_video_share();
-	conference.share_user_screen();
-	$('#toggle-video').show();
-    if(!enable_screen_share){
-        start_timer();
-    }
+    // conference.connection.extra.full_name = 'Kartheek';
+    // conference.connection.userid = 'kartheek@tridotstech.com'
+    // conference.connection.updateExtraData();
+    // conference.join_room();
+	// conference.enable_video_share();
+	// conference.share_user_screen();
+	// $('#toggle-video').show();
+    // if(!enable_screen_share){
+    //     start_timer();
+    // }
 } else{
     start_timer();
 }
 } catch(e){
 console.log(e)
 }
+
+
+
+
 function check_video(){
 if(enable_candidate_video){
     setTimeout(function(){
