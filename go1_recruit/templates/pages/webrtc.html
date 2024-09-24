@@ -60,7 +60,7 @@
 		{ urls: "stun:stun3.l.google.com:5349" },
 		{ urls: "stun:stun4.l.google.com:19302" },
 		{ urls: "stun:stun4.l.google.com:5349" },
-        { urls: "stun:stun.relay.metered.ca:80" },
+        // { urls: "stun:stun.relay.metered.ca:80" },
 		// {
 		// 	urls: "turn:global.relay.metered.ca:80",
 		// 	username: "99aa7fcd9147f6e490b02a14",
@@ -87,21 +87,21 @@
 		// 	credential: "B1jbhoibFjfFWQ5o",
 		// }
 	];
-	// iceConfiguration.iceServers.push({
-	// 	urls: 'stun:muazkhan.com:3478',
-	// 	credential: 'muazkh',
-	// 	username: 'hkzaum'
-	// });
-	// iceConfiguration.iceServers.push({
-	// 	urls: 'turns:muazkhan.com:5349',
-	// 	credential: 'muazkh',
-	// 	username: 'hkzaum'
-	// });
-	// iceConfiguration.iceServers.push({
-	// 	urls: 'turn:muazkhan.com:3478',
-	// 	credential: 'muazkh',
-	// 	username: 'hkzaum'
-	// });
+	iceConfiguration.iceServers.push({
+		urls: 'stun:muazkhan.com:3478',
+		credential: 'muazkh',
+		username: 'hkzaum'
+	});
+	iceConfiguration.iceServers.push({
+		urls: 'turns:muazkhan.com:5349',
+		credential: 'muazkh',
+		username: 'hkzaum'
+	});
+	iceConfiguration.iceServers.push({
+		urls: 'turn:muazkhan.com:3478',
+		credential: 'muazkh',
+		username: 'hkzaum'
+	});
 	const localConnection = new RTCPeerConnection(iceConfiguration)
 	const remoteConnection = new RTCPeerConnection(iceConfiguration)
 	let interviewerStream = null;
