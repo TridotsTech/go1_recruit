@@ -3020,15 +3020,15 @@ try{
             screen_fieldname: 'screen_video',
             doctype: 'Exam Result',
             auto_join: true,
-            username: '{{user}}',
+            username: '{{candidate_email}}',
             show_user_screen_sharing: false,
             show_remote_users_media: false,
             enable_option_buttons: false,
             allow_open_room: true
         });
         conference.connection.extra.full_name = '{{candidate_name}}';
-        conference.connection.userid = '{{user}}'
-        conference.username = '{{user}}';
+        conference.connection.userid = '{{candidate_email}}'
+        conference.username = '{{candidate_email}}';
         conference.connection.updateExtraData();
         if(enable_candidate_video){
             $('#toggle-video').show();

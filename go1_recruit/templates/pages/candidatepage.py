@@ -89,6 +89,7 @@ def get_context(context):
 							context.Answers = Answers
 							context.Duration = ExamMaster[0].duration_minutes
 							context.user = User
+							context.candidate_email=encrypt_url[0].candidate_email
 							context.monitored = 1
 							context.user_video = ExamMaster[0].enable_user_video
 							context.screen_sharing = ExamMaster[0].enable_screen_sharing						
@@ -98,6 +99,7 @@ def get_context(context):
 							context.Answers=Answers
 							context.Duration=ExamMaster[0].duration_minutes
 							context.user=User
+							context.candidate_email=encrypt_url[0].candidate_email
 							context.monitored = 0
 					except Exception as e:
 						context.Duration = 30
