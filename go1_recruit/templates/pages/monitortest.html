@@ -2,6 +2,13 @@
 {% block page_content %}
 <link rel="stylesheet" type="text/css" href="/assets/go1_recruit/css/RecordRtc/getHTMLMediaElement.css">
 <!-- <link rel="stylesheet" type="text/css" href="/assets/go1_recruit/css/go1_recruit.css"> -->
+<style>
+	#remote-videos-container{
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap:2em;
+	}
+</style>
 <div style="height: 80px;"></div>
 
 <div id="info-section">
@@ -26,8 +33,6 @@
     <div class="row">        
         <div class="col-md-12 col-sm-12 col-xs-12 mg-20">
             <div id="remote-videos-container" class="videos-container">
-				<video id="candidate" playsinline autoplay></video>
-				<video id="candidate-screen" playsinline autoplay></video>
                 <div class="loader">Please wait until your connection is established.</div>
                 <div class="test-completed" style="text-align: center; display: none;">
                     {{exam_info.candidate_name}} has completed the test.
@@ -38,6 +43,8 @@
         <div class="col-md-12 col-sm-12 col-xs-12" id="user-video">
             <div id="videos-container" class="videos-container">
 				<video id="interviewer" playsinline autoplay muted></video>
+				<video id="candidate-screen" playsinline autoplay></video>
+				<video id="candidate" playsinline autoplay></video>
 			</div>
         </div>
     </div>
