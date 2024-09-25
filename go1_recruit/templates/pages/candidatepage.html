@@ -951,7 +951,7 @@ canvas {
           window.event.preventDefault();
           event.returnValue = 'Are you sure you want to leave?';
         });
-        document.addEventListener('contextmenu', event => event.preventDefault());
+        // document.addEventListener('contextmenu', event => event.preventDefault());
         var  count12 = '{{go1_recruit_settings.maximum_time_for_execution}}'
         $(".btn-execute-code").click(function(){
              var empty = $(this).parent().find('.codelanguage').val();
