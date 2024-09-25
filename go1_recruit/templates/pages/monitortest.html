@@ -26,15 +26,19 @@
     <div class="row">        
         <div class="col-md-12 col-sm-12 col-xs-12 mg-20">
             <div id="remote-videos-container" class="videos-container">
+				<video id="candidate" playsinline autoplay></video>
+				<video id="candidate-screen" playsinline autoplay></video>
                 <div class="loader">Please wait until your connection is established.</div>
-                <div class="test-completed" style="text-align: center;">
+                <div class="test-completed" style="text-align: center; display: none;">
                     {{exam_info.candidate_name}} has completed the test.
                     <button type="button" class="btn btn-warning plan-btn plans-btn" onclick="evaluateTest()">Evaluate Test</button>
                 </div>
             </div>
         </div>
         <div class="col-md-12 col-sm-12 col-xs-12" id="user-video">
-            <div id="videos-container" class="videos-container"></div>
+            <div id="videos-container" class="videos-container">
+				<video id="interviewer" playsinline autoplay muted></video>
+			</div>
         </div>
     </div>
 </div>
@@ -60,13 +64,16 @@
     var roomid = '{{ room_id }}';
     var conference;
     var count = 1;
-	console.log('{{ user_email }}')
+	// console.log('{{ user_email }}')
     // Initialize the connection
-    initSocketConnection();
+    // initSocketConnection();
 
     $('#join-room').click(function() {
-        joinRoom();
-		start_test();
+		// joinRoom();
+		// start_test();
+		start()
+		showVideoSection();
+		removeLoader()
     });
 
     // Function to initialize socket connection
@@ -77,8 +84,6 @@
             isRoomExist = 1;
         });
         frappe.socketio.on('room-connected', function() {
-            showVideoSection();
-			removeLoader()
         });
     }
 
@@ -143,6 +148,25 @@
             }
         });
     }
+	const iceConfiguration = { }
+	iceConfiguration.iceServers = [
+		{ urls: "stun:stun.l.google.com:19302" }
+	];
+	iceConfiguration.iceServers.push({
+		urls: 'stun:muazkhan.com:3478',
+		credential: 'muazkh',
+		username: 'hkzaum'
+	});
+	iceConfiguration.iceServers.push({
+		urls: 'turns:muazkhan.com:5349',
+		credential: 'muazkh',
+		username: 'hkzaum'
+	});
+	iceConfiguration.iceServers.push({
+		urls: 'turn:muazkhan.com:3478',
+		credential: 'muazkh',
+		username: 'hkzaum'
+	});
 	const localConnection = new RTCPeerConnection(iceConfiguration)
 	const interviewerVideo = document.getElementById("interviewer")
 	var candidateJoined = 0
@@ -175,7 +199,8 @@
 	function answerSDP(remoteSDP){
 		// console.log(remoteSDP)
 		const answer = remoteSDP
-		localConnection.setRemoteDescription(answer).then(a=>console.log("Remote Description in local is Set"))
+		localConnection.setRemoteDescription(answer)
+		// .then(a=>console.log("Remote Description in local is Set"))
 	}
 	async function listen_for_candidate(){
 		while(!candidateJoined) {
