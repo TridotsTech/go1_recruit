@@ -223,11 +223,17 @@
 		listen_for_candidate()
 	}
 	setTimeout(() => {
-		frappe.realtime.on('candidate_joined', function(){
-			frappe.call({'method':'go1_recruit.go1_recruit.api.offer', args:{'localSDP':localSDP}})
+		frappe.socketio = io.connect(frappe.socketio.get_host(9000), { secure: true });
+        frappe.socketio.on('candidate_joined', function() {
+            frappe.call({'method':'go1_recruit.go1_recruit.api.offer', args:{'localSDP':localSDP}})
 			candidateJoined = 1
 			removeLoader()
-		})
+        });
+		// frappe.realtime.on('candidate_joined', function(){
+		// 	frappe.call({'method':'go1_recruit.go1_recruit.api.offer', args:{'localSDP':localSDP}})
+		// 	candidateJoined = 1
+		// 	removeLoader()
+		// })
 		frappe.realtime.on('answer', function(data){
 			answerSDP(data['remoteSDP'])
 		})
