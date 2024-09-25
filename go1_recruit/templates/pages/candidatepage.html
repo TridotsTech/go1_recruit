@@ -2996,18 +2996,7 @@ var screen_recorder, video_recorder, monitored, conference;
 try{
     monitored = '{{monitored}}';
     if(monitored == '1'){
-        // screen_recorder = new RecordScreen({
-        //     share: document.getElementById('screen-recorder'),
-        //     filename: 'Screen{{ExamId}}{{user}}',
-        //     doctype: 'Exam Result',
-        //     fieldname: 'user_video'
-        // });
-        // video_recorder = new RecordVideo({
-        //     video: document.getElementById('video-recorder'),
-        //     filename: 'Video{{ExamId}}{{user}}',
-        //     doctype: 'Exam Result',
-        //     fieldname: 'screen_video'
-        // });
+       
         var enable_candidate_video = false;
         var enable_screen_share = false;
         if('{{candidate_video}}' == '1'){
@@ -3039,6 +3028,7 @@ try{
         });
         conference.connection.extra.full_name = '{{candidate_name}}';
         // conference.connection.userid = '{{user}}'
+        conference.username = '{{User}}';
         conference.connection.updateExtraData();
         if(enable_candidate_video){
             $('#toggle-video').show();
