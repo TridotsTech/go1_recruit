@@ -121,12 +121,12 @@
        return result;
     }
     
-    if (window.dev_server) {
-        frappe.boot.socketio_port = '9000' //use socketio port shown when bench starts
-    }
+    // if (window.dev_server) {
+    //     frappe.boot.socketio_port = '9000' //use socketio port shown when bench starts
+    // }
     
 
-    frappe.socketio.socket = io.connect(frappe.socketio.get_host(8000), {secure: true})
+    frappe.socketio.socket = io.connect(frappe.socketio.get_host(9000), {secure: true})
     frappe.socketio.socket.on('room-created', function(room_id){
         auto_connect_room(room_id)
     });
