@@ -1,0 +1,198 @@
+{% extends base_template_path %}
+{% block page_content %}
+<link rel="stylesheet" type="text/css" href="/assets/interview_portal/css/RecordRtc/getHTMLMediaElement.css">
+<div style="height: 100px;"></div>
+<div class="container" id="info-section">
+    <h2 class="text-center">{{exam_info.questionpaper_name}}</h2>
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12" style="min-height: 150px;">
+            <div><b>Candidate Name:</b> {{exam_info.candidate_name}}</div>
+            <div><b>Candidate Email:</b> {{exam_info.candidate_email}}</div>        
+            <div><b>Test Duration:</b> {{exam_info.duration_minutes}} Mins</div>
+            <div><b>No. of Questions:</b> {{exam_info.noof_questions}}</div>
+            <div id="not-available"><span class="fa fa-times" style="color: #ce1717;"></span> Candidate is not available</div>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="text-center">
+                <button type="button" class="btn btn-warning plan-btn plans-btn" id="join-room">Join Room</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="" id="videos-section">
+    <div class="row">        
+        <div class="col-md-12 col-sm-12 col-xs-12 mg-20">
+            <div id="remote-videos-container" class="videos-container">
+                <div class="loader">Please wait until your connection is established.</div>
+                <div class="test-completed" style="text-align: center;">
+                    {{exam_info.candidate_name}} has completed the test.
+                    <button type="button" class="btn btn-warning plan-btn plans-btn" onclick="evaluvate_test()">Evaluvate Test</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12" id="user-video">
+            <div id="videos-container" class="videos-container"></div>
+        </div>
+    </div>
+</div>
+{% include "templates/pages/systemrequirements.html" %}
+<style type="text/css">
+    video{
+        position: relative;
+    }
+    .hero-and-content {
+    background-color: #f5f7fa;
+    }
+    .header {
+        background: url(/assets/interview_portal/images/header.jpg) center center no-repeat;
+        background-size: cover;
+    }
+    .media-box video{
+        opacity: 1;
+    }
+    .videos-container{
+        min-height: 200px;
+        max-width: 90%;
+    }
+    .media-container{
+        width: 100%;
+        margin-right: 10px;
+    }
+    .mg-20{
+        margin: 20px 0;
+    }
+    .bdl{
+        border-left: 1px solid #ddd;
+    }
+    #info-section{
+        margin: auto;
+        max-width: 500px;
+        border: 1px solid #6b6969;
+        box-shadow: 3px 3px 3px 2px #ddd!important;
+        background: #fff;
+        padding: 15px;       
+    }
+    #videos-section, #not-available, .test-completed, .result-btn{
+        display: none;
+    }
+    #videos-section{
+        padding: 0 4%;
+    }
+    #not-available{
+        padding: 6px 10px;
+        font-weight: 600;
+        border: 1px solid;
+        border-radius: 22px;
+        margin-top: 10px;
+        color: #ce1717;
+    }
+    .loader, .test-completed {
+        margin: auto;
+        max-width: 500px;
+        padding: 7%;
+        font-weight: 800;
+        font-size: 20px;
+        background: #fff;
+        border: 1px solid #222;
+    }
+    #user-video{
+        position: absolute;
+        right:0;
+        z-index: 1;
+        width: 200px;
+        bottom: : 0;
+    }
+</style>
+{% endblock %}
+{% block script %}
+<script src="/assets/interview_portal/js/RecordRtc/RecordRTC.js"></script>
+<script src="/assets/interview_portal/js/RecordRtc/RTCMultiConnection.min.js"></script>
+<script src="/assets/interview_portal/js/RecordRtc/video-conference.js"></script>
+<script src="/assets/interview_portal/js/RecordRtc/getHTMLMediaElement.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script type="text/javascript">
+    function makeid(length) {
+       var result           = '';
+       var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+       var charactersLength = characters.length;
+       for ( var i = 0; i < length; i++ ) {
+          result += characters.charAt(Math.floor(Math.random() * charactersLength));
+       }
+       return result;
+    }
+    frappe.socketio.socket = io.connect(frappe.socketio.get_host(8000), {secure: true})
+    frappe.socketio.socket.on('room-created', function(room_id){
+        auto_connect_room(room_id)
+    });
+    frappe.socketio.socket.on('room-connected', function(room_id){
+        $('#info-section').slideUp();
+        $('#videos-section').show();
+    })
+	var user_email = '{{ user_email }}';
+    // var user_email = makeid(12)
+    var roomid = '{{ room_id }}';
+    var conference;
+	function initConference(){
+        conference = new RTCConference({
+            videosContainer: document.getElementById('videos-container'),
+            remoteVideosContainer: document.getElementById('remote-videos-container'),
+            recordConference: false,
+            roomid: roomid,
+            enable_video: true,
+            auto_join: true,        
+            show_user_screen_sharing: true,
+            show_remote_users_media: true,
+            enable_option_buttons: true,
+            allow_open_room: false
+        });
+        conference.connection.errors.ROOM_NOT_AVAILABLE = "Candidate haven't started the test yet. Please wait untill candidate starts their test."
+        conference.connection.errors.ROOM_FULL = "Only one interviwer can see the candidate's test."
+    }
+    function roomempty(){
+
+    }
+    document.getElementById('join-room').onclick = function(){
+        conference.username = user_email;
+        conference.join_room();
+        this.disabled = true;
+    }
+    function auto_connect_room(room_id){
+        if(room_id == roomid)
+            conference.join_room();
+    }
+    function room_connected(){
+        $('#info-section').slideUp();
+        $('#videos-section').show();
+    }
+    function roomempty(){
+        $('#not-available').show();
+    }
+    function removeloader(){
+        $('.loader').hide();
+    }
+    var count = 1;
+    function roomclosed(){
+        if(count == 1){
+            count = count + 1;
+            conference.leave_room();
+        }
+        setTimeout(function(){
+            $('.test-completed').show();
+        }, 1000);        
+    }
+    function evaluvate_test(){
+        frappe.call({
+            method: 'interview_portal.templates.pages.monitortest.get_result_id',
+            args: {
+                candidate: '{{exam_info.candidate_email}}',
+                exam_id: '{{exam_info.questionpaper_id}}'
+            },
+            callback: function(r){
+                if(r.message){
+                    window.location.href = '/desk#Form/Exam Result/' + r.message;
+                }
+            }
+        })
+    }
+</script>
+{% endblock %}

@@ -1,9 +1,13 @@
 from __future__ import unicode_literals
 import frappe
 import json
+import random
+import string
 from frappe import _
 import frappe.handler
 import frappe.client
+from frappe.utils import cstr, encode
+from cryptography.fernet import Fernet, InvalidToken 
 
 # catalog_settings=frappe.get_single('Catalog Settings')
 # media_settings=frappe.get_single('Media Settings')
@@ -178,6 +182,92 @@ def insert_exam_result_user_answers(doc,token):
 	except Exception:
 		frappe.log_error("ecommerce_business_store.ecommerce_business_store.api.insert_exam_result_user_answers", frappe.get_traceback())
 
+@frappe.whitelist()
+def insert_candidate_mail(interview_id):
+	candidate_data = frappe.db.sql('''
+                                SELECT 
+                                	ir.custom_interview_question_paper, 
+                                 	ja.applicant_name, 
+                                  	i.job_applicant, 
+                                   	id.interviewer,
+                                    i.custom_time_zone,
+                                    i.scheduled_on,
+                                    i.from_time,
+                                    i.to_time,
+                                    ir.custom_monitored_test,
+                                    ir.custom_candidate_video,
+                                    ir.custom_candidate_screen,
+                                    iqp.noof_questions
+                                FROM
+									`tabInterview` i
+								INNER JOIN
+									`tabInterview Round` ir ON ir.name = i.interview_round
+								INNER JOIN
+									`tabJob Applicant` ja ON ja.name = i.job_applicant
+								INNER JOIN
+									`tabInterview Detail` id ON i.name = id.parent
+								INNER JOIN
+									`tabInterview Question Paper` iqp ON iqp.name = ir.custom_interview_question_paper
+								WHERE
+									i.name = %(interview)s
+                                ''', {"interview":interview_id}, as_dict=1)[0]
+
+	question_paper = frappe.get_doc('Interview Question Paper', candidate_data.custom_interview_question_paper)
+	subject_list = ""
+	for subject in question_paper.subject:
+		subject_list += f"{subject.name},"
+	encrypted = encrypt(candidate_data.custom_interview_question_paper+candidate_data.job_applicant+randomString(4))
+	
+	question_paper_candidates = frappe.new_doc("Question Paper Candidates")
+	question_paper_candidates.questionpaper_id = candidate_data.custom_interview_question_paper
+	question_paper_candidates.candidate_name = candidate_data.applicant_name
+	question_paper_candidates.candidate_email = candidate_data.job_applicant
+	question_paper_candidates.interviewer_email = frappe.get_date(candidate_data.scheduled_on) + candidate_data.interviewer
+	question_paper_candidates.subject_name = subject_list[0:-1]
+	question_paper_candidates.noof_questions=candidate_data.noof_questions
+	question_paper_candidates.time_zone = candidate_data.custom_time_zone
+	question_paper_candidates.start_time = candidate_data.start_time
+	question_paper_candidates.end_time=candidate_data.end_time
+	question_paper_candidates.monitored_test=candidate_data.custom_monitored_test
+	question_paper_candidates.encrypted_url = '{0}/online_interview1?token={1}'.format(frappe.utils.get_url(), encrypted)
+
+
+	if candidate_data.monitored_test == 1:
+		url_token = encrypt(candidate_data.custom_interview_question_paper + candidate_data.interviewer_email + randomString(4))
+		question_paper_candidates.interviewer_url = '{0}/monitortest?token={1}'.format(frappe.utils.get_url(), url_token)
+		question_paper_candidates.candidate_video=candidate_data.custom_candidate_video
+		question_paper_candidates.record_screen=candidate_data.custom_candidate_screen
+	question_paper_candidates.save(ignore_permissions=True)
+
+def randomString(stringLength):
+	"""Generate a random string of fixed length """
+	letters = string.ascii_lowercase
+	return ''.join(random.choice(letters) for i in range(stringLength))
+
+def decrypt(url):
+	try:
+		cipher_suite = Fernet(encode(get_encryption_key()))
+		plain_text = cstr(cipher_suite.decrypt(encode(url)))
+		return plain_text
+	except InvalidToken:
+		# encryption_key in site_config is changed and not valid
+		frappe.throw(_('Encryption key is invalid, Please check site_config.json'))
+  
+def encrypt(url):
+	cipher_suite = Fernet(encode(get_encryption_key()))
+	cipher_text = cstr(cipher_suite.encrypt(encode(url)))
+	return cipher_text
+
+
+def get_encryption_key():
+	from frappe.installer import update_site_config
+
+	if 'encryption_key' not in frappe.local.conf:
+		encryption_key = Fernet.generate_key().decode()
+		update_site_config('encryption_key', encryption_key)
+		frappe.local.conf.encryption_key = encryption_key
+
+	return frappe.local.conf.encryption_key
 
 @frappe.whitelist()
 def execute_realtime():

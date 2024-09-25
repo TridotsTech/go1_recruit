@@ -38,7 +38,7 @@ boot_session = "go1_recruit.go1_recruit.api.boot_session"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {"Interview" : "public/js/doctype/interview.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -139,9 +139,15 @@ fixtures = [
 	{
 		"doctype":"Timezone Format",
 		"filters": {
-			"name":["in", ["Asia/Kolkata"]]
+			"name": ["in", ["Asia/Kolkata"]]
 		}
-	}
+	},
+	{
+		"doctype":"Custom Field",
+		"filters": {
+			"module": "Go1 Recruit"
+		}
+	},
 ]
 
 
