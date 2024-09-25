@@ -144,7 +144,7 @@
 		};
 		
 		localConnection.onicecandidate = e =>  {
-		console.log("New ICE candidate on localConnection, Reprinting SDP")
+		// console.log("New ICE candidate on localConnection, Reprinting SDP")
 			// console.log(JSON.stringify(localConnection.localDescription))
 			localSDP = localConnection.localDescription
 		}
@@ -187,7 +187,8 @@
 			console.log('Candidate Stream', track)
 			remoteConnection.addTrack(track, candidateStream)
 		}
-		remoteConnection.setRemoteDescription(offer).then(a=>console.log("Local Description in remote is Set"))
+		remoteConnection.setRemoteDescription(offer)
+		// .then(a=>console.log("Local Description in remote is Set"))
 		await remoteConnection.createAnswer().then(a => remoteConnection.setLocalDescription(a))
 		// .then(a=>console.log(JSON.stringify(remoteConnection.localDescription)))
 		setTimeout(() => {
@@ -198,7 +199,8 @@
 	function answerSDP(remoteSDP){
 		// console.log(remoteSDP)
 		const answer = remoteSDP
-		localConnection.setRemoteDescription(answer).then(a=>console.log("Remote Description in local is Set"))
+		localConnection.setRemoteDescription(answer)
+		// .then(a=>console.log("Remote Description in local is Set"))
 	}
 	
 	async function listen_for_candidate(){
