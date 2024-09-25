@@ -1,5 +1,5 @@
-{% extends base_template_path %}
-  {% block page_content %}
+{% extends "templates/Layout/customweb2.html" %}
+{% block page_content %}
   <link rel="stylesheet" type="text/css" href="/assets/go1_recruit/css/RecordRtc/getHTMLMediaElement.css">
 <input type="hidden" id="UserInfoId" value="{{user}}">
 <input type="hidden" id="IsPublicResult" value="{{PublishResult}}">
@@ -2026,7 +2026,6 @@ $("#CountDownTimer").TimeCircles({ time: { Days: { show: false }, Hours: { show:
             $("#btnClose").hide();
             if (isClosed == 0) {
                 // alert("Your time is up. Click ok to submit your answers or click cancel to reload.");
-                alert('{{custom_alerts.test_page_time_up}}');
                 frappe.run_serially([
                     () => {
                         if(monitored == 1){
@@ -2573,8 +2572,7 @@ function finish() {
     $("#btnCancel").hide();
     $("#btnClose").show();
     if (isClosed == 0) {
-        // var confirmResult = confirm("Are you sure you want to submit the answers?");
-        var confirmResult = confirm("{{custom_alerts.test_page_submit_answer}}");
+        var confirmResult = confirm("Are you sure you want to submit the answers?");
         if (confirmResult) {
             frappe.run_serially([
                 () => {
