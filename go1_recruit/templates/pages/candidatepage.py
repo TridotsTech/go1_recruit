@@ -18,8 +18,7 @@ no_cache = 1
 no_sitemap = 1
 
 def get_context(context):
-	context.general_settings=frappe.get_single('General Settings')
-	context.interview_portal_settings=frappe.get_single('Interview Portal Settings')
+	context.interview_portal_settings=frappe.get_single('Go1 Recruit Settings')
 	# delimeter = make_route_string(frappe.form_dict)
 	Token = frappe.form_dict.token
 	context.user_video = context.screen_sharing = 0
