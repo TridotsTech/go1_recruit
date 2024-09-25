@@ -54,7 +54,7 @@ RTCConference = Class.extend({
         let me = this;
         // this.getUserMedia();
         this.connection = new RTCMultiConnection();
-        this.connection.socketURL = 'https://muazkhan.com:9001/';
+        this.connection.socketURL = '/';
         if (this.username)
             this.connection.extra.full_name = this.username;
         let session = {};
