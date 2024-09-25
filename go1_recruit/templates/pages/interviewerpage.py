@@ -10,6 +10,7 @@ def get_context(context):
 		raise frappe.Redirect
 	url = '{0}/interviewerpage?token={1}'.format(frappe.utils.get_url(), token)
 	check_test = frappe.db.get_all('Question Paper Candidates', filters={'interviewer_url': url}, fields=['*'])
+	frappe.log_error("url",url)
 	if check_test:
 		if check_test[0].test_attempted:
 			frappe.local.flags.redirect_location = "/test_attempted.html"
