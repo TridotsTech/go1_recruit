@@ -17,7 +17,6 @@ from cryptography.fernet import Fernet, InvalidToken
 no_cache = 1
 no_sitemap = 1
 
-@frappe.whitelist()
 def get_context(context):
 	context.general_settings=frappe.get_single('General Settings')
 	context.interview_portal_settings=frappe.get_single('Interview Portal Settings')
