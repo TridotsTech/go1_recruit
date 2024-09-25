@@ -1,6 +1,6 @@
 {% extends base_template_path %}
   {% block page_content %}
-  <link rel="stylesheet" type="text/css" href="/assets/interview_portal/css/RecordRtc/getHTMLMediaElement.css">
+  <link rel="stylesheet" type="text/css" href="/assets/go1_recruit/css/RecordRtc/getHTMLMediaElement.css">
 <input type="hidden" id="UserInfoId" value="{{user}}">
 <input type="hidden" id="IsPublicResult" value="{{PublishResult}}">
 <input type="hidden" id="ExamId" value="{{ExamId}}">
@@ -921,13 +921,13 @@ canvas {
 <script type="text/javascript" src="/assets/js/frappe-web.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.9/ace.js"></script>
-<script src="/assets/interview_portal/js/RecordRtc/RecordRTC.js"></script>
-<script src="/assets/interview_portal/js/RecordRtc/RTCMultiConnection.min.js"></script>
-<script src="/assets/interview_portal/js/RecordRtc/audio-recorder.js"></script>
-<script src="/assets/interview_portal/js/RecordRtc/video-recorder.js"></script>
-<script src="/assets/interview_portal/js/RecordRtc/video-conference.js"></script>
-<script src="/assets/interview_portal/js/RecordRtc/screen-recorder.js"></script>
-<script src="/assets/interview_portal/js/RecordRtc/getHTMLMediaElement.js"></script>
+<script src="/assets/go1_recruit/js/RecordRtc/RecordRTC.js"></script>
+<script src="/assets/go1_recruit/js/RecordRtc/RTCMultiConnection.min.js"></script>
+<script src="/assets/go1_recruit/js/RecordRtc/audio-recorder.js"></script>
+<script src="/assets/go1_recruit/js/RecordRtc/video-recorder.js"></script>
+<script src="/assets/go1_recruit/js/RecordRtc/video-conference.js"></script>
+<script src="/assets/go1_recruit/js/RecordRtc/screen-recorder.js"></script>
+<script src="/assets/go1_recruit/js/RecordRtc/getHTMLMediaElement.js"></script>
 <script src="/socket.io/socket.io.js"></script>
 <script type="text/javascript">
     $(function () {
@@ -952,7 +952,7 @@ canvas {
           event.returnValue = 'Are you sure you want to leave?';
         });
         document.addEventListener('contextmenu', event => event.preventDefault());
-        var  count12 = '{{interview_portal_settings.maximum_time_for_execution}}'
+        var  count12 = '{{go1_recruit_settings.maximum_time_for_execution}}'
         $(".btn-execute-code").click(function(){
              var empty = $(this).parent().find('.codelanguage').val();
              let editing = $(this).parent().find(".code-editing").attr('data-id');
@@ -975,7 +975,7 @@ canvas {
         var resultsDivSave= $(this).parent().find('.result1');
         var currentBtn=$(this);
         frappe.call({
-            method: 'interview_portal.templates.pages.start_test.execute',
+            method: 'go1_recruit.templates.pages.start_test.execute',
             args: {
                code2:code1,
                lang1:lang
@@ -1013,7 +1013,7 @@ canvas {
 //         var code1 = editor.getValue();
 //         let lang = $('select').val();
 //         frappe.call({
-//             method: 'interview_portal.templates.pages.start_test.execute',
+//             method: 'go1_recruit.templates.pages.start_test.execute',
 //             args: {
 //                code2:code1,
 //                lang1:lang

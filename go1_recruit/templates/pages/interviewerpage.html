@@ -1,6 +1,6 @@
 {% extends base_template_path %}
 {% block page_content %}
-<link rel="stylesheet" type="text/css" href="/assets/interview_portal/css/RecordRtc/getHTMLMediaElement.css">
+<link rel="stylesheet" type="text/css" href="/assets/go1_recruit/css/RecordRtc/getHTMLMediaElement.css">
 <div style="height: 100px;"></div>
 <div class="container" id="info-section">
     <h2 class="text-center">{{exam_info.questionpaper_name}}</h2>
@@ -44,7 +44,7 @@
     background-color: #f5f7fa;
     }
     .header {
-        background: url(/assets/interview_portal/images/header.jpg) center center no-repeat;
+        background: url(/assets/go1_recruit/images/header.jpg) center center no-repeat;
         background-size: cover;
     }
     .media-box video{
@@ -105,10 +105,10 @@
 </style>
 {% endblock %}
 {% block script %}
-<script src="/assets/interview_portal/js/RecordRtc/RecordRTC.js"></script>
-<script src="/assets/interview_portal/js/RecordRtc/RTCMultiConnection.min.js"></script>
-<script src="/assets/interview_portal/js/RecordRtc/video-conference.js"></script>
-<script src="/assets/interview_portal/js/RecordRtc/getHTMLMediaElement.js"></script>
+<script src="/assets/go1_recruit/js/RecordRtc/RecordRTC.js"></script>
+<script src="/assets/go1_recruit/js/RecordRtc/RTCMultiConnection.min.js"></script>
+<script src="/assets/go1_recruit/js/RecordRtc/video-conference.js"></script>
+<script src="/assets/go1_recruit/js/RecordRtc/getHTMLMediaElement.js"></script>
 <script src="/socket.io/socket.io.js"></script>
 <script type="text/javascript">
     function makeid(length) {
@@ -182,7 +182,7 @@
     }
     function evaluvate_test(){
         frappe.call({
-            method: 'interview_portal.templates.pages.monitortest.get_result_id',
+            method: 'go1_recruit.templates.pages.monitortest.get_result_id',
             args: {
                 candidate: '{{exam_info.candidate_email}}',
                 exam_id: '{{exam_info.questionpaper_id}}'
