@@ -199,7 +199,7 @@ def check_candidate_presence():
 	try:
 		frappe.publish_realtime('check_candidate_presence')
 	except:
-		frappe.log_error("Check Presence not Triggered")
+		frappe.log_error("Check Presence not Triggered", frappe.get_traceback())
 	
 @frappe.whitelist(allow_guest=True)
 def notify_interviewer():
