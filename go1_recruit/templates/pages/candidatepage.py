@@ -13,7 +13,6 @@ from frappe import _
 import requests
 from frappe.utils import cstr, encode
 from cryptography.fernet import Fernet, InvalidToken
-from zoomus import ZoomClient
 
 no_cache = 1
 no_sitemap = 1
@@ -115,17 +114,6 @@ def get_context(context):
 		frappe.local.flags.redirect_location = "/404.html"
 		raise frappe.Redirect
 
-@frappe.whitelist(allow_guest=False)
-def get_zoomstatus(id):
-	portal_settings = frappe.get_single("Interview Portal Settings")
-	client = ZoomClient(portal_settings.zoom_api_key, portal_settings.zoom_api_password)
-	url = "https://api.zoom.us/v2/meetings/"+str(id)
-	headers = {'authorization': 'Bearer {}'.format(client.config.get("token"))}
-	response = requests.request("GET", url, headers=headers)
-	meeting_response = json.loads(response.content)
-	meeting_status = meeting_response.get("status")
-	if meeting_status:
-		return meeting_status
 
 @frappe.whitelist(allow_guest=True)
 def execute(code2,lang1):
