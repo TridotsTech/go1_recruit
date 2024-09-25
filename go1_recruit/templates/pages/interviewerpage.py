@@ -19,7 +19,7 @@ def get_context(context):
 		if current_datetime >= check_test[0].start_time and current_datetime <= check_test[0].end_time:
 			context.exam_info = check_test[0]
 			context.room_id = check_test[0].name
-			context.user_email = check_test[0].candidate_email
+			context.user_email = check_test[0].interviewer_email
 			context.monitored = 'true'
 			context.user_video = 1
 		else:
