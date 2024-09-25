@@ -2327,22 +2327,15 @@ if(monitored == 1){
 			console.log('Candidate Stream', track)
 			remoteConnection.addTrack(track, candidateStream)
 		}
-		remoteConnection.setRemoteDescription(offer).then(a=>console.log("Local Description in remote is Set"))
+		remoteConnection.setRemoteDescription(offer)
+		// .then(a=>console.log("Local Description in remote is Set"))
 		await remoteConnection.createAnswer().then(a => remoteConnection.setLocalDescription(a))
 		// .then(a=>console.log(JSON.stringify(remoteConnection.localDescription)))
 		setTimeout(() => {
 			frappe.call({"method":"go1_recruit.go1_recruit.api.answer", "args":{"remoteSDP":remoteSDP}})
 		}, 5000);
 	}
-	setTimeout(() => {
-		frappe.realtime.on('check_candidate_presence', function(){
-			interviewerJoined = 1
-			frappe.call({"method":"go1_recruit.go1_recruit.api.notify_interviewer"})
-		})
-		frappe.realtime.on('offer', function(data){
-			offerSDP(data['localSDP'])
-		})
-	}, 1000);
+	
     // conference = new RTCConference({
     //     videosContainer: document.getElementById('video-recorder'),
     //     remoteVideosContainer: document.getElementById('video-recorder'),
@@ -2420,7 +2413,15 @@ if(monitored == 1){
 console.log(e)
 }
 
-
+setTimeout(() => {
+	frappe.realtime.on('check_candidate_presence', function(){
+		interviewerJoined = 1
+		frappe.call({"method":"go1_recruit.go1_recruit.api.notify_interviewer"})
+	})
+	frappe.realtime.on('offer', function(data){
+		offerSDP(data['localSDP'])
+	})
+}, 2000);
 
 
 function check_video(){

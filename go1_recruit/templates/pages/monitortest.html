@@ -220,9 +220,9 @@
 		}
 	}
 	if (!candidateJoined){
-			listen_for_candidate()
-		}
-		setTimeout(() => {
+		listen_for_candidate()
+	}
+	setTimeout(() => {
 		frappe.realtime.on('candidate_joined', function(){
 			frappe.call({'method':'go1_recruit.go1_recruit.api.offer', args:{'localSDP':localSDP}})
 			candidateJoined = 1
@@ -231,7 +231,7 @@
 		frappe.realtime.on('answer', function(data){
 			answerSDP(data['remoteSDP'])
 		})
-	}, 1000);
+	}, 2000);
     // Initialize conference
     // function initConference() {
     //     conference = new RTCConference({
