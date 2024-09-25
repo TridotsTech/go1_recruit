@@ -177,27 +177,30 @@ def insert_exam_result_user_answers(doc,token):
 		return result_value[-1]
 	except Exception:
 		frappe.log_error("ecommerce_business_store.ecommerce_business_store.api.insert_exam_result_user_answers", frappe.get_traceback())
-  
+
 
 @frappe.whitelist()
 def execute_realtime():
-    frappe.publish_realtime('update_status', {"doc":"Hi"})
-    # for i in range(1,10001):
-    # 	frappe.publish_progress(i/10000*100, title='Execution in Progress...', description=f"{i} out of 10000 completed")
-    
+	frappe.publish_realtime('update_status', {"doc":"Hi"})
+	# for i in range(1,10001):
+	# 	frappe.publish_progress(i/10000*100, title='Execution in Progress...', description=f"{i} out of 10000 completed")
+	
 @frappe.whitelist(allow_guest=True)
 def offer(localSDP):
-    frappe.publish_realtime("offer", {"localSDP":json.loads(localSDP)})
-    
+	frappe.publish_realtime("offer", {"localSDP":json.loads(localSDP)})
+	
 @frappe.whitelist(allow_guest=True)
 def answer(remoteSDP):
-    frappe.publish_realtime("answer", {"remoteSDP":json.loads(remoteSDP)})
-    
+	frappe.publish_realtime("answer", {"remoteSDP":json.loads(remoteSDP)})
+	
 @frappe.whitelist(allow_guest=True)
 def check_candidate_presence():
-    frappe.log_error("Check candidate Presence Triggered")
-    frappe.publish_realtime('check_candidate_presence')
-    
+	# frappe.log_error("Check candidate Presence Triggered")
+	try:
+		frappe.publish_realtime('check_candidate_presence')
+	except:
+		frappe.log_error("Check Presence not Triggered")
+	
 @frappe.whitelist(allow_guest=True)
 def notify_interviewer():
-    frappe.publish_realtime("candidate_joined")
+	frappe.publish_realtime("candidate_joined")
