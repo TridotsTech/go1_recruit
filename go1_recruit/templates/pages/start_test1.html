@@ -2259,8 +2259,8 @@ try{
 monitored = '{{monitored}}';
 // monitored = '1';
 console.log(monitored)
-if(monitored == '1'){
-   
+if(monitored == 1){
+	console.log('connection started')
     var enable_candidate_video = true;
     var enable_screen_share = true;
     if('{{candidate_video}}' == '1'){
@@ -2290,7 +2290,7 @@ if(monitored == '1'){
 	});
 	const remoteConnection = new RTCPeerConnection(iceConfiguration)
 	const candidateVideo = document.getElementById("video-recorder")
-
+	var remoteSDP;
 	async function offerSDP(localSDP){
 		// console.log(localSDP)
 		const offer = localSDP
@@ -2304,8 +2304,8 @@ if(monitored == '1'){
             },
             audio: false
 		})
-		document.getElementById("candidate").srcObject = candidateStream
-		document.getElementById("candidate-screen").srcObject = candidateScreenStream
+		document.getElementById("video-recorder").srcObject = candidateStream
+		// document.getElementById("candidate-screen").srcObject = candidateScreenStream
 		remoteConnection.onicecandidate = e =>  {
 			// console.log("New ICE candidate on remoteConnection. Reprinting SDP")
 			// console.log(JSON.stringify(remoteConnection.localDescription) )
