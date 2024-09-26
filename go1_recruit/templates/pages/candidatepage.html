@@ -2027,11 +2027,11 @@ $("#CountDownTimer").TimeCircles({ time: { Days: { show: false }, Hours: { show:
                 // alert("Your time is up. Click ok to submit your answers or click cancel to reload.");
                 frappe.run_serially([
                     () => {
-                        if(monitored == 1){
+                        // if(monitored == 1){
                             // video_recorder.stop_video_recording();
                             // screen_recorder.stop_recording();
                             conference.leave_room();
-                        }
+                        // }
                     },
                     () => {
                         SubmitAnswers();
@@ -2575,11 +2575,11 @@ function finish() {
         if (confirmResult) {
             frappe.run_serially([
                 () => {
-                    if(monitored == 1){
+                    // if(monitored == 1){
                         // video_recorder.stop_video_recording();
                         // screen_recorder.stop_recording();
                         conference.leave_room();
-                    }
+                    // }
                 },
                 () => {
                     SubmitAnswers()
@@ -2810,13 +2810,13 @@ function SubmitAnswers() {
                  success: function(Responseresult) {
                     var resultName=Responseresult.message.name;
                     var resultUserName=Responseresult.message.user;
-                    if(monitored == 1){
+                    // if(monitored == 1){
                         // save_video_files(resultName)
                         // video_recorder.docname = resultName;
                         // screen_recorder.docname = resultName;
                         conference.docname = resultName;
                         $('#video-recorder-html #toggle-video').hide();
-                    }
+                    // }
 
             
             var valuesDocss=[];
