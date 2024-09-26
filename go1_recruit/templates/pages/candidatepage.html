@@ -2995,10 +2995,10 @@ function schavailable(percent) {
 var screen_recorder, video_recorder, monitored, conference;
 try{
     monitored = '{{monitored}}';
-    if(monitored == '1'){
+    // if(monitored == '1'){
        
-        var enable_candidate_video = false;
-        var enable_screen_share = false;
+        var enable_candidate_video = true;
+        var enable_screen_share = true;
         if('{{candidate_video}}' == '1'){
             enable_candidate_video = true;
         }
@@ -3032,12 +3032,13 @@ try{
         if(enable_candidate_video){
             $('#toggle-video').show();
         }
-        if(!enable_screen_share){
-            start_timer();
-        }
-    } else{
+        // if(!enable_screen_share){
+        //     start_timer();
+        // }
+    // } else{
+        
         start_timer();
-    }
+    // }
 } catch(e){
     console.log(e)
 }

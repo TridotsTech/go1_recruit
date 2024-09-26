@@ -111,21 +111,6 @@
 <script src="/assets/go1_recruit/js/RecordRtc/getHTMLMediaElement.js"></script>
 <script src="/socket.io/socket.io.js"></script>
 <script type="text/javascript">
-    function makeid(length) {
-       var result           = '';
-       var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-       var charactersLength = characters.length;
-       for ( var i = 0; i < length; i++ ) {
-          result += characters.charAt(Math.floor(Math.random() * charactersLength));
-       }
-       return result;
-    }
-    
-    // if (window.dev_server) {
-    //     frappe.boot.socketio_port = '9000' //use socketio port shown when bench starts
-    // }
-    
-
     frappe.socketio.socket = io.connect(frappe.socketio.get_host(9000), {secure: true})
     frappe.socketio.socket.on('room-created', function(room_id){
         auto_connect_room(room_id)
