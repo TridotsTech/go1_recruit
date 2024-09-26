@@ -158,6 +158,20 @@
 
     }
     document.getElementById('join-room').onclick = function(){
+        conference = new RTCConference({
+            videosContainer: document.getElementById('videos-container'),
+            remoteVideosContainer: document.getElementById('remote-videos-container'),
+            recordConference: false,
+            roomid: roomid,
+            enable_video: true,
+            auto_join: true,        
+            show_user_screen_sharing: true,
+            show_remote_users_media: true,
+            enable_option_buttons: true,
+            allow_open_room: false
+        });
+        conference.connection.errors.ROOM_NOT_AVAILABLE = "Candidate haven't started the test yet. Please wait untill candidate starts their test."
+        conference.connection.errors.ROOM_FULL = "Only one interviwer can see the candidate's test."
         conference.username = user_email;
         conference.join_room();
         this.disabled = true;
