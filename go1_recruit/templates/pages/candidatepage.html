@@ -2890,7 +2890,12 @@ function SubmitAnswers() {
             </div>\
         </div>';
         $('#rightContent1').show(html)
-                    $('#rightContent1').html(html)
+                    $('#rightContent1').html(html);
+                     if(monitored == 0){
+                        video_recorder.docname = resultName;
+                        video_recorder.stop_video_recording();
+                        screen_recorder.stop_recording();
+                        }
 
                 }
             });
@@ -3012,13 +3017,14 @@ try{
         share: document.getElementById('screen-recorder'),
         filename: 'Screen{{ExamId}}{{user}}',
         doctype: 'Exam Result',
-		docname: '{{roomid}}',
+		docname: '',
         fieldname: 'user_video'
     });
     video_recorder = new RecordVideo({
         video: document.getElementById('video-recorder'),
         filename: 'Video{{ExamId}}{{user}}',
         doctype: 'Exam Result',
+        docname: '',
         fieldname: 'screen_video'
     });
         start_timer();
@@ -3072,10 +3078,7 @@ function finish() {
                         // screen_recorder.stop_recording();
                         conference.leave_room();
                     }
-                    else{
-                        video_recorder.stop_video_recording();
-                        screen_recorder.stop_recording();
-                    }
+                   
                 },
                 () => {
                     SubmitAnswers()
