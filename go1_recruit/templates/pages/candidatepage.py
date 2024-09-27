@@ -27,7 +27,7 @@ def get_context(context):
 		context.code=frappe.form_dict.code
 	url = '{0}/online_interview1?token={1}'.format(frappe.utils.get_url(), Token)
 	frappe.log_error("cand_url",url)
-	encrypt_url=frappe.db.sql('''select name, questionpaper_id, meeting_id, candidate_name, candidate_email, test_attempted, time_zone, start_time, end_time, monitored_test, candidate_video, record_screen, interviewer_email  from `tabQuestion Paper Candidates` where encrypted_url=%(token)s''',{'token':url},as_dict=1)
+	encrypt_url=frappe.db.sql('''select name, questionpaper_id, meeting_id, candidate_name, candidate_email, test_attempted, time_zone, start_time, end_time, monitored_test, candidate_video, record_screen, interviewer_email  from `tabQuestion Paper Candidates` where encrypted_url=%(url)s''',{'url':url},as_dict=1)
 	QuestionId=encrypt_url[0].questionpaper_id
 	exam_result_id = frappe.db.get_all('Exam Result',fields=['exam_id'],filters={'user':encrypt_url[0].candidate_email})
 	for shop in exam_result_id:
@@ -52,6 +52,7 @@ def get_context(context):
 		# User=frappe.form_dict.user_id
 			ExamId=encrypt_url[0].questionpaper_id
 			User=encrypt_url[0].candidate_email
+			frappe.log_error("User", User)
 			context.ExamId=ExamId
 			
 			questions=[]
