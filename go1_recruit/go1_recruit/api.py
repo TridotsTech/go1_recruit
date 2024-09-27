@@ -147,6 +147,7 @@ def insert_exam_result_user_answers(doc,token):
 			not_attempt = frappe.db.sql('''select count(question) as not_attempt from `tabUser Answer` c where c.is_correct=0 and REPLACE(c.user_answer,CHAR(10),'')='' and c.parent=%(parent)s''',{'parent':exam_result1.name},as_dict=1)
 			result["not_attempt"]=not_attempt[0].not_attempt
 			result["exam_info"] = frappe.db.sql('''select QPT.topic,IQP.question_paper_name,QPS.subjects from `tabInterview Question Paper` IQP inner join `tabQuestion Paper Topics` QPT on IQP.name=QPT.parent join `tabQuestion Paper Subject` QPS on IQP.name=QPS.parent where IQP.name=%(exam_id)s''',{'exam_id':exam_result1.exam_id},as_dict=1)
+			frappe.log_error('Candidate Name', {"exam_id":exam_result1.exam_id, "User":x.get("user")})
 			result["user_list"] = frappe.db.sql('''select candidate_name,candidate_email,start_time,end_time from `tabQuestion Paper Candidates` where questionpaper_id=%(id)s and candidate_email=%(email)s''',{'id':exam_result1.exam_id,'email':x.get("user")},as_dict=1)
 			result_value.append(result)
 			exam_result_save=frappe.get_doc('Exam Result',x.get("parent"))
