@@ -26,7 +26,7 @@ def get_context(context):
 	if frappe.form_dict.code:
 		context.code=frappe.form_dict.code
 	url = '{0}/online_interview1?token={1}'.format(frappe.utils.get_url(), Token)
-	frappe.log_error("cand_url",url)
+	# frappe.log_error("cand_url",url)
 	encrypt_url=frappe.db.sql('''select name, questionpaper_id, meeting_id, candidate_name, candidate_email, test_attempted, time_zone, start_time, end_time, monitored_test, candidate_video, record_screen, interviewer_email  from `tabQuestion Paper Candidates` where encrypted_url=%(url)s''',{'url':url},as_dict=1)
 	QuestionId=encrypt_url[0].questionpaper_id
 	exam_result_id = frappe.db.get_all('Exam Result',fields=['exam_id'],filters={'user':encrypt_url[0].candidate_email})
@@ -40,11 +40,11 @@ def get_context(context):
 			context.email = encrypt_url[0].candidate_email
 			context.user_list1 = encrypt_url[0].candidate_name
 			context.attempt = count[0].count-not_attempt[0].not_attempt
-			exam_info=[]
-			exam_info = frappe.db.sql('''select IQP.question_paper_name,IQP.subject,IQP.name from `tabInterview Question Paper` IQP where IQP.name=%(name)s''',{'name':QuestionId},as_dict=1)
-			for exam in exam_info:
-				exam.topic = frappe.db.get_all('Question Paper Topics',fields=['topic'],filters={'parent':exam.name})
-			context.exam_info1 = exam_info
+			# exam_info=[]
+			# exam_info = frappe.db.sql('''select IQP.question_paper_name,IQP.subject,IQP.name from `tabInterview Question Paper` IQP where IQP.name=%(name)s''',{'name':QuestionId},as_dict=1)
+			# for exam in exam_info:
+			# 	exam.topic = frappe.db.get_all('Question Paper Topics',fields=['topic'],filters={'parent':exam.name})
+			# context.exam_info1 = exam_info
 	context.Duration = 30
 	if encrypt_url: #code changed by shankar on 04-09-2019
 		if encrypt_url[0].test_attempted==0:

@@ -2028,8 +2028,8 @@ $("#CountDownTimer").TimeCircles({ time: { Days: { show: false }, Hours: { show:
                 frappe.run_serially([
                     () => {
                         // if(monitored == 1){
-                            // video_recorder.stop_video_recording();
-                            // screen_recorder.stop_recording();
+                            video_recorder.stop_video_recording();
+                            screen_recorder.stop_recording();
                             // conference.leave_room();
                         // }
                     },
@@ -2783,9 +2783,9 @@ function SubmitAnswers() {
                     var resultName=Responseresult.message.name;
                     var resultUserName=Responseresult.message.user;
                     // if(monitored == 1){
-                        // save_video_files(resultName)
-                        // video_recorder.docname = resultName;
-                        // screen_recorder.docname = resultName;
+                        save_video_files(resultName)
+                        video_recorder.docname = resultName;
+                        screen_recorder.docname = resultName;
                         // conference.docname = resultName;
                         $('#video-recorder-html #toggle-video').hide();
                     // }
@@ -3056,8 +3056,8 @@ function finish() {
             frappe.run_serially([
                 () => {
                     // if(monitored == 1){
-                        // video_recorder.stop_video_recording();
-                        // screen_recorder.stop_recording();
+                        video_recorder.stop_video_recording();
+                        screen_recorder.stop_recording();
                         // conference.leave_room();
                     // }
                 },
