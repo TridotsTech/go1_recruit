@@ -2966,11 +2966,11 @@ function schavailable(percent) {
 // screen recording & video recording
 var screen_recorder, video_recorder, monitored, conference;
 try{
-    // monitored = '{{monitored}}';
-    // if(monitored == '1'){
+    monitored = '{{monitored}}';
+    if(monitored == '1'){
        
-        var enable_candidate_video = true;
-        var enable_screen_share = true;
+        var enable_candidate_video = false;
+        var enable_screen_share = false;
         if('{{candidate_video}}' == '1'){
             enable_candidate_video = true;
         }
@@ -3004,13 +3004,24 @@ try{
         if(enable_candidate_video){
             $('#toggle-video').show();
         }
-        // if(!enable_screen_share){
-        //     start_timer();
-        // }
-    // } else{
-        
+        if(!enable_screen_share){
+            start_timer();
+        }
+    } else{
+     screen_recorder = new RecordScreen({
+        share: document.getElementById('screen-recorder'),
+        filename: 'Screen{{ExamId}}{{user}}',
+        doctype: 'Exam Result',
+        fieldname: 'user_video'
+    });
+    video_recorder = new RecordVideo({
+        video: document.getElementById('video-recorder'),
+        filename: 'Video{{ExamId}}{{user}}',
+        doctype: 'Exam Result',
+        fieldname: 'screen_video'
+    });
         start_timer();
-    // }
+    }
 } catch(e){
     console.log("Conference",e)
 }
@@ -3055,11 +3066,15 @@ function finish() {
         if (confirmResult) {
             frappe.run_serially([
                 () => {
-                    // if(monitored == 1){
+                    if(monitored == 1){
                         // video_recorder.stop_video_recording();
                         // screen_recorder.stop_recording();
                         conference.leave_room();
-                    // }
+                    }
+                    else{
+                        video_recorder.stop_video_recording();
+                        screen_recorder.stop_recording();
+                    }
                 },
                 () => {
                     SubmitAnswers()
