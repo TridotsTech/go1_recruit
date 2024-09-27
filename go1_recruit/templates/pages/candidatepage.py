@@ -52,7 +52,7 @@ def get_context(context):
 		# User=frappe.form_dict.user_id
 			ExamId=encrypt_url[0].questionpaper_id
 			User=encrypt_url[0].candidate_email
-			frappe.log_error("User", User)
+			# frappe.log_error("User", User)
 			context.ExamId=ExamId
 			
 			questions=[]
@@ -89,7 +89,7 @@ def get_context(context):
 							context.userlog = frappe.session.user
 							context.Answers = Answers
 							context.Duration = ExamMaster[0].duration_minutes
-							context.user = User
+							context.user_email = User
 							context.candidate_email=encrypt_url[0].candidate_email
 							context.monitored = 1
 							context.user_video = ExamMaster[0].enable_user_video
@@ -99,7 +99,7 @@ def get_context(context):
 							context.userlog=frappe.session.user
 							context.Answers=Answers
 							context.Duration=ExamMaster[0].duration_minutes
-							context.user=User
+							context.user_email=User
 							context.candidate_email=encrypt_url[0].candidate_email
 							context.monitored = 0
 					except Exception as e:
