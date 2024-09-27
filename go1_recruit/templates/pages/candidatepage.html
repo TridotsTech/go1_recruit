@@ -2777,7 +2777,7 @@ function SubmitAnswers() {
                 dataType: "json",
                 async: false,
                 headers:{
-                    'X-Frappe-CSRF-Token':'{{csrf_token}}'
+                    'X-Frappe-CSRF-Token':frappe.csrf_token
                 },
                  success: function(Responseresult) {
                     var resultName=Responseresult.message.name;
@@ -2829,7 +2829,7 @@ function SubmitAnswers() {
                 dataType: "json",
                 async: false,
                 headers:{
-                    'X-Frappe-CSRF-Token':'{{csrf_token}}'
+                    'X-Frappe-CSRF-Token':frappe.csrf_token
                 },
                 success: function(data) {
                     // console.log("-----------------------------------------data")
