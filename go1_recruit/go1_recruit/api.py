@@ -3,6 +3,7 @@ import frappe
 import json
 import random
 import string
+import datetime
 from frappe import _
 import frappe.handler
 import frappe.client
@@ -117,34 +118,7 @@ def insert_exam_result_user_answers(doc,token):
 						c = user_answers
 						d = correct_answers
 						for i in user_answers:
-							# # print("======iiiiii")
-							# # print(i)
-							# for j in correct_answers:
-							# 	print(i)
-							# 	print(j)
-							# 	print(i == j)
-							# 	if i == j:
-							# 		c.remove(i)
-							# 		d.remove(j)
-							# 		# print("=====user_answers11111")
-							# 		# print(user_answers)
-							# 		# print("=======correct_answers")
-							# 		# print(correct_answers)
-							if i in d:
 								user_correct_ans.append(i)
-						# valuated_ans = c + d
-						
-						# print("=======valuated_ans")
-						# print(valuated_ans)
-						# if(len(valuated_ans)==0):
-						# 	result_doc.is_evaluated=1
-						# 	result_doc.is_correct=1
-						# 	result_doc.secured_marks=1
-						# else:
-						# 	result_doc.is_evaluated=1
-						# 	result_doc.is_correct=0
-						# 	result_doc.secured_marks=0
-						
 						if len(d) == len(user_correct_ans):
 							result_doc.is_evaluated=1
 							result_doc.is_correct=1
@@ -177,7 +151,6 @@ def insert_exam_result_user_answers(doc,token):
 			result_value.append(result)
 			exam_result_save=frappe.get_doc('Exam Result',x.get("parent"))
 			exam_result_save.save(ignore_permissions=True)
-		# frappe.log_error("Result", result_value)
 		return result_value[-1]
 	except Exception:
 		frappe.log_error("ecommerce_business_store.ecommerce_business_store.api.insert_exam_result_user_answers", frappe.get_traceback())
@@ -217,18 +190,17 @@ def insert_candidate_mail(interview_id):
 	for subject in question_paper.subject:
 		subject_list += f"{subject.name},"
 	encrypted = encrypt(candidate_data.custom_interview_question_paper+candidate_data.job_applicant+randomString(4))
-	
 	question_paper_candidates = frappe.new_doc("Question Paper Candidates")
 	question_paper_candidates.questionpaper_id = candidate_data.custom_interview_question_paper
 	question_paper_candidates.candidate_name = candidate_data.applicant_name
 	question_paper_candidates.candidate_email = candidate_data.job_applicant
-	question_paper_candidates.interviewer_email = frappe.get_date(candidate_data.scheduled_on) + candidate_data.interviewer
+	question_paper_candidates.interviewer_email = candidate_data.interviewer
 	question_paper_candidates.subject_name = subject_list[0:-1]
 	question_paper_candidates.noof_questions=candidate_data.noof_questions
 	question_paper_candidates.time_zone = candidate_data.custom_time_zone
-	question_paper_candidates.start_time = candidate_data.start_time
-	question_paper_candidates.end_time=candidate_data.end_time
-	question_paper_candidates.monitored_test=candidate_data.custom_monitored_test
+	question_paper_candidates.start_time = frappe.utils.get_datetime(str(candidate_data.scheduled_on) + " " + str(candidate_data.from_time))
+	question_paper_candidates.end_time = frappe.utils.get_datetime(str(candidate_data.scheduled_on) + " " + str(candidate_data.to_time))
+	question_paper_candidates.monitored_test = candidate_data.custom_monitored_test
 	question_paper_candidates.encrypted_url = '{0}/online_interview1?token={1}'.format(frappe.utils.get_url(), encrypted)
 
 

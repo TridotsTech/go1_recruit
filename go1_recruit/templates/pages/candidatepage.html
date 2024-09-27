@@ -2566,35 +2566,7 @@ function goBack(id) {
     $("#QuestionItem-" + id).show();
 }
 
-function finish() {
-    // $("#CountDownTimer").TimeCircles().stop();//code commented by shankar anand 0n 2-09-2019
-    $("#btnCancel").hide();
-    $("#btnClose").show();
-    if (isClosed == 0) {
-        var confirmResult = confirm("Are you sure you want to submit the answers?");
-        if (confirmResult) {
-            frappe.run_serially([
-                () => {
-                    // if(monitored == 1){
-                        // video_recorder.stop_video_recording();
-                        // screen_recorder.stop_recording();
-                        conference.leave_room();
-                    // }
-                },
-                () => {
-                    SubmitAnswers()
-                }
-            ]);
-            isClosed = 1;//code inserted by shankar anand 0n 2-09-2019
-            $("#CountDownTimer").TimeCircles().stop()//code inserted by shankar anand 0n 2-09-2019
-        } else {
-        //code commented by shankar anand 0n 2-09-2019    
-            // var url = window.location.href;
-            // window.location.href = url;
-        }
-    }
-    // isClosed = 1;//code commented by shankar anand 0n 2-09-2019
-}
+
 
 function SubmitAnswers() {
     $(".btn-finish").hide();
@@ -3073,6 +3045,38 @@ $(document).ready(function(){
         })
     })
 })
+
+function finish() {
+    // $("#CountDownTimer").TimeCircles().stop();//code commented by shankar anand 0n 2-09-2019
+    $("#btnCancel").hide();
+    $("#btnClose").show();
+    if (isClosed == 0) {
+        var confirmResult = confirm("Are you sure you want to submit the answers?");
+        if (confirmResult) {
+            frappe.run_serially([
+                () => {
+                    // if(monitored == 1){
+                        // video_recorder.stop_video_recording();
+                        // screen_recorder.stop_recording();
+                        conference.leave_room();
+                    // }
+                },
+                () => {
+                    SubmitAnswers()
+                }
+            ]);
+            isClosed = 1;//code inserted by shankar anand 0n 2-09-2019
+            $("#CountDownTimer").TimeCircles().stop()//code inserted by shankar anand 0n 2-09-2019
+        } else {
+        //code commented by shankar anand 0n 2-09-2019    
+            // var url = window.location.href;
+            // window.location.href = url;
+        }
+    }
+    // isClosed = 1;//code commented by shankar anand 0n 2-09-2019
+}
 </script>
+
+
 
 {% endblock %}
