@@ -3015,19 +3015,19 @@ try{
             start_timer();
         }
     } else{
-     screen_recorder = new RecordScreen({
+    screen_recorder = new RecordScreen({
         share: document.getElementById('screen-recorder'),
         filename: 'Screen{{ExamId}}{{user}}',
         doctype: 'Exam Result',
 		docname: '',
-        fieldname: 'user_video'
+        fieldname: 'screen_video'
     });
     video_recorder = new RecordVideo({
         video: document.getElementById('video-recorder'),
         filename: 'Video{{ExamId}}{{user}}',
         doctype: 'Exam Result',
         docname: '',
-        fieldname: 'screen_video'
+        fieldname: 'user_video'
     });
         start_timer();
     }
