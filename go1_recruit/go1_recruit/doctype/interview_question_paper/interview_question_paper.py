@@ -166,6 +166,16 @@ def insert_mail_to_candidates(question_paper_id):
 						question_paper_candidates.record_screen=x.record_screen
 					question_paper_candidates.save(ignore_permissions=True)
      
+					try:
+						user = frappe.db.exists("User", question_paper_candidates.candidate_email)
+						if not user:
+							user_doc = frappe.new_doc('User')
+							user_doc.email = question_paper_candidates.candidate_email
+							user_doc.first_name = question_paper_candidates.candidate_name
+							user_doc.insert()
+							frappe.db.commit()
+					except Exception:
+						frappe.log_error(frappe.get_traceback(), "go1_recruit.go1_recruit.doctype.interview_question_paper.interview_question_paper.insert_mail_to_candidates")
 				else:
 					if custom_alerts and custom_alerts["validate_start_and_end_timing"]:
 						frappe.throw(_(custom_alerts["validate_start_and_end_timing"]))
