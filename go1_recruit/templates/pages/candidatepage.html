@@ -17,7 +17,7 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-sm-6" id="MainContent">
+    <div class="col-sm-9" id="MainContent">
         {% if questions %}
     <div class='featured-products-section' itemscope itemtype="http://schema.org/Product">
         <div>
@@ -133,6 +133,11 @@
     <div class="col-sm-3" id="rightContent">
         <div class="QuestionsOverView">
             <span class="timetitle" style="font-size: 17px;padding-left: 0;margin-bottom: 10px;">Questions Overview</span>
+            <div id="screen-recorder"></div>
+                <div id="video-recorder-html">
+                    <div id="toggle-video"><span class="fa fa-angle-double-right"></span></div>
+                    <div id="video-recorder"></div>
+                </div>
             <div class="tblQuestions">
                 {% for item in questions %} {% set firstQuestion="" %} {% if loop.index==1 %} {% set firstQuestion="selectedClass" %} {% endif %}
                 <a style="cursor:pointer;" class="rightQuestion col-md-3 col-sm-6 col-xs-3" data-toggle="tooltip" title="{{item.name}}" onclick="selectQuestion({{loop.index}})"><span id="questionNo-{{loop.index}}" class="questionNo {{firstQuestion}} {%if loop.index==1%}active-qsn-btn {%else%}disable-qsn-btn{%endif%}">{{loop.index}}</span></a> {% endfor %}
@@ -159,13 +164,7 @@
        
     </div>
 
-   <div class="col-sm-3" id="videorightdiv" >
-       <div id="screen-recorder"></div>
-        <div id="video-recorder-html">
-            <div id="toggle-video"><span class="fa fa-angle-double-right"></span></div>
-            <div id="video-recorder"></div>
-        </div>
-    </div>
+   
 
 </div>
 <div class="Loading">Loading...</div>
@@ -182,6 +181,8 @@
     float: left;
     width: 100%;
     padding-bottom: 10px;
+
+    margin-top: 42%;
 }
 .timetitle1{
     margin-left: 15px;
@@ -453,7 +454,7 @@ margin-left: 15px;
 
 .buttons {
    float: left;
-    width: 56.9%;
+    width: 85.3%;
     margin-top: 15px;
     position: fixed;
     bottom: 0;
@@ -705,7 +706,7 @@ canvas {
     position: fixed;
     top: 8px;
     z-index: 99999999999;
-    right: 23%;
+    right: 26%;
 }
 
 @media only screen and (min-width: 968px) {
@@ -718,7 +719,7 @@ canvas {
         height: 100%;
         margin-top: -20px;
         position: fixed;
-        right: 25%;
+        right: 0;
         padding-top: 0px;
         border-left: 1px solid #d3d3d3;
         top: 70px;
@@ -3211,6 +3212,13 @@ function finish() {
 }
 #video-recorder-html video {
     opacity: 1;
+}
+#video-recorder-html {
+     position: absolute;
+    right: 0;
+    z-index: 1;
+    width: 90%;
+    margin-right: 5%;
 }
 </style>
 
