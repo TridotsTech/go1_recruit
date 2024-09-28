@@ -9,7 +9,7 @@
             </div>
         </div>
 
-    <div class="col-md-6">
+    <div class="col-md-12">
     {% else %}
     <div class="row" style="padding: 25px;">
         <div class="col-md-6">
@@ -141,12 +141,12 @@
        background: url(/assets/go1_recruit/images/header.jpg) center center no-repeat;
 }
     .detail-div{
-        min-height: 495px;
-        max-width: 600px;
-        background: white;
-        margin: 0px auto;
-        padding: 20px;
-        border: 2px solid #ddd;
+           min-height: 495px;
+    max-width: 600px;
+    background: white;
+    margin: 0px auto;
+    padding: 20px;
+    box-shadow: 0 0 5px #ddd;
     }
     .information-div{
         min-height: 495px;
@@ -165,11 +165,17 @@
         list-style: upper-roman;
     }
     a.back-login {
-    font-weight: normal;
+    font-weight: 600;
     font-size: 15px;
 }
     a.back-login b {
     font-size: 15px;
+}
+.sub-footer{
+    display: none;
+}
+plan-btn {
+    background-color: #209cee !important;border-radius: 0px !important;
 }
 </style>
 {%endblock%}
