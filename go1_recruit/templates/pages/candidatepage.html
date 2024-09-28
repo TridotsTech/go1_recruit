@@ -6,11 +6,7 @@
 <input type="hidden" id="ExamId" value="{{ExamId}}">
 <input type="hidden" id="scholarship" value= "None">
 <input type="hidden" id="allow_submit" value= "">
-<div id="screen-recorder"></div>
-<div id="video-recorder-html">
-    <div id="toggle-video"><span class="fa fa-angle-double-right"></span></div>
-    <div id="video-recorder"></div>
-</div>
+
 <div class="row">
     <div class="headerRow">
         <div class="timeLeft">
@@ -21,7 +17,7 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-sm-9" id="MainContent">
+    <div class="col-sm-6" id="MainContent">
         {% if questions %}
     <div class='featured-products-section' itemscope itemtype="http://schema.org/Product">
         <div>
@@ -163,7 +159,14 @@
        
     </div>
 
-   
+   <div class="col-sm-3" id="videorightdiv" >
+       <div id="screen-recorder"></div>
+        <div id="video-recorder-html">
+            <div id="toggle-video"><span class="fa fa-angle-double-right"></span></div>
+            <div id="video-recorder"></div>
+        </div>
+    </div>
+
 </div>
 <div class="Loading">Loading...</div>
 {% endblock %} {% block style %}
@@ -303,13 +306,11 @@ input[type=submit]:before{
 .QuestionNo {
     float: left;
        width: calc(100% - 25px);
-    border-bottom: 1px solid #5e64ff;
     padding-bottom: 10px;
     font-size: 18px;
     color: #000;
     font-weight: 600;
     margin-left: 15px;
-    margin-bottom: 25px;
 }
 body
 {
@@ -451,19 +452,20 @@ margin-left: 15px;
 }
 
 .buttons {
-    float: left;
-    width: 83.3%;
+   float: left;
+    width: 56.9%;
     margin-top: 15px;
     position: fixed;
     bottom: 0;
     left: 0;
     padding: 15px;
     border-top: 1px solid #d3d3d3;
-    transform: translate(-12%);
+    border-right: 1px solid #d3d3d3;
     -webkit-transform: translate(-12%);
     text-align: center;
     background: #fff;
     z-index: 999999;
+    padding-left: 5%;
 }
 a.btn.btn-primary.action-btn{
     color: #fff !important;
@@ -716,7 +718,7 @@ canvas {
         height: 100%;
         margin-top: -20px;
         position: fixed;
-        right: 0;
+        right: 25%;
         padding-top: 0px;
         border-left: 1px solid #d3d3d3;
         top: 70px;
@@ -2880,6 +2882,7 @@ function SubmitAnswers() {
                         // screen_recorder.docname = resultName;
                         // conference.docname = resultName;
                         $('#video-recorder-html #toggle-video').hide();
+						$('#video-recorder').hide();
                     // }
 
             
@@ -3118,7 +3121,8 @@ try{
         filename: 'Video{{ExamId}}{{user}}',
         doctype: 'Exam Result',
         docname: '',
-        fieldname: 'user_video'
+        fieldname: 'user_video',
+		record_video: 1
     });
         start_timer();
     }
@@ -3126,19 +3130,19 @@ try{
     console.log("Conference",e)
 }
 function check_video(){
-    if(enable_candidate_video){
-        setTimeout(function(){
-            $('#toggle-video').trigger('click');
-        }, 1000 * 30)
-    }
+    // if(enable_candidate_video){
+    //     setTimeout(function(){
+    //         $('#toggle-video').trigger('click');
+    //     }, 1000 * 30)
+    // }
 }
 document.getElementById('toggle-video').onclick = function(){
-    $('#video-recorder').toggle();
-    if($('#video-recorder').css('display') == 'none'){
-        $('#toggle-video').addClass('hide-class')
-    } else{
-        $('#toggle-video').removeClass('hide-class')
-    }
+    // $('#video-recorder').toggle();
+    // if($('#video-recorder').css('display') == 'none'){
+    //     $('#toggle-video').addClass('hide-class')
+    // } else{
+    //     $('#toggle-video').removeClass('hide-class')
+    // }
 }
 $(document).ready(function(){
     $('audio').on('play', function(){
@@ -3188,7 +3192,15 @@ function finish() {
     // isClosed = 1;//code commented by shankar anand 0n 2-09-2019
 }
 </script>
-
+<style type="text/css">
+    .navbar{
+        padding: 0;
+        border-bottom: none;
+    }
+    .freetext{
+            border: 1px solid #d3d3d3;
+    }
+</style>
 
 
 {% endblock %}
