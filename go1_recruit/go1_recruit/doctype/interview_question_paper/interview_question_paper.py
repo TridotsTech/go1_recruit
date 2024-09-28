@@ -170,9 +170,10 @@ def insert_mail_to_candidates(question_paper_id):
 						user = frappe.db.exists("User", question_paper_candidates.candidate_email)
 						if not user:
 							user_doc = frappe.new_doc('User')
-							user_doc.email = question_paper_candidates.candidate_email
-							user_doc.first_name = question_paper_candidates.candidate_name
-							user_doc.insert()
+							user_doc.email = x.candidate_email
+							user_doc.name = x.candidate_email
+							user_doc.first_name = x.candidate_name
+							user_doc.insert(ignore_permissions=True)
 							frappe.db.commit()
 					except Exception:
 						frappe.log_error(frappe.get_traceback(), "go1_recruit.go1_recruit.doctype.interview_question_paper.interview_question_paper.insert_mail_to_candidates")
