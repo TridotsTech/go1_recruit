@@ -47,9 +47,9 @@ RecordVideo = Class.extend({
 	    // this.video.volume = 1;
 	    // this.video.src = URL.createObjectURL(this.recorder.getBlob());
         this.recorder.camera.stop();
-	    if(this.record_video){            
+	    // if(this.record_video){            
             this.get_video_file();
-        }	    	    
+        // }	    	    
 	},
 	stop_video_recording: function(){
 		let me = this;

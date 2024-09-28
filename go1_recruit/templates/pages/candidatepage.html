@@ -303,6 +303,7 @@ input[type=submit]:before{
 body
 {
     overflow-x: hidden;
+	background-color: #fff !important;
 }
 .options{
 margin-left: 15px;
@@ -912,6 +913,12 @@ canvas {
     .QuestionItem .success-msg{
         width: 100%;
     }
+}
+.optionvalue1.icon{
+	font-size:16px;
+}
+.sub-footer{
+	border:none !important;
 }
 </style>
 {% endblock %} {% block script %}
@@ -2854,7 +2861,7 @@ function SubmitAnswers() {
                       });
                     $(".Loading").hide();
                     // $("#MainContent").html("<span class='resultSpan'>Thank you for attending exam.You will get notification regarding result.</span>");
-                    $("#MainContent").html("<span class='resultSpan'>Thanks for taking the interview test. Please wait for further updates.</span>");
+                    $("#MainContent").html("<span class='resultSpan'>Thanks for taking the interview test. Results will be evaluated and shared to your email.</span>");
                     $('#rightContent').hide();
                     var html = '<div class="timetitle2" style="border-bottom: 1px solid #d3d3d3">\
         <h3 class="timetitle1" style="font-size: 18px;">Result Overview</h3></div>\
@@ -2890,8 +2897,8 @@ function SubmitAnswers() {
             </div>\
             </div>\
         </div>';
-        $('#rightContent1').show(html)
-                    $('#rightContent1').html(html);
+        $('#rightContent1').show()
+        $('#rightContent1').html(html);
                      if(monitored == 0){
                         video_recorder.docname = resultName;
                         screen_recorder.docname = resultName;
