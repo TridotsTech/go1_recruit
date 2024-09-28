@@ -2054,8 +2054,9 @@ $(document).ready(function() {
         if(document.getElementById('Audio_frm-'+i)){
             new RecordAudio({
                 audio: document.getElementById('Audio_frm-'+i),
-                doctype: 'Exam Result',
-                filename: 'AudioRecord-',
+                // doctype: 'Exam Result',
+				// docname: '',
+                filename: 'AudioRecord-' + i,
                 show_time_duration: true
             })
         }
