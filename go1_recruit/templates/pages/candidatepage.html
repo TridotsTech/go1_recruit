@@ -69,24 +69,14 @@
                                         <div id="code-{{i}}" class="code-editor"></div></div>
                                         
                                         <input type="submit" name="execute" value="Execute"  class="btn btn-execute-code" data-id="execute-{{i}}" id="execute-{{i}}">
-                                           <!--  <button class="btn" onclick="converter()"><i class="fa fa-play" id="button"></i> Execute</button> -->
-                                            <select id="empty" class="codelanguage">
-                                              <option value=""></option>
-                                              <option value="python2">python2</option>
-                                              <option value="java">java</option>
-                                              <option value="python3">python3</option>
-                                              <option value="c">c</option>
-                                              <option value="sql">sql</option>
-                                              <option value="php">php</option>
-                                              <option value="vbn">vbn</option>
-                                              <option value="cpp">cpp</option>
-                                              <option value="csharp">csharp</option>
-                                              <option value="c99">c99</option>
-                                              <option value="cobol">cobol</option>
-                                              <option value="icon">icon</option>
-                                              <option value="nodejs">nodejs</option>
-                                              <option value="haskell">haskell</option>
-                                              <option value="go">go</option>
+                                              <select id="empty" class="codelanguage">
+												<option value="py">Python</option>
+												<option value="cpp">C++</option>
+												<option value="java">Java</option>
+												<option value="c">C</option>
+												<option value="go">Go</option>
+												<option value="js">NodeJS</option>
+												<option value="cs">C#</option>
                                             </select>
                                             <div class="execute_result" style="display: none;" data-id='savehidden-{{i}}' class="store_dat">
                                                
@@ -96,13 +86,34 @@
                                         <div class="result1 codeResult" data-id='result-{{i}}' class="store_dat" id="code_result">
                                                
                                             </div>
-
-                                            <!-- <div id="code_result" data-id='result-{{i}}' class="codeResult">
-                                                 <textarea name="result1" id="result-{{i}}" rows="10" cols="100" class="result1"></textarea>
-                                                 </div> -->
                                     </div>
                                 </div>
                             </div>
+							<!-- <div id="app" class="p-8">
+								<textarea id="codeInput" class="w-full p-2 border mb-4" rows="6" placeholder="Enter your code here"></textarea>
+								
+								<select id="languageSelect" class="w-full p-2 border mb-4">
+								  <option value="py">Python</option>
+								  <option value="cpp">C++</option>
+								  <option value="java">Java</option>
+								  <option value="c">C</option>
+								  <option value="go">Go</option>
+								  <option value="js">NodeJS</option>
+								  <option value="cs">C#</option>
+								</select>
+								
+								<button id="runCodeBtn" class="bg-green-500 text-white p-2 w-full mb-4">Run Code</button>
+								
+								<div id="loading" class="text-center mb-4" style="display: none;">Executing...</div>
+								<div id="outputContainer" style="display: none;">
+								  <h2 class="text-xl font-bold">Output:</h2>
+								  <pre id="output" class="whitespace-pre-line bg-gray-100 p-2 border"></pre>
+								</div>
+								<div id="errorContainer" style="display: none;">
+								  <h2 class="text-xl font-bold text-red-500">Error:</h2>
+								  <pre id="error" class="whitespace-pre-line bg-red-100 p-2 border"></pre>
+								</div>
+							</div> -->
                             {% endif %}
                             {% if item.question_type=="Audio" %}
                             <div class="options">
@@ -969,50 +980,123 @@ canvas {
             if(code123 == ''){
                 alert('Please enter the code to execute.')
             }
-           else{
-            $(".Loading").show();
-             let editing = $(this).parent().find(".code-editing").attr('data-id');
-             var counter=parseInt($(this).parent().find(".hdnCodeCounter").val());
-             $(this).parent().find(".hdnCodeCounter").val(counter+1);
-              var editor = ace.edit(editing);
-        var code1 = editor.getValue();
-        let lang = $(this).parent().find('.codelanguage').val();
-        var resultsDiv= $(this).parent().find('.execute_result');
-        var resultsDivSave= $(this).parent().find('.result1');
-        var currentBtn=$(this);
-        frappe.call({
-            method: 'go1_recruit.templates.pages.start_test.execute',
-            args: {
-               code2:code1,
-               lang1:lang
-        },
-        callback: function(r) {
-            var resultt = $('.btn-execute-code').val();
-            if(r.message.output!=undefined)
-            {
-            $(resultsDivSave).html(r.message.output);
-            $(resultsDiv).append("<b>Attempt "+ (counter+1) + ":</b><br/>");
-            $(resultsDiv).append(code1+"<br/><br/>");
-            $(resultsDiv).append("Output :"+r.message.output + "<br/><br/>");
-             $(currentBtn).val("Execute ("+(count12-(counter+1))+")");
-            if((count12-1)==counter)
-            {
-                $(currentBtn).attr("disabled","disabled")
-            }
-            $(".Loading").hide();
-            }
+           	else{
+				$(".Loading").show();
+				let editing = $(this).parent().find(".code-editing").attr('data-id');
+				var counter=parseInt($(this).parent().find(".hdnCodeCounter").val());
+				$(this).parent().find(".hdnCodeCounter").val(counter+1);
+				var editor = ace.edit(editing);
+				var code1 = editor.getValue();
+				let lang = $(this).parent().find('.codelanguage').val();
+				var resultsDiv= $(this).parent().find('.execute_result');
+				var resultsDivSave= $(this).parent().find('.result1');
+				var currentBtn=$(this);
+
+				var data = new URLSearchParams();
+				data.append('code', code);
+				data.append('language', language);
+				// Code inserted by Jayaprakash 28-09-2024
+				var response = await fetch('https://api.codex.jaagrav.in', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/x-www-form-urlencoded'
+				},
+				body: data
+				});
+
+				var result = await response.json();
+				var output;
+				if (result.error){
+					output = result.error
+				}else{
+					output = result.output
+				}
+				$(resultsDivSave).html(output);
+				$(resultsDiv).append("<b>Attempt "+ (counter+1) + ":</b><br/>");
+				$(resultsDiv).append(code1+"<br/><br/>");
+				$(resultsDiv).append("Output :"+output + "<br/><br/>");
+					$(currentBtn).val("Execute ("+(count12-(counter+1))+")");
+				if((count12-1)==counter)
+				{
+					$(currentBtn).attr("disabled","disabled")
+				}
+				$(".Loading").hide();
+
+    //     frappe.call({
+    //         method: 'go1_recruit.templates.pages.start_test.execute',
+    //         args: {
+    //            code2:code1,
+    //            lang1:lang
+    //     },
+    //     callback: function(r) {
+    //         var resultt = $('.btn-execute-code').val();
+    //         if(r.message.output!=undefined)
+    //         {
+    //         $(resultsDivSave).html(r.message.output);
+    //         $(resultsDiv).append("<b>Attempt "+ (counter+1) + ":</b><br/>");
+    //         $(resultsDiv).append(code1+"<br/><br/>");
+    //         $(resultsDiv).append("Output :"+r.message.output + "<br/><br/>");
+    //          $(currentBtn).val("Execute ("+(count12-(counter+1))+")");
+    //         if((count12-1)==counter)
+    //         {
+    //             $(currentBtn).attr("disabled","disabled")
+    //         }
+    //         $(".Loading").hide();
+    //         }
            
-        }
-    })
-    }
-    }
-    else{
-         alert("Please Select Your Programming Language")
-        
-    }
-    
+    //     }
+    // })
+    		}
+    	}
+		else{
+			alert("Please Select Your Programming Language")
+		}
         });
     });
+	// document.getElementById('runCodeBtn').addEventListener('click', async function () {
+    //   const code = document.getElementById('codeInput').value;
+    //   const language = document.getElementById('languageSelect').value;
+    //   const loadingElement = document.getElementById('loading');
+    //   const outputContainer = document.getElementById('outputContainer');
+    //   const errorContainer = document.getElementById('errorContainer');
+    //   const outputElement = document.getElementById('output');
+    //   const errorElement = document.getElementById('error');
+
+    //   loadingElement.style.display = 'block';
+    //   outputContainer.style.display = 'none';
+    //   errorContainer.style.display = 'none';
+    //   outputElement.textContent = '';
+    //   errorElement.textContent = '';
+
+    //   const data = new URLSearchParams();
+    //   data.append('code', code);
+    //   data.append('language', language);
+
+    //   try {
+    //     const response = await fetch('https://api.codex.jaagrav.in', {
+    //       method: 'POST',
+    //       headers: {
+    //         'Content-Type': 'application/x-www-form-urlencoded'
+    //       },
+    //       body: data
+    //     });
+
+    //     const result = await response.json();
+
+    //     if (result.error) {
+    //       errorContainer.style.display = 'block';
+    //       errorElement.textContent = result.error;
+    //     } else {
+    //       outputContainer.style.display = 'block';
+    //       outputElement.textContent = result.output;
+    //     }
+    //   } catch (err) {
+    //     errorContainer.style.display = 'block';
+    //     errorElement.textContent = 'Error: ' + err.message;
+    //   } finally {
+    //     loadingElement.style.display = 'none';
+    //   }
+    // });
 //     function converter() {
 //        let editing = $(".code-editing").attr('data-id');
 //        var editor = ace.edit(editing);
