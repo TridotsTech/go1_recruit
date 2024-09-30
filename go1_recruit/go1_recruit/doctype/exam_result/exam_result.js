@@ -135,23 +135,47 @@ frappe.ui.form.on('Exam Result', {
 
                                 
     },
-
-
+	candidate_recording(frm) {
+		var d = new frappe.ui.Dialog({
+		    title: "Video Recording",
+		    fields: [{
+                        fieldname: 'video_recording',
+                        fieldtype: 'HTML'
+                    }],
+            size: 'large'
+		})
+		var html = `<video width="757" height="480" controls playsinline autoplay src="${frm.doc.user_video}"></video>`
+		d.fields_dict.video_recording.$wrapper.html(html);
+		d.show()
+	},
+	screen_recording(frm) {
+		var d = new frappe.ui.Dialog({
+		    title: "Screen Recording",
+		    fields: [{
+                        fieldname: 'screen_recording',
+                        fieldtype: 'HTML'
+                    }],
+            size: 'large'
+		})
+		var html = `<video width="757" height="480" controls playsinline autoplay src="${frm.doc.screen_video}"></video>`
+		d.fields_dict.screen_recording.$wrapper.html(html);
+		d.show()
+	},
     generate_video_html: function(frm) {
-        let wrapper = $(cur_frm.get_field('video_html').wrapper).empty();
-        var user_video = '';
-        var Screen_video = '';
-        if (cur_frm.doc.screen_video || cur_frm.doc.user_video) {
-            $(cur_frm.get_field('video_html').wrapper).parent().parent().parent().parent().show();
-            if (cur_frm.doc.user_video) {
-                let html = $('<div class="row" style="background: #fafbfc;border-bottom: 1px solid #d1d8dd;border-radius: 0;margin-left: -30px;margin-right: -30px;margin-top: -15px;"><div class="col-md-12" style="padding: 20px 30px;"><a href="' + window.location.origin + cur_frm.doc.user_video + '" style="font-weight: 600;" target="_blank">Play Candidate Video<i class="fa fa-file-video-o" aria-hidden="true" style="font-size: 19px;padding-left:15px"></i></a></div></div>').appendTo(wrapper);
-            }
-            if (cur_frm.doc.screen_video) {
-                let html = $('<div class="row" style="background: #fafbfc;border-bottom: 1px solid #d1d8dd;border-radius: 0;margin-left: -30px;margin-right: -30px;margin-top: -15px;"><div class="col-md-12" style="padding: 20px 30px;"><a href="' + window.location.origin + cur_frm.doc.screen_video + '" style="font-weight: 600;" target="_blank">Play Screen Video<i class="fa fa-file-video-o" aria-hidden="true" style="font-size: 19px;padding-left:15px"></i></a></div></div>').appendTo(wrapper);
-            }
-        }else{
-            $(cur_frm.get_field('video_html').wrapper).parent().parent().parent().parent().hide();
-        }
+        // let wrapper = $(cur_frm.get_field('video_html').wrapper).empty();
+        // var user_video = '';
+        // var Screen_video = '';
+        // if (cur_frm.doc.screen_video || cur_frm.doc.user_video) {
+        //     $(cur_frm.get_field('video_html').wrapper).parent().parent().parent().parent().show();
+        //     if (cur_frm.doc.user_video) {
+        //         let html = $('<div class="row" style="background: #fafbfc;border-bottom: 1px solid #d1d8dd;border-radius: 0;margin-left: -30px;margin-right: -30px;margin-top: -15px;"><div class="col-md-12" style="padding: 20px 30px;"><a href="' + window.location.origin + cur_frm.doc.user_video + '" style="font-weight: 600;" target="_blank">Play Candidate Video<i class="fa fa-file-video-o" aria-hidden="true" style="font-size: 19px;padding-left:15px"></i></a></div></div>').appendTo(wrapper);
+        //     }
+        //     if (cur_frm.doc.screen_video) {
+        //         let html = $('<div class="row" style="background: #fafbfc;border-bottom: 1px solid #d1d8dd;border-radius: 0;margin-left: -30px;margin-right: -30px;margin-top: -15px;"><div class="col-md-12" style="padding: 20px 30px;"><a href="' + window.location.origin + cur_frm.doc.screen_video + '" style="font-weight: 600;" target="_blank">Play Screen Video<i class="fa fa-file-video-o" aria-hidden="true" style="font-size: 19px;padding-left:15px"></i></a></div></div>').appendTo(wrapper);
+        //     }
+        // }else{
+        //     $(cur_frm.get_field('video_html').wrapper).parent().parent().parent().parent().hide();
+        // }
     },
 
     send_mail: function(frm) {
