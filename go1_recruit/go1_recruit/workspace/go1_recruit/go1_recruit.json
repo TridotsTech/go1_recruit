@@ -1,0 +1,210 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"RSeC-ICpnb\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Go1 Recruit</span>\",\"col\":12}},{\"id\":\"vdE1676_6S\",\"type\":\"card\",\"data\":{\"card_name\":\"Questions\",\"col\":4}},{\"id\":\"0DnG-dxtPm\",\"type\":\"card\",\"data\":{\"card_name\":\"Interviews\",\"col\":4}},{\"id\":\"G1U-5eEsb7\",\"type\":\"card\",\"data\":{\"card_name\":\"Configurations\",\"col\":4}},{\"id\":\"Hmi4ISoqmg\",\"type\":\"card\",\"data\":{\"card_name\":\"Logs\",\"col\":4}}]",
+ "creation": "2024-09-25 13:43:18.529017",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "users",
+ "idx": 0,
+ "indicator_color": "",
+ "is_hidden": 0,
+ "label": "Go1 Recruit",
+ "links": [
+  {
+   "description": "Masters for the interview questions",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Questions",
+   "link_count": 4,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Interview Topic",
+   "link_count": 0,
+   "link_to": "Interview Topic",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Interview Subject",
+   "link_count": 0,
+   "link_to": "Interview Subject",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Question Level",
+   "link_count": 0,
+   "link_to": "Question Level",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Interview Questions",
+   "link_count": 0,
+   "link_to": "Interview Question",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "description": "Go1 Recruit Settings",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Configurations",
+   "link_count": 4,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Go1 Recruit Settings",
+   "link_count": 0,
+   "link_to": "Go1 Recruit Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Site Configuration",
+   "link_count": 0,
+   "link_to": "Site Configuration",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Timezone Format",
+   "link_count": 0,
+   "link_to": "Timezone Format",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Website Context",
+   "link_count": 0,
+   "link_to": "Website Context",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "description": "Log data for various transactions",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Logs",
+   "link_count": 3,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Video Conference Participant",
+   "link_count": 0,
+   "link_to": "Video Conference Participant",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Video Conference Room",
+   "link_count": 0,
+   "link_to": "Video Conference Room",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Question Paper Candidates",
+   "link_count": 0,
+   "link_to": "Question Paper Candidates",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "description": "The main documents related to Interviews and Evaluations",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Interviews",
+   "link_count": 3,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Interview Question Paper",
+   "link_count": 0,
+   "link_to": "Interview Question Paper",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Exam Result",
+   "link_count": 0,
+   "link_to": "Exam Result",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Exam Result Sharing",
+   "link_count": 0,
+   "link_to": "Exam Result Sharing",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2024-09-30 16:42:58.500535",
+ "modified_by": "Administrator",
+ "module": "Go1 Recruit",
+ "name": "Go1 Recruit",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 3.0,
+ "shortcuts": [],
+ "title": "Go1 Recruit"
+}

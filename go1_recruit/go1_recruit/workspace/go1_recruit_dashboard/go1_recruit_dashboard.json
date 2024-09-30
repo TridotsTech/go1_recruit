@@ -1,0 +1,67 @@
+{
+ "charts": [
+  {
+   "chart_name": "Scheduled Interviews Heatmap",
+   "label": "Scheduled Interviews"
+  },
+  {
+   "chart_name": "Interviews Per Question Paper",
+   "label": "Interviews Per Question Paper"
+  },
+  {
+   "chart_name": "Questions Per Subject",
+   "label": "Questions Per Subject"
+  }
+ ],
+ "content": "[{\"id\":\"UbqndZgffh\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Go1 Recruit Dashboard</span>\",\"col\":12}},{\"id\":\"658pToWVbD\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"No. of Subjects\",\"col\":4}},{\"id\":\"P1Jz6ALEBl\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"No. of Topics\",\"col\":4}},{\"id\":\"la-Kg0RNJV\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"No. of Questions\",\"col\":4}},{\"id\":\"HHONy-e6EB\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Questions Per Subject\",\"col\":12}},{\"id\":\"1-ZW7ZSI3b\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Scheduled Interviews\",\"col\":12}},{\"id\":\"rRxXes_Mg_\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"No. of Tests\",\"col\":4}},{\"id\":\"hSNWTYEJx0\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Tests Attended\",\"col\":4}},{\"id\":\"xLIbjiaY5J\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Tests Scheduled\",\"col\":4}},{\"id\":\"BCITHtP9fk\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Interviews Per Question Paper\",\"col\":12}}]",
+ "creation": "2024-09-30 15:30:39.582004",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "dashboard-list",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Go1 Recruit Dashboard",
+ "links": [],
+ "modified": "2024-09-30 16:42:58.436056",
+ "modified_by": "Administrator",
+ "module": "Go1 Recruit",
+ "name": "Go1 Recruit Dashboard",
+ "number_cards": [
+  {
+   "label": "No. of Questions",
+   "number_card_name": "Questions in Repository"
+  },
+  {
+   "label": "No. of Subjects",
+   "number_card_name": "Subjects in Repository"
+  },
+  {
+   "label": "No. of Tests",
+   "number_card_name": "No. of Interviews"
+  },
+  {
+   "label": "Tests Scheduled",
+   "number_card_name": "Tests Scheduled"
+  },
+  {
+   "label": "No. of Topics",
+   "number_card_name": "Topics in Repository"
+  },
+  {
+   "label": "Tests Attended",
+   "number_card_name": "No. of Interviews Attended"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 2.0,
+ "shortcuts": [],
+ "title": "Go1 Recruit Dashboard"
+}
