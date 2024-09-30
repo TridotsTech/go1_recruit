@@ -121,7 +121,7 @@ def get_context(context):
 @frappe.whitelist(allow_guest=True)
 def execute(code2,lang1):
 	try:
-		interview_portal_settings=frappe.get_single('Interview Portal Settings')
+		go1_recruit_settings=frappe.get_single('Go1 Recruit Settings')
 		code2=code2.replace('&lt;','<')
 		code2=code2.replace('&gt;','>')
 		code2=code2.replace('!--','')
@@ -129,8 +129,8 @@ def execute(code2,lang1):
 		code2=code2.replace('&amp;','&')
 		URL = "https://api.jdoodle.com/execute"
 		data1 = {
-			'clientId' : interview_portal_settings.client_id,
-			'clientSecret' : interview_portal_settings.client_secret,
+			'clientId' : go1_recruit_settings.client_id,
+			'clientSecret' : go1_recruit_settings.client_secret,
 			'script' : code2,
 			'language' : lang1,
 			'versionIndex': 0
@@ -142,7 +142,7 @@ def execute(code2,lang1):
 		url=json.loads(url)
 		return url 
 	except Exception:
-		frappe.log_error(frappe.get_traceback(), "interview_portal.interview_portal.templates.pages.start_test.execute") 
+		frappe.log_error(frappe.get_traceback(), "go1_recruit.go1_recruit.templates.pages.candidatepage.execute") 
 
 def encrypt(url):
 	if len(url) > 100:

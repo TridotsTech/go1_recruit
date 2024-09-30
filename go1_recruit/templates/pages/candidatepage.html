@@ -996,60 +996,60 @@ canvas {
 				console.log(code1)
 				console.log(language)
 				
-				var data = new URLSearchParams();
-				data.append('code', code1);
-				data.append('language', language);
-				// Code inserted by Jayaprakash 28-09-2024
-				var response = await fetch('https://api.codex.jaagrav.in', {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/x-www-form-urlencoded'
-				},
-				body: data
-				});
+				// var data = new URLSearchParams();
+				// data.append('code', code1);
+				// data.append('language', language);
+				// // Code inserted by Jayaprakash 28-09-2024
+				// var response = await fetch('https://api.codex.jaagrav.in', {
+				// method: 'POST',
+				// headers: {
+				// 	'Content-Type': 'application/x-www-form-urlencoded'
+				// },
+				// body: data
+				// });
 
-				var result = await response.json();
-				var output;
-				if (result.error){
-					output = result.error
-				}else{
-					output = result.output
-				}
-				$(resultsDivSave).html(output);
-				$(resultsDiv).append("<b>Attempt "+ (counter+1) + ":</b><br/>");
-				$(resultsDiv).append(code1+"<br/><br/>");
-				$(resultsDiv).append("Output :"+output + "<br/><br/>");
-					$(currentBtn).val("Execute ("+(count12-(counter+1))+")");
-				if((count12-1)==counter)
-				{
-					$(currentBtn).attr("disabled","disabled")
-				}
-				$(".Loading").hide();
+				// var result = await response.json();
+				// var output;
+				// if (result.error){
+				// 	output = result.error
+				// }else{
+				// 	output = result.output
+				// }
+				// $(resultsDivSave).html(output);
+				// $(resultsDiv).append("<b>Attempt "+ (counter+1) + ":</b><br/>");
+				// $(resultsDiv).append(code1+"<br/><br/>");
+				// $(resultsDiv).append("Output :"+output + "<br/><br/>");
+				// 	$(currentBtn).val("Execute ("+(count12-(counter+1))+")");
+				// if((count12-1)==counter)
+				// {
+				// 	$(currentBtn).attr("disabled","disabled")
+				// }
+				// $(".Loading").hide();
 				//End by JayaPrakash 28-09-2024
-    //     frappe.call({
-    //         method: 'go1_recruit.templates.pages.start_test.execute',
-    //         args: {
-    //            code2:code1,
-    //            lang1:lang
-    //     },
-    //     callback: function(r) {
-    //         var resultt = $('.btn-execute-code').val();
-    //         if(r.message.output!=undefined)
-    //         {
-    //         $(resultsDivSave).html(r.message.output);
-    //         $(resultsDiv).append("<b>Attempt "+ (counter+1) + ":</b><br/>");
-    //         $(resultsDiv).append(code1+"<br/><br/>");
-    //         $(resultsDiv).append("Output :"+r.message.output + "<br/><br/>");
-    //          $(currentBtn).val("Execute ("+(count12-(counter+1))+")");
-    //         if((count12-1)==counter)
-    //         {
-    //             $(currentBtn).attr("disabled","disabled")
-    //         }
-    //         $(".Loading").hide();
-    //         }
+        frappe.call({
+            method: 'go1_recruit.templates.pages.start_test.execute',
+            args: {
+               code2:code1,
+               lang1:lang
+        },
+        callback: function(r) {
+            var resultt = $('.btn-execute-code').val();
+            if(r.message.output!=undefined)
+            {
+            $(resultsDivSave).html(r.message.output);
+            $(resultsDiv).append("<b>Attempt "+ (counter+1) + ":</b><br/>");
+            $(resultsDiv).append(code1+"<br/><br/>");
+            $(resultsDiv).append("Output :"+r.message.output + "<br/><br/>");
+             $(currentBtn).val("Execute ("+(count12-(counter+1))+")");
+            if((count12-1)==counter)
+            {
+                $(currentBtn).attr("disabled","disabled")
+            }
+            $(".Loading").hide();
+            }
            
-    //     }
-    // })
+        }
+    })
     		}
     	}
 		else{
