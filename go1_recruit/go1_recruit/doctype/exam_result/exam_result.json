@@ -198,13 +198,13 @@
    "fieldtype": "HTML"
   },
   {
-   "depends_on": "eval:frm.doc.user_video;",
+   "depends_on": "eval:doc.user_video;",
    "fieldname": "candidate_recording",
    "fieldtype": "Button",
    "label": "Candidate Recording"
   },
   {
-   "depends_on": "eval:frm.doc.screen_video;",
+   "depends_on": "eval:doc.screen_video;",
    "fieldname": "screen_recording",
    "fieldtype": "Button",
    "label": "Screen Recording"
@@ -212,7 +212,7 @@
  ],
  "hide_toolbar": 1,
  "links": [],
- "modified": "2024-09-30 12:19:55.286756",
+ "modified": "2024-09-30 12:37:15.570565",
  "modified_by": "Administrator",
  "module": "Go1 Recruit",
  "name": "Exam Result",

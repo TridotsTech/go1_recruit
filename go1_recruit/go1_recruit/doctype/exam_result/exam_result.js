@@ -144,9 +144,13 @@ frappe.ui.form.on('Exam Result', {
                     }],
             size: 'large'
 		})
-		var html = `<video width="757" height="480" controls playsinline autoplay src="${frm.doc.user_video}"></video>`
+		$('.modal-backdrop').on('click',function(){
+			$('.candidate-video').attr('src', '')
+		});
+		var html = `<video width="757" height="480" controls playsinline autoplay src="${frm.doc.user_video}" class="video">Video Not Supported</video>`
 		d.fields_dict.video_recording.$wrapper.html(html);
 		d.show()
+		close_video()
 	},
 	screen_recording(frm) {
 		var d = new frappe.ui.Dialog({
@@ -157,9 +161,10 @@ frappe.ui.form.on('Exam Result', {
                     }],
             size: 'large'
 		})
-		var html = `<video width="757" height="480" controls playsinline autoplay src="${frm.doc.screen_video}"></video>`
+		var html = `<video width="757" height="480" controls playsinline autoplay src="${frm.doc.screen_video}" class="video">Video Not Supported</video>`
 		d.fields_dict.screen_recording.$wrapper.html(html);
 		d.show()
+		close_video()
 	},
     generate_video_html: function(frm) {
         // let wrapper = $(cur_frm.get_field('video_html').wrapper).empty();
@@ -408,4 +413,16 @@ function send_mail() {
 
     })
     dialog.show();
+}
+
+function close_video(){
+	setTimeout(function(){
+		$(document).mouseup(function(e) {
+			var container = $('[class="modal-content"]');
+			if (!container.is(e.target) && container.has(e.target).length === 0) 
+			{
+				$('.video').attr('src', '')
+			}
+		});
+	}, 250)
 }
