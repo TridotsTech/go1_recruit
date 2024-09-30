@@ -993,7 +993,9 @@ canvas {
 				var resultsDiv= $(this).parent().find('.execute_result');
 				var resultsDivSave= $(this).parent().find('.result1');
 				var currentBtn=$(this);
-
+				console.log(code)
+				console.log(language)
+				
 				var data = new URLSearchParams();
 				data.append('code', code);
 				data.append('language', language);
