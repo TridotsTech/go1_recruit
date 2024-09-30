@@ -972,7 +972,7 @@ canvas {
         });
         // document.addEventListener('contextmenu', event => event.preventDefault());
         var  count12 = '{{go1_recruit_settings.maximum_time_for_execution}}'
-        $(".btn-execute-code").click(function(){
+        $(".btn-execute-code").click(async function(){
              var empty = $(this).parent().find('.codelanguage').val();
              let editing = $(this).parent().find(".code-editing").attr('data-id');
              var editor = ace.edit(editing);
@@ -993,12 +993,12 @@ canvas {
 				var resultsDiv= $(this).parent().find('.execute_result');
 				var resultsDivSave= $(this).parent().find('.result1');
 				var currentBtn=$(this);
-				console.log(code)
-				console.log(language)
+				console.log(code1)
+				console.log(lang)
 				
 				var data = new URLSearchParams();
-				data.append('code', code);
-				data.append('language', language);
+				data.append('code', code1);
+				data.append('language', lang);
 				// Code inserted by Jayaprakash 28-09-2024
 				var response = await fetch('https://api.codex.jaagrav.in', {
 				method: 'POST',
@@ -1025,7 +1025,7 @@ canvas {
 					$(currentBtn).attr("disabled","disabled")
 				}
 				$(".Loading").hide();
-
+				//End by JayaPrakash 28-09-2024
     //     frappe.call({
     //         method: 'go1_recruit.templates.pages.start_test.execute',
     //         args: {
