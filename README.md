@@ -11,17 +11,23 @@
 -   Based on the topics selected questions can be randomly picked from a pre-existing question bank, based on certain filters.​
 -   Even the filters for the questions can be randomized by selecting patterns.
 
+![Auto Generate Questions](github/Auto-Generate-Questions.gif)
+
 ## Monitored Assessment
 
 -   Employer can choose whether a candidate must undergo monitored test or unmonitored test.​
 -   If the candidate must undergo monitored test, then the meeting invite will be sent to both the candidate as well as the interviewer.​
 -   Both the candidate and the interviewer will be in the same virtual room where the assessment will take place.
 
+![Interview Test](github/Interview-Test.gif)
+
 ## Screen & Video Recordings​
 
 -   Using WebRTC technology, we will be able to capture screen recordings of the candidates as they perform the assessment.​
 -   Candidates take the test in a supervised online environment in the specified time-frame which is based on the candidate's time zone.​
 -   Employer gets a detailed report of evaluated results per candidate as well as video recordings of the assessment.
+
+![Screen And Video Recording](github/Video-and-Screen-Recording.gif)
 
 ## Coding Evaluation 
 

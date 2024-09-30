@@ -1380,6 +1380,7 @@ frappe.ui.form.on('Interview Question Paper', {
                     "fieldname": "monitered_test",
                     "label": __("Monitored Test"),
                     "reqd": 0,
+					"hidden": 1,
                     onchange: function() {
                         let val = this.get_value()
                         if(val == 0){
@@ -1419,7 +1420,8 @@ frappe.ui.form.on('Interview Question Paper', {
                     "fieldtype": "Data",
                     "fieldname": "candidate_phone",
                     "label": __("Candidate Phone"),
-                    "reqd": 1
+                    "reqd": 1,
+					"options": "Phone"
                 },
                 {
                     "fieldtype": "Datetime",
