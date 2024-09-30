@@ -127,7 +127,7 @@ def execute(code2,lang1):
 		code2=code2.replace('!--','')
 		code2=code2.replace('--','')
 		code2=code2.replace('&amp;','&')
-		URL = "https://api.jdoodle.com/execute"
+		URL = "https://api.jdoodle.com/v1/execute"
 		data1 = {
 			'clientId' : go1_recruit_settings.client_id,
 			'clientSecret' : go1_recruit_settings.client_secret,
