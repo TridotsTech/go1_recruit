@@ -994,11 +994,11 @@ canvas {
 				var resultsDivSave= $(this).parent().find('.result1');
 				var currentBtn=$(this);
 				console.log(code1)
-				console.log(lang)
+				console.log(language)
 				
 				var data = new URLSearchParams();
 				data.append('code', code1);
-				data.append('language', lang);
+				data.append('language', language);
 				// Code inserted by Jayaprakash 28-09-2024
 				var response = await fetch('https://api.codex.jaagrav.in', {
 				method: 'POST',
